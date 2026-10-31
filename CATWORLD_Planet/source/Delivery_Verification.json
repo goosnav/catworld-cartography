@@ -1,0 +1,202 @@
+{
+  "clean_renders": 12,
+  "annotated_plates": 12,
+  "pdf_pages": 23,
+  "render_images_unique": true,
+  "python_sources_compile": true,
+  "blender_validation": "source/Model_Verification.json",
+  "images": [
+    {
+      "file": "renders/01_panterra.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "128875ecbc4d2d16fa84e02d5af3a4fbf934408a29cdaf82da653a6090b50e36"
+    },
+    {
+      "file": "renders/02_eastern.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "b4c15797844c2c2060bb28d9e7c8202da3c73f8898797ba86f388eba96d04957"
+    },
+    {
+      "file": "renders/03_western.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "7a1b25f143bd2f7df4ebd4f1f9d81d491a1a86e0b3cdc91464dc57a43a4ec9bf"
+    },
+    {
+      "file": "renders/04_far_side.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "e061b0b54b86897937cd8103140824a1d379ada4da24c47fc32642004b19a87a"
+    },
+    {
+      "file": "renders/05_north_pole.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "07b449988bc9c51a88f42b3056ec35da4d0cb987f2d9b280fd4dc276e332beb2"
+    },
+    {
+      "file": "renders/06_south_pole.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "597a2330c2becc508ab056d6f362e5a39a0db48b3a35d7fc23222fd2b8a12065"
+    },
+    {
+      "file": "renders/07_panterra_close.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "0206c5604d72a22bc363a7a1859dbfe11d0a9cc16433c8364b42d685247f4917"
+    },
+    {
+      "file": "renders/08_impact_close.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "dcaa9e6de286eb139a34e2d8c06a3ddee076fe284534a94d11f50d1e0290846c"
+    },
+    {
+      "file": "renders/09_dam_valley.png",
+      "size": [
+        2400,
+        1600
+      ],
+      "sha256": "dbd80c2fc0c75b207ff4d73cd50d206ff65a89b39937bba198260c24ba3d75b3"
+    },
+    {
+      "file": "renders/10_dam_detail.png",
+      "size": [
+        2400,
+        1600
+      ],
+      "sha256": "e26a6fe2d4f56cafd676e5237af1e12bab2a364342e3a189ca61614877385199"
+    },
+    {
+      "file": "renders/11_southern_continent.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "72faf47693120255dc45776048297f9c73636849313c8311f00ac3994775ad3a"
+    },
+    {
+      "file": "renders/12_eastern_continent.png",
+      "size": [
+        2400,
+        2400
+      ],
+      "sha256": "4656b0ba2b8d45c6fca6d06cf1cabafc8a7d1eb0b3b48083bbdc6640cd8fbbdc"
+    },
+    {
+      "file": "annotated/01_panterra_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "305630bb0e8d760e7f2ee6eb76339d9d5f86a2ce0f92cec35ebbe2105059290f"
+    },
+    {
+      "file": "annotated/02_eastern_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "654b6bee33049f33c370f9e8b98bc352a5b37e8ea8ee562eb81539b5026a84f3"
+    },
+    {
+      "file": "annotated/03_western_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "5a942054b25e460a22d135c3e237032f9939b1f4804749ef5ef4df4677303ea5"
+    },
+    {
+      "file": "annotated/04_far_side_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "0b759bcd88270372a0f5a717ab930c0b888ae3bf2b67820347979c705ec8c4e5"
+    },
+    {
+      "file": "annotated/05_north_pole_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "5640f242a56a64096269688255926c5c6913e24075abb042781441a50d815a06"
+    },
+    {
+      "file": "annotated/06_south_pole_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "e89b4ffad102cd08c6fae721effbbdb2c1e03c92d8255cf4bf8ccb2dc61104ab"
+    },
+    {
+      "file": "annotated/07_panterra_close_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "b92c3270b32f20dfc2c7796ac9f7ad9efe7e0ccc2df1b4f464ead846ac0bec7a"
+    },
+    {
+      "file": "annotated/08_impact_close_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "c0634f2089d2cea03482728feea8c1b432dcf46bb7c81fae7aa3539ff15b5217"
+    },
+    {
+      "file": "annotated/09_dam_valley_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "9d726b2cc1ad40eedd220121f10e3c4f401e8c549528b4c4ac9600b788fe4abb"
+    },
+    {
+      "file": "annotated/10_dam_detail_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "e63ed63fa1c320d678f343c019b0480dfb86b255966d6a9a1d3e43170e9e44d2"
+    },
+    {
+      "file": "annotated/11_southern_continent_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "e27679d839fa5a098fe1005282567c117aadb6192d0be7ffb3d1d92325e203a4"
+    },
+    {
+      "file": "annotated/12_eastern_continent_annotated.png",
+      "size": [
+        2600,
+        2060
+      ],
+      "sha256": "871bc184d07e5560f8edb1a2fab97e20235a389b9046b412308e9d25dc020842"
+    }
+  ]
+}

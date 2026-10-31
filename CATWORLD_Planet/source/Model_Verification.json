@@ -1,0 +1,43 @@
+{
+  "globe_vertices": 525825,
+  "globe_quads": 524288,
+  "geographic_landmarks": 23,
+  "atlas_cameras": 10,
+  "timeline_markers": 10,
+  "packed_images": [
+    {
+      "name": "albedo_4096.png",
+      "packed": true,
+      "size": [
+        4096,
+        2048
+      ]
+    },
+    {
+      "name": "height_16bit.png",
+      "packed": true,
+      "size": [
+        4096,
+        2048
+      ]
+    },
+    {
+      "name": "land_mask.png",
+      "packed": true,
+      "size": [
+        4096,
+        2048
+      ]
+    },
+    {
+      "name": "roughness.png",
+      "packed": true,
+      "size": [
+        4096,
+        2048
+      ]
+    }
+  ],
+  "default_camera": "01_panterra",
+  "default_frame": 1
+}

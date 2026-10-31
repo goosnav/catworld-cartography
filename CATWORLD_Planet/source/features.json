@@ -1,0 +1,255 @@
+[
+  {
+    "id": "01",
+    "name": "Ferric Sea / impact basin",
+    "lon": 1.8167724384495947,
+    "lat": 64.98695651135345,
+    "description": "Ancient impact; iron-rich sediment and central uplift",
+    "sketch_xy": [
+      1560,
+      595
+    ]
+  },
+  {
+    "id": "02",
+    "name": "Northern Divide",
+    "lon": -6.6583359018896635,
+    "lat": 36.81874821902281,
+    "description": "Broad collision belt; peaks to 8.6 km",
+    "sketch_xy": [
+      1500,
+      925
+    ]
+  },
+  {
+    "id": "03",
+    "name": "Panterran Plateau",
+    "lon": 3.8631213913644493,
+    "lat": 21.09071359921598,
+    "description": "Dissected upland below the mountain wall",
+    "sketch_xy": [
+      1615,
+      1110
+    ]
+  },
+  {
+    "id": "04",
+    "name": "Great Reservoir",
+    "lon": -10.829899169721127,
+    "lat": 11.503811887183144,
+    "description": "Flooded continental basin, maintained by the dam",
+    "sketch_xy": [
+      1470,
+      1220
+    ]
+  },
+  {
+    "id": "05",
+    "name": "Great Panterran Dam",
+    "lon": -2.475605740172592,
+    "lat": 5.1326771847074255,
+    "description": "Reservoir outlet at a bedrock gorge",
+    "sketch_xy": [
+      1555,
+      1290
+    ]
+  },
+  {
+    "id": "06",
+    "name": "Alluvial trade outlet",
+    "lon": 10.24210237797605,
+    "lat": -4.401716977707618,
+    "description": "Amsterdam shorthand; delta, canals and commerce",
+    "sketch_xy": [
+      1680,
+      1390
+    ]
+  },
+  {
+    "id": "07",
+    "name": "Old-growth refuge",
+    "lon": -38.01319973436115,
+    "lat": 21.09071359921598,
+    "description": "Wet uplands, giant trees and logging frontier",
+    "sketch_xy": [
+      1200,
+      1110
+    ]
+  },
+  {
+    "id": "08",
+    "name": "Western Gate",
+    "lon": -46.787972358723074,
+    "lat": 30.248634146714547,
+    "description": "Lower mountain saddle; migration checkpoint",
+    "sketch_xy": [
+      1190,
+      1000
+    ]
+  },
+  {
+    "id": "09",
+    "name": "Central Gate",
+    "lon": 22.50806768630935,
+    "lat": 35.51702116314776,
+    "description": "Second low passage through Northern Divide",
+    "sketch_xy": [
+      1720,
+      940
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Eastern Gate",
+    "lon": 87.10134054377822,
+    "lat": 38.11506561092289,
+    "description": "Eastern coastal and ridge crossing",
+    "sketch_xy": [
+      2200,
+      910
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Southern rain-shadow desert",
+    "lon": -142.38358942141565,
+    "lat": -26.3024696625167,
+    "description": "Dry western interior of the southern continent",
+    "sketch_xy": [
+      600,
+      1550
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Windward southern range",
+    "lon": -115.8604503698464,
+    "lat": -33.939474685156874,
+    "description": "Added eastern spine intercepts moist trade winds",
+    "sketch_xy": [
+      825,
+      1610
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Drowned land bridge",
+    "lon": -57.00698760049784,
+    "lat": -18.79099870035054,
+    "description": "Island chain and former low-sea-level migration route",
+    "sketch_xy": [
+      1060,
+      1530
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Pieter\u2019s fishing village",
+    "lon": -4.982592941560211,
+    "lat": 3.456070013871484,
+    "description": "Proposed site beside the outlet reach",
+    "sketch_xy": [
+      1530,
+      1308
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Ancient avian cliff ruins",
+    "lon": -47.01375002587739,
+    "lat": 23.62665012258742,
+    "description": "Ruins above the western forest corridor",
+    "sketch_xy": [
+      1135,
+      1080
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Southern harbor / capital region",
+    "lon": -14.244982004814306,
+    "lat": -11.941258793796313,
+    "description": "London shorthand; sheltered bay and farmland",
+    "sketch_xy": [
+      1445,
+      1465
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Merchant island",
+    "lon": 7.218955481766831,
+    "lat": -31.189720228991867,
+    "description": "Milan shorthand; trade controls in southern strait",
+    "sketch_xy": [
+      1640,
+      1640
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Eastern humid coast",
+    "lon": 150.72176321303158,
+    "lat": -0.3136825823026612,
+    "description": "Wet forest and river plains beyond the divide",
+    "sketch_xy": [
+      2700,
+      1320
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Eastern rift gulf",
+    "lon": 122.86458806074721,
+    "lat": 11.736908728010496,
+    "description": "Fault-bounded gulf opening into the southern sea",
+    "sketch_xy": [
+      2510,
+      1200
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Southern shelf gulf",
+    "lon": -116.1550334753654,
+    "lat": -26.3024696625167,
+    "description": "Drowned failed-rift basin and broken capes",
+    "sketch_xy": [
+      775,
+      1550
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Old southern shield",
+    "lon": -148.30555547679225,
+    "lat": -22.040033428303758,
+    "description": "Ancient dry craton with dune basins and gravel plains",
+    "sketch_xy": [
+      530,
+      1515
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Eastern collision knot",
+    "lon": 99.60742612339477,
+    "lat": 32.895842595609366,
+    "description": "Broad transpressional uplands joining eastern terranes",
+    "sketch_xy": [
+      2310,
+      970
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Northern fjord remnant",
+    "lon": -172.79193266554645,
+    "lat": 70.86021372751848,
+    "description": "Glacial valleys cut into the high-latitude remnant",
+    "sketch_xy": [
+      730,
+      530
+    ]
+  }
+]

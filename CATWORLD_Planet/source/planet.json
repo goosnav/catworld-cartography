@@ -1,0 +1,12 @@
+{
+  "radius_km": 6100,
+  "tilt_deg": 23.4,
+  "orbital_year_earth_years": 4000,
+  "relief_exaggeration": 5,
+  "seed": 49,
+  "crater_center": [
+    1.8167724384495947,
+    64.98695651135345
+  ],
+  "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "09_dam_valley",
+    "features": [
+      {
+        "id": "A",
+        "name": "Great Reservoir",
+        "x": 0.5639517903327942,
+        "y": 0.2732754945755005,
+        "visible": true
+      },
+      {
+        "id": "B",
+        "name": "Gravity dam / service crest",
+        "x": 0.45348960161209106,
+        "y": 0.6086097061634064,
+        "visible": true
+      },
+      {
+        "id": "C",
+        "name": "Gated spillway",
+        "x": 0.4404085576534271,
+        "y": 0.6658879518508911,
+        "visible": true
+      },
+      {
+        "id": "D",
+        "name": "Turbine galleries",
+        "x": 0.5315398573875427,
+        "y": 0.7231987714767456,
+        "visible": true
+      },
+      {
+        "id": "E",
+        "name": "Tailwater / river",
+        "x": 0.3895378112792969,
+        "y": 0.8334072828292847,
+        "visible": true
+      },
+      {
+        "id": "F",
+        "name": "Abutment checkpoint",
+        "x": 0.625214695930481,
+        "y": 0.688967764377594,
+        "visible": true
+      },
+      {
+        "id": "G",
+        "name": "Fishing village",
+        "x": 0.7334240674972534,
+        "y": 0.5605405271053314,
+        "visible": true
+      }
+    ]
+  },
+  {
+    "name": "10_dam_detail",
+    "features": [
+      {
+        "id": "A",
+        "name": "Great Reservoir",
+        "x": 0.5920698642730713,
+        "y": -0.10241484642028809,
+        "visible": false
+      },
+      {
+        "id": "B",
+        "name": "Gravity dam / service crest",
+        "x": 0.4975116550922394,
+        "y": 0.4756850004196167,
+        "visible": true
+      },
+      {
+        "id": "C",
+        "name": "Gated spillway",
+        "x": 0.48631396889686584,
+        "y": 0.5934718251228333,
+        "visible": true
+      },
+      {
+        "id": "D",
+        "name": "Turbine galleries",
+        "x": 0.6888675093650818,
+        "y": 0.6490645706653595,
+        "visible": true
+      },
+      {
+        "id": "E",
+        "name": "Tailwater / river",
+        "x": 0.4427674114704132,
+        "y": 0.8964545354247093,
+        "visible": true
+      },
+      {
+        "id": "F",
+        "name": "Abutment checkpoint",
+        "x": 0.8888083100318909,
+        "y": 0.47157371044158936,
+        "visible": true
+      },
+      {
+        "id": "G",
+        "name": "Fishing village",
+        "x": 1.0628700256347656,
+        "y": 0.202093243598938,
+        "visible": false
+      }
+    ]
+  }
+]
