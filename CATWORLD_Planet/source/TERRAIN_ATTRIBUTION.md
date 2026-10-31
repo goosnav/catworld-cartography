@@ -1,3 +1,14 @@
+# Catworld terrain provenance
+
+The bundled `mountain_analogue_dem.npy` is a zoom-7 Terrarium tile mosaic covering the Himalayan/Tibetan margin around 72–96° E and 24–36° N (complete intersecting tiles). Retrieved 31 October 2026 from `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png`.
+
+Terrain data courtesy of Mapzen Terrain Tiles / AWS; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey. Source elevations were mosaicked, warped, rescaled and blended into fictional terrain. These modifications and the proposed world geography are not endorsed by the data providers. The full provider attribution document follows; its global list does not imply every regional dataset was used here.
+
+Dataset: https://registry.opendata.aws/terrain-tiles/
+Original attribution: https://github.com/tilezen/joerd/blob/master/docs/attribution.md
+
+---
+
 # Attribution
 
 Attribution is required for many terrain tile data providers. Example language is provided below, but you are responsible for researching each project to follow their license terms. More details are available on the [Data Sources](data-sources.md) page at [Mapzen rights](https://mapzen.com/rights) for Mapzen's hosted service.

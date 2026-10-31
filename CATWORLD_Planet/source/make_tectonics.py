@@ -1,32 +1,42 @@
 from PIL import Image,ImageDraw,ImageFont
-import math,json,numpy as np
+import math
 from pathlib import Path
-B=Path(__file__).resolve().parents[1];fnt='/System/Library/Fonts/Supplemental/Arial.ttf';bold='/System/Library/Fonts/Supplemental/Arial Bold.ttf'
-def f(s,b=False):return ImageFont.truetype(bold if b else fnt,s)
+B=Path(__file__).resolve().parents[1]
+def f(s,b=False):return ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial'+(' Bold' if b else '')+'.ttf',s)
 im=Image.new('RGB',(2400,1800),'#10191f');d=ImageDraw.Draw(im)
-d.text((65,45),'CATWORLD / A PROPOSED TECTONIC HISTORY',font=f(46,1),fill='#f3e8cf')
-d.text((65,110),'Geographic explanation, not a plate-motion simulation. Boundaries are schematic.',font=f(26),fill='#a5bbc5')
-tex=Image.open(B/'textures/albedo_4096.png').resize((2200,1100));im.paste(tex,(100,180));d=ImageDraw.Draw(im)
-def pt(lon,lat):return (100+(lon+180)/360*2200,180+(90-lat)/180*1100)
-for lon in range(-180,181,30):d.line([pt(lon,-85),pt(lon,85)],fill='#28404a',width=1)
-for lat in range(-60,61,30):d.line([pt(-180,lat),pt(180,lat)],fill='#28404a',width=1)
-def line(coords,col,width=5):d.line([pt(*p) for p in coords],fill=col,width=width,joint='curve')
+d.text((65,45),'CATWORLD / THREE CORES, ONE COLLISION SYSTEM',font=f(44,1),fill='#f3e8cf')
+d.text((65,110),'Proposed history and moisture routes. Schematic boundaries; no plate or climate simulation.',font=f(25),fill='#a5bbc5')
+tex=Image.open(B/'textures/albedo_4096.png').convert('RGB').resize((2200,1100));td=ImageDraw.Draw(tex)
+def pt(lon,lat):return ((lon+180)/360*2200,(90-lat)/180*1100)
+for lon in range(-180,181,30):td.line([pt(lon,-90),pt(lon,90)],fill='#28404a',width=1)
+for lat in range(-60,61,30):td.line([pt(-180,lat),pt(180,lat)],fill='#28404a',width=1)
+def line(coords,col,width=5):
+ for sh in [-360,0,360]:td.line([pt(lo+sh,la) for lo,la in coords],fill=col,width=width,joint='curve')
 def arrow(a,b,col):
- a=pt(*a);b=pt(*b);d.line([a,b],fill=col,width=5);ang=math.atan2(b[1]-a[1],b[0]-a[0]);q=[b,(b[0]-20*math.cos(ang-.45),b[1]-20*math.sin(ang-.45)),(b[0]-20*math.cos(ang+.45),b[1]-20*math.sin(ang+.45))];d.polygon(q,fill=col)
-line([(-63,28),(-40,32),(-15,37),(15,36),(45,37),(75,39),(100,33),(130,25),(160,10)],'#f2b270',7)
-for lo,la in [(-35,33),(10,36),(62,38),(115,29)]:arrow((lo,la+14),(lo,la+4),'#f2b270');arrow((lo,la-14),(lo,la-4),'#f2b270')
-line([(-119,-15),(-116,-26),(-118,-36),(-128,-47)],'#f2b270',6)
-arrow((-103,-31),(-113,-31),'#f2b270');arrow((-139,-33),(-124,-33),'#f2b270')
-line([(122,19),(123,12),(130,2),(138,-9)],'#74c5df',6)
-arrow((124,7),(114,6),'#74c5df');arrow((130,7),(140,8),'#74c5df')
-line([(-126,-22),(-116,-26),(-105,-30)],'#74c5df',6)
-line([(-56,-13),(-67,-22),(-85,-29),(-106,-32)],'#cbbb99',3)
-for text,loc in [('NORTHERN CRATON',(5,54)),('PANTERRAN PLATE',(-25,-1)),('EASTERN TERRANES',(135,-20)),('SOUTHERN SHIELD',(-147,-22)),('BROKEN SHELF',(-76,-36))]:
- x,y=pt(*loc);box=d.textbbox((0,0),text,font=f(22,1));d.rounded_rectangle((x-8,y-6,x+box[2]+8,y+28),radius=4,fill='#10191f');d.text((x,y),text,font=f(22,1),fill='#f3e8cf')
-d.text((100,1320),'1 / IMPACT',font=f(29,1),fill='#da8870');d.text((860,1320),'2 / COLLISION',font=f(29,1),fill='#f2b270');d.text((1610,1320),'3 / RIFTING + EROSION',font=f(29,1),fill='#74c5df')
-columns=[['An ancient strike damages an older','northern craton. Later erosion exposes','iron-rich rocks; a breached rim floods.','The crater is not the mountain suture.'],['Convergence closes an older ocean.','Crust thickens into a broad mountain','belt linking Panterra and the eastern','lands, with parallel thrusts and passes.'],['Younger extension opens the eastern','gulf and southern shelf basin. Faults','guide angular coasts; rivers and ice','cut the smaller bays and fjords.']]
-for xx,ls in zip([100,860,1610],columns):
- for j,txt in enumerate(ls):d.text((xx,1380+j*40),txt,font=f(27),fill='#c4d1d6')
-d.text((100,1625),'ORANGE = convergence / mountain belts     BLUE = extension / rift gulfs     PALE = drowned shelf connection',font=f(25),fill='#c4d1d6')
-d.text((100,1690),'Terrain analogue: Mapzen Terrain Tiles / AWS; USGS SRTM & GMTED. Warped and rescaled for a fictional planet.',font=f(22),fill='#8fa7b1')
+ for sh in [-360,0,360]:
+  aa=pt(a[0]+sh,a[1]);bb=pt(b[0]+sh,b[1]);td.line([aa,bb],fill=col,width=5);ang=math.atan2(bb[1]-aa[1],bb[0]-aa[0]);td.polygon([bb,(bb[0]-19*math.cos(ang-.45),bb[1]-19*math.sin(ang-.45)),(bb[0]-19*math.cos(ang+.45),bb[1]-19*math.sin(ang+.45))],fill=col)
+orange='#f2b270';blue='#74a0df';cyan='#6de7dd'
+line([(-63,28),(-40,32),(-15,37),(15,36),(45,37),(75,39),(100,33),(130,29),(145,27),(158,22),(171,16),(181,9),(190,1),(199,-8),(210,-18),(222,-29),(235,-39)],orange,8)
+for lo,la in [(-35,33),(20,36),(82,37),(155,23),(199,-8)]:
+ arrow((lo,la+13),(lo,la+4),orange);arrow((lo,la-13),(lo,la-4),orange)
+line([(174,9),(170,-3),(165,-16),(154,-23)],orange,5)
+line([(122,19),(123,12),(130,2),(138,-9)],blue,6)
+line([(163,3),(164,-6),(168,-12)],blue,6)
+line([(-126,-22),(-116,-26),(-105,-30)],blue,6)
+line([(-118,-39),(-103,-33),(-86,-26),(-70,-21),(-57,-12),(-44,4)],'#cbbb99',5)
+# Maritime exposure and descent into the dry basin, not generic latitude stripes.
+arrow((174,42),(172,23),cyan);arrow((178,17),(156,4),cyan)
+arrow((-103,-8),(-132,-23),cyan);arrow((-48,19),(-36,19),cyan)
+def label(txt,loc,size=22,col='#f3e8cf'):
+ x,y=pt(*loc);bb=td.textbbox((0,0),txt,font=f(size,1));w=bb[2];x=max(8,min(x,2190-w));td.rounded_rectangle((x-6,y-5,x+w+6,y+size+7),radius=4,fill='#10191f');td.text((x,y),txt,font=f(size,1),fill=col)
+for txt,loc in [('1 / PANTERRA',(-30,-1)),('2 / DRY INTERIOR',(119,-15)),('3 / MARITIME CORE',(-168,-28)),('DROWNED SHELF',(-94,-45)),('ARCTIC OCEAN',(-65,83)),('POLAR LAND',(40,-78)),('OLD IMPACT',(-16,58))]:label(txt,loc)
+label('MOISTURE',(137,49),19,cyan);label('MOISTURE',(-115,0),19,cyan)
+im.paste(tex,(100,180));d=ImageDraw.Draw(im)
+heads=['1 / OLD CRUST + IMPACT','2 / TWO OCEANS CLOSE','3 / RIFTING, WATER + ICE']
+columns=[['Three older continental cores survive.','The northern impact scars one craton.','Its red apron merges into the mainland;','the crater is older than the collision.'],['Panterra docks with eastern terranes.','A later, oblique collision adds the third','core. Broad sutures continue across the','map seam and onto the southern spine.'],['Rifts explain gulfs and angular capes.','A drowned shelf preserves an island','bridge. Ice cuts the polar coasts; winds','place the dry basin behind the wall.']]
+for x,head,lines in zip([100,860,1610],heads,columns):
+ d.text((x,1320),head,font=f(28,1),fill=orange)
+ for j,txt in enumerate(lines):d.text((x,1380+j*40),txt,font=f(26),fill='#c4d1d6')
+d.text((100,1625),'ORANGE: collision     BLUE: rifts     PALE: former shelf bridge     CYAN: proposed moisture routes',font=f(25),fill='#c4d1d6')
+d.text((100,1690),'Terrain analogue: Mapzen Terrain Tiles / AWS; USGS SRTM & GMTED. Warped into fictional topography.',font=f(22),fill='#8fa7b1')
 im.save(B/'guide/Tectonic_Framework.png')

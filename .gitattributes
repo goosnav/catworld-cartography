@@ -1,0 +1,9 @@
+*.blend binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.npy binary
+*.npz binary
+*.csv text eol=lf
+*.py text eol=lf
+*.md text eol=lf

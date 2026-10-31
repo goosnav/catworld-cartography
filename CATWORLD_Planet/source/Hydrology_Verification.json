@@ -1,0 +1,7 @@
+{
+  "direction": "Seattle -> Great Reservoir -> Dam -> downstream metropolis",
+  "main_river_upstream_water_m": 3140.0,
+  "main_river_lake_inlet_water_m": 690.0,
+  "monotonic_water_profile": true,
+  "river_width_is_exaggerated": true
+}

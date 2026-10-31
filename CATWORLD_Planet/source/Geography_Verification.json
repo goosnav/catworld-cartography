@@ -1,0 +1,31 @@
+{
+  "core_anchor_lonlat": [
+    [
+      0,
+      20
+    ],
+    [
+      150,
+      5
+    ],
+    [
+      -140,
+      -30
+    ]
+  ],
+  "core_connected_component_ids": [
+    17,
+    17,
+    17
+  ],
+  "three_cores_connected": true,
+  "south_polar_component": 218,
+  "physical_peak_m": 10800.0,
+  "river": {
+    "direction": "Seattle -> Great Reservoir -> Dam -> downstream metropolis",
+    "main_river_upstream_water_m": 3140.0,
+    "main_river_lake_inlet_water_m": 690.0,
+    "monotonic_water_profile": true,
+    "river_width_is_exaggerated": true
+  }
+}

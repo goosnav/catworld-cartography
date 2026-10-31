@@ -1,6 +1,6 @@
 id,name,lon,lat,description
 01,Ferric Sea / impact basin,1.8167724384495947,64.98695651135345,Ancient impact; iron-rich sediment and central uplift
-02,Northern Divide,-6.6583359018896635,36.81874821902281,Broad collision belt; peaks to 8.6 km
+02,Northern Divide,-6.6583359018896635,36.81874821902281,Enormous folded belt; multiple spines and high plateaus
 03,Panterran Plateau,3.8631213913644493,21.09071359921598,Dissected upland below the mountain wall
 04,Great Reservoir,-10.829899169721127,11.503811887183144,"Flooded continental basin, maintained by the dam"
 05,Great Panterran Dam,-2.475605740172592,5.1326771847074255,Reservoir outlet at a bedrock gorge
@@ -9,16 +9,23 @@ id,name,lon,lat,description
 08,Western Gate,-46.787972358723074,30.248634146714547,Lower mountain saddle; migration checkpoint
 09,Central Gate,22.50806768630935,35.51702116314776,Second low passage through Northern Divide
 10,Eastern Gate,87.10134054377822,38.11506561092289,Eastern coastal and ridge crossing
-11,Southern rain-shadow desert,-142.38358942141565,-26.3024696625167,Dry western interior of the southern continent
-12,Windward southern range,-115.8604503698464,-33.939474685156874,Added eastern spine intercepts moist trade winds
+11,Maritime southern lowlands,-142.38358942141565,-26.3024696625167,Wet right-hand core in the marked far-side view
+12,Southern great range,-115.8604503698464,-33.939474685156874,Third continental core joins the global collision belt
 13,Drowned land bridge,-57.00698760049784,-18.79099870035054,Island chain and former low-sea-level migration route
 14,Pieter’s fishing village,-4.982592941560211,3.456070013871484,Proposed site beside the outlet reach
 15,Ancient avian cliff ruins,-47.01375002587739,23.62665012258742,Ruins above the western forest corridor
-16,Southern harbor / capital region,-14.244982004814306,-11.941258793796313,London shorthand; sheltered bay and farmland
+16,London / lakeshore country,-13.9306640625,8.3056640625,Proposed city on the southwestern lake shore; elevated above the reservoir
 17,Merchant island,7.218955481766831,-31.189720228991867,Milan shorthand; trade controls in southern strait
-18,Eastern humid coast,150.72176321303158,-0.3136825823026612,Wet forest and river plains beyond the divide
+18,Great leeward desert,150.72176321303158,-0.3136825823026612,Dry interior on the left of the marked far-side view
 19,Eastern rift gulf,122.86458806074721,11.736908728010496,Fault-bounded gulf opening into the southern sea
 20,Southern shelf gulf,-116.1550334753654,-26.3024696625167,Drowned failed-rift basin and broken capes
-21,Old southern shield,-148.30555547679225,-22.040033428303758,Ancient dry craton with dune basins and gravel plains
+21,Old southern shield,-148.30555547679225,-22.040033428303758,Old shield with deeply weathered forests and river plains
 22,Eastern collision knot,99.60742612339477,32.895842595609366,Broad transpressional uplands joining eastern terranes
 23,Northern fjord remnant,-172.79193266554645,70.86021372751848,Glacial valleys cut into the high-latitude remnant
+24,Seattle / upstream timber city,-33.54857440340596,20.40916029690085,Primary river flows from here INTO the super-lake
+25,Rome / eastern lake shore,-2.5927734375,10.6787109375,Proposed high-bank city overlooking the lake; distinct from the downstream metropolis
+26,Far-side collision isthmus,-172,0,Continuous mountain land link between second and third cores
+27,Long drowned-shelf archipelago,-87,-26,Former land bridge toward Panterra; submerged saddle chain
+28,Arctic crown islands,-80,80,Glaciated bedrock islands and straits amid broken pack ice
+29,South polar ice continent,105,-77,"Asymmetric land ice, coastal mountains and outlet glaciers"
+30,Southern embayment,-25,-76,Deep marine inlet interrupts the south polar ice sheet

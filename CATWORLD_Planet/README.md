@@ -1,34 +1,46 @@
-# Catworld / Terra - planet reference package
+# Catworld / Terra — revision 2
 
-Open **OPEN_ATLAS.html** for the local gallery, or start with **CATWORLD_Contact_Sheet.jpg**.
+Open **OPEN_ATLAS.html** for the complete offline gallery. Start with **CATWORLD_Contact_Sheet.jpg** to choose a drawing angle.
 
-- `renders/`: 12 clean PNGs. Six whole-globe angles, four regional globe views, two dam views.
-- `annotated/`: 12 matching callout plates. Numbers correspond to the landmark catalogue.
-- `model/CATWORLD_Terra.blend`: editable globe, packed textures, named landmarks and ten atlas cameras.
-- `model/CATWORLD_Dam_Study.blend`: separate valley-scale dam and settlement study.
-- `guide/CATWORLD_Geography_Atlas.pdf`: illustrated guide and annotated reference plates.
-- `guide/Geography_and_Design.md`: editable guide text, assumptions, reasoning and sources.
-- `guide/Tectonic_Framework.png`: proposed collision belts, rifts and geographic history.
-- `guide/Landmark_Catalogue.csv`: 23 named feature coordinates and descriptions.
-- `textures/`: albedo, 16-bit height, roughness and land mask.
-- `source/`: reproducible scripts, numerical terrain, camera metadata, checks and terrain-data attribution.
+This revision connects three continental cores with a broad collision belt, corrects the far-side desert and wet regions, develops both poles, integrates the impact basin and adds a long drowned island bridge. The primary waterway runs **Seattle → super-lake → dam → downstream city**. London and Rome sit near the lake.
 
-## Blender
+## Contents
 
-Built with Blender 5.2.1. The globe opens on the Panterra-facing camera. Frames 1-10 select the ten globe cameras and matching illumination: front, east, west, far side, north pole, south pole, Panterra close, impact basin, southern continent and eastern continent. Numpad 0 toggles camera view. Orbit outside camera view to find another drawing angle.
+- `renders/`: 14 clean PNGs — six whole-globe views, six regional globe studies, two local dam studies.
+- `annotated/`: 14 matching reference plates, including flow arrows on the Seattle and Panterra studies.
+- `model/CATWORLD_Terra.blend`: editable globe with packed textures, 30 named geographic anchors and 12 atlas cameras.
+- `model/CATWORLD_Dam_Study.blend`: separate valley-scale dam and settlement study, retained from the previous iteration.
+- `guide/CATWORLD_Geography_Atlas.pdf`: illustrated geography guide and all annotated plates.
+- `guide/Geography_and_Design.md`: editable explanation, assumptions, proposed history and sources.
+- `guide/Tectonic_Framework.png`: three-core collision system, rifts, drowned shelf and moisture routes.
+- `guide/Landmark_Catalogue.csv`: 30 proposed feature locations and descriptions.
+- `textures/`: 4K albedo, 16-bit height, roughness and land mask.
+- `source/`: build scripts, physical elevation data, hydrology and camera metadata, verification records and terrain attribution.
 
-The textures are packed; the model does not need an internet connection. Globe terrain uses fivefold radial height exaggeration for readability. The physical height field remains in metres. The dam uses its own local kilometre scale without vertical exaggeration. Its buildings and structural details cannot be resolved on the whole globe.
+## Blender and drawing
 
-The clean globe PNGs have transparent backgrounds. They are separately lit, cloud-free satellite-style references, not simultaneous physical photographs. Use the full PNG for drawing, not the smaller PDF reproduction. The remaining limitations are documented in the guide.
+Built with Blender 5.2.1. Frames 1–12 select the globe cameras and matching illumination. The views are front, east, west, far side, north pole, south pole, Panterra close, impact basin, southern continent, eastern continent, Seattle waterway and archipelago. Numpad 0 toggles camera view. Orbit normally to choose another angle. Textures are packed, so the model works offline.
 
-## Key decisions
+The globe uses **10× radial relief exaggeration** to make the enormous ranges legible from orbit. The numerical height field remains in physical metres and peaks at 10.8 km. River widths are exaggerated for visibility. The separate dam model uses kilometre units without vertical exaggeration; its structures are too small to resolve on the global mesh.
 
-Map 5 controls the overall arrangement. The later revisions narrow central Panterra, sharpen capes, deepen gulfs, enlarge the iron-rich impact basin and give the southern and eastern continents distinct relief and coast types. The mountain system is a broad collision belt with warped real ridge-and-valley relief, not a line of isolated cones. Exact tectonic motions and climate are proposed, not simulated.
+Clean PNGs have transparent backgrounds. Each camera has its own drawing-friendly illumination. These are cloud-free satellite-style references, not simultaneous photographs. Use the full PNGs for drawing rather than the smaller PDF plates.
 
-Radius: 6,100 km. Tilt: 23.4 degrees. Orbital period: 4,000 Earth years, as requested. The guide explicitly retains the unresolved requirement for Earth-like warmth on that long orbit. All new geographic labels are proposals; real city labels remain shorthand.
+Radius: 6,100 km. Tilt: 23.4°. Orbital period: 4,000 Earth years. The guide preserves that orbit while explaining the unresolved heating premise and the implications of thousand-year seasons. Climate, plate history and ice extent are reasoned worldbuilding proposals, not simulations. New labels and city placements are proposals.
 
 ## Rebuild
 
-From this folder, install Python dependencies in a local virtual environment: `numpy`, `scipy`, and `pillow`. Run `python source/build_terrain.py`, then `blender -b --python source/build_blender.py`. Run `blender -b --python source/build_dam.py` for the inset. Run `blender -b --python source/finalize_model.py` after the globe render pass to restore its opening view and animate the lights for each camera. The bundled analogue DEM avoids a network dependency. To rebuild the guide and callout plates, install `reportlab`, then run `python source/make_tectonics.py` and `python source/package_atlas.py`; the layout scripts use the Arial fonts bundled with macOS. These commands regenerate model and render files in this package.
+Install Python packages `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf` in a virtual environment. From this package folder:
 
-Terrain data credit and modification details are in `source/TERRAIN_ATTRIBUTION.md` and the guide. The original pitch deck and private message screenshots are not included in this delivery.
+```sh
+python source/build_terrain.py
+blender -b -t 8 --python source/build_blender.py
+blender -b --python source/build_dam.py
+blender -b --python source/finalize_model.py
+python source/make_tectonics.py
+python source/package_atlas.py
+python source/verify_delivery.py
+```
+
+Use `blender -b -t 8 --python source/build_blender.py -- --draft` for six fast review views. The bundled analogue elevation sample avoids a network download. The annotation/PDF scripts use Arial fonts bundled with macOS. Rebuilding regenerates files in this package. The SHA256 manifest describes the delivered files and must be regenerated after edits.
+
+Terrain attribution is in `source/TERRAIN_ATTRIBUTION.md`. The original pitch deck and private message screenshots are not included. The repository's first commit preserves the previous iteration; the stable `CATWORLD_Planet/` directory contains the current revision.

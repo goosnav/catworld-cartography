@@ -7,19 +7,30 @@ from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 B=Path(__file__).resolve().parents[1]
 F='/System/Library/Fonts/Supplemental/Arial.ttf';FB='/System/Library/Fonts/Supplemental/Arial Bold.ttf'
 def font(s,b=False):return ImageFont.truetype(FB if b else F,s)
 views=json.load(open(B/'source/views.json'));views+=json.load(open(B/'source/dam_views.json'))
 views.sort(key=lambda x:x['name'])
-select={'01':['01','02','03','04','05','06','07','08','16'],'02':['01','02','09','10','18','19','22'],'03':['07','08','11','12','13','15','20','21'],'04':['11','12','18','19','21','23'],'05':['01','02','08','09','10','23'],'06':['11','12','13','16','17','18','20'],'07':['02','03','04','05','06','07','14','15','16','17'],'08':['01','02','09'],'11':['11','12','13','20','21'],'12':['10','18','19','22']}
-titles={'01':'PANTERRA / FRONT HEMISPHERE','02':'EASTERN HEMISPHERE','03':'WESTERN HEMISPHERE','04':'FAR-SIDE HEMISPHERE','05':'NORTH POLAR VIEW','06':'SOUTH POLAR VIEW','07':'PANTERRA / REGIONAL STUDY','08':'NORTHERN IMPACT BASIN','09':'GREAT DAM / VALLEY CONTEXT','10':'GREAT DAM / STRUCTURAL STUDY','11':'SOUTHERN CONTINENT','12':'EASTERN CONTINENT'}
+select={'01': ['01', '02', '03', '04', '05', '06', '07', '24', '16', '25'], '02': ['02', '10', '18', '19', '22', '26'], '03': ['07', '08', '11', '12', '13', '20', '21', '24', '27'], '04': ['11', '12', '18', '19', '21', '26', '27', '23'], '05': ['01', '02', '09', '10', '23', '28'], '06': ['11', '12', '13', '17', '29', '30'], '07': ['02', '03', '04', '05', '06', '07', '14', '16', '24', '25'], '08': ['01', '02', '09', '28'], '11': ['11', '12', '20', '21', '26', '27'], '12': ['10', '18', '19', '22', '26'], '13': ['04', '07', '24', '16', '25'], '14': ['11', '12', '13', '20', '27']}
+titles={'01':'PANTERRA / FRONT HEMISPHERE','02':'EASTERN HEMISPHERE','03':'WESTERN HEMISPHERE','04':'FAR-SIDE HEMISPHERE','05':'NORTH POLAR VIEW','06':'SOUTH POLAR VIEW','07':'PANTERRA / REGIONAL STUDY','08':'NORTHERN IMPACT BASIN','09':'GREAT DAM / VALLEY CONTEXT','10':'GREAT DAM / STRUCTURAL STUDY','11':'SOUTHERN CONTINENT','12':'EASTERN CONTINENT','13':'SEATTLE / PRIMARY WATERWAY','14':'DROWNED LAND BRIDGE'}
 for v in views:
  name=v['name'];idx=name[:2];im=Image.open(B/'renders'/f'{name}.png').convert('RGBA');im.thumbnail((1800,1800))
  out=Image.new('RGB',(2600,2060),'#10191f');d=ImageDraw.Draw(out);offx=(1860-im.width)//2;offy=155+(1800-im.height)//2;out.paste(im,(offx,offy),im)
  d.text((55,40),'CATWORLD  /  '+titles[idx],font=font(42,True),fill='#f2ead8')
- sub='Local engineering concept · 1 unit = 1 km' if idx in ['09','10'] else f"View center {v['latitude']:.0f}° latitude / {v['longitude']:.0f}° longitude · relief 5×"
+ sub='Local engineering concept · 1 unit = 1 km' if idx in ['09','10'] else f"View center {v['latitude']:.0f}° latitude / {v['longitude']:.0f}° longitude · relief 10×"
  d.text((55,100),sub,font=font(25),fill='#93acb7');d.line((1900,160,1900,1920),fill='#35505b',width=2)
+ if idx in ['07','13']:
+  for points in v.get('flowpaths',{}).values():
+   for j in range(2,len(points),2):
+    a,b=points[j-1],points[j]
+    if not all(.02<t<.98 for t in a+b):continue
+    x,y=offx+b[0]*im.width,offy+b[1]*im.height
+    ang=math.atan2(b[1]-a[1],b[0]-a[0]);length=18
+    d.line([(x-length*math.cos(ang-.5),y-length*math.sin(ang-.5)),(x,y),(x-length*math.cos(ang+.5),y-length*math.sin(ang+.5))],fill='#ffbc8b',width=4)
+  d.text((55,1930),'FLOW: SEATTLE → SUPER-LAKE → DAM → DOWNSTREAM CITY',font=font(23,True),fill='#ffbc8b')
  ff=[f for f in v['features'] if f['visible'] and (idx not in select or f['id'] in select[idx])]
  yy=190
  for f in ff:
@@ -39,7 +50,7 @@ for v in views:
 # Whole-set contact sheet, with no omitted hemisphere.
 cols=4;cw=720;ch=780;rows=math.ceil(len(views)/cols)
 cs=Image.new('RGB',(cols*cw,rows*ch+160),'#10191f');d=ImageDraw.Draw(cs)
-d.text((40,30),'CATWORLD / PLANET REFERENCE ATLAS',font=font(48,True),fill='#f2ead8');d.text((40,95),'One globe · every hemisphere · two regional continents · crater and dam studies',font=font(25),fill='#9bb2be')
+d.text((40,30),'CATWORLD / PLANET REFERENCE ATLAS',font=font(48,True),fill='#f2ead8');d.text((40,95),'Three connected cores · polar regions · primary waterway · island bridge',font=font(25),fill='#9bb2be')
 for i,v in enumerate(views):
  im=Image.open(B/'renders'/f"{v['name']}.png").convert('RGBA');im.thumbnail((690,680));x=(i%cols)*cw;y=(i//cols)*ch+160;cs.paste(im,(x+(cw-im.width)//2,y+(680-im.height)//2),im)
  d.text((x+25,y+705),titles[v['name'][:2]],font=font(23,True),fill='#f2ead8')
@@ -47,15 +58,16 @@ cs.save(B/'CATWORLD_Contact_Sheet.jpg',quality=93)
 # Catalogue and statistics.
 features=json.load(open(B/'source/features.json'))
 with open(B/'guide/Landmark_Catalogue.csv','w') as f:
- w=csv.DictWriter(f,fieldnames=['id','name','lon','lat','description']);w.writeheader();w.writerows({k:v for k,v in ff.items() if k!='sketch_xy'} for ff in features)
+ w=csv.DictWriter(f,fieldnames=['id','name','lon','lat','description'],lineterminator='\n');w.writeheader();w.writerows({k:v for k,v in ff.items() if k!='sketch_xy'} for ff in features)
 a=np.load(B/'source/terrain_fields.npz');h,w=a['land'].shape;la=90-(np.arange(h)+.5)*180/h;area=6100**2*(np.pi/h)*(2*np.pi/w)*np.cos(np.radians(la))[:,None]
 stats={'land_area_km2':float((a['land']*area).sum()),'reservoir_area_km2':float((a['lake']*area).sum()),'peak_m':float(a['height'].max()),'radius_km':6100}
 json.dump(stats,open(B/'source/statistics.json','w'),indent=2)
 # Offline gallery is a file index, not an external service.
 items='\n'.join(f'''<figure><a href="renders/{v['name']}.png"><img src="renders/{v['name']}.png" alt="{titles[v['name'][:2]]}"></a><figcaption>{titles[v['name'][:2]]} · <a href="annotated/{v['name']}_annotated.png">Annotations</a></figcaption></figure>''' for v in views)
-(B/'OPEN_ATLAS.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><title>Catworld / Planet Atlas</title><style>body{background:#10191f;color:#e8e0d1;font:17px/1.5 system-ui;margin:40px}a{color:#a8d4dd}h1{letter-spacing:.06em}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}figure{margin:0}img{width:100%;aspect-ratio:1;object-fit:contain}figcaption{padding:10px 0}p{max-width:900px}</style><h1>CATWORLD / TERRA</h1><p>Cloud-free references from one editable Blender globe. Click a view for the full-resolution PNG. The redline versions locate the landmarks. Radius 6,100 km; 23.4° tilt; 4,000 Earth years per orbit.</p><p><a href="guide/CATWORLD_Geography_Atlas.pdf">Illustrated geography guide</a> · <a href="model/CATWORLD_Terra.blend">Globe model</a> · <a href="model/CATWORLD_Dam_Study.blend">Dam study</a> · <a href="guide/Landmark_Catalogue.csv">Landmarks</a></p><main>'''+items+'</main></html>')
+(B/'OPEN_ATLAS.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><title>Catworld / Planet Atlas</title><style>body{background:#10191f;color:#e8e0d1;font:17px/1.5 system-ui;margin:40px}a{color:#a8d4dd}h1{letter-spacing:.06em}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}figure{margin:0}img{width:100%;aspect-ratio:1;object-fit:contain}figcaption{padding:10px 0}p{max-width:900px}</style><h1>CATWORLD / TERRA</h1><p>Cloud-free references from one editable Blender globe. Click a view for the full-resolution PNG. The redline versions locate the landmarks. Radius 6,100 km; 23.4° tilt; 4,000 Earth years per orbit.</p><p><a href="guide/CATWORLD_Geography_Atlas.pdf">Illustrated geography guide</a> · <a href="model/CATWORLD_Terra.blend">Globe model</a> · <a href="model/CATWORLD_Dam_Study.blend">Dam study</a> · <a href="guide/Landmark_Catalogue.csv">Landmarks</a> · <a href="guide/Tectonic_Framework.png">Tectonic framework</a> · <a href="guide/Revision_Comparison.jpg">Before / after</a></p><main>'''+items+'</main></html>')
 # PDF guide, readable prose followed by reference plates.
-styles=getSampleStyleSheet();styles.add(ParagraphStyle(name='BodyCustom',fontName='Helvetica',fontSize=10.5,leading=15,spaceAfter=9,textColor=colors.HexColor('#26353b')));styles['Heading1'].textColor=colors.HexColor('#133e47');styles['Heading1'].fontSize=23;styles['Heading1'].keepWithNext=1;styles['Heading2'].keepWithNext=1;styles['Heading2'].fontSize=16;styles['Heading2'].spaceBefore=17;styles['Heading3'].fontSize=12;styles['Heading3'].spaceBefore=13
+pdfmetrics.registerFont(TTFont('AtlasArial',F));pdfmetrics.registerFont(TTFont('AtlasArialBold',FB));pdfmetrics.registerFontFamily('AtlasArial',normal='AtlasArial',bold='AtlasArialBold',italic='AtlasArial',boldItalic='AtlasArialBold')
+styles=getSampleStyleSheet();styles.add(ParagraphStyle(name='BodyCustom',fontName='AtlasArial',fontSize=10.5,leading=15,spaceAfter=9,textColor=colors.HexColor('#26353b')));styles['Heading1'].textColor=colors.HexColor('#133e47');styles['Heading1'].fontSize=23;styles['Heading1'].keepWithNext=1;styles['Heading2'].keepWithNext=1;styles['Heading2'].fontSize=16;styles['Heading2'].spaceBefore=17;styles['Heading3'].fontSize=12;styles['Heading3'].spaceBefore=13
 story=[]
 md=(B/'guide/Geography_and_Design.md').read_text()
 for para in re.split(r'\n\s*\n',md):
@@ -66,7 +78,7 @@ for para in re.split(r'\n\s*\n',md):
  txt=html.escape(txt).replace('`','').replace('\n','<br/>')
  txt=re.sub(r'(https://[^\s<]+)',lambda m:f'<link href="{m.group(1)}" color="#217081">{m.group(1)}</link>',txt)
  story.append(Paragraph(txt,style))
-story.append(PageBreak());story.append(Paragraph('Tectonic framework',styles['Heading1']));story.append(RImage(str(B/'guide/Tectonic_Framework.png'),width=500,height=375));story.append(Spacer(1,15));story.append(Paragraph('The orange belt marks convergence. Blue lines identify proposed rifts. The impact basin predates this collision system. See the full-resolution PNG for the complete diagram.',styles['BodyCustom']));story.append(PageBreak());story.append(Paragraph('Landmark coordinates',styles['Heading1']))
+story.append(PageBreak());story.append(Paragraph('Tectonic framework',styles['Heading1']));story.append(RImage(str(B/'guide/Tectonic_Framework.png'),width=500,height=375));story.append(Spacer(1,15));story.append(Paragraph('The orange belt links three continental cores through successive collisions. Blue lines identify rifts; cyan arrows show the proposed moisture supply. The impact basin predates this collision system. See the full-resolution PNG for the complete diagram.',styles['BodyCustom']));story.append(PageBreak());story.append(Paragraph('Landmark coordinates',styles['Heading1']))
 for f in features:story.append(Paragraph(f"<b>{f['id']} / {html.escape(f['name'])}</b> — {f['lat']:.2f} latitude, {f['lon']:.2f} longitude<br/>{html.escape(f['description'])}",styles['BodyCustom']))
 for v in views:
  story.append(PageBreak());story.append(Paragraph(titles[v['name'][:2]],styles['Heading1']));story.append(Spacer(1,12))

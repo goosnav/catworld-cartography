@@ -2,7 +2,7 @@
   "radius_km": 6100,
   "tilt_deg": 23.4,
   "orbital_year_earth_years": 4000,
-  "relief_exaggeration": 5,
+  "relief_exaggeration": 10,
   "seed": 49,
   "crater_center": [
     1.8167724384495947,
