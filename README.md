@@ -2,28 +2,25 @@
 
 An editable Blender planet and satellite-style drawing-reference atlas for Catworld / Terra.
 
-![Panterra regional reference](CATWORLD_Planet/renders/07_panterra_close.png)
+![Ocean-centered world map](CATWORLD_Planet/world_maps/01_world_ocean_centered_preview.jpg)
 
-Revision 8 preserves the creator's latest river redline. The northern feeder winds down the plateau northwest of the reservoir, while the lake drains west through Seattle country and separately through the eastern megadam. The crossed-out eastern feeder is removed. The north is a broad mountain province with steppe foothills; the west is substantial forest country. Two southern mountain groups rise above fertile agricultural lowlands.
+Revision 9 follows the creator's latest green correction: the whole mountain connection sweeps south and meets the eastern continent lower on its western flank. The eastern core inclines an additional 13 degrees south. The five-island crossing curves out from Panterra, with larger fragments near the independent southern mainland. An isolated bigger-Hawaii volcanic group, three northern fore-islands and sparse ocean outposts give the far hemisphere more geography.
 
-The R8 pass replaces warped, mirrored-looking relief with bounded elevation sampling and branching mountain valleys. River bends have variable widths and connected tributaries; three smaller lakes have distinct basin shapes. Forest, steppe, farmland, exposed rock and snow follow shared moisture and elevation fields. Polar relief uses spherical coordinates, and the iron basin has uneven rim heights and sediment staining. The local waterfall has broken caprock lips and a continuous channel surface.
+The primary exports are two clean 8192 × 4096 rectangular world maps: ocean-centered and Panterra-centered. Matching tectonic sheets distinguish proposed collision, subduction, spreading and transform boundaries from drowned shelves and hotspot trails. Numbered versions locate the 39 geographic anchors.
 
-The previous shortened crossing is preserved: the southern mainland remains closer to Panterra, with five islands tapering toward the main continent. The new 8K colour layer smooths river edges; physical elevation data remains 4K. See the terrain review and before/after plates in the guide.
-
-The eastern continent rotates eight degrees south. The independent southern mainland has a new asymmetric coast, moves closer to Panterra, and has a shorter, sparse eastern archipelago. Only Panterra and the eastern continent share the mountain connection. Deep ocean separates the eastern and southern continents without a linking island arc.
-
-The current epoch is northern late autumn / southern late spring with 35-degree axial tilt and a 4,000-Earth-year orbit. The guide distinguishes creator direction from proposed heat, climate, ice, migration and engineering details.
+The northern feeder follows the approved redline northwest of the plateau reservoir. The lake drains west through Seattle forest country and separately through the eastern megadam. Broad northern mountain provinces descend into steppe; fertile agricultural lowlands lie south. The seasonal snapshot is northern late autumn / southern late spring, with a working 35-degree tilt and 4,000-Earth-year orbit.
 
 The stable `CATWORLD_Planet/` directory contains the current delivery; Git history preserves earlier iterations.
 
+- Two clean 8K world maps, two tectonic maps and two numbered world maps.
 - 16 clean renders and 16 matching annotated plates.
-- Editable globe with 13 cameras, four packed textures and 36 geographic anchors.
+- Editable globe with 13 cameras, four packed textures and 39 named anchors.
 - Separate dam and plateau-waterfall models.
-- Comprehensive creator/showrunner PDF, editable guide, diagrams, daylight table and landmark catalogue.
+- Comprehensive 54-page creator/showrunner PDF, diagrams, daylight table and landmark catalogue.
 - Physical terrain fields, directed drainage paths, build scripts and verification records.
 
-After cloning, open `CATWORLD_Planet/OPEN_ATLAS.html` for the offline gallery. Read the [package instructions](CATWORLD_Planet/README.md), [technical companion](CATWORLD_Planet/guide/Geography_and_Design.md), or [creator guide](CATWORLD_Planet/guide/CATWORLD_Creator_Guide.pdf).
+After cloning, open `CATWORLD_Planet/OPEN_ATLAS.html` for the offline gallery. Read the [package instructions](CATWORLD_Planet/README.md), [ocean and tectonic notes](CATWORLD_Planet/guide/Ocean_and_Tectonics_R9.md), or [creator guide](CATWORLD_Planet/guide/CATWORLD_Creator_Guide.pdf).
 
-Global relief is exaggerated ten times and river widths are enlarged for drawing clarity. Local studies use true relief in kilometre units. The former 65 m lowstand, crossing date and precise 255-degree seasonal epoch are proposals; the heat source and climate are not solved by this visual model.
+Global relief is exaggerated ten times and river widths are enlarged for drawing clarity. Physical elevation remains 4K; the 8K colour map improves presentation. Local studies use true relief in kilometre units. Plate geometry, the former 65 m lowstand, crossing date and precise seasonal epoch are proposals. The visual model does not solve climate, orbital heating, erosion or hydraulic engineering.
 
 Terrain attribution: [TERRAIN_ATTRIBUTION.md](CATWORLD_Planet/source/TERRAIN_ATTRIBUTION.md). Original pitch deck, private screenshots, backups and temporary work are excluded.

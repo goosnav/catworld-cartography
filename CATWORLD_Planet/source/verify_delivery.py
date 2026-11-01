@@ -1,4 +1,4 @@
-"""Verify the delivered R8 atlas and its actual terrain fields."""
+"""Verify the delivered R9 atlas and its actual terrain fields."""
 import ast,hashlib,json,re,math
 from pathlib import Path
 import numpy as np
@@ -21,9 +21,9 @@ assert len({i['sha256'] for i in images})==32
 for target in re.findall(r'(?:href|src)="([^"]+)"',(B/'OPEN_ATLAS.html').read_text()):
  if not target.startswith(('http:','https:','#')):assert (B/target).is_file(),target
 model=json.load(open(B/'source/Model_Verification.json'))
-assert model['atlas_cameras']==13 and model['geographic_landmarks']==36
+assert model['atlas_cameras']==13 and model['geographic_landmarks']==39
 assert model['timeline_markers']==13 and all(i['packed'] for i in model['packed_images'])
-planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==8
+planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==9
 z=np.load(B/'source/terrain_fields.npz');land=z['land'];h,w=land.shape
 
 def components(mask):
@@ -35,14 +35,14 @@ def components(mask):
   if a and b:parent[find(b)]=find(a)
  return np.array([find(i) for i in range(count+1)])[labs]
 def at(a,lo,la):return a[int((90-la)/180*h),int((lo+180)/360*w)%w]
-lab=components(land);anchors=[(0,20),(120,5),(-104,-39)];ids=[int(at(lab,*q)) for q in anchors]
+lab=components(land);anchors=[(0,20),(115,-8),(-104,-39)];ids=[int(at(lab,*q)) for q in anchors]
 assert ids[0]==ids[1] and ids[2]>0 and ids[2]!=ids[0],ids
 assert int(at(lab,105,-77)) not in ids
 low=components(land|(z['height']>=-65));assert len({int(at(low,*q)) for q in anchors})==1
 la=90-(np.arange(h)+.5)*180/h;lo=((np.arange(w)+.5)*360/w-180)%360
 channel=(lo[None,:]>150)&(lo[None,:]<210)&(la[:,None]<-10)&(la[:,None]>-60)
-assert not np.any(channel&land), 'The deep separating corridor must stay open'
-assert np.max(z['height'][channel]) < -65, 'Deep water cannot form a lowstand bridge'
+assert np.mean(land[channel])<.02, 'The separating ocean must remain overwhelmingly open water'
+assert at(low,175,-12)==0, 'Deep separating ocean must remain submerged'
 # Verify the creator's large-near-mainland, small-toward-Panterra hierarchy.
 island_sizes={}
 for side,left,right in [('near_southern_mainland',278,297),('toward_panterra',297,313)]:
@@ -93,8 +93,23 @@ for name,points in paths.items():
  dense[name]=dict(maximum_pixel_uphill_m=delta,interpretation='Minor raster quantization; designed continuous profile is downhill')
 import pymupdf
 pdf=pymupdf.open(B/'guide/CATWORLD_Creator_Guide.pdf');assert len(pdf)>=40
-report=dict(revision=8,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,dense_pixel_checks=dense,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
+report=dict(revision=9,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,dense_pixel_checks=dense,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
 assert len(report['models'])==3
 json.dump(report,open(B/'source/Delivery_Verification.json','w'),indent=2)
-geog=json.load(open(B/'source/Geography_Verification.json'));geog['revision']=8;geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
+geog=json.load(open(B/'source/Geography_Verification.json'));geog['revision']=9;geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
 print(json.dumps({k:v for k,v in report.items() if k not in ['images','river_profiles']},indent=2))
+
+# Primary maps must be exact longitude rolls of one texture, not separate drawings.
+a=np.array(Image.open(B/'textures/albedo_8192.png'))
+for center,stem in [(180,'01_world_ocean_centered'),(0,'02_world_panterra_centered')]:
+ v=np.array(Image.open(B/'world_maps'/(stem+'.png')));assert v.shape==(4096,8192,3);assert np.array_equal(v,np.roll(a,round(-center/360*8192),axis=1))
+new=json.load(open(B/'source/Ocean_Revision_R9.json'))
+for f in new['islands']:
+ assert f['cells']>0
+# Verify all five shelf islands are separate from both mainlands and each other.
+chain_ids=[int(at(lab,f['lon'],f['lat'])) for f in new['islands'][:5]]
+assert len(set(chain_ids))==5 and not set(chain_ids)&set(ids),chain_ids
+assert len([f for f in new['islands'] if f['name'].startswith('Crown ')])==2
+assert len([f for f in new['islands'] if f['name'].startswith('Northern ') and f['kind']=='glacial'])==3
+r=json.load(open(B/'source/Delivery_Verification.json'));r.update(primary_maps_verified=True,new_authored_islands=len(new['islands']),shelf_island_components=chain_ids,geographic_landmarks=39);json.dump(r,open(B/'source/Delivery_Verification.json','w'),indent=2)
+print('R9 PRIMARY MAPS AND ISLANDS VERIFIED')

@@ -98,11 +98,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.8233105540275574,
-        "y": 0.29717332124710083,
+        "x": 0.9068359732627869,
+        "y": 0.5035536885261536,
         "visible": true
       },
       {
@@ -128,11 +128,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.11850094795227051,
-        "y": 0.6001700460910797,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.18318575620651245,
+        "y": 0.5454312264919281,
         "visible": true
       },
       {
@@ -178,31 +178,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.908009946346283,
-        "y": 0.4704081416130066,
+        "x": 0.9246625900268555,
+        "y": 0.5823280215263367,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.9504120945930481,
-        "y": 0.4447113275527954,
+        "x": 0.9412791132926941,
+        "y": 0.6051468849182129,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.11638464778661728,
-        "y": 0.7347899079322815,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.12449667602777481,
+        "y": 0.7159489393234253,
         "visible": true
       },
       {
@@ -218,11 +218,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.8636671304702759,
-        "y": 0.33227330446243286,
+        "x": 0.922993540763855,
+        "y": 0.552200436592102,
         "visible": true
       },
       {
@@ -258,21 +258,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.4843636751174927,
-        "y": 0.40551167726516724,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.5387855768203735,
+        "y": 0.42163217067718506,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.1236310675740242,
-        "y": 0.6892430484294891,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.1285555064678192,
+        "y": 0.6671043038368225,
         "visible": true
       },
       {
@@ -364,6 +364,36 @@
         "x": 0.5535559058189392,
         "y": 0.7725715786218643,
         "visible": true
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.2730228006839752,
+        "y": 0.3806845545768738,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.36789223551750183,
+        "y": 0.08738279342651367,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.5875062346458435,
+        "y": 0.659919261932373,
+        "visible": false
       }
     ],
     "flowpaths": {
@@ -3048,11 +3078,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.34639057517051697,
-        "y": 0.21918261051177979,
+        "x": 0.3098870813846588,
+        "y": 0.4270225763320923,
         "visible": true
       },
       {
@@ -3078,11 +3108,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.2522512376308441,
-        "y": 0.507940411567688,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.18318533897399902,
+        "y": 0.4209982752799988,
         "visible": false
       },
       {
@@ -3128,31 +3158,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.695676863193512,
-        "y": 0.5471431314945221,
+        "x": 0.5998489856719971,
+        "y": 0.6291356086730957,
         "visible": true
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.49057844281196594,
-        "y": 0.43656307458877563,
+        "x": 0.42847996950149536,
+        "y": 0.5845089852809906,
         "visible": true
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.3485027253627777,
-        "y": 0.6920207142829895,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.2901379466056824,
+        "y": 0.648119181394577,
         "visible": false
       },
       {
@@ -3168,11 +3198,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.3626839518547058,
-        "y": 0.2636220455169678,
+        "x": 0.33286362886428833,
+        "y": 0.4887728691101074,
         "visible": true
       },
       {
@@ -3208,21 +3238,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.9477699995040894,
-        "y": 0.5790022909641266,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.9433194398880005,
+        "y": 0.5945906341075897,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.2698120176792145,
-        "y": 0.611103743314743,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.24945718050003052,
+        "y": 0.5790024399757385,
         "visible": false
       },
       {
@@ -3313,6 +3343,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 0.0638226717710495,
         "y": 0.6177513003349304,
+        "visible": true
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.8931360840797424,
+        "y": 0.5301518738269806,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.7833059430122375,
+        "y": 0.16944152116775513,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.826576828956604,
+        "y": 0.8044244796037674,
         "visible": true
       }
     ],
@@ -5998,11 +6058,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.6536091566085815,
-        "y": 0.21918267011642456,
+        "x": 0.6901127099990845,
+        "y": 0.42702269554138184,
         "visible": false
       },
       {
@@ -6028,11 +6088,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.7477484941482544,
-        "y": 0.507940262556076,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.8168143630027771,
+        "y": 0.42099809646606445,
         "visible": true
       },
       {
@@ -6078,31 +6138,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.3043229281902313,
-        "y": 0.547143280506134,
+        "x": 0.4001508951187134,
+        "y": 0.6291357576847076,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.5094213485717773,
-        "y": 0.4365631937980652,
+        "x": 0.5715198516845703,
+        "y": 0.5845091044902802,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.6514970064163208,
-        "y": 0.6920205652713776,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.7098617553710938,
+        "y": 0.6481190323829651,
         "visible": true
       },
       {
@@ -6118,11 +6178,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.6373158097267151,
-        "y": 0.2636221647262573,
+        "x": 0.6671361923217773,
+        "y": 0.488772988319397,
         "visible": false
       },
       {
@@ -6158,21 +6218,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.05222977697849274,
-        "y": 0.5790023505687714,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.0566803440451622,
+        "y": 0.5945907235145569,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.730187714099884,
-        "y": 0.6111035645008087,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.7505425214767456,
+        "y": 0.5790022909641266,
         "visible": true
       },
       {
@@ -6263,6 +6323,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 0.936177134513855,
         "y": 0.617751270532608,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.10686367005109787,
+        "y": 0.5301518738269806,
+        "visible": true
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.21669375896453857,
+        "y": 0.16944152116775513,
+        "visible": true
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.17342297732830048,
+        "y": 0.8044245541095734,
         "visible": false
       }
     ],
@@ -8948,11 +9038,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.1766892373561859,
-        "y": 0.2572559118270874,
+        "x": 0.09316384047269821,
+        "y": 0.46814364194869995,
         "visible": false
       },
       {
@@ -8978,11 +9068,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.8814988732337952,
-        "y": 0.5592762529850006,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.8168140649795532,
+        "y": 0.48859357833862305,
         "visible": false
       },
       {
@@ -9028,31 +9118,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.09198996424674988,
-        "y": 0.5054291486740112,
+        "x": 0.07533730566501617,
+        "y": 0.6055536270141602,
         "visible": true
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.049587756395339966,
-        "y": 0.43990784883499146,
+        "x": 0.05872073397040367,
+        "y": 0.597531795501709,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.8836151957511902,
-        "y": 0.7193221747875214,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.8755031228065491,
+        "y": 0.6885147094726562,
         "visible": false
       },
       {
@@ -9068,11 +9158,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.13633263111114502,
-        "y": 0.2973366975784302,
+        "x": 0.0770062804222107,
+        "y": 0.523767501115799,
         "visible": false
       },
       {
@@ -9108,21 +9198,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.5156363248825073,
-        "y": 0.4841790199279785,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.4612143635749817,
+        "y": 0.5003520250320435,
         "visible": true
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.8763687610626221,
-        "y": 0.6565341353416443,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.8714443445205688,
+        "y": 0.6293663382530212,
         "visible": false
       },
       {
@@ -9214,6 +9304,36 @@
         "x": 0.4464438557624817,
         "y": 0.7058640718460083,
         "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.7269771695137024,
+        "y": 0.44775503873825073,
+        "visible": true
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.632107675075531,
+        "y": 0.11776202917098999,
+        "visible": true
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.4124937653541565,
+        "y": 0.7298726439476013,
+        "visible": true
       }
     ],
     "flowpaths": {
@@ -11898,11 +12018,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.34639087319374084,
-        "y": 0.8233105093240738,
+        "x": 0.3098873496055603,
+        "y": 0.9068359062075615,
         "visible": true
       },
       {
@@ -11928,12 +12048,12 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.2522514760494232,
-        "y": 0.11850088834762573,
-        "visible": false
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.1831856071949005,
+        "y": 0.18318569660186768,
+        "visible": true
       },
       {
         "id": "14",
@@ -11978,31 +12098,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.6956771016120911,
-        "y": 0.9080097824335098,
+        "x": 0.5998491644859314,
+        "y": 0.9246624410152435,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.49057871103286743,
-        "y": 0.9504119865596294,
-        "visible": true
+        "x": 0.42848020792007446,
+        "y": 0.9412790089845657,
+        "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.3485029339790344,
-        "y": 0.11638456583023071,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.2901381552219391,
+        "y": 0.12449657917022705,
         "visible": false
       },
       {
@@ -12018,12 +12138,12 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.3626842200756073,
-        "y": 0.8636670559644699,
-        "visible": true
+        "x": 0.33286386728286743,
+        "y": 0.922993466258049,
+        "visible": false
       },
       {
         "id": "23",
@@ -12058,21 +12178,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.9477702379226685,
-        "y": 0.4843634366989136,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.9433196783065796,
+        "y": 0.5387853682041168,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.2698122262954712,
-        "y": 0.12363100051879883,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.24945738911628723,
+        "y": 0.12855541706085205,
         "visible": false
       },
       {
@@ -12163,6 +12283,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 0.06382288783788681,
         "y": 0.5535558760166168,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.8931362628936768,
+        "y": 0.2730225920677185,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.7833062410354614,
+        "y": 0.3678920865058899,
+        "visible": true
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.8265770673751831,
+        "y": 0.5875059962272644,
         "visible": false
       }
     ],
@@ -14848,11 +14998,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.6536091566085815,
-        "y": 0.8233102113008499,
+        "x": 0.6901127099990845,
+        "y": 0.906835600733757,
         "visible": false
       },
       {
@@ -14878,11 +15028,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.7477484941482544,
-        "y": 0.11850053071975708,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.8168143630027771,
+        "y": 0.1831853985786438,
         "visible": false
       },
       {
@@ -14928,31 +15078,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.3043229281902313,
-        "y": 0.9080096110701561,
+        "x": 0.4001508951187134,
+        "y": 0.9246622249484062,
         "visible": true
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.5094213485717773,
-        "y": 0.9504117295145988,
-        "visible": false
+        "x": 0.5715198516845703,
+        "y": 0.9412787929177284,
+        "visible": true
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.6514970064163208,
-        "y": 0.11638432741165161,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.7098617553710938,
+        "y": 0.12449634075164795,
         "visible": true
       },
       {
@@ -14968,11 +15118,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.6373158097267151,
-        "y": 0.8636668026447296,
+        "x": 0.6671361923217773,
+        "y": 0.9229931607842445,
         "visible": false
       },
       {
@@ -15008,21 +15158,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.05222977697849274,
-        "y": 0.484363317489624,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.0566803440451622,
+        "y": 0.5387852191925049,
         "visible": true
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.730187714099884,
-        "y": 0.12363070249557495,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.7505425214767456,
+        "y": 0.12855517864227295,
         "visible": true
       },
       {
@@ -15113,6 +15263,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 0.936177134513855,
         "y": 0.5535556077957153,
+        "visible": true
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.10686367005109787,
+        "y": 0.2730224132537842,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.21669375896453857,
+        "y": 0.3678918480873108,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.17342297732830048,
+        "y": 0.5875058472156525,
         "visible": true
       }
     ],
@@ -17798,11 +17978,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 1.1065788269042969,
-        "y": 0.06749987602233887,
+        "x": 1.2624989748001099,
+        "y": 0.43531882762908936,
         "visible": false
       },
       {
@@ -17828,12 +18008,12 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": -0.10971274971961975,
-        "y": 0.6507989764213562,
-        "visible": false
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.021120643243193626,
+        "y": 0.5289510786533356,
+        "visible": true
       },
       {
         "id": "14",
@@ -17878,31 +18058,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 1.1692073345184326,
-        "y": 0.4657013416290283,
+        "x": 1.2221803665161133,
+        "y": 0.648912638425827,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 1.2944751977920532,
-        "y": 0.36664897203445435,
+        "x": 1.2937618494033813,
+        "y": 0.6492986679077148,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": -0.13722530007362366,
-        "y": 0.9229086339473724,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": -0.10853245109319687,
+        "y": 0.8736442923545837,
         "visible": false
       },
       {
@@ -17918,11 +18098,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 1.1735273599624634,
-        "y": 0.13373678922653198,
+        "x": 1.2852362394332886,
+        "y": 0.5297582149505615,
         "visible": false
       },
       {
@@ -17958,21 +18138,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.3618234395980835,
-        "y": 0.43270689249038696,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.45863619446754456,
+        "y": 0.4579927921295166,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": -0.10503081977367401,
-        "y": 0.8194523751735687,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": -0.09133896231651306,
+        "y": 0.773333415389061,
         "visible": false
       },
       {
@@ -18064,6 +18244,36 @@
         "x": 0.7019997239112854,
         "y": 0.8971169665455818,
         "visible": true
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.0036387634463608265,
+        "y": 0.3872935175895691,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.19763414561748505,
+        "y": -0.187575101852417,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.5731773972511292,
+        "y": 0.8679826408624649,
+        "visible": false
       }
     ],
     "flowpaths": {
@@ -20748,11 +20958,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 1.1859971284866333,
-        "y": 0.5639806091785431,
+        "x": 1.3634377717971802,
+        "y": 0.8298264443874359,
         "visible": false
       },
       {
@@ -20778,11 +20988,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": -0.33877626061439514,
-        "y": 0.9672700837254524,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": -0.20414796471595764,
+        "y": 1.0268738009035587,
         "visible": false
       },
       {
@@ -20828,31 +21038,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 1.3923285007476807,
-        "y": 0.18622535467147827,
+        "x": 1.4216543436050415,
+        "y": 0.4490552544593811,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 1.4696589708328247,
-        "y": 0.4884715676307678,
+        "x": 1.4457406997680664,
+        "y": 0.7439631521701813,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": -0.3367582857608795,
-        "y": 0.9469938091933727,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": -0.32327109575271606,
+        "y": 1.0214277654886246,
         "visible": false
       },
       {
@@ -20868,11 +21078,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 1.274048924446106,
-        "y": 0.575170636177063,
+        "x": 1.399815320968628,
+        "y": 0.8422469198703766,
         "visible": false
       },
       {
@@ -20908,21 +21118,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.4969118535518646,
-        "y": -0.30311334133148193,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.613846480846405,
+        "y": -0.2768486738204956,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": -0.3265247046947479,
-        "y": 1.027321333065629,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": -0.31730711460113525,
+        "y": 1.0381083637475967,
         "visible": false
       },
       {
@@ -21013,6 +21223,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 0.5855679512023926,
         "y": 1.4621368944644928,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.03789623826742172,
+        "y": -0.2540621757507324,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.23476463556289673,
+        "y": -0.3625023365020752,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.7108258605003357,
+        "y": 0.1453026533126831,
         "visible": false
       }
     ],
@@ -23698,11 +23938,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.6228878498077393,
-        "y": 0.5013059675693512,
+        "x": 0.6500309705734253,
+        "y": 0.8235224038362503,
         "visible": false
       },
       {
@@ -23728,12 +23968,12 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.9760459661483765,
-        "y": 0.20954734086990356,
-        "visible": true
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 1.0561256408691406,
+        "y": 0.1818535327911377,
+        "visible": false
       },
       {
         "id": "14",
@@ -23778,31 +24018,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.09117791056632996,
-        "y": 0.8880443871021271,
+        "x": 0.2247798591852188,
+        "y": 1.0160782169550657,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.3750428259372711,
-        "y": 0.8392048180103302,
+        "x": 0.46775054931640625,
+        "y": 1.0130733493715525,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.8373578786849976,
-        "y": 0.40070515871047974,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.9193540215492249,
+        "y": 0.3689032793045044,
         "visible": true
       },
       {
@@ -23818,11 +24058,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.5868825912475586,
-        "y": 0.5860304832458496,
+        "x": 0.6117969751358032,
+        "y": 0.9048169776797295,
         "visible": false
       },
       {
@@ -23858,21 +24098,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": -0.1434069275856018,
-        "y": 0.48991143703460693,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": -0.15371017158031464,
+        "y": 0.558283269405365,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.9490453600883484,
-        "y": 0.32947641611099243,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.9769969582557678,
+        "y": 0.30098235607147217,
         "visible": true
       },
       {
@@ -23964,6 +24204,36 @@
         "x": 1.1149556636810303,
         "y": 0.7686910629272461,
         "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 0.0007158279186114669,
+        "y": 0.25176435708999634,
+        "visible": true
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.13052009046077728,
+        "y": -0.055417656898498535,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.00030148823861964047,
+        "y": 0.8666225075721741,
+        "visible": true
       }
     ],
     "flowpaths": {
@@ -26648,12 +26918,12 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.02219260483980179,
-        "y": 0.07665818929672241,
-        "visible": true
+        "x": -0.09758790582418442,
+        "y": 0.3819078803062439,
+        "visible": false
       },
       {
         "id": "11",
@@ -26678,11 +26948,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.5703714489936829,
-        "y": 0.5351107120513916,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.43068647384643555,
+        "y": 0.40616321563720703,
         "visible": false
       },
       {
@@ -26728,31 +26998,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.345044881105423,
-        "y": 0.5469907820224762,
+        "x": 0.21931572258472443,
+        "y": 0.6707121431827545,
         "visible": true
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.06965246051549911,
-        "y": 0.388396680355072,
+        "x": 0.006734625436365604,
+        "y": 0.6096083521842957,
         "visible": true
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.6830487251281738,
-        "y": 0.8043398857116699,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.6083634495735168,
+        "y": 0.7409767508506775,
         "visible": false
       },
       {
@@ -26768,12 +27038,12 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.0033449807669967413,
-        "y": 0.14023900032043457,
-        "visible": true
+        "x": -0.08620993047952652,
+        "y": 0.4718472361564636,
+        "visible": false
       },
       {
         "id": "23",
@@ -26808,21 +27078,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 1.0295780897140503,
-        "y": 0.6029245853424072,
-        "visible": false
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.9737709164619446,
+        "y": 0.6239414513111115,
+        "visible": true
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.585791289806366,
-        "y": 0.686922699213028,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.5577930212020874,
+        "y": 0.639905720949173,
         "visible": false
       },
       {
@@ -26914,6 +27184,36 @@
         "x": -0.05156230926513672,
         "y": 0.6861935257911682,
         "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": 1.163581132888794,
+        "y": 0.5409291684627533,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.9488962292671204,
+        "y": 0.007164895534515381,
+        "visible": true
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.7941182255744934,
+        "y": 0.9361454024910927,
+        "visible": true
       }
     ],
     "flowpaths": {
@@ -29598,11 +29898,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 1.5591145753860474,
-        "y": -0.31049108505249023,
+        "x": 1.8284565210342407,
+        "y": 0.27961981296539307,
         "visible": false
       },
       {
@@ -29628,12 +29928,12 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": -0.17323048412799835,
-        "y": 0.8245031088590622,
-        "visible": false
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.09017947316169739,
+        "y": 0.6005702912807465,
+        "visible": true
       },
       {
         "id": "14",
@@ -29678,31 +29978,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 1.3131239414215088,
-        "y": 0.359311580657959,
+        "x": 1.485817790031433,
+        "y": 0.6533602178096771,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 1.7005680799484253,
-        "y": 0.16840088367462158,
+        "x": 1.7599296569824219,
+        "y": 0.6369642019271851,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": -0.30815595388412476,
-        "y": 1.285849004983902,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": -0.20833009481430054,
+        "y": 1.1973470002412796,
         "visible": false
       },
       {
@@ -29718,11 +30018,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 1.6436549425125122,
-        "y": -0.20859038829803467,
+        "x": 1.8401939868927002,
+        "y": 0.43486911058425903,
         "visible": false
       },
       {
@@ -29758,21 +30058,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": -0.14295800030231476,
-        "y": 0.42566728591918945,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.006554031278938055,
+        "y": 0.4543464183807373,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": -0.18329887092113495,
-        "y": 1.1056901961565018,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": -0.1429581344127655,
+        "y": 1.0260897316038609,
         "visible": false
       },
       {
@@ -29863,6 +30163,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 1.2273871898651123,
         "y": 1.1157764419913292,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": -0.6269264221191406,
+        "y": 0.396795392036438,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": -0.22912852466106415,
+        "y": -0.5925518274307251,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.29192882776260376,
+        "y": 1.1170345917344093,
         "visible": false
       }
     ],
@@ -32548,11 +32878,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 0.9082642197608948,
-        "y": 0.2249167561531067,
+        "x": 1.0094707012176514,
+        "y": 0.5444786548614502,
         "visible": false
       },
       {
@@ -32578,11 +32908,11 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": 0.5936956405639648,
-        "y": 0.2830250859260559,
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.726794958114624,
+        "y": 0.1770108938217163,
         "visible": true
       },
       {
@@ -32628,31 +32958,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 0.4927314519882202,
-        "y": 0.7946044653654099,
+        "x": 0.6316847205162048,
+        "y": 0.8957746848464012,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 0.7943587899208069,
-        "y": 0.6163926422595978,
+        "x": 0.8719412684440613,
+        "y": 0.804673358798027,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": 0.46326643228530884,
-        "y": 0.5586536228656769,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": 0.5466271042823792,
+        "y": 0.48883360624313354,
         "visible": true
       },
       {
@@ -32668,11 +32998,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 0.9116513729095459,
-        "y": 0.3087204098701477,
+        "x": 0.9887577295303345,
+        "y": 0.6426853239536285,
         "visible": false
       },
       {
@@ -32708,21 +33038,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": -0.11039034277200699,
-        "y": 0.6984878480434418,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": -0.0703810378909111,
+        "y": 0.7441819906234741,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": 0.5733495354652405,
-        "y": 0.4326092004776001,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": 0.6037323474884033,
+        "y": 0.38586926460266113,
         "visible": true
       },
       {
@@ -32813,6 +33143,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 1.1185576915740967,
         "y": 0.595022052526474,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": -0.16929639875888824,
+        "y": 0.521906167268753,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": 0.03736114501953125,
+        "y": 0.04027724266052246,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.11668355017900467,
+        "y": 1.0333844497799873,
         "visible": false
       }
     ],
@@ -35498,11 +35858,11 @@
       {
         "id": "10",
         "name": "Eastern Gate",
-        "lon": 64.58697539695169,
-        "lat": 38.11506561092289,
+        "lon": 64.95350948952475,
+        "lat": 9.230477372960209,
         "description": "Eastern coastal and ridge crossing",
-        "x": 1.4545602798461914,
-        "y": -0.16260874271392822,
+        "x": 1.698116660118103,
+        "y": 0.3534417748451233,
         "visible": false
       },
       {
@@ -35528,12 +35888,12 @@
       {
         "id": "13",
         "name": "Panterran shelf approach",
-        "lon": -57,
-        "lat": -1,
-        "description": "Flooded final approach of the proposed cat migration route",
-        "x": -0.21514737606048584,
-        "y": 0.9041526317596436,
-        "visible": false
+        "lon": -45,
+        "lat": 10,
+        "description": "Peninsula departure into the curved shelf island route",
+        "x": 0.012575171887874603,
+        "y": 0.7332542538642883,
+        "visible": true
       },
       {
         "id": "14",
@@ -35578,31 +35938,31 @@
       {
         "id": "18",
         "name": "Great leeward desert",
-        "lon": 115.62186604155515,
-        "lat": -5.947732984098095,
+        "lon": 103.23138365082498,
+        "lat": -16.489655020513496,
         "description": "Dry interior on the left of the marked far-side view",
-        "x": 1.3312585353851318,
-        "y": 0.2723429203033447,
+        "x": 1.4646942615509033,
+        "y": 0.5614743232727051,
         "visible": false
       },
       {
         "id": "19",
         "name": "Eastern rift gulf",
-        "lon": 88.80170660613456,
-        "lat": 8.015214481891224,
+        "lon": 80.79389346326893,
+        "lat": -10.704978013420574,
         "description": "Fault-bounded gulf opening into the southern sea",
-        "x": 1.6337307691574097,
-        "y": 0.184315025806427,
+        "x": 1.6704484224319458,
+        "y": 0.6125770807266235,
         "visible": false
       },
       {
         "id": "20",
-        "name": "Sparse eastern archipelago",
-        "lon": -68.45000000000005,
-        "lat": -24.965,
-        "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra",
-        "x": -0.3126913607120514,
-        "y": 1.264254480600357,
+        "name": "Curved southern shelf archipelago",
+        "lon": -60.8,
+        "lat": -19,
+        "description": "Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland",
+        "x": -0.23649105429649353,
+        "y": 1.2100725024938583,
         "visible": false
       },
       {
@@ -35618,11 +35978,11 @@
       {
         "id": "22",
         "name": "Eastern collision knot",
-        "lon": 69.31413184176402,
-        "lat": 31.30300546154483,
+        "lon": 68.4396749187525,
+        "lat": 1.4140812321592833,
         "description": "Broad transpressional uplands joining eastern terranes",
-        "x": 1.5397149324417114,
-        "y": -0.08420705795288086,
+        "x": 1.716439127922058,
+        "y": 0.47700655460357666,
         "visible": false
       },
       {
@@ -35658,21 +36018,21 @@
       {
         "id": "26",
         "name": "Deep separating ocean",
-        "lon": 182,
-        "lat": -10,
-        "description": "No island route between eastern and southern continents",
-        "x": 0.03175600245594978,
-        "y": 0.2634883522987366,
+        "lon": 175,
+        "lat": -12,
+        "description": "Deep ocean with isolated volcanic islands; no continuous eastern-to-southern land bridge",
+        "x": 0.17191605269908905,
+        "y": 0.2858279347419739,
         "visible": false
       },
       {
         "id": "27",
         "name": "Drowned migration shelf",
-        "lon": -58.549999999999955,
-        "lat": -14.135,
-        "description": "Submerged continental saddles between sparse island peaks",
-        "x": -0.21916963160037994,
-        "y": 1.1390933394432068,
+        "lon": -56,
+        "lat": -10,
+        "description": "Curved drowned shelf; proposed migration corridor at lower sea level",
+        "x": -0.1873624175786972,
+        "y": 1.078073002398014,
         "visible": false
       },
       {
@@ -35763,6 +36123,36 @@
         "description": "Rugged southern spine with lower tributary catchments",
         "x": 1.051819086074829,
         "y": 1.1954206675291061,
+        "visible": false
+      },
+      {
+        "id": "37",
+        "name": "Pelagic Crown / bigger Hawaii",
+        "lon": -150,
+        "lat": -3.8,
+        "description": "Large isolated volcanic island; sparse older companions to the northeast",
+        "x": -0.4436040222644806,
+        "y": 0.27567243576049805,
+        "visible": false
+      },
+      {
+        "id": "38",
+        "name": "Northern fore-islands",
+        "lon": -155,
+        "lat": 46.6,
+        "description": "Three rugged islands south of the northern remnant and Greenland-like polar land",
+        "x": -0.10143549740314484,
+        "y": -0.5407958030700684,
+        "visible": false
+      },
+      {
+        "id": "39",
+        "name": "Southern ocean volcanic outpost",
+        "lon": 165,
+        "lat": -42,
+        "description": "Isolated shield island and distant eroded remnant",
+        "x": 0.40547460317611694,
+        "y": 0.8981097862124443,
         "visible": false
       }
     ],

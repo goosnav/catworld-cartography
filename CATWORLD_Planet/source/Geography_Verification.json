@@ -1,5 +1,5 @@
 {
-  "revision": 8,
+  "revision": 9,
   "panterra_western_coast_preserved": true,
   "eastern_southern_ocean_has_no_island_arc": true,
   "removed_eastern_arc_pixels": 22285,
@@ -10,14 +10,14 @@
       "component": 6
     },
     {
-      "lon": 120,
-      "lat": 5,
+      "lon": 115,
+      "lat": -8,
       "component": 6
     },
     {
       "lon": -104,
       "lat": -39,
-      "component": 107
+      "component": 125
     }
   ],
   "main_and_east_connected": true,

@@ -1,4 +1,10 @@
-# Terra / R8 technical companion
+# R9 update: ocean geography and rectangular maps
+
+The primary rectangular maps are in `world_maps/`: one centered at 180 degrees and one at zero degrees. These are exact longitude rolls of one 8K globe colour texture. The tectonic sheets use those same coordinates. Equirectangular projection is useful for the entire world but stretches polar shapes; the orthographic globe views remain the drawing references for local proportions.
+
+The eastern block has an additional 13-degree southward inclination. The latest green outline supersedes earlier concavity wording: the land bridge and mountain belt sweep south into the lower western side. Five distinct islands form the curved peninsula-to-southern-mainland crossing. Pelagic Crown, three northern fore-islands and scattered volcanic islands/atolls populate selected ocean settings. The tectonic map is a geological proposal, not a solved plate-motion reconstruction. Read `Ocean_and_Tectonics_R9.md` for details.
+
+# Terra / R9 technical companion
 
 The illustrated creator guide explains the world and its design reasoning. R8 preserves the shortened Panterra/eastern mountain connection and the independent southern continent, while revising landforms, hydrology, vegetation and seasons.
 
@@ -32,11 +38,11 @@ Stronger tilt intensifies summer as well as winter sunlight contrasts. Snow, sea
 
 Globe physical radius is 6,100 km; Blender radius is ten units, with tenfold displayed relief. One 8192 x 4096 colour map and three 4096 x 2048 physical/material maps are packed into the globe. The high-resolution colour layer smooths vector waterways; the physical terrain detail remains 4K. Physical height and visible surface elevation are separately stored in `terrain_fields.npz`; lake and river water surfaces differ from their beds. Local models use kilometre units and true vertical scale, so convert scales before combining them.
 
-`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and R6 terrain/hydrology pass followed by R7 and R8 terrain passes. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
+`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and R6 terrain/hydrology pass followed by R7 and R8 terrain passes and the R9 ocean revision. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
 
 `build_blender.py` renders thirteen cameras; `finalize_model.py` saves their timeline/light bindings and verifies packed textures. The dam and waterfall have separate build scripts. `make_epoch_figures.py` and `make_explanatory_figures.py` generate the world/process diagrams. `package_atlas.py` creates annotations, gallery, CSV and statistics. `build_creator_guide.py` creates the PDF and editable guide. `verify_delivery.py` checks topology, hydrology, metadata and delivered files.
 
-The globe is a satellite-style drawing reference with deliberately readable relief and waterways. Sub-texel roads, houses, individual giant trees and engineering are not resolved globally. Use the regional and local studies for closer design work. The guide's 36 feature anchors are proposals unless explicitly identified as creator direction.
+The globe is a satellite-style drawing reference with deliberately readable relief and waterways. Sub-texel roads, houses, individual giant trees and engineering are not resolved globally. Use the regional and local studies for closer design work. The guide's 39 feature anchors are proposals unless explicitly identified as creator direction.
 
 ## R8 basin and surface treatment
 

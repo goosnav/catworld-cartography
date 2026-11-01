@@ -1,6 +1,6 @@
 # CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE
 
-Revision 8. Prepared 31 October 2026.
+Revision 9. Prepared 1 November 2026.
 
 ## What is established, and what is proposed
 
@@ -28,7 +28,7 @@ Radius 6,100 km, 35-degree tilt, 24-hour rotation, Ls 255 degrees, a 65 m former
 
 ### Three continental identities
 
-Panterra is the main story landscape. The eastern dry core remains attached through the mountain belt, rotated eight degrees downward at its junction. A deep ocean separates it from the independent southern shield.
+Panterra is the main story landscape. The eastern dry core remains attached through the mountain belt, inclined farther south with a south-swept connecting neck. A deep ocean separates it from the independent southern shield.
 
 ### The southern silhouette
 
@@ -44,17 +44,17 @@ Front is 0 degrees, east +90, west -90 and far side 180. The southern regional c
 
 ## What changed in this pass
 
-### Terrain structure
+### Primary rectangular exports
 
-The continent layout is retained. Repeated, stretched mountain bands are replaced with more legible branching relief. Polar terrain no longer pinches where meridians meet.
+Two clean 8192 x 4096 equirectangular world maps now lead the package: one centered on the far ocean at 180 degrees, matching the creator redline; one centered on Panterra at zero degrees. Matching tectonic and numbered sheets use the same framing. These are the globe surface unwrapped, not independent painted geographies.
 
-### Water and surface
+### Eastern connection and island route
 
-Rivers become slimmer and vary in width, with bends and connected tributaries. The small lakes have distinct shorelines; the reservoir remains a flooded plateau valley. Forest, steppe, farmland, exposed rock and snow share the same underlying terrain.
+The eastern block inclines a further 13 degrees south. The entire connecting neck and its mountains sweep south to meet the lower western flank of the eastern continent, following the latest green correction. The southern island crossing bends sharply out from the Panterran peninsula before flattening toward the old homeland. Five exposed islands remain, with the largest fragments nearest the southern mainland.
 
-### Closer studies
+### New ocean geography
 
-The impact water has variable mineral colour rather than a flat red fill. Broken caprock lips and near-vertical falls replace regular water ramps in the local waterfall. The feature-by-feature review is included as Terrain_Design_Review_R8.md.
+Pelagic Crown is a working name for the requested bigger Hawaii. It has two distant, much smaller companions. Three northern fore-islands sit south of the Greenland-like polar land and the older northern remnant. Other scattered islands occur in sparse volcanic pairs, isolated seamount groups, and low warm-water atolls. None creates a continuous eastern-to-southern bridge.
 
 ## A collision system and a separate old continent
 
@@ -212,7 +212,7 @@ A country-scale impact implies an ancient catastrophe. Its age must allow climat
 
 ### A southward swing
 
-The eastern block is rotated eight degrees clockwise around its junction with Panterra. The far end is more vertical in the world view, while the connecting mountain belt remains continuous.
+The eastern block retains its initial eight-degree inclination and adds a further thirteen-degree southward rotation in R9, with a south-swept connecting neck attached lower on the eastern flank. The far end is more vertical in the world view, while the connecting mountain belt remains continuous.
 
 ### Relief and rain shadow
 
@@ -224,7 +224,7 @@ The long rift gulf, irregular peninsulas and exposed faulted margins move with t
 
 ### Open ocean beyond
 
-There is no bridge or island arc between this continent and the southern mainland. Their geology and migration roles are distinct.
+There is no continuous bridge or connecting island arc between this continent and the southern mainland. Isolated oceanic volcanic islands do not close that deep-water separation. Their geology and migration roles are distinct.
 
 ## The independent southern continent
 
@@ -248,7 +248,7 @@ Its identity as the cats' old homeland is still a proposal. The sheltered easter
 
 ### A sparse curved archipelago
 
-Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. Larger fault-bounded fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]
+Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. Larger fault-bounded fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. The chain follows a pronounced bend: nearly north-south near the Panterran peninsula, then westward toward the southern mainland. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]
 
 ### What could form a former bridge
 
@@ -430,7 +430,7 @@ An 8192 x 4096 colour map and three 4096 x 2048 physical maps support the globe.
 
 ### What can be edited
 
-Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, R7 and the R8 terrain pass, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
+Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, R7, R8 terrain and R9 ocean geography, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
 
 ### Light and atmosphere
 
@@ -462,23 +462,19 @@ Approve or revise the proposed 65 m lowstand and 1,100-year crossing date. Test 
 
 Develop Seattle forest districts, agricultural settlements, lake shipping, eastern dam operations and the northern passes at regional scale. Use the broad continental atlas for continuity; commission local maps for individual journeys and scenes.
 
-## R8 / A more natural terrain language
+## Ocean islands and plate boundaries
 
-### Relief and drainage
+### Different origins, different shapes
 
-Repeated mirrored relief is replaced by bounded elevation sampling and broader regional terrain. Slender river corridors have variable widths, bends, graded valleys and joined tributaries. The main lake remains a level drowned plateau valley; three small lakes have distinct asymmetric shorelines.
+The southern shelf islands are elongated continental fragments and an inherited arc, with drowned saddles between them. Pelagic Crown instead consists of overlapping shield volcanoes above a proposed hotspot. Its two older companions diminish northeastward; the gaps remain deep ocean. Northern fore-islands are rugged remnants of continental crust, with fjords and seasonal summit snow.
 
-### Land cover and ice
+### What the tectonic sheet means
 
-Forest, steppe, agricultural lowlands and bare rock blend through moisture and altitude fields. Snow responds to elevation and exposed ridges. Polar relief uses spherical coordinates to avoid pinching at the pole; cold shores show rock and tundra rather than a green halo.
+Five named plate domains are separated by a conceptual network: collision along the giant mountains; subduction beside the curved arc; spreading ridges through remote oceans; and transform links joining the zones. Teeth mark the proposed overriding side. Motion arrows show direction only. Shelf edges, former migration routes and hotspot trails have separate symbols because they are not automatically plate boundaries. [S14]
 
-### Basin and local studies
+### Scale and uncertainty
 
-The impact rim has uneven eroded sectors and patchy iron staining. Sediment colours vary near water margins and river mouths. The waterfall study has broken caprock lips, deeper plunge pools, channel bends and talus; the dam gorge has irregular eroded shoulders.
-
-### Continuity and limits
-
-The approved continents, five-island crossing and main river corridors remain. These are process-informed design choices, not a simulated drainage, erosion, ice or climate solution. River widths and globe relief remain exaggerated for drawing reference.
+The large volcanic island is an intentionally oversized fictional analogue, not a copy of Hawaii. The plate domains, polar boundary, motions and volcanic ages are proposals; no Euler-pole reconstruction or geodynamic solution has been calculated. Continental shelves can be thousands of kilometres wide only under special geology; the -65 m migration shelf remains a deliberate story constraint.
 
 ## Sources and reference notes
 
@@ -540,4 +536,4 @@ NASA Science, Milankovitch (Orbital) Cycles and Their Role in Earth's Climate. h
 
 ### S14 / Island-arc analogy
 
-USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m sea-level fall.
+USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m sea-level fall. Hotspot distinction: USGS, https://www.usgs.gov/faqs/what-a-hotspot-and-how-do-you-know-its-there . Plate-boundary mechanisms: https://pubs.usgs.gov/gip/dynamic/understanding.html .

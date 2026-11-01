@@ -1,10 +1,11 @@
-"""R8: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
+"""R9: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 from revise_southern_r6 import SPINE as OLD_SPINE,CHAIN as OLD_CHAIN,shorten_shelf as old_shelf
 from revise_r7 import shift_point
-SPINE=[shift_point(*p) for p in OLD_SPINE];CHAIN=[shift_point(*p) for p in OLD_CHAIN]
+SPINE=[shift_point(*p) for p in OLD_SPINE]
+from revise_r9 import CHAIN
 def shorten_shelf(points):return [shift_point(*p) for p in old_shelf(points)]
 B=Path(__file__).resolve().parents[1];G=B/'guide';BG='#10191f';INK='#efe7d6';MUTED='#abc2ca';TEAL='#7cdccc';GOLD='#e3b479'
 def font(n,b=False):return ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial'+(' Bold' if b else '')+'.ttf',n)
@@ -57,13 +58,13 @@ text(d,(70,1310),'Collision thickens the main mountain bridge. Southern rifting 
 text(d,(70,1360),'Low sea level can expose the shelf; it cannot expose the deep ocean separating the eastern and southern continents.',27)
 im.save(G/'Tectonic_Framework.png')
 # Before/after uses the previous far-side angle and the new 12-degree southern framing.
-im,d=base('FAR SIDE / MORE DISTINCTIVE SOUTHERN GEOGRAPHY','R8: southern mainland closer; five islands with broad straits replace the long crowded chain.',1300)
+im,d=base('FAR SIDE / MORE DISTINCTIVE SOUTHERN GEOGRAPHY','R9: southern mainland closer; five islands with broad straits replace the long crowded chain.',1300)
 for j,p in enumerate([B/'source/reference_R5_far_side.png',B/'renders/04_far_side.png']):
  pic=Image.open(p).convert('RGBA');pic.thumbnail((1000,1000),Image.Resampling.LANCZOS);im.paste(pic,(70+j*1070,220),pic)
- text(d,(70+j*1070,170),'PREVIOUS / R5' if j==0 else 'REVISED / R8',32,MUTED if j==0 else TEAL,True)
+ text(d,(70+j*1070,170),'PREVIOUS / R5' if j==0 else 'REVISED / R9',32,MUTED if j==0 else TEAL,True)
 text(d,(70,1240),'Both views: 180 longitude / 12 south. The southern regional plate gives a closer view of the new coast.',26,MUTED)
 im.save(G/'Revision_Comparison.jpg',quality=94)
-print('R8 EPOCH FIGURES COMPLETE')
+print('R9 EPOCH FIGURES COMPLETE')
 # Geometric daylight at the proposed epoch, without refraction or terrain horizons.
 import math,json,csv
 dec=math.asin(math.sin(math.radians(35))*math.sin(math.radians(255)));rows=[]

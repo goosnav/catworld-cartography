@@ -1,24 +1,30 @@
-# Catworld / Terra - Revision 8
+# Catworld / Terra - Revision 9
 
 Start with **guide/CATWORLD_Creator_Guide.pdf**, the illustrated creator/showrunner guide. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
 
-The eastern continent swings eight degrees south around its mountain junction. The independent southern mainland has a new asymmetric coastline, sits farther southeast and closer to Panterra, and has a sparse eastward chain of five islands: two large fragments, one middle island and two small remnants toward Panterra. Open ocean still separates it from the eastern continent. The north is a wide mountain province, with steppe foothills below; Seattle has broad western forest country, and southern settled districts have fertile rolling agricultural land.
+**Primary exports:** open `world_maps/01_world_ocean_centered.png` for the view matching the redline, and `world_maps/02_world_panterra_centered.png` for the Panterra-centered view. Both are clean 8192 x 4096 equirectangular maps of the same globe. The two matching tectonic sheets and two numbered world sheets are beside them.
+
+The eastern continent inclines a further thirteen degrees south; its connection sweeps south into the lower western flank, following the latest green correction. Five islands form a curved route out of Panterra's peninsula toward the southern mainland, with larger fragments near the old homeland. A larger isolated volcanic island, two sparse companions, three northern fore-islands and other scattered ocean islands add regional variety. No continuous chain joins the eastern and southern continents.
+
+The north is a broad mountain province with steppe foothills. Seattle retains substantial western forest country. Southern settled districts remain fertile rolling agricultural land.
 
 The northern mountain river crosses the upper plateau and falls into the reservoir valley. **The lake drains west through Seattle to the sea**, across a natural high bedrock sill. The eastern megadam controls a separate lower outlet toward the downstream city. This supersedes the old Seattle-into-lake arrangement.
 
 ## Contents
 
-- `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 36-landmark catalogue, model specifications and sixteen reference plates.
+- `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 39-landmark catalogue, model specifications and sixteen globe/local reference plates plus four rectangular world plates.
+- `world_maps/`: primary clean, tectonic and numbered maps in two longitude framings.
+- `guide/Ocean_and_Tectonics_R9.md`: this revision, island origins and tectonic assumptions.
 - `guide/Creator_Guide.md`: editable guide text.
 - `guide/Geography_and_Design.md`: technical companion.
-- `guide/Revision_Comparison.jpg`: R7/R8 terrain and polar comparison.
+- `guide/Revision_Comparison.jpg`: R8/R9 rectangular geography comparison.
 - `guide/Tectonic_Framework.png`, `Seasonal_Epoch.png`, `Migration_Lowstand.png`: world-scale explanation plates.
 - `guide/Waterway_Logic.png`, `Plateau_Valley_Section.png`, `Mountain_Section.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: process diagrams.
 - `guide/Seasonal_Reference.csv`: geometric daylight at the stated epoch.
 - `guide/Landmark_Catalogue.csv`: names, descriptions and coordinates.
 - `renders/`: sixteen clean PNGs: thirteen globe views, two dam views and one waterfall study.
 - `annotated/`: matching numbered plates; regional hydrology plates include flow arrows.
-- `model/CATWORLD_Terra.blend`: editable globe, four packed maps, thirteen cameras and 36 anchors.
+- `model/CATWORLD_Terra.blend`: editable globe, four packed maps, thirteen cameras and 39 anchors.
 - `model/CATWORLD_Dam_Study.blend`: local gorge, dam, terraces and two saved cameras.
 - `model/CATWORLD_Waterfall_Study.blend`: local plateau river and cascade study.
 - `textures/`: 8K albedo plus 4K working albedo, 16-bit surface height, roughness and land mask.
@@ -41,7 +47,7 @@ Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf`. Run from the pack
 
 ```sh
 BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
-# Optional full terrain reconstruction; delivered terrain already contains R8.
+# Optional full terrain reconstruction; delivered terrain already contains R9.
 # python source/build_terrain.py
 "$BLENDER" -b -t 8 --python source/build_blender.py
 "$BLENDER" -b -t 8 --python source/build_dam.py
@@ -50,6 +56,8 @@ BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
 "$BLENDER" -b --python source/finalize_dam.py
 "$BLENDER" -b --python source/verify_waterfall.py
 python source/make_epoch_figures.py
+python source/export_world_maps.py
+python source/make_r9_figures.py
 python source/make_explanatory_figures.py
 python source/make_revision_comparison.py
 python source/package_atlas.py
@@ -57,7 +65,7 @@ python source/build_creator_guide.py
 python source/verify_delivery.py
 ```
 
-Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6, R7 and R8; do not apply `revise_r6.py` `revise_r7.py` or `revise_r8.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
+Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6, R7, R8 and R9; do not apply `revise_r6.py` `revise_r7.py` `revise_r8.py` or `revise_r9.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
 
 Original private sketches, message screenshots and the pitch deck are excluded from the handoff. Earlier Git commits preserve earlier iterations. The stable repository directory `CATWORLD_Planet/` contains the current release.
 

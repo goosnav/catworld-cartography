@@ -1,0 +1,218 @@
+{
+  "revision": 9,
+  "eastern_rotation_additional_deg": 13,
+  "neck_depression_deg": 28,
+  "archipelago_centerline": [
+    [
+      276,
+      -31
+    ],
+    [
+      284.5,
+      -30.6
+    ],
+    [
+      291,
+      -27.3
+    ],
+    [
+      299.5,
+      -20
+    ],
+    [
+      305,
+      -10
+    ],
+    [
+      310,
+      -3.5
+    ],
+    [
+      315,
+      7
+    ],
+    [
+      320,
+      13
+    ]
+  ],
+  "islands": [
+    {
+      "name": "Shelf fragment west",
+      "lon": -75.5,
+      "lat": -30.6,
+      "kind": "shelf",
+      "peak_m": 1790.5078980288024,
+      "cells": 1932
+    },
+    {
+      "name": "Shelf fragment east",
+      "lon": -69,
+      "lat": -27.3,
+      "kind": "shelf",
+      "peak_m": 1326.6257100918172,
+      "cells": 832
+    },
+    {
+      "name": "Middle arc island",
+      "lon": -60.5,
+      "lat": -20.0,
+      "kind": "arc",
+      "peak_m": 1883.7851222226177,
+      "cells": 354
+    },
+    {
+      "name": "Panterran arc remnant",
+      "lon": -54.89999999999998,
+      "lat": -10.0,
+      "kind": "arc",
+      "peak_m": 933.8007106218259,
+      "cells": 104
+    },
+    {
+      "name": "Peninsula fore-island",
+      "lon": -50,
+      "lat": -3.5,
+      "kind": "arc",
+      "peak_m": 765.8002883441446,
+      "cells": 53
+    },
+    {
+      "name": "Pelagic Crown / bigger Hawaii",
+      "lon": -150,
+      "lat": -3.8,
+      "kind": "hotspot",
+      "peak_m": 4105.420751881847,
+      "cells": 4765
+    },
+    {
+      "name": "Crown older island",
+      "lon": -142.5,
+      "lat": 3.4,
+      "kind": "hotspot",
+      "peak_m": 1499.1967364278626,
+      "cells": 250
+    },
+    {
+      "name": "Crown eroded remnant",
+      "lon": -132,
+      "lat": 9.1,
+      "kind": "hotspot",
+      "peak_m": 244.9952398588765,
+      "cells": 42
+    },
+    {
+      "name": "Northern fjord island",
+      "lon": -169,
+      "lat": 49,
+      "kind": "glacial",
+      "peak_m": 1219.7753985407091,
+      "cells": 638
+    },
+    {
+      "name": "Northern split island",
+      "lon": -155,
+      "lat": 46.6,
+      "kind": "glacial",
+      "peak_m": 992.4055259745984,
+      "cells": 386
+    },
+    {
+      "name": "Northern skerry",
+      "lon": -147,
+      "lat": 51,
+      "kind": "glacial",
+      "peak_m": 522.4203792323219,
+      "cells": 90
+    },
+    {
+      "name": "Western seamount island",
+      "lon": 153,
+      "lat": 50,
+      "kind": "hotspot",
+      "peak_m": 842.6207866262919,
+      "cells": 69
+    },
+    {
+      "name": "Western companion",
+      "lon": 148,
+      "lat": 46,
+      "kind": "hotspot",
+      "peak_m": 338.6740906710314,
+      "cells": 15
+    },
+    {
+      "name": "South ocean volcanic island",
+      "lon": 165,
+      "lat": -42,
+      "kind": "hotspot",
+      "peak_m": 1720.9975537871126,
+      "cells": 151
+    },
+    {
+      "name": "South ocean remnant",
+      "lon": 173,
+      "lat": -48,
+      "kind": "hotspot",
+      "peak_m": 500.0535859181382,
+      "cells": 24
+    },
+    {
+      "name": "Equatorial ocean island",
+      "lon": 178,
+      "lat": 23,
+      "kind": "hotspot",
+      "peak_m": 975.0733361121329,
+      "cells": 45
+    },
+    {
+      "name": "Equatorial companion",
+      "lon": -177,
+      "lat": 27,
+      "kind": "hotspot",
+      "peak_m": 313.86246851974306,
+      "cells": 13
+    },
+    {
+      "name": "Warm-water atoll",
+      "lon": -126,
+      "lat": -19,
+      "kind": "atoll",
+      "peak_m": 6.0,
+      "cells": 26
+    },
+    {
+      "name": "Remote warm-water atoll",
+      "lon": -111,
+      "lat": 24,
+      "kind": "atoll",
+      "peak_m": 4.5,
+      "cells": 21
+    },
+    {
+      "name": "Northern ocean volcanic island",
+      "lon": -81,
+      "lat": 52,
+      "kind": "hotspot",
+      "peak_m": 1090.4497879449782,
+      "cells": 72
+    },
+    {
+      "name": "Northern ocean remnant",
+      "lon": -89,
+      "lat": 49,
+      "kind": "hotspot",
+      "peak_m": 376.39277119375095,
+      "cells": 16
+    },
+    {
+      "name": "Southern polar fore-island",
+      "lon": -140,
+      "lat": -59,
+      "kind": "glacial",
+      "peak_m": 697.8966863132417,
+      "cells": 126
+    }
+  ],
+  "main_hydrology_unchanged": true
+}

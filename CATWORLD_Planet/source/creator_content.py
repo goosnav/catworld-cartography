@@ -1,10 +1,12 @@
+"""Creator guide content; working names and geological proposals are explicit."""
 SECTIONS = [{'title': 'What is established, and what is proposed',
   'kicker': 'READ THIS FIRST',
   'figure': None,
   'paras': [('Established geography',
-             'Terra has a 4,000-Earth-year orbit. The creator requested stronger axial tilt; this model uses a proposed 35 degrees. Panterra and the eastern continent share the giant mountain system. The separate southern '
-             'mainland is closer to Panterra and has a sparse eastern island chain. No island arc links it to the '
-             'eastern continent.'),
+             'Terra has a 4,000-Earth-year orbit. The creator requested stronger axial tilt; this model uses a '
+             'proposed 35 degrees. Panterra and the eastern continent share the giant mountain system. The '
+             'separate southern mainland is closer to Panterra and has a sparse eastern island chain. No island '
+             'arc links it to the eastern continent.'),
             ('Current epoch',
              'The north is in late autumn and its high country is already wintry. The south is in late spring '
              'approaching summer. The older southern-winter crossing and current southward bird movement remain '
@@ -19,37 +21,50 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'foothills. The west is extensive forest country around Seattle. Southern settled districts are '
              'fertile farmland and rolling hills.'),
             ('Design proposals and limits',
-             'Radius 6,100 km, 35-degree tilt, 24-hour rotation, Ls 255 degrees, a 65 m former lowstand and an illustrative '
-             'crossing 1,100 years ago remain proposals. Exact ice extent, heat source, water budget and '
-             'engineering need further development. This is a consistent drawing-reference model, not a climate '
-             'or engineering simulation.')]},
+             'Radius 6,100 km, 35-degree tilt, 24-hour rotation, Ls 255 degrees, a 65 m former lowstand and an '
+             'illustrative crossing 1,100 years ago remain proposals. Exact ice extent, heat source, water budget '
+             'and engineering need further development. This is a consistent drawing-reference model, not a '
+             'climate or engineering simulation.')]},
  {'title': 'The planet at a glance',
   'kicker': 'WORLD ORIENTATION',
   'figure': 'overview',
   'paras': [('Three continental identities',
              'Panterra is the main story landscape. The eastern dry core remains attached through the mountain '
-             'belt, rotated eight degrees downward at its junction. A deep ocean separates it from the '
+             'belt, inclined farther south with a south-swept connecting neck. A deep ocean separates it from the '
              'independent southern shield.'),
             ('The southern silhouette',
-             'The smaller mainland sits southwest of Panterra, closer and farther south after a further 10-degree eastward and 1-degree southward adjustment in R7. An asymmetric headland, oblique old '
-             'escarpment, deeply cut southeastern coast and offset southern peninsulas replace the '
-             'inverted-Australia resemblance.'),
+             'The smaller mainland sits southwest of Panterra, closer and farther south after a further 10-degree '
+             'eastward and 1-degree southward adjustment in R7. An asymmetric headland, oblique old escarpment, '
+             'deeply cut southeastern coast and offset southern peninsulas replace the inverted-Australia '
+             'resemblance.'),
             ('An intentionally sparse route',
-             'Five retained islands lead east toward Panterra: two large fragments, one middle island and two small remnants. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments '
-             'recall Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies '
-             'of their real climates.'),
+             'Five retained islands lead east toward Panterra: two large fragments, one middle island and two '
+             'small remnants. The largest, irregular continental fragments cluster near the southern mainland; '
+             'small, separated arc remnants pepper the approach to Panterra. Large rifted fragments recall '
+             'Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies of '
+             'their real climates.'),
             ('Using the globe',
              'Front is 0 degrees, east +90, west -90 and far side 180. The southern regional camera follows the '
              'relocated mainland. Polar and regional views all render the same model.')]},
  {'title': 'What changed in this pass',
-  'kicker': 'R8 TERRAIN REVIEW',
-  'figure': 'guide/Revision_Comparison.jpg',
-  'paras': [('Terrain structure',
-             'The continent layout is retained. Repeated, stretched mountain bands are replaced with more legible branching relief. Polar terrain no longer pinches where meridians meet.'),
-            ('Water and surface',
-             'Rivers become slimmer and vary in width, with bends and connected tributaries. The small lakes have distinct shorelines; the reservoir remains a flooded plateau valley. Forest, steppe, farmland, exposed rock and snow share the same underlying terrain.'),
-            ('Closer studies',
-             'The impact water has variable mineral colour rather than a flat red fill. Broken caprock lips and near-vertical falls replace regular water ramps in the local waterfall. The feature-by-feature review is included as Terrain_Design_Review_R8.md.')]},
+  'kicker': 'R9 / OCEANS AND CONNECTIONS',
+  'figure': 'world_maps/01_world_ocean_centered_preview.jpg',
+  'paras': [('Primary rectangular exports',
+             'Two clean 8192 x 4096 equirectangular world maps now lead the package: one centered on the far '
+             'ocean at 180 degrees, matching the creator redline; one centered on Panterra at zero degrees. '
+             'Matching tectonic and numbered sheets use the same framing. These are the globe surface unwrapped, '
+             'not independent painted geographies.'),
+            ('Eastern connection and island route',
+             'The eastern block inclines a further 13 degrees south. The entire connecting neck and its mountains '
+             'sweep south to meet the lower western flank of the eastern continent, following the latest green '
+             'correction. The southern island crossing bends sharply out from the Panterran peninsula before '
+             'flattening toward the old homeland. Five exposed islands remain, with the largest fragments nearest '
+             'the southern mainland.'),
+            ('New ocean geography',
+             'Pelagic Crown is a working name for the requested bigger Hawaii. It has two distant, much smaller '
+             'companions. Three northern fore-islands sit south of the Greenland-like polar land and the older '
+             'northern remnant. Other scattered islands occur in sparse volcanic pairs, isolated seamount groups, '
+             'and low warm-water atolls. None creates a continuous eastern-to-southern bridge.')]},
  {'title': 'A collision system and a separate old continent',
   'kicker': 'TECTONIC HISTORY',
   'figure': 'guide/Tectonic_Framework.png',
@@ -219,8 +234,10 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
   'kicker': 'REGIONAL TOUR / 02',
   'figure': 'renders/12_eastern_continent.png',
   'paras': [('A southward swing',
-             'The eastern block is rotated eight degrees clockwise around its junction with Panterra. The far end '
-             'is more vertical in the world view, while the connecting mountain belt remains continuous.'),
+             'The eastern block retains its initial eight-degree inclination and adds a further thirteen-degree '
+             'southward rotation in R9, with a south-swept connecting neck attached lower on the eastern flank. '
+             'The far end is more vertical in the world view, while the connecting mountain belt remains '
+             'continuous.'),
             ('Relief and rain shadow',
              'The enlarged northern mountain margin gives way to dry lee-side country with gravel basins, dunes, '
              'salt pans and dissected escarpments. The west/left dry side from the creator redline remains dry. '
@@ -229,7 +246,8 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'The long rift gulf, irregular peninsulas and exposed faulted margins move with the continent. '
              'Rivers and geographic anchors are transformed with the land, avoiding detached overlays.'),
             ('Open ocean beyond',
-             'There is no bridge or island arc between this continent and the southern mainland. Their geology '
+             'There is no continuous bridge or connecting island arc between this continent and the southern '
+             'mainland. Isolated oceanic volcanic islands do not close that deep-water separation. Their geology '
              'and migration roles are distinct.')]},
  {'title': 'The independent southern continent',
   'kicker': 'REGIONAL TOUR / 03',
@@ -243,8 +261,9 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'catches moisture; the cooler southern coast has wetter inlets and slopes. These climatic contrasts '
              'persist during southern spring.'),
             ('Closer, but still separate',
-             'The southeastward adjustment shortens the passage toward Panterra and puts the mainland more clearly to its southwest. Water still clearly separates the modern mainland and the island chain. There is '
-             'no new land neck.'),
+             'The southeastward adjustment shortens the passage toward Panterra and puts the mainland more '
+             'clearly to its southwest. Water still clearly separates the modern mainland and the island chain. '
+             'There is no new land neck.'),
             ('Old homeland',
              "Its identity as the cats' old homeland is still a proposal. The sheltered eastern shelf, coastal "
              'resources and former crossing can support that history without fixing political borders or final '
@@ -253,9 +272,11 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
   'kicker': 'REGIONAL TOUR / THE ARCHIPELAGO',
   'figure': 'renders/14_archipelago.png',
   'paras': [('A sparse curved archipelago',
-             'Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. Larger fault-bounded '
-             'fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. '
-             'The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]'),
+             'Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. '
+             'Larger fault-bounded fragments transition into slender volcanic-looking islands, separated by '
+             'conspicuous water gaps. The chain follows a pronounced bend: nearly north-south near the Panterran '
+             'peninsula, then westward toward the southern mainland. The Aleutians inform its arc curvature and '
+             'aligned peaks, not the depth of its crossing shelf. [S14]'),
             ('What could form a former bridge',
              'Submerged continental saddles provide the possible old crossing. The volcanic-looking peaks alone '
              'do not imply shallow water: the model separately includes a continental shelf beneath the route. At '
@@ -453,14 +474,15 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'The dam has two reference views. The waterfall has its own editable local study, with one kilometre '
              'per Blender unit and true vertical scale.'),
             ('Resolution and exaggeration',
-             'An 8192 x 4096 colour map and three 4096 x 2048 physical maps support the globe. Thirteen globe views, two dam views and one waterfall view '
-             'make sixteen clean and sixteen annotated references. The globe uses 10x relief and widened rivers; '
-             'local studies use true relief. Small buildings, individual trees and engineering details remain '
-             'below global resolution.'),
+             'An 8192 x 4096 colour map and three 4096 x 2048 physical maps support the globe. Thirteen globe '
+             'views, two dam views and one waterfall view make sixteen clean and sixteen annotated references. '
+             'The globe uses 10x relief and widened rivers; local studies use true relief. Small buildings, '
+             'individual trees and engineering details remain below global resolution.'),
             ('What can be edited',
              'Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build '
-             'pipeline reconstructs earlier terrain stages before applying R6, R7 and the R8 terrain pass, so transforms are not accumulated '
-             'by repeatedly rotating a finished model. The packed Blender files remain independently editable.'),
+             'pipeline reconstructs earlier terrain stages before applying R6, R7, R8 terrain and R9 ocean '
+             'geography, so transforms are not accumulated by repeatedly rotating a finished model. The packed '
+             'Blender files remain independently editable.'),
             ('Light and atmosphere',
              'Clouds are omitted to expose the terrain. Each camera has broad daylight from a useful drawing '
              'angle, not one simultaneous astronomical illumination state. The blue limb is a restrained visual '
@@ -491,7 +513,28 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
             ('6 / Local production detail',
              'Develop Seattle forest districts, agricultural settlements, lake shipping, eastern dam operations '
              'and the northern passes at regional scale. Use the broad continental atlas for continuity; '
-             'commission local maps for individual journeys and scenes.')]}]
+             'commission local maps for individual journeys and scenes.')]},
+ {'title': 'Ocean islands and plate boundaries',
+  'kicker': 'R9 / GEOLOGICAL REASONING',
+  'figure': 'world_maps/03_tectonics_ocean_centered_preview.jpg',
+  'paras': [('Different origins, different shapes',
+             'The southern shelf islands are elongated continental fragments and an inherited arc, with drowned '
+             'saddles between them. Pelagic Crown instead consists of overlapping shield volcanoes above a '
+             'proposed hotspot. Its two older companions diminish northeastward; the gaps remain deep ocean. '
+             'Northern fore-islands are rugged remnants of continental crust, with fjords and seasonal summit '
+             'snow.'),
+            ('What the tectonic sheet means',
+             'Five named plate domains are separated by a conceptual network: collision along the giant '
+             'mountains; subduction beside the curved arc; spreading ridges through remote oceans; and transform '
+             'links joining the zones. Teeth mark the proposed overriding side. Motion arrows show direction '
+             'only. Shelf edges, former migration routes and hotspot trails have separate symbols because they '
+             'are not automatically plate boundaries. [S14]'),
+            ('Scale and uncertainty',
+             'The large volcanic island is an intentionally oversized fictional analogue, not a copy of Hawaii. '
+             'The plate domains, polar boundary, motions and volcanic ages are proposals; no Euler-pole '
+             'reconstruction or geodynamic solution has been calculated. Continental shelves can be thousands of '
+             'kilometres wide only under special geology; the -65 m migration shelf remains a deliberate story '
+             'constraint.')]}]
 SOURCES = [('D / Project references',
   'CATWORLD PITCH DECK.pdf, 50-page development draft, and map sketches 3-5. D2 = overview/migration; D4 = '
   'Panterra; D5 = Flock; D9 = Cyrus context; D12 = Pieter/dam village; D38-42 = map concepts; D45 = chronology; '
@@ -529,7 +572,9 @@ SOURCES = [('D / Project references',
  ('T / Terrain provenance',
   'Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled '
   'and combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution '
-  'is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model. Drainage reference: USDA NRCS Soil Survey Manual, chapter 2, https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch2.pdf ; sediment plumes: NASA, https://svs.gsfc.nasa.gov/15034 .'),
+  'is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model. Drainage reference: '
+  'USDA NRCS Soil Survey Manual, chapter 2, https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch2.pdf ; '
+  'sediment plumes: NASA, https://svs.gsfc.nasa.gov/15034 .'),
  ('S11 / Ice and sea level',
   'NASA, Melting sea ice versus land ice: '
   'https://sealevel.nasa.gov/faq/23/whats-the-difference-between-melting-sea-ice-and-melting-land-ice-on-sea-levels/ '
@@ -541,8 +586,11 @@ SOURCES = [('D / Project references',
  ('S13 / Stronger axial tilt',
   "NASA Science, Milankovitch (Orbital) Cycles and Their Role in Earth's Climate. "
   'https://science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/ '
-  '. General tilt-season mechanism; the 35-degree alien-world climate is a design extrapolation.')]
-
-SOURCES.append(('S14 / Island-arc analogy','USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m sea-level fall.'))
-
-SECTIONS.append(dict(title='R8 / A more natural terrain language',kicker='LATEST REVISION',figure='renders/15_plateau_hydrology.png',paras=[('Relief and drainage','Repeated mirrored relief is replaced by bounded elevation sampling and broader regional terrain. Slender river corridors have variable widths, bends, graded valleys and joined tributaries. The main lake remains a level drowned plateau valley; three small lakes have distinct asymmetric shorelines.'),('Land cover and ice','Forest, steppe, agricultural lowlands and bare rock blend through moisture and altitude fields. Snow responds to elevation and exposed ridges. Polar relief uses spherical coordinates to avoid pinching at the pole; cold shores show rock and tundra rather than a green halo.'),('Basin and local studies','The impact rim has uneven eroded sectors and patchy iron staining. Sediment colours vary near water margins and river mouths. The waterfall study has broken caprock lips, deeper plunge pools, channel bends and talus; the dam gorge has irregular eroded shoulders.'),('Continuity and limits','The approved continents, five-island crossing and main river corridors remain. These are process-informed design choices, not a simulated drainage, erosion, ice or climate solution. River widths and globe relief remain exaggerated for drawing reference.')]))
+  '. General tilt-season mechanism; the 35-degree alien-world climate is a design extrapolation.'),
+ ('S14 / Island-arc analogy',
+  'USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. '
+  'https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines '
+  'an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m '
+  'sea-level fall. Hotspot distinction: USGS, '
+  'https://www.usgs.gov/faqs/what-a-hotspot-and-how-do-you-know-its-there . Plate-boundary mechanisms: '
+  'https://pubs.usgs.gov/gip/dynamic/understanding.html .')]
