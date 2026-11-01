@@ -1,9 +1,10 @@
 {
-  "revision": 6,
+  "revision": 8,
   "camera": "Camera",
   "unit_scale_m": 1000.0,
-  "upper_river_m": 1090,
-  "reservoir_m": 690,
-  "drop_m": 400,
-  "water_surface": "Continuous mesh following the graded bed; procedural water, no fluid simulation"
+  "upper_river_m": 1090.000033378601,
+  "reservoir_m": 689.9999976158142,
+  "drop_m": 400.00003576278687,
+  "water_vertices": 434041,
+  "water_surface": "Continuous mesh with irregular caprock lips; no fluid simulation"
 }

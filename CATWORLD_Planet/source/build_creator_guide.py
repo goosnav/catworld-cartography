@@ -15,7 +15,7 @@ INK='#18333f';GRAY='#62787b';TEAL='#247f86';BG='#f6f2e9';DARK='#10191f';RED='#c3
 for name,file in [('Guide','Arial.ttf'),('GuideBold','Arial Bold.ttf')]:pdfmetrics.registerFont(TTFont(name,'/System/Library/Fonts/Supplemental/'+file))
 pdfmetrics.registerFontFamily('Guide',normal='Guide',bold='GuideBold',italic='Guide',boldItalic='GuideBold')
 CACHE=Path(sys.argv[1]) if len(sys.argv)>1 else Path(tempfile.mkdtemp(prefix='catworld-pdf-'));CACHE.mkdir(parents=True,exist_ok=True)
-P=G/'CATWORLD_Creator_Guide.pdf';c=canvas.Canvas(str(P),pagesize=A4,pageCompression=1);c.setTitle('Catworld / Terra - Creator and Showrunner World Guide - Revision 7');c.setAuthor('Catworld cartography development');page=0;layout=[]
+P=G/'CATWORLD_Creator_Guide.pdf';c=canvas.Canvas(str(P),pagesize=A4,pageCompression=1);c.setTitle('Catworld / Terra - Creator and Showrunner World Guide - Revision 8');c.setAuthor('Catworld cartography development');page=0;layout=[]
 def para(text,x,y,width=CW,size=10.5,leading=14.5,bold=False,col=INK):
  st=ParagraphStyle('p',fontName='GuideBold' if bold else 'Guide',fontSize=size,leading=leading,textColor=HexColor(col),splitLongWords=True)
  q=Paragraph(text,st);ww,hh=q.wrap(width,1000);q.drawOn(c,x,y-hh);return y-hh
@@ -25,7 +25,7 @@ def start(title,kicker='CATWORLD / WORLD MODEL',key=None):
  page+=1;c.setFillColor(HexColor(BG));c.rect(0,0,W,H,fill=1,stroke=0)
  c.setFillColor(HexColor(TEAL));c.setFont('GuideBold',8.5);c.drawString(M,H-36,kicker)
  y=para(html.escape(title),M,H-60,size=24,leading=28,bold=True)
- c.setStrokeColor(HexColor('#cbd3cc'));c.line(M,40,W-M,40);c.setFont('Guide',8);c.setFillColor(HexColor(GRAY));c.drawString(M,27,'CATWORLD / CREATOR GUIDE / R7');c.drawRightString(W-M,27,str(page))
+ c.setStrokeColor(HexColor('#cbd3cc'));c.line(M,40,W-M,40);c.setFont('Guide',8);c.setFillColor(HexColor(GRAY));c.drawString(M,27,'CATWORLD / CREATOR GUIDE / R8');c.drawRightString(W-M,27,str(page))
  if key:c.bookmarkPage(key);c.addOutlineEntry(title,key,level=0,closed=False)
  return y-18
 
@@ -65,7 +65,7 @@ def finish(y=60):
 # Cover.
 page=1;c.setFillColor(HexColor(DARK));c.rect(0,0,W,H,fill=1,stroke=0);c.setFillColor(HexColor('#ece5d6'));c.setFont('GuideBold',40);c.drawString(M,H-83,'CATWORLD');c.setFont('GuideBold',28);c.drawString(M,H-120,'THE WORLD MODEL');c.setFont('Guide',14);c.drawString(M,H-151,'Creator & showrunner field guide')
 image(B/'renders/01_panterra.png',M,H-185,CW,CW,True)
-para('A planet to draw from. A geography to tell stories in.',M,120,size=14,leading=18,bold=True,col='#ece5d6');para('Revision 7 / 31 October 2026<br/>A separate southern continent and its eastern archipelago.<br/>Northern autumn, southern spring, and an ancient crossing.',M,89,size=10.5,leading=15,col='#a9bec7');c.bookmarkPage('cover');c.addOutlineEntry('Cover','cover',0);finish(48)
+para('A planet to draw from. A geography to tell stories in.',M,120,size=14,leading=18,bold=True,col='#ece5d6');para('Revision 8 / 31 October 2026<br/>A separate southern continent and its eastern archipelago.<br/>Northern autumn, southern spring, and an ancient crossing.',M,89,size=10.5,leading=15,col='#a9bec7');c.bookmarkPage('cover');c.addOutlineEntry('Cover','cover',0);finish(48)
 # Contents.
 y=start('A guide to the model','READING ROUTE','contents');y=para('Read the geography first, then use the reference plates. Established creator facts, draft-deck material and new cartographic proposals are distinguished throughout. Square-bracket source keys point to the reference notes.',M,y,size=11,leading=16)-22
 for i,s in enumerate(SECTIONS):
@@ -101,7 +101,7 @@ for j in range(4):
  finish(y)
 # Specifications and camera index.
 y=start('Specifications and camera index','USING THE FILES','specs');stats=json.load(open(B/'source/statistics.json'));model=json.load(open(B/'source/Model_Verification.json'))
-y=textblocks([('Model scale','Radius 6,100 km; axial tilt 35 degrees; orbital period 4,000 Earth years; assumed rotation 24 hours. Globe radius in Blender is 10 units. Physical elevation is separate from 10x display relief. The dam model uses 1 unit = 1 km.'),('Resolution',f"{model['globe_vertices']:,} globe vertices and {model['globe_quads']:,} quads. Four packed 4096 x 2048 maps. Thirteen 2048 x 2048 globe renders, two dam renders and one waterfall render at 2400 x 1600. Thirty-six named geographic anchors. Reservoir footprint: {stats['reservoir_area_km2']:,.0f} km2. Peak physical elevation: {stats['peak_m']/1000:.2f} km."),('Validation','Panterra and the east are connected; the southern core is separate. The designed shelf connects at -65 m sea level; polar land remains separate. The northern feeder and both reservoir outlets descend. Named city sites are checked against land and reservoir masks. Source scripts, image sizes, gallery links and packed textures are checked. These checks do not replace tectonic, climate, erosion or hydraulic simulation.')],y,size=10)
+y=textblocks([('Model scale','Radius 6,100 km; axial tilt 35 degrees; orbital period 4,000 Earth years; assumed rotation 24 hours. Globe radius in Blender is 10 units. Physical elevation is separate from 10x display relief. The dam model uses 1 unit = 1 km.'),('Resolution',f"{model['globe_vertices']:,} globe vertices and {model['globe_quads']:,} quads. Four packed maps: 8192 x 4096 colour and three 4096 x 2048 physical maps. Thirteen 2048 x 2048 globe renders, two dam renders and one waterfall render at 2400 x 1600. Thirty-six named geographic anchors. Reservoir footprint: {stats['reservoir_area_km2']:,.0f} km2. Peak physical elevation: {stats['peak_m']/1000:.2f} km."),('Validation','Panterra and the east are connected; the southern core is separate. The designed shelf connects at -65 m sea level; polar land remains separate. The northern feeder and both reservoir outlets descend. Named city sites are checked against land and reservoir masks. Source scripts, image sizes, gallery links and packed textures are checked. These checks do not replace tectonic, climate, erosion or hydraulic simulation.')],y,size=10)
 views=json.load(open(B/'source/views.json'));dam=json.load(open(B/'source/dam_views.json'))+json.load(open(B/'source/waterfall_views.json'));y-=5
 for idx,v in enumerate(views):
  y=para(f"<b>Frame {idx+1:02d}</b> - {v['name']} - center {v['latitude']:.0f} lat / {v['longitude']:.0f} lon",M,y,size=9,leading=12)-3
@@ -129,7 +129,7 @@ for v in sorted(views+dam,key=lambda q:q['name']):
   ys[col]=yy
  finish(min(ys))
 c.save();json.dump({'pages':page,'sections':len(SECTIONS),'layout':layout},open(G/'PDF_Layout_Verification.json','w'),indent=2)
-md=['# CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE','Revision 7. Prepared 31 October 2026.']
+md=['# CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE','Revision 8. Prepared 31 October 2026.']
 for s in SECTIONS:
  md+=['## '+s['title']]
  for h,t in s['paras']:md+=['### '+h,t]

@@ -1,6 +1,6 @@
-# Terra / R7 technical companion
+# Terra / R8 technical companion
 
-The illustrated creator guide explains the world and its design reasoning. R7 preserves the shortened Panterra/eastern mountain connection and the independent southern continent, while revising landforms, hydrology, vegetation and seasons.
+The illustrated creator guide explains the world and its design reasoning. R8 preserves the shortened Panterra/eastern mountain connection and the independent southern continent, while revising landforms, hydrology, vegetation and seasons.
 
 ## Geography and tectonics
 
@@ -30,14 +30,16 @@ Stronger tilt intensifies summer as well as winter sunlight contrasts. Snow, sea
 
 ## Model, data and reproducibility
 
-Globe physical radius is 6,100 km; Blender radius is ten units, with tenfold displayed relief. Four 4096 x 2048 maps are packed into the globe. Physical height and visible surface elevation are separately stored in `terrain_fields.npz`; lake and river water surfaces differ from their beds. Local models use kilometre units and true vertical scale, so convert scales before combining them.
+Globe physical radius is 6,100 km; Blender radius is ten units, with tenfold displayed relief. One 8192 x 4096 colour map and three 4096 x 2048 physical/material maps are packed into the globe. The high-resolution colour layer smooths vector waterways; the physical terrain detail remains 4K. Physical height and visible surface elevation are separately stored in `terrain_fields.npz`; lake and river water surfaces differ from their beds. Local models use kilometre units and true vertical scale, so convert scales before combining them.
 
-`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and R6 terrain/hydrology pass and final R7 natural-landforms pass. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
+`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and R6 terrain/hydrology pass followed by R7 and R8 terrain passes. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
 
 `build_blender.py` renders thirteen cameras; `finalize_model.py` saves their timeline/light bindings and verifies packed textures. The dam and waterfall have separate build scripts. `make_epoch_figures.py` and `make_explanatory_figures.py` generate the world/process diagrams. `package_atlas.py` creates annotations, gallery, CSV and statistics. `build_creator_guide.py` creates the PDF and editable guide. `verify_delivery.py` checks topology, hydrology, metadata and delivered files.
 
 The globe is a satellite-style drawing reference with deliberately readable relief and waterways. Sub-texel roads, houses, individual giant trees and engineering are not resolved globally. Use the regional and local studies for closer design work. The guide's 36 feature anchors are proposals unless explicitly identified as creator direction.
 
-## R7 basin and surface treatment
+## R8 basin and surface treatment
 
-Three small lakes now occupy elongated, branching basins with tributary notches and enclosing valley walls. Each has a level water surface. The previous circular lake rims were removed. Broad lowland noise is subdued and mixed with dissected terrain detail; forest-steppe edges vary with regional moisture and relief. Terrain mesh samples are bilinear to reduce stepped shading. These are constructed landforms, not an erosion simulation.
+The new pass retains the geography and replaces the repeated relief patterns with bounded terrain sampling. Northern highlands remain broad, with smaller incised massifs and altitude-controlled snow. Three small lakes have distinct elongated, hooked and irregular basin shapes. Variable-width rivers and tributaries follow their approved corridors. The impact basin has uneven staining and suspended-sediment colours. Polar relief is evaluated in spherical coordinates, avoiding seams and pinching.
+
+See `Terrain_Design_Review_R8.md` for the full feature audit. These are constructed landforms, not an erosion simulation.

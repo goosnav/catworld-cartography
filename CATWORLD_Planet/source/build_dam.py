@@ -1,15 +1,20 @@
-import bpy, math, random, json
+import bpy, math, random, json,sys
 from mathutils import Vector, noise
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1];random.seed(81)
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 s=bpy.context.scene;s.render.engine='CYCLES';s.cycles.samples=32;s.cycles.use_denoising=True;s.render.resolution_x=2400;s.render.resolution_y=1600;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.view_settings.view_transform='AgX';s.render.film_transparent=False
+try:
+ prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='METAL';prefs.get_devices()
+ for device in prefs.devices:device.use=device.type=='METAL'
+ if any(d.use for d in prefs.devices):s.cycles.device='GPU'
+except (TypeError,RuntimeError):pass
 s.world.use_nodes=True;s.world.node_tree.nodes['Background'].inputs[0].default_value=(.45,.58,.70,1);s.world.node_tree.nodes['Background'].inputs[1].default_value=.5
 s.unit_settings.system='METRIC';s.unit_settings.scale_length=1000
 s['purpose']='Conceptual terrain inset of landmark 05, oriented north upstream; 1 Blender unit = 1 km. Fictional engineering, not a construction design.'
 def mat(name,col,rough=.7):
  m=bpy.data.materials.new(name);m.diffuse_color=(*col,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*col,1);p.inputs['Roughness'].default_value=rough;return m
-stone=mat('Warm weathered mass concrete',(.42,.40,.33));dark=mat('Oxidized bronze gates',(.12,.18,.16),.35);water=mat('Fresh reservoir water',(.025,.17,.19),.24);roof=mat('Patinated copper roofs',(.15,.25,.21),.5);white=mat('Aerated spillway water',(.62,.79,.79),.4);earth=mat('Layered bedrock',(.24,.23,.18));leaves=mat('Forest canopy',(.17,.22,.07));road=mat('Pale crushed stone road',(.36,.33,.25))
+stone=mat('Warm weathered mass concrete',(.42,.40,.33));dark=mat('Oxidized bronze gates',(.12,.18,.16),.35);water=mat('Fresh reservoir water',(.012,.08,.095),.28);roof=mat('Patinated copper roofs',(.15,.25,.21),.5);white=mat('Aerated spillway water',(.62,.79,.79),.4);earth=mat('Layered bedrock',(.24,.23,.18));leaves=mat('Forest canopy',(.17,.22,.07));road=mat('Pale crushed stone road',(.36,.33,.25))
 # Material texture distinguishes stone from green slopes.
 terrainmat=mat('Bedrock and forest slope mosaic',(.18,.25,.10));nt=terrainmat.node_tree;n=nt.nodes;l=nt.links;p=n.get('Principled BSDF');tex=n.new('ShaderNodeTexNoise');tex.inputs['Scale'].default_value=3;tex.inputs['Detail'].default_value=7;tex.inputs['Roughness'].default_value=.72
 coords=n.new('ShaderNodeTexCoord');l.new(coords.outputs['Object'],tex.inputs['Vector'])
@@ -21,10 +26,15 @@ def terrain(x,y):
  width=2.4+max(y,0)*.22 if y>=0 else .55+1.85*math.exp(y/1.3)
  center=.16*math.sin(y*.65)*(1-math.exp(-abs(y)))
  q=abs(x-center)/width
+ q*=1+.055*math.sin(y*3.4+x*.7)*min(1,abs(y)/1.5)
  h=.21+.62*min(q**3.6,2.8)
  amp=min(max(q-.45,0),1)*.28
  h+=amp*noise.fractal(Vector((x*.8,y*.8,2)),1,2,5)
  h+=.05*min(q,1)*noise.noise(Vector((x*6,y*6,1)))
+ # Secondary erosion converges obliquely toward the gorge, away from the abutments.
+ gully=math.exp(-(math.sin(y*1.5+abs(x)*1.1+.4*math.sin(x*2))/.18)**2)
+ h-=.10*gully*min(1,max(q-.65,0))*min(1,abs(y)/2)
+
  return h
 N=340;verts=[]
 for iy in range(N+1):

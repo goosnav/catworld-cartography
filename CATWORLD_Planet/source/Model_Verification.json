@@ -6,11 +6,11 @@
   "timeline_markers": 13,
   "packed_images": [
     {
-      "name": "albedo_4096.png",
+      "name": "albedo_8192.png",
       "packed": true,
       "size": [
-        4096,
-        2048
+        8192,
+        4096
       ]
     },
     {

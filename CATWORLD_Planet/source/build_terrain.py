@@ -379,3 +379,10 @@ revise_r6(OUT)
 
 from revise_r7 import revise as natural_landforms
 natural_landforms(OUT)
+
+
+from revise_r8 import revise as organic_terrain
+organic_terrain(OUT)
+
+from refine_water_texture import refine as water_texture
+water_texture(OUT)

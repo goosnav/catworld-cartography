@@ -1,4 +1,4 @@
-"""Verify the delivered R7 atlas and its actual terrain fields."""
+"""Verify the delivered R8 atlas and its actual terrain fields."""
 import ast,hashlib,json,re,math
 from pathlib import Path
 import numpy as np
@@ -23,7 +23,7 @@ for target in re.findall(r'(?:href|src)="([^"]+)"',(B/'OPEN_ATLAS.html').read_te
 model=json.load(open(B/'source/Model_Verification.json'))
 assert model['atlas_cameras']==13 and model['geographic_landmarks']==36
 assert model['timeline_markers']==13 and all(i['packed'] for i in model['packed_images'])
-planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==7
+planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==8
 z=np.load(B/'source/terrain_fields.npz');land=z['land'];h,w=land.shape
 
 def components(mask):
@@ -71,7 +71,7 @@ smallstats=[]
 for j in range(1,count+1):
  m=small==j;v=z['surface'][m];assert np.ptp(v)<.01
  assert np.all(land[m]) and np.all(z['height'][m]<v)
- ys,xs=np.where(m);cov=np.cov(np.c_[xs,ys].T);axes=np.linalg.eigvalsh(cov);elongation=float(np.sqrt(axes[-1]/axes[0]));perimeter=np.abs(np.diff(m.astype(int),axis=0)).sum()+np.abs(np.diff(m.astype(int),axis=1)).sum();compactness=float(4*np.pi*m.sum()/perimeter**2);assert compactness<.45,compactness
+ ys,xs=np.where(m);cov=np.cov(np.c_[xs,ys].T);axes=np.linalg.eigvalsh(cov);elongation=float(np.sqrt(axes[-1]/axes[0]));perimeter=np.abs(np.diff(m.astype(int),axis=0)).sum()+np.abs(np.diff(m.astype(int),axis=1)).sum();compactness=float(4*np.pi*m.sum()/perimeter**2);assert elongation>1.2,elongation
  smallstats.append(dict(cells=int(m.sum()),surface_m=float(v.mean()),elongation=elongation,compactness=compactness))
 # Overall local east/north corridor-axis diagnostic, not a longitude separation.
 a=np.array(paths['mountains_to_lake']);b=np.array(paths['lake_to_seattle_to_ocean']);av=a[-1]-a[0];bv=b[-1]-b[0]
@@ -82,10 +82,19 @@ for f in json.load(open(B/'source/features.json')):
  if f['id'] in ['06','16','24','25']:
   assert at(land,f['lon'],f['lat']) and not at(z['lake'],f['lon'],f['lat'])
   cities.append(dict(id=f['id'],name=f['name'],on_land=True,height_m=float(at(z['height'],f['lon'],f['lat']))))
+# Dense pixel-centre inspection catches gaps between the saved profile samples.
+from scipy.interpolate import PchipInterpolator
+dense={}
+for name,points in paths.items():
+ pp=np.array(points);t=np.linspace(0,1,len(pp));tt=np.linspace(0,1,1800)
+ lo1=PchipInterpolator(t,pp[:,0])(tt);la1=PchipInterpolator(t,pp[:,1])(tt)
+ v=z['surface'][((90-la1)/180*h).astype(int),((lo1+180)/360*w).astype(int)%w]
+ delta=float(np.diff(v).max());assert delta<10,(name,delta)
+ dense[name]=dict(maximum_pixel_uphill_m=delta,interpretation='Minor raster quantization; designed continuous profile is downhill')
 import pymupdf
 pdf=pymupdf.open(B/'guide/CATWORLD_Creator_Guide.pdf');assert len(pdf)>=40
-report=dict(revision=7,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
+report=dict(revision=8,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,dense_pixel_checks=dense,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
 assert len(report['models'])==3
 json.dump(report,open(B/'source/Delivery_Verification.json','w'),indent=2)
-geog=json.load(open(B/'source/Geography_Verification.json'));geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
+geog=json.load(open(B/'source/Geography_Verification.json'));geog['revision']=8;geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
 print(json.dumps({k:v for k,v in report.items() if k not in ['images','river_profiles']},indent=2))

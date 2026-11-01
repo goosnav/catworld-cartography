@@ -37,13 +37,13 @@ uv=mesh.uv_layers.new(name='Geographic UV')
 uvs=np.stack([(lo+np.pi)/(2*np.pi),(la+np.pi/2)/np.pi],-1).reshape(-1,2)
 uv.data.foreach_set('uv',uvs[faces.reshape(-1)].astype('f').ravel())
 for p in mesh.polygons:p.use_smooth=True
-mat=bpy.data.materials.new('Satellite surface | packed 4K maps');mat.use_nodes=True;n=mat.node_tree.nodes;l=mat.node_tree.links;p=n.get('Principled BSDF')
+mat=bpy.data.materials.new('Satellite surface | 8K colour and 4K physical maps');mat.use_nodes=True;n=mat.node_tree.nodes;l=mat.node_tree.links;p=n.get('Principled BSDF')
 def tex(name,space='sRGB'):
  t=n.new('ShaderNodeTexImage');t.image=bpy.data.images.load(str(BASE/'textures'/name));t.image.colorspace_settings.name=space;t.image.pack();t.interpolation='Linear';return t
-col=tex('albedo_4096.png');l.new(col.outputs['Color'],p.inputs['Base Color'])
+col=tex('albedo_8192.png');l.new(col.outputs['Color'],p.inputs['Base Color'])
 rough=tex('roughness.png','Non-Color');l.new(rough.outputs['Color'],p.inputs['Roughness'])
-h=tex('height_16bit.png','Non-Color');b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.34;b.inputs['Distance'].default_value=.16;l.new(h.outputs['Color'],b.inputs['Height']);l.new(b.outputs['Normal'],p.inputs['Normal'])
-p.inputs['Specular IOR Level'].default_value=.035
+h=tex('height_16bit.png','Non-Color');b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.27;b.inputs['Distance'].default_value=.16;l.new(h.outputs['Color'],b.inputs['Height']);l.new(b.outputs['Normal'],p.inputs['Normal'])
+p.inputs['Specular IOR Level'].default_value=.022
 obj.data.materials.append(mat)
 # Fine surface irregularities, restrained enough to read at globe scale.
 noise=n.new('ShaderNodeTexNoise');noise.inputs['Scale'].default_value=1400;noise.inputs['Detail'].default_value=3
@@ -52,8 +52,8 @@ mask=tex('land_mask.png','Non-Color');mul=n.new('ShaderNodeMath');mul.operation=
 # Thin atmospheric limb, transparent at the center so coasts stay unobscured.
 bpy.ops.mesh.primitive_uv_sphere_add(segments=192,ring_count=96,radius=10.19)
 at=bpy.context.object;at.name='Thin atmospheric limb';am=bpy.data.materials.new('Subtle blue limb');am.use_nodes=True
-an=am.node_tree.nodes;al=am.node_tree.links;an.clear();out=an.new('ShaderNodeOutputMaterial');tr=an.new('ShaderNodeBsdfTransparent');em=an.new('ShaderNodeEmission');em.inputs[0].default_value=(.035,.16,.31,1);em.inputs[1].default_value=.28
-fr=an.new('ShaderNodeFresnel');fr.inputs[0].default_value=1.014;mix=an.new('ShaderNodeMixShader');al.new(fr.outputs[0],mix.inputs[0]);al.new(tr.outputs[0],mix.inputs[1]);al.new(em.outputs[0],mix.inputs[2]);al.new(mix.outputs[0],out.inputs[0]);at.data.materials.append(am)
+an=am.node_tree.nodes;al=am.node_tree.links;an.clear();out=an.new('ShaderNodeOutputMaterial');tr=an.new('ShaderNodeBsdfTransparent');em=an.new('ShaderNodeEmission');em.inputs[0].default_value=(.035,.16,.31,1);em.inputs[1].default_value=.17
+fr=an.new('ShaderNodeFresnel');fr.inputs[0].default_value=1.002;mix=an.new('ShaderNodeMixShader');al.new(fr.outputs[0],mix.inputs[0]);al.new(tr.outputs[0],mix.inputs[1]);al.new(em.outputs[0],mix.inputs[2]);al.new(mix.outputs[0],out.inputs[0]);at.data.materials.append(am)
 for pp in at.data.polygons:pp.use_smooth=True
 # Non-rendering landmarks make the .blend useful as an editable atlas.
 fc=bpy.data.collections.new('LANDMARKS | named geographic anchors');scene.collection.children.link(fc)
@@ -91,7 +91,7 @@ for name,lon,lat,scale in views:
  scene.render.filepath=str(BASE/('review_draft' if '--draft' in sys.argv else 'renders')/f'{name}.png')
  if '--draft' in sys.argv:
   scene.cycles.samples=8;scene.render.resolution_percentage=40
-  if name not in ['01_panterra','02_eastern','04_far_side','05_north_pole','06_south_pole','11_maritime_continent','14_archipelago','07_panterra_close','13_seattle_waterway','15_plateau_hydrology']:continue
+  if name not in ['01_panterra','02_eastern','04_far_side','05_north_pole','06_south_pole','11_maritime_continent','14_archipelago','07_panterra_close','13_seattle_waterway','15_plateau_hydrology','08_impact_close','12_eastern_continent']:continue
  only=next((a.split('=',1)[1].split(',') for a in sys.argv if a.startswith('--only=')),None)
  if only and name not in only:continue
  if '--preview' in sys.argv:

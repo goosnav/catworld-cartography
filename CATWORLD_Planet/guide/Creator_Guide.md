@@ -1,12 +1,12 @@
 # CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE
 
-Revision 7. Prepared 31 October 2026.
+Revision 8. Prepared 31 October 2026.
 
 ## What is established, and what is proposed
 
 ### Established geography
 
-Terra has a 4,000-Earth-year orbit and, following the latest creator direction, 35-degree axial tilt. Panterra and the eastern continent share the giant mountain system. The separate southern mainland is closer to Panterra and has a sparse eastern island chain. No island arc links it to the eastern continent.
+Terra has a 4,000-Earth-year orbit. The creator requested stronger axial tilt; this model uses a proposed 35 degrees. Panterra and the eastern continent share the giant mountain system. The separate southern mainland is closer to Panterra and has a sparse eastern island chain. No island arc links it to the eastern continent.
 
 ### Current epoch
 
@@ -22,7 +22,7 @@ Most of northern Panterra is a broad mountain province. Steppe occupies the lowe
 
 ### Design proposals and limits
 
-Radius 6,100 km, 24-hour rotation, Ls 255 degrees, a 65 m former lowstand and an illustrative crossing 1,100 years ago remain proposals. Exact ice extent, heat source, water budget and engineering need further development. This is a consistent drawing-reference model, not a climate or engineering simulation.
+Radius 6,100 km, 35-degree tilt, 24-hour rotation, Ls 255 degrees, a 65 m former lowstand and an illustrative crossing 1,100 years ago remain proposals. Exact ice extent, heat source, water budget and engineering need further development. This is a consistent drawing-reference model, not a climate or engineering simulation.
 
 ## The planet at a glance
 
@@ -44,17 +44,17 @@ Front is 0 degrees, east +90, west -90 and far side 180. The southern regional c
 
 ## What changed in this pass
 
-### Land and mountains
+### Terrain structure
 
-The eastern block swings south. The southern mainland is redesigned and closer to Panterra, with fewer islands. Northern Panterra becomes a broad, dissected highland province with parallel ranges, massifs and intermontane valleys.
+The continent layout is retained. Repeated, stretched mountain bands are replaced with more legible branching relief. Polar terrain no longer pinches where meridians meet.
 
-### Rivers and the plateau
+### Water and surface
 
-A single northern feeder follows the higher plateau and drops into one drowned valley arm. The western outlet descends toward Seattle. The feeder follows the latest drawn route northwest of the lake, with the Seattle outlet below it. The redline takes precedence over an abstract bearing calculation.
+Rivers become slimmer and vary in width, with bends and connected tributaries. The small lakes have distinct shorelines; the reservoir remains a flooded plateau valley. Forest, steppe, farmland, exposed rock and snow share the same underlying terrain.
 
-### Regions and seasons
+### Closer studies
 
-Seattle is a substantial forest region, not just a pin beside a thin coastal strip. Northern foothills are steppe; the southern settled country is agricultural and hilly. Tilt increases from 23.4 to 35 degrees; daylight and polar conditions are recalculated.
+The impact water has variable mineral colour rather than a flat red fill. Broken caprock lips and near-vertical falls replace regular water ramps in the local waterfall. The feature-by-feature review is included as Terrain_Design_Review_R8.md.
 
 ## A collision system and a separate old continent
 
@@ -426,11 +426,11 @@ The globe contains thirteen saved cameras with matching lights, packed textures 
 
 ### Resolution and exaggeration
 
-Four 4096 x 2048 maps support the globe. Thirteen globe views, two dam views and one waterfall view make sixteen clean and sixteen annotated references. The globe uses 10x relief and widened rivers; local studies use true relief. Small buildings, individual trees and engineering details remain below global resolution.
+An 8192 x 4096 colour map and three 4096 x 2048 physical maps support the globe. Thirteen globe views, two dam views and one waterfall view make sixteen clean and sixteen annotated references. The globe uses 10x relief and widened rivers; local studies use true relief. Small buildings, individual trees and engineering details remain below global resolution.
 
 ### What can be edited
 
-Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6 and the R7 natural-landforms pass, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
+Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, R7 and the R8 terrain pass, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
 
 ### Light and atmosphere
 
@@ -462,23 +462,23 @@ Approve or revise the proposed 65 m lowstand and 1,100-year crossing date. Test 
 
 Develop Seattle forest districts, agricultural settlements, lake shipping, eastern dam operations and the northern passes at regional scale. Use the broad continental atlas for continuity; commission local maps for individual journeys and scenes.
 
-## R7 / Natural landforms and shorter crossing
+## R8 / A more natural terrain language
 
-### Valley lakes
+### Relief and drainage
 
-Three small circular lakes are replaced by elongated, branching basins. Narrow inlets follow tributary valleys; bedrock shoulders divide their arms. Each basin has one level water surface and a bed below it.
+Repeated mirrored relief is replaced by bounded elevation sampling and broader regional terrain. Slender river corridors have variable widths, bends, graded valleys and joined tributaries. The main lake remains a level drowned plateau valley; three small lakes have distinct asymmetric shorelines.
 
-### Coherent terrain
+### Land cover and ice
 
-Broad lowland lumps are reduced in favour of subdued dissected relief. Forest-steppe boundaries are irregular, alpine snow transitions follow relief more closely, and the globe samples terrain continuously to reduce stepped shading.
+Forest, steppe, agricultural lowlands and bare rock blend through moisture and altitude fields. Snow responds to elevation and exposed ridges. Polar relief uses spherical coordinates to avoid pinching at the pole; cold shores show rock and tundra rather than a green halo.
 
-### Less crowded ocean
+### Basin and local studies
 
-The southern mainland moves another ten degrees east and one degree south. Five retained islands span the shorter gap: two large continental fragments near the mainland, one middle island, and two small remnants nearer Panterra. Most former island peaks are submerged. The deep ocean toward the eastern continent stays open.
+The impact rim has uneven eroded sectors and patchy iron staining. Sediment colours vary near water margins and river mouths. The waterfall study has broken caprock lips, deeper plunge pools, channel bends and talus; the dam gorge has irregular eroded shoulders.
 
-### Limits
+### Continuity and limits
 
-These are art-directed landforms and a geological interpretation, not a numerical erosion or climate simulation. River widths and globe relief remain exaggerated for drawing reference.
+The approved continents, five-island crossing and main river corridors remain. These are process-informed design choices, not a simulated drainage, erosion, ice or climate solution. River widths and globe relief remain exaggerated for drawing reference.
 
 ## Sources and reference notes
 
@@ -524,7 +524,7 @@ NASA, Causes of Climate Change, https://science.nasa.gov/climate-change/causes/ 
 
 ### T / Terrain provenance
 
-Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled and combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model.
+Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled and combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model. Drainage reference: USDA NRCS Soil Survey Manual, chapter 2, https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch2.pdf ; sediment plumes: NASA, https://svs.gsfc.nasa.gov/15034 .
 
 ### S11 / Ice and sea level
 

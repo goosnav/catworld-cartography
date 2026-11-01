@@ -1,4 +1,4 @@
-# Catworld / Terra - Revision 7
+# Catworld / Terra - Revision 8
 
 Start with **guide/CATWORLD_Creator_Guide.pdf**, the illustrated creator/showrunner guide. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
 
@@ -11,7 +11,7 @@ The northern mountain river crosses the upper plateau and falls into the reservo
 - `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 36-landmark catalogue, model specifications and sixteen reference plates.
 - `guide/Creator_Guide.md`: editable guide text.
 - `guide/Geography_and_Design.md`: technical companion.
-- `guide/Revision_Comparison.jpg`: R6/R7 lake, terrain and archipelago comparison.
+- `guide/Revision_Comparison.jpg`: R7/R8 terrain and polar comparison.
 - `guide/Tectonic_Framework.png`, `Seasonal_Epoch.png`, `Migration_Lowstand.png`: world-scale explanation plates.
 - `guide/Waterway_Logic.png`, `Plateau_Valley_Section.png`, `Mountain_Section.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: process diagrams.
 - `guide/Seasonal_Reference.csv`: geometric daylight at the stated epoch.
@@ -21,7 +21,7 @@ The northern mountain river crosses the upper plateau and falls into the reservo
 - `model/CATWORLD_Terra.blend`: editable globe, four packed maps, thirteen cameras and 36 anchors.
 - `model/CATWORLD_Dam_Study.blend`: local gorge, dam, terraces and two saved cameras.
 - `model/CATWORLD_Waterfall_Study.blend`: local plateau river and cascade study.
-- `textures/`: 4K albedo, 16-bit surface height, roughness and land mask.
+- `textures/`: 8K albedo plus 4K working albedo, 16-bit surface height, roughness and land mask.
 - `source/`: build scripts, physical terrain fields, metadata, verification records and terrain attribution.
 - `CATWORLD_Contact_Sheet.jpg`: index of all views.
 
@@ -29,7 +29,7 @@ The northern mountain river crosses the upper plateau and falls into the reservo
 
 Built with Blender 5.2.1. Globe frames 1-13 select atlas cameras and matching lighting. Dam frames 1-2 select context/detail. The waterfall file has one camera. Numpad 0 toggles camera view. Textures are packed for offline use.
 
-The globe uses **10x radial relief exaggeration**, and rivers are widened for readability. Physical elevations remain in metres. The globe radius is ten Blender units for a physical radius of 6,100 km. Its 4096 x 2048 texture resolution is approximately 9.4 km per texel at the equator. The local dam and waterfall models use one unit per kilometre with true relief. They are separate landform/engineering concepts, not exact high-resolution extracts from the globe.
+The globe uses **10x radial relief exaggeration**, and rivers are widened for readability. Physical elevations remain in metres. The globe radius is ten Blender units for a physical radius of 6,100 km. Its physical terrain grid is 4096 x 2048 (about 9.4 km per texel at the equator). The 8192 x 4096 colour map refines river edges; it does not add elevation resolution. The local dam and waterfall models use one unit per kilometre with true relief. They are separate landform/engineering concepts, not exact high-resolution extracts from the globe.
 
 Clean globe PNGs have transparent backgrounds. Clouds are omitted and each reference has useful daylight for drawing, even where the seasonal epoch implies polar night. Use full PNGs for close study; the PDF embeds compressed copies.
 
@@ -41,24 +41,28 @@ Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf`. Run from the pack
 
 ```sh
 BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
-# Optional full terrain reconstruction; delivered terrain already contains R7.
+# Optional full terrain reconstruction; delivered terrain already contains R8.
 # python source/build_terrain.py
 "$BLENDER" -b -t 8 --python source/build_blender.py
 "$BLENDER" -b -t 8 --python source/build_dam.py
 "$BLENDER" -b -t 8 --python source/build_waterfall.py
 "$BLENDER" -b --python source/finalize_model.py
 "$BLENDER" -b --python source/finalize_dam.py
+"$BLENDER" -b --python source/verify_waterfall.py
 python source/make_epoch_figures.py
 python source/make_explanatory_figures.py
+python source/make_revision_comparison.py
 python source/package_atlas.py
 python source/build_creator_guide.py
 python source/verify_delivery.py
 ```
 
-Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6 and R7; do not apply `revise_r6.py` or `revise_r7.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
+Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6, R7 and R8; do not apply `revise_r6.py` `revise_r7.py` or `revise_r8.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
 
 Original private sketches, message screenshots and the pitch deck are excluded from the handoff. Earlier Git commits preserve earlier iterations. The stable repository directory `CATWORLD_Planet/` contains the current release.
 
-## R7 natural landforms pass
+## R8 terrain revision
 
-The southern mainland moves a further 10 degrees east and 1 degree south, shortening the gap. The archipelago is reduced to five retained islands. Three dot-like lakes become branching valley basins; lowland relief, biome transitions and surface sampling are refined for a less rigid appearance.
+The approved continent layout and five-island crossing are preserved. This pass removes folded elevation-sampling artefacts, develops broader dissected relief, varies river widths and bends, reshapes the small lakes, and rebuilds the land-cover and snow transitions. Spherical polar fields remove the meridian pinching. Mineral water and coastal staining vary through the impact basin; the local waterfall has broken lips, near-vertical drops and rock debris.
+
+Read `guide/Terrain_Design_Review_R8.md` for the feature-by-feature reasoning and remaining limits. These are process-informed art decisions, not numerical erosion or climate results.
