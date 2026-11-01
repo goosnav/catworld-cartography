@@ -4,260 +4,168 @@
     "name": "Ferric Sea / impact basin",
     "lon": 1.8167724384495898,
     "lat": 64.98695651135345,
-    "description": "Ancient impact; iron-rich sediment and central uplift",
-    "sketch_xy": [
-      1560,
-      595
-    ]
+    "description": "Ancient impact; iron-rich sediment and central uplift"
   },
   {
     "id": "02",
     "name": "Northern Divide",
     "lon": -6.6583359018896715,
     "lat": 36.81874821902281,
-    "description": "Enormous folded belt; multiple spines and high plateaus",
-    "sketch_xy": [
-      1500,
-      925
-    ]
+    "description": "Enormous folded belt; multiple spines and high plateaus"
   },
   {
     "id": "03",
     "name": "Panterran Plateau",
-    "lon": 3.8631213913644444,
-    "lat": 21.09071359921598,
-    "description": "Dissected upland below the mountain wall",
-    "sketch_xy": [
-      1615,
-      1110
-    ]
+    "lon": -5,
+    "lat": 23,
+    "description": "Steppe upland above the drowned reservoir valley"
   },
   {
     "id": "04",
     "name": "Great Reservoir",
     "lon": -10.82989916972113,
     "lat": 11.503811887183144,
-    "description": "Flooded continental basin, maintained by the dam",
-    "sketch_xy": [
-      1470,
-      1220
-    ]
+    "description": "Flooded continental basin, maintained by the dam"
   },
   {
     "id": "05",
     "name": "Great Panterran Dam",
     "lon": -2.475605740172597,
     "lat": 5.1326771847074255,
-    "description": "Reservoir outlet at a bedrock gorge",
-    "sketch_xy": [
-      1555,
-      1290
-    ]
+    "description": "Reservoir outlet at a bedrock gorge"
   },
   {
     "id": "06",
     "name": "Alluvial trade outlet",
-    "lon": 10.242102377976039,
-    "lat": -4.401716977707618,
-    "description": "Amsterdam shorthand; delta, canals and commerce",
-    "sketch_xy": [
-      1680,
-      1390
-    ]
+    "lon": 10.3271484375,
+    "lat": -4.5263671875,
+    "description": "Raised alluvial terrace beside the downstream eastern port and trade outlet"
   },
   {
     "id": "07",
-    "name": "Old-growth refuge",
-    "lon": -38.01319973436114,
-    "lat": 21.09071359921598,
-    "description": "Wet uplands, giant trees and logging frontier",
-    "sketch_xy": [
-      1200,
-      1110
-    ]
+    "name": "Western old-growth country",
+    "lon": -36,
+    "lat": 20,
+    "description": "Broad Seattle forest country; old growth covers the western watershed and hills"
   },
   {
     "id": "08",
     "name": "Western Gate",
     "lon": -46.78797235872307,
     "lat": 30.248634146714547,
-    "description": "Lower mountain saddle; migration checkpoint",
-    "sketch_xy": [
-      1190,
-      1000
-    ]
+    "description": "Lower mountain saddle; migration checkpoint"
   },
   {
     "id": "09",
     "name": "Central Gate",
     "lon": 22.508067686309346,
     "lat": 35.51702116314776,
-    "description": "Second low passage through Northern Divide",
-    "sketch_xy": [
-      1720,
-      940
-    ]
+    "description": "Second low passage through Northern Divide"
   },
   {
     "id": "10",
     "name": "Eastern Gate",
     "lon": 64.58697539695169,
     "lat": 38.11506561092289,
-    "description": "Eastern coastal and ridge crossing",
-    "sketch_xy": [
-      2200,
-      910
-    ]
+    "description": "Eastern coastal and ridge crossing"
   },
   {
     "id": "11",
-    "name": "Southern coastal river country",
-    "lon": -140,
-    "lat": -30,
-    "description": "Warm eastern coastal catchments; southern late spring",
-    "sketch_xy": [
-      600,
-      1550
-    ]
+    "name": "Southern eastern coast",
+    "lon": -96,
+    "lat": -36,
+    "description": "Wet spring coast beneath the old escarpment"
   },
   {
     "id": "12",
-    "name": "Eastern escarpment",
-    "lon": -139,
-    "lat": -34,
-    "description": "Rejuvenated old margin; distinct from the northern collision belt",
-    "sketch_xy": [
-      825,
-      1610
-    ]
+    "name": "Southern escarpment",
+    "lon": -101,
+    "lat": -42,
+    "description": "Old uplifted margin follows the redesigned eastern coast"
   },
   {
     "id": "13",
     "name": "Panterran shelf approach",
     "lon": -57,
     "lat": -1,
-    "description": "Flooded final approach of the proposed cat migration route",
-    "sketch_xy": [
-      1060,
-      1530
-    ]
+    "description": "Flooded final approach of the proposed cat migration route"
   },
   {
     "id": "14",
     "name": "Pieter\u2019s fishing village",
     "lon": -2.4435,
     "lat": 5.1468,
-    "description": "Local dam inset site; terrace location is below global texture resolution",
-    "sketch_xy": [
-      1530,
-      1308
-    ]
+    "description": "Local dam inset site; terrace location is below global texture resolution"
   },
   {
     "id": "15",
     "name": "Ancient avian cliff ruins",
     "lon": -47.013750025877385,
     "lat": 23.62665012258742,
-    "description": "Ruins above the western forest corridor",
-    "sketch_xy": [
-      1135,
-      1080
-    ]
+    "description": "Ruins above the western forest corridor"
   },
   {
     "id": "16",
     "name": "London / lakeshore country",
     "lon": -13.9306640625,
     "lat": 8.3056640625,
-    "description": "Proposed city on the southwestern lake shore; elevated above the reservoir",
-    "sketch_xy": [
-      1450,
-      1302
-    ]
+    "description": "Proposed city on the southwestern lake shore; elevated above the reservoir"
   },
   {
     "id": "17",
     "name": "Merchant island",
     "lon": 7.218955481766841,
     "lat": -31.189720228991867,
-    "description": "Milan shorthand; trade controls in southern strait",
-    "sketch_xy": [
-      1640,
-      1640
-    ]
+    "description": "Milan shorthand; trade controls in southern strait"
   },
   {
     "id": "18",
     "name": "Great leeward desert",
-    "lon": 120.72176321303158,
-    "lat": -0.3136825823026612,
-    "description": "Dry interior on the left of the marked far-side view",
-    "sketch_xy": [
-      2700,
-      1320
-    ]
+    "lon": 115.62186604155515,
+    "lat": -5.947732984098095,
+    "description": "Dry interior on the left of the marked far-side view"
   },
   {
     "id": "19",
     "name": "Eastern rift gulf",
-    "lon": 92.86458806074722,
-    "lat": 11.736908728010496,
-    "description": "Fault-bounded gulf opening into the southern sea",
-    "sketch_xy": [
-      2510,
-      1200
-    ]
+    "lon": 88.80170660613456,
+    "lat": 8.015214481891224,
+    "description": "Fault-bounded gulf opening into the southern sea"
   },
   {
     "id": "20",
-    "name": "Eastern shelf archipelago",
-    "lon": -125,
-    "lat": -24,
-    "description": "Large continental fragments, drowned valleys and narrow sounds",
-    "sketch_xy": [
-      775,
-      1550
-    ]
+    "name": "Sparse eastern archipelago",
+    "lon": -75.6,
+    "lat": -24.25,
+    "description": "Six principal islands and eight minor islands toward Panterra"
   },
   {
     "id": "21",
-    "name": "Old southern shield",
-    "lon": -163,
-    "lat": -28,
-    "description": "Dry sandstone basins, weathered uplands and salt pans",
-    "sketch_xy": [
-      530,
-      1515
-    ]
+    "name": "Southern shield",
+    "lon": -116,
+    "lat": -37,
+    "description": "Asymmetric dry continental interior"
   },
   {
     "id": "22",
     "name": "Eastern collision knot",
-    "lon": 70.40476874419619,
-    "lat": 32.895842595609366,
-    "description": "Broad transpressional uplands joining eastern terranes",
-    "sketch_xy": [
-      2310,
-      970
-    ]
+    "lon": 69.31413184176402,
+    "lat": 31.30300546154483,
+    "description": "Broad transpressional uplands joining eastern terranes"
   },
   {
     "id": "23",
     "name": "Northern remnant island",
     "lon": -161,
     "lat": 55,
-    "description": "Small isolated glacial remnant; cooling into winter",
-    "sketch_xy": [
-      730,
-      530
-    ]
+    "description": "Small isolated glacial remnant; cooling into winter"
   },
   {
     "id": "24",
-    "name": "Seattle / upstream timber city",
-    "lon": -33.54857440340595,
-    "lat": 20.40916029690085,
-    "description": "Primary river flows from here INTO the super-lake"
+    "name": "Seattle / western forest country",
+    "lon": -33.4,
+    "lat": 13.5,
+    "description": "Large forested region and lower-river port downstream of the western overflow"
   },
   {
     "id": "25",
@@ -269,16 +177,16 @@
   {
     "id": "26",
     "name": "Deep separating ocean",
-    "lon": 169,
-    "lat": -5,
-    "description": "Open water separates the eastern core from the southern continent"
+    "lon": 182,
+    "lat": -10,
+    "description": "No island route between eastern and southern continents"
   },
   {
     "id": "27",
     "name": "Drowned migration shelf",
-    "lon": -100,
-    "lat": -18,
-    "description": "Former dry crossing at illustrative sea level 65 m lower"
+    "lon": -62.4,
+    "lat": -13.75,
+    "description": "Submerged continental saddles between sparse island peaks"
   },
   {
     "id": "28",
@@ -300,5 +208,47 @@
     "lon": -25.0,
     "lat": -76.0,
     "description": "Deep marine inlet interrupts the south polar ice sheet"
+  },
+  {
+    "id": "31",
+    "name": "Northern plateau falls",
+    "lon": -14.8853515625,
+    "lat": 17.5552734375,
+    "description": "Upper-plateau river drops about 400 m into the reservoir valley"
+  },
+  {
+    "id": "32",
+    "name": "Natural western overflow",
+    "lon": -20.5,
+    "lat": 12.85,
+    "description": "High bedrock sill; reservoir spills west toward Seattle"
+  },
+  {
+    "id": "33",
+    "name": "Northern interior massifs",
+    "lon": -8,
+    "lat": 48,
+    "description": "Broad high country with parallel ranges, glaciated headwalls and deep valleys"
+  },
+  {
+    "id": "34",
+    "name": "Western high valleys",
+    "lon": -30,
+    "lat": 40,
+    "description": "Intermontane basins interrupt the vast northern mountain province"
+  },
+  {
+    "id": "35",
+    "name": "Southwestern mountain country",
+    "lon": -24,
+    "lat": -8,
+    "description": "Broad older uplifts, high valleys and cultivated foothills"
+  },
+  {
+    "id": "36",
+    "name": "Southeastern peninsula ranges",
+    "lon": 7,
+    "lat": -15,
+    "description": "Rugged southern spine with lower tributary catchments"
   }
 ]

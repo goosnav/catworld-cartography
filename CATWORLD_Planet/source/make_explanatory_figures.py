@@ -18,22 +18,30 @@ for a,b in [((180,925),(570,925)),((2020,925),(1470,925))]:arrow(d,a,b,RED)
 for a,b in [((1500,735),(1710,735)),((1735,795),(1890,835))]:d.line([a,b],fill=TEAL,width=12)
 label(d,(100,500),'OLDER NORTHERN\nCRUST + IMPACT\nPROVINCE',True);label(d,(660,190),'FOLDED HIGH RANGES',True);label(d,(1090,350),'DISSECTED\nPLATEAU',True);label(d,(1460,560),'SUPER-LAKE\n690 m',True);label(d,(1770,655),'DAM + LOWER\nRIVER PLAIN',True);label(d,(750,1000),'Thickened crust supports uplift; erosion cuts connected valleys.',False)
 im.save(G/'Mountain_Section.png')
-im,d=canvas('THE WATERWAY HAS ONE CLEAR DIRECTION','Seattle is upstream of the lake. The large trading city is downstream of the dam.',(2200,940))
-boxes=[(70,270,450,600,'SEATTLE','Timber city\nUpstream river\nMountain runoff'),(610,270,1040,600,'SUPER-LAKE','London / Rome\nFresh water + fisheries\nLevel: 690 m'),(1200,270,1580,600,'GREAT DAM','4.8 km crest\nPower + controlled flow\nLocal engineering inset'),(1740,270,2130,600,'DOWNSTREAM CITY','Amsterdam shorthand\nCanals + trade\nAlluvial lowlands')]
-for x,y,x2,y2,title,body in boxes:
- d.rounded_rectangle((x,y,x2,y2),18,fill='#e3e7df',outline=TEAL,width=4);d.text((x+25,y+25),title,font=font(32,True),fill=INK)
- lines=[]
- for raw in body.split('\n'):
-  line=''
-  for word in raw.split():
-   test=(line+' '+word).strip()
-   if d.textlength(test,font=font(30))>x2-x-50 and line:lines.append(line);line=word
-   else:line=test
-  lines.append(line)
- for j,line in enumerate(lines):d.text((x+25,y+100+j*38),line,font=font(30),fill=INK)
-for i in range(3):arrow(d,(boxes[i][2]+15,435),(boxes[i+1][0]-20,435),TEAL,10)
-label(d,(80,720),'Water, logs and cargo follow the corridor. Rapids, locks, canals and transshipment\nneed local design before the whole route can be treated as navigable.',False)
+im,d=canvas('TWO RIVER CORRIDORS / A LAKE WITH TWO OUTLETS','Conceptual map and elevations. Arrows show flow; positions and distances are schematic.',(2200,1320))
+def box(x,y,w,h,title,lines):
+ d.rounded_rectangle((x,y,x+w,y+h),18,fill='#e3e7df',outline=TEAL,width=4)
+ d.text((x+22,y+20),title,font=font(32,True),fill=INK)
+ for j,t in enumerate(lines):d.text((x+22,y+77+j*39),t,font=font(29),fill=INK)
+box(1390,205,680,210,'NORTHERN MOUNTAIN RIVER',['Upper plateau: ~1,090 m near falls','High river supplies the lake'])
+box(830,520,610,225,'DROWNED VALLEY / SUPER-LAKE',['Water surface: ~690 m','Surrounding plateau is higher','London / Rome: lakeshore districts'])
+box(70,650,570,245,'SEATTLE / WESTERN FORESTS',['Natural high sill: ~685 m','River falls toward the coast','Forest country and estuary port'])
+box(1500,870,620,245,'EASTERN DAM + DOWNSTREAM CITY',['Crest 715 m / local tailwater 266 m','Dam blocks the lower valley route','Managed discharge toward the sea'])
+arrow(d,(1500,420),(1320,505),TEAL,10);label(d,(1290,435),'FALLS: ~400 m',True)
+arrow(d,(815,640),(655,725),TEAL,10);label(d,(610,525),'WESTERN\nOVERFLOW',True)
+arrow(d,(1370,755),(1550,855),TEAL,10)
+label(d,(80,1000),'The northern feeder follows the marked route northwest of the lake.\nThe western Seattle outlet lies below it.\nTheir local bends vary; the redline controls placement.')
+label(d,(80,1210),'One naturally overflowing lake and one controlled eastern outlet. No second western dam.',False)
 im.save(G/'Waterway_Logic.png')
+im,d=canvas('A DROWNED VALLEY WITHIN THE PLATEAU','Conceptual section along the northern feeder, reservoir and lower eastern valley.',(2200,1100))
+profile=[(80,310),(300,330),(520,350),(650,330),(720,350),(760,520),(850,550),(920,640),(1110,650),(1310,655),(1490,660),(1600,665),(1640,860),(1840,905),(2120,955)]
+d.polygon(profile+[(2120,1040),(80,1040)],fill='#b8a180');d.line(profile,fill=INK,width=6)
+d.line([(80,316),(680,340),(750,355),(790,525),(900,570),(950,615)],fill=TEAL,width=13)
+d.polygon([(950,615),(1600,615),(1600,665),(1310,655),(1110,650),(920,640)],fill='#6aa9b1')
+d.polygon([(1585,600),(1630,600),(1690,870),(1600,870)],fill='#738087');d.line([(1690,860),(1850,900),(2110,945)],fill=TEAL,width=11)
+label(d,(80,200),'UPPER PLATEAU RIVER',True);label(d,(770,250),'FALLS\n1,090 to 690 m',True);label(d,(1070,470),'DROWNED VALLEY\n690 m WATER',True);label(d,(1640,390),'EASTERN DAM\n715 m CREST',True);label(d,(1720,740),'LOWER VALLEY\n+ CITY',True)
+label(d,(90,800),'A high western side saddle (not in this section)\nallows natural overflow toward Seattle.\nThe dam closes the former deeper eastern exit.')
+im.save(G/'Plateau_Valley_Section.png')
 im,d=canvas('RAIN SHADOW: FOLLOW THE AIR, NOT THE PAGE','Proposed moisture route across the eastern mountain wall; direction matters.')
 profile=[(100,810),(370,810),(530,780),(650,680),(790,460),(900,340),(980,500),(1100,430),(1220,610),(1390,730),(1600,760),(1830,770),(2110,785)]
 d.polygon(profile+[(2110,940),(100,940)],fill='#bc9d6a');d.polygon([(370,810),(530,780),(650,680),(790,460),(900,340),(980,500),(1100,430),(1100,940),(370,940)],fill='#68815d');d.rectangle((100,810,370,940),fill='#4c9aa4');d.line(profile,fill=INK,width=7)

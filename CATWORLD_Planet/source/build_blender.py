@@ -5,6 +5,14 @@ BASE=Path(__file__).resolve().parents[1]
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 for dat in list(bpy.data.materials): bpy.data.materials.remove(dat)
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True
+# Prefer the available Metal GPU on macOS; keep a CPU fallback for other machines.
+try:
+ prefs=bpy.context.preferences.addons['cycles'].preferences
+ prefs.compute_device_type='METAL';prefs.get_devices()
+ for device in prefs.devices:device.use=device.type=='METAL'
+ if any(d.use for d in prefs.devices) and '--cpu' not in sys.argv:scene.cycles.device='GPU'
+except (TypeError,RuntimeError):pass
+
 scene.render.resolution_x=2048;scene.render.resolution_y=2048;scene.render.resolution_percentage=100
 scene.render.image_settings.file_format='PNG';scene.world.color=(.12,.12,.12)
 scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.09,.12,.17,1);scene.world.node_tree.nodes['Background'].inputs[1].default_value=.5
@@ -54,7 +62,7 @@ for ftr in features:
 bpy.ops.object.camera_add();cam=bpy.context.object;cam.name='ATLAS camera';scene.camera=cam;cam.data.type='ORTHO';cam.data.ortho_scale=22.2;cam.data.lens=50
 bpy.ops.object.light_add(type='AREA');key=bpy.context.object;key.name='Broad daylight';key.data.energy=7500;key.data.shape='DISK';key.data.size=14
 bpy.ops.object.light_add(type='AREA');fill=bpy.context.object;fill.name='Soft atmospheric fill';fill.data.energy=3400;fill.data.size=20
-views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,-12,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-153,-32,15.0),('12_eastern_continent',135,5,15.0),('13_seattle_waterway',-25,16,6.7),('14_archipelago',-108,-18,16.0)]
+views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,-12,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-112,-38,15.0),('12_eastern_continent',129,-2,15.0),('13_seattle_waterway',-27,15,7.5),('14_archipelago',-69,-20,15.0),('15_plateau_hydrology',-21,23,8.3)]
 metadata=[]
 for name,lon,lat,scale in views:
  direction=xyz(lon,lat,1);target=Vector((0,0,0)) if scale>20 else direction*8.7
@@ -79,7 +87,7 @@ for name,lon,lat,scale in views:
  scene.render.filepath=str(BASE/('review_draft' if '--draft' in sys.argv else 'renders')/f'{name}.png')
  if '--draft' in sys.argv:
   scene.cycles.samples=8;scene.render.resolution_percentage=40
-  if name not in ['01_panterra','02_eastern','04_far_side','05_north_pole','06_south_pole','11_maritime_continent','14_archipelago']:continue
+  if name not in ['01_panterra','02_eastern','04_far_side','05_north_pole','06_south_pole','11_maritime_continent','14_archipelago','07_panterra_close','13_seattle_waterway','15_plateau_hydrology']:continue
  only=next((a.split('=',1)[1].split(',') for a in sys.argv if a.startswith('--only=')),None)
  if only and name not in only:continue
  if '--preview' in sys.argv:

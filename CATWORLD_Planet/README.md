@@ -1,51 +1,51 @@
-# Catworld / Terra - Revision 5
+# Catworld / Terra - Revision 6
 
-Start with **guide/CATWORLD_Creator_Guide.pdf**: the 45-page creator/showrunner guide explains the complete model, its story geography, design reasoning, assumptions and open decisions. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
+Start with **guide/CATWORLD_Creator_Guide.pdf**, the illustrated creator/showrunner guide. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
 
-This revision separates the far-side continent, moves it SOUTH, and rebuilds it as a smaller old mainland with a substantial eastern archipelago. Only Panterra and the eastern continent remain connected by the mountain range. Open ocean, without a linking island arc, separates the eastern and southern continents; the southern archipelago runs east toward Panterra. Northern late autumn and southern late spring are now the explicit seasonal setting. A modeled shelf can provide the old cat crossing at an illustrative sea level 65 m lower; it is drowned today.
+The eastern continent swings eight degrees south around its mountain junction. The independent southern mainland has a new asymmetric coastline, sits farther southeast and closer to Panterra, and has a sparse eastward chain of six principal and eight minor islands toward Panterra. Open ocean still separates it from the eastern continent. The north is a wide mountain province, with steppe foothills below; Seattle has broad western forest country, and southern settled districts have fertile rolling agricultural land.
 
-The primary waterway is **Seattle -> super-lake -> dam -> downstream city**. London and Rome sit near the lake; Amsterdam is the downstream city shorthand. These names and most exact placements remain proposals.
+The northern mountain river crosses the upper plateau and falls into the reservoir valley. **The lake drains west through Seattle to the sea**, across a natural high bedrock sill. The eastern megadam controls a separate lower outlet toward the downstream city. This supersedes the old Seattle-into-lake arrangement.
 
 ## Contents
 
-- `guide/CATWORLD_Creator_Guide.pdf`: 45-page illustrated guide, sources, 30-landmark catalogue, model specifications and 14 reference plates with readable vector labels.
+- `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 36-landmark catalogue, model specifications and sixteen reference plates.
 - `guide/Creator_Guide.md`: editable guide text.
-- `guide/Geography_and_Design.md`: technical companion and file index.
-- `guide/Revision_Comparison.jpg`: R4/R5 comparison with the new far-side view tilted 12 degrees south.
-- `guide/Tectonic_Framework.png`: proposed collision history, rifts, shelf bridge and moisture routes.
-- `guide/Seasonal_Epoch.png` and `Migration_Lowstand.png`: the current season and the proposed historic shelf crossing.
-- `guide/Mountain_Section.png`, `Waterway_Logic.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: explanatory diagrams.
-- `guide/Seasonal_Reference.csv`: geometric daylight by region for the proposed epoch.
-- `guide/Landmark_Catalogue.csv`: feature names, descriptions and coordinates.
-- `renders/`: 14 clean PNGs: six whole-globe views, six regional globe studies, two dam studies.
-- `annotated/`: 14 matching annotated PNGs. Seattle/Panterra plates include flow arrows.
-- `model/CATWORLD_Terra.blend`: packed editable globe, 30 landmark anchors and 12 saved cameras.
-- `model/CATWORLD_Dam_Study.blend`: local dam, gorge, village, access roads and two saved cameras.
-- `textures/`: 4K albedo, 16-bit height, roughness and land mask.
-- `source/`: reproducible build scripts, physical terrain data, camera metadata, verification records and terrain attribution.
-- `CATWORLD_Contact_Sheet.jpg`: visual index of every rendered view.
+- `guide/Geography_and_Design.md`: technical companion.
+- `guide/Revision_Comparison.jpg`: R5/R6 far-side comparison.
+- `guide/Tectonic_Framework.png`, `Seasonal_Epoch.png`, `Migration_Lowstand.png`: world-scale explanation plates.
+- `guide/Waterway_Logic.png`, `Plateau_Valley_Section.png`, `Mountain_Section.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: process diagrams.
+- `guide/Seasonal_Reference.csv`: geometric daylight at the stated epoch.
+- `guide/Landmark_Catalogue.csv`: names, descriptions and coordinates.
+- `renders/`: sixteen clean PNGs: thirteen globe views, two dam views and one waterfall study.
+- `annotated/`: matching numbered plates; regional hydrology plates include flow arrows.
+- `model/CATWORLD_Terra.blend`: editable globe, four packed maps, thirteen cameras and 36 anchors.
+- `model/CATWORLD_Dam_Study.blend`: local gorge, dam, terraces and two saved cameras.
+- `model/CATWORLD_Waterfall_Study.blend`: local plateau river and cascade study.
+- `textures/`: 4K albedo, 16-bit surface height, roughness and land mask.
+- `source/`: build scripts, physical terrain fields, metadata, verification records and terrain attribution.
+- `CATWORLD_Contact_Sheet.jpg`: index of all views.
 
 ## Blender and drawing
 
-Built with Blender 5.2.1. Globe frames 1-12 select the saved atlas cameras and matching lights: front, east, west, far side, north pole, south pole, Panterra close, impact basin, southern continent, eastern continent, Seattle waterway and archipelago. Dam frames 1-2 select valley context and structural detail. Numpad 0 toggles the camera view. Textures are packed for offline use.
+Built with Blender 5.2.1. Globe frames 1-13 select atlas cameras and matching lighting. Dam frames 1-2 select context/detail. The waterfall file has one camera. Numpad 0 toggles camera view. Textures are packed for offline use.
 
-The globe uses **10x radial relief exaggeration**. Physical elevations remain in metres, with a peak near 10.8 km. River widths are exaggerated for visibility. Global texture resolution is roughly 9.4 km per texel at the equator. The dam model uses 1 unit = 1 km; its structures are below global texture resolution. Convert scales before combining these models.
+The globe uses **10x radial relief exaggeration**, and rivers are widened for readability. Physical elevations remain in metres. The globe radius is ten Blender units for a physical radius of 6,100 km. Its 4096 x 2048 texture resolution is approximately 9.4 km per texel at the equator. The local dam and waterfall models use one unit per kilometre with true relief. They are separate landform/engineering concepts, not exact high-resolution extracts from the globe.
 
-Clean globe PNGs have transparent backgrounds. Each view has drawing-friendly lighting, and clouds are omitted. These are satellite-style worldbuilding references, not simultaneous astronomical photographs. The PDF uses compressed image copies; use the full PNGs for close drawing work.
+Clean globe PNGs have transparent backgrounds. Clouds are omitted and each reference has useful daylight for drawing, even where the seasonal epoch implies polar night. Use full PNGs for close study; the PDF embeds compressed copies.
 
-Radius: 6,100 km. Tilt: 23.4 degrees. Orbit: 4,000 Earth years. The guide preserves that orbit and explains the unresolved heat source. Tectonics, climate, ice extent, engineering and most names remain proposals; no global climate, plate-motion or hydraulic simulation has been run.
+Radius: 6,100 km. Tilt: **35 degrees**. Orbit: 4,000 Earth years. Proposed epoch: Ls 255 degrees, north late autumn / south late spring. The exact epoch, former 65 m lowstand, crossing date, heat source, ice mass, discharge and engineering remain design hypotheses. No global climate, plate-motion, erosion or hydraulic simulation has been run.
 
 ## Rebuild on macOS
 
-Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf` in a Python environment. From this package folder:
+Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf`. Run from the package directory:
 
 ```sh
 BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
-# Optional: rebuild the bundled traced geography and terrain from scratch.
-# Delivered terrain fields already contain R5.
+# Optional full terrain reconstruction; delivered terrain already contains R6.
 # python source/build_terrain.py
 "$BLENDER" -b -t 8 --python source/build_blender.py
 "$BLENDER" -b -t 8 --python source/build_dam.py
+"$BLENDER" -b -t 8 --python source/build_waterfall.py
 "$BLENDER" -b --python source/finalize_model.py
 "$BLENDER" -b --python source/finalize_dam.py
 python source/make_epoch_figures.py
@@ -55,6 +55,6 @@ python source/build_creator_guide.py
 python source/verify_delivery.py
 ```
 
-For fast drafts, add `-- --draft` to the `build_blender.py` command. The bundled Himalayan analogue avoids a network download. Document scripts use Arial from macOS. Rebuilding regenerates files; regenerate the SHA256 manifest after changes.
+Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6; do not apply `revise_r6.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
 
-The original pitch deck and private message screenshots are not included. Terrain attribution is in `source/TERRAIN_ATTRIBUTION.md`. Earlier commits preserve previous iterations; the repository's stable `CATWORLD_Planet/` folder contains the current delivery.
+Original private sketches, message screenshots and the pitch deck are excluded from the handoff. Earlier Git commits preserve earlier iterations. The stable repository directory `CATWORLD_Planet/` contains the current release.

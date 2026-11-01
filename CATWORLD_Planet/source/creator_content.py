@@ -1,201 +1,224 @@
-"""R5 creator guide: current canon, design proposals and limits."""
 SECTIONS = [{'title': 'What is established, and what is proposed',
   'kicker': 'READ THIS FIRST',
   'figure': None,
-  'paras': [('Confirmed world facts',
-             'Terra is approximately Earth-sized, with Earth-like tilt and a 4,000-Earth-year orbit. Panterra and the '
-             'eastern continent remain joined by the enormous mountain belt. The smaller far-side continent is '
-             'independent and lies in the SOUTH, with a substantial archipelago to its east. This supersedes the '
-             'former three-connected-core and northern-far-side layouts.'),
-            ('Confirmed seasonal direction',
-             'Northern winter is approaching. The Blood Lake country is in late autumn or locally early winter; the '
-             'southern hemisphere is in late spring, approaching summer. Earlier southern winter allowed the cats to '
-             'cross from their old homeland toward Panterra. The model now reflects those opposing seasons.'),
-            ('Confirmed water order',
-             'Seattle is upstream: its major river flows INTO the super-lake near London and Rome. The dam controls '
-             'the outlet, and the large trading city is downstream. City names remain development shorthand.'),
-            ('Proposed quantities and mechanisms',
-             'The model uses radius 6,100 km, tilt 23.4 degrees and a 24-hour day. Solar longitude 255 degrees, a '
-             'former sea level 65 m lower, a crossing 1,100 years before the present, and identification of the new '
-             'southern landmass as Old Panterra are explicit proposals. The creator has fixed the direction of the '
-             'seasonal story, not those exact numbers.'),
-            ('Unresolved physics',
-             'A habitable heat source for the long orbit, grounded-ice mass balance, sea-level chronology and regional '
-             'climate require further development. The map is an art-directed geographic hypothesis, not an ice-sheet '
-             'or climate simulation.')]},
+  'paras': [('Established geography',
+             'Terra has a 4,000-Earth-year orbit and, following the latest creator direction, 35-degree axial '
+             'tilt. Panterra and the eastern continent share the giant mountain system. The separate southern '
+             'mainland is closer to Panterra and has a sparse eastern island chain. No island arc links it to the '
+             'eastern continent.'),
+            ('Current epoch',
+             'The north is in late autumn and its high country is already wintry. The south is in late spring '
+             'approaching summer. The older southern-winter crossing and current southward bird movement remain '
+             'the story framework.'),
+            ('Authoritative water order',
+             'The northern mountain river crosses the upper plateau, falls into the reservoir valley, and '
+             'supplies the lake. A separate, slightly more southerly river drains west through Seattle country to '
+             'the sea. The eastern megadam and its downstream city remain in place. This replaces the earlier '
+             'Seattle-into-lake layout.'),
+            ('Regional environments',
+             'Most of northern Panterra is a broad mountain province. Steppe occupies the lower northern '
+             'foothills. The west is extensive forest country around Seattle. Southern settled districts are '
+             'fertile farmland and rolling hills.'),
+            ('Design proposals and limits',
+             'Radius 6,100 km, 24-hour rotation, Ls 255 degrees, a 65 m former lowstand and an illustrative '
+             'crossing 1,100 years ago remain proposals. Exact ice extent, heat source, water budget and '
+             'engineering need further development. This is a consistent drawing-reference model, not a climate '
+             'or engineering simulation.')]},
  {'title': 'The planet at a glance',
   'kicker': 'WORLD ORIENTATION',
   'figure': 'overview',
-  'paras': [('Two connected continents and one separate southern land',
-             'Panterra connects eastward through a short, broad mountainous neck to the eastern dry continent. That '
-             'collision system ends before the separating ocean. There is no present-day land bridge from the eastern '
-             'continent to the southern continent.'),
-            ('A smaller southern silhouette',
-             'The southern mainland lies roughly between 15 and 51 degrees south. It has a weathered dry interior, a '
-             'divided northern coast, a wetter eastern escarpment, cool southern inlets and a long eastern '
-             'archipelago. A small northern remnant island survives in an otherwise open far-side northern ocean.'),
-            ('Different kinds of connection',
-             'The mountain connection is permanent land. The eastern archipelago is separated by water today. A '
-             'modeled shallow continental ribbon provides a proposed former lowstand crossing toward Panterra; it is '
-             'not a third modern mountain bridge.'),
-            ('Orientation',
-             'Longitude is arbitrary. Front is 0 degrees, east +90, west -90, and far side 180. The far-side camera is '
-             'tipped 12 degrees south to show the new mainland. Polar views complete the same globe.')]},
+  'paras': [('Three continental identities',
+             'Panterra is the main story landscape. The eastern dry core remains attached through the mountain '
+             'belt, rotated eight degrees downward at its junction. A deep ocean separates it from the '
+             'independent southern shield.'),
+            ('The southern silhouette',
+             'The smaller mainland sits southwest of Panterra, closer and farther south after a final 16-degree eastward and 5-degree southward adjustment. An asymmetric headland, oblique old '
+             'escarpment, deeply cut southeastern coast and offset southern peninsulas replace the '
+             'inverted-Australia resemblance.'),
+            ('An intentionally sparse route',
+             'Six principal islands and eight minor islands lead east toward Panterra. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments '
+             'recall Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies '
+             'of their real climates.'),
+            ('Using the globe',
+             'Front is 0 degrees, east +90, west -90 and far side 180. The southern regional camera follows the '
+             'relocated mainland. Polar and regional views all render the same model.')]},
  {'title': 'What changed in this pass',
-  'kicker': 'REVISION 5',
+  'kicker': 'REVISION 6',
   'figure': 'guide/Revision_Comparison.jpg',
-  'paras': [('The northern extension is removed',
-             'The former far-side northern mainland and its collision junction are replaced by ocean. The new '
-             'independent mainland is smaller and south of the equator. Its geology and silhouette are rebuilt rather '
-             'than simply rotating the old green strip.'),
-            ('Distinct mainland and island regions',
-             'The interior gains dry basins, stony uplands and salt pans. A less extreme eastern range supports wet '
-             'coastal catchments. Large fault-aligned islands, outer fragments and drowned sounds make the eastern '
-             'side an archipelago. Panterra retains its shortened mountain connection to the eastern continent. The '
-             'residual island arc below the eastern continent is removed so it no longer suggests a second link.'),
-            ('One explicit seasonal snapshot',
-             'Northern highlands gain autumn snow and frost; the Blood Lake retains an open red centre and broken '
-             'shore ice. Arctic pack expands while southern pack retreats. Southern grounded ice and mountain glaciers '
-             'survive into spring. The primary Seattle waterway and dam remain intact.')]},
+  'paras': [('Land and mountains',
+             'The eastern block swings south. The southern mainland is redesigned and closer to Panterra, with '
+             'fewer islands. Northern Panterra becomes a broad, dissected highland province with parallel ranges, '
+             'massifs and intermontane valleys.'),
+            ('Rivers and the plateau',
+             'A single northern feeder follows the higher plateau and drops into one drowned valley arm. The '
+             'western outlet descends toward Seattle. The feeder follows the latest drawn route northwest of the '
+             'lake, with the Seattle outlet below it. The redline takes precedence over an abstract bearing '
+             'calculation.'),
+            ('Regions and seasons',
+             'Seattle is a substantial forest region, not just a pin beside a thin coastal strip. Northern '
+             'foothills are steppe; the southern settled country is agricultural and hilly. Tilt increases from '
+             '23.4 to 35 degrees; daylight and polar conditions are recalculated.')]},
  {'title': 'A collision system and a separate old continent',
   'kicker': 'TECTONIC HISTORY',
   'figure': 'guide/Tectonic_Framework.png',
   'paras': [('Older continental crust',
-             'Panterra, the eastern dry interior and the southern mainland preserve older crustal blocks. The northern '
-             'impact and its iron province predate the main collision. The southern shield has its own weathering, '
-             'rifting and erosion history.'),
+             'Panterra, the eastern dry interior and the southern mainland preserve older crustal blocks. The '
+             'northern impact and its iron province predate the main collision. The southern shield has its own '
+             'weathering, rifting and erosion history.'),
             ('The main collision stops at the eastern margin',
              'Panterra and the eastern block collide, thickening crust and supporting the gargantuan range. Broad '
              'folds, plateaus and valleys explain the mountain bridge. This belt does not need to continue across '
              'every continent. [S1]'),
             ('Southern rifting and an old raised margin',
-             'The independent southern continent is interpreted as an older rifted block. Its eastern escarpment is a '
-             'rejuvenated inherited mountain margin, lower than the main collision belt. Extension breaks the '
-             'continental shelf into large islands, gulfs and straits. This supports an Australia-like role without '
-             'copying Australia.'),
+             'The independent southern continent is interpreted as an older rifted block. Its eastern escarpment '
+             'is a rejuvenated inherited mountain margin, lower than the main collision belt. Extension breaks '
+             'the continental shelf into large islands, gulfs and straits. This supports an Australia-like role '
+             'without copying Australia.'),
             ('Two different seaways',
-             'Deep ocean separates the southern continent from the eastern dry core. The long eastern shelf ribbon '
-             'toward Panterra is a distinct, shallow remnant of stretched continental crust. Its former emergence is a '
-             'sea-level hypothesis, not a new mountain collision. Boundary lines are schematic and plate velocities '
-             'are unspecified.')]},
+             'Deep ocean separates the southern continent from the eastern dry core. The long eastern shelf '
+             'ribbon toward Panterra is a distinct, shallow remnant of stretched continental crust. Its former '
+             'emergence is a sea-level hypothesis, not a new mountain collision. Boundary lines are schematic and '
+             'plate velocities are unspecified.')]},
  {'title': 'Gargantuan ranges, not a row of peaks',
   'kicker': 'MOUNTAIN LOGIC',
   'figure': 'guide/Mountain_Section.png',
-  'paras': [('A broad elevated system',
-             'The high country includes parallel folded ridges, interior plateaus, dissected foothills and deep '
-             'transverse valleys. Proposed peaks approach 10.8 km. The high belt is several hundred kilometres wide, '
-             'with a broader surrounding mountain province. Those dimensions are deliberate fantasy-world choices.'),
-            ('Why the plateau sits below it',
-             'Thickened crust raises a wide region. Erosion then cuts the lower flank into valleys and terraces, '
-             'creating the transition from the Northern Divide to the Panterran Plateau and reservoir basin. The lake '
-             'occupies a depression within that landscape, rather than resting on an arbitrary flat shelf.'),
-            ('Why the terrain looks structured',
-             'A real Himalayan elevation analogue supplies ridge-and-valley texture, warped into the invented belt. '
-             'The independent southern escarpment uses a lower, separately shaped relief field; it has no collision '
-             'junction with the northern belt. The source elevations are modified reference data, not a claim that '
-             'Terra copies Earth.'),
-            ('Reading the height correctly',
-             'The physical elevation field is in metres. The globe displays relief at TEN times its radial height so '
-             'mountains remain readable from space. The cross-section is also schematic. Neither image should be used '
-             'to infer literal cliff heights or structural dimensions.')]},
+  'paras': [('A northern province, not one ridge',
+             'Most northern Panterran land outside the impact basin is now strongly mountainous. Multiple folded '
+             'ranges and rugged massifs surround high valleys and inherited upland basins. The main crest remains '
+             'the highest tier; broad supporting terrain makes it part of a continent.'),
+            ('A plausible mountain history',
+             'Long convergence thickens crust across a wide belt, while erosion and faulting separate individual '
+             'ridges and basins. Renewed uplift can affect older northern crust without making the ancient impact '
+             'responsible for every mountain. [S1]'),
+            ('Relief and erosion texture',
+             'A Himalayan elevation analogue supplies coherent ridge-and-valley structure at several scales. '
+             'Broad foothill transitions and coastal taper prevent mountains from becoming a uniformly extruded '
+             'wall. The eastern range is rotated with its host terrain.'),
+            ('How to draw it',
+             'Globe relief is exaggerated ten times. Draw a wide region of overlapping ranges and deep valleys, '
+             'then step down into open foothills. Use the local dam and waterfall studies for true-height '
+             'relationships.'),
+            ('Southern mountain groups',
+             "The creator's two southern mountain regions are built as broad older uplifts and a rugged peninsula "
+             'spine. Eroded fold roots and later fault uplift explain high ground separated from the active '
+             'northern collision. Their lower slopes feed tributaries and grade into the settled agricultural '
+             'country.')]},
  {'title': 'Panterra: the principal story landscape',
   'kicker': 'REGIONAL TOUR / 01',
   'figure': 'renders/07_panterra_close.png',
-  'paras': [('A connected sequence of places',
-             'The Northern Divide forms the high northern boundary. Below it lie a dissected plateau, wet western '
-             'uplands, the Seattle river corridor, the great lake and cultivated southern lowlands. The downstream '
-             'metropolis occupies the outlet trade system. These relationships matter more than any provisional name.'),
-            ('Forests, fields and industry',
-             'Wet upland valleys support giant old-growth forests and timber settlements. Lower gradients and water '
-             'access support farming near the lake and river plains. Logging, milling, canals and electricity connect '
-             "those resource zones to cities. The deck's giant-tree and industrial themes therefore occupy specific "
-             'parts of the terrain. [D4, D41, D47]'),
-            ('Defence and access',
-             'The mountains and indented shores limit easy overland approaches. Gate valleys offer supply corridors '
-             'through the range. Ports and river mouths provide alternatives, so the empire is difficult to enter with '
-             'heavy freight without becoming implausibly sealed off from the world.')]},
- {'title': 'Seattle flows into the lake',
+  'paras': [('Four readable regions',
+             'A mountain-dominated north descends into steppe foothills and a dissected plateau. The great lake '
+             'occupies a valley inside that plateau. Westward lie Seattle forest country and its river corridor. '
+             'Southward lie fertile settlements, pasture and rolling agricultural hills.'),
+            ('A substantial western forest',
+             'Old growth covers a broad western watershed and inland hills, with wet ravines, logging '
+             'tributaries, clearings and settlement margins. The forest gradually opens toward the plateau; it is '
+             'not a thin painted coastline.'),
+            ('Farming and settlement',
+             'The southern green-and-gold lowlands represent agricultural country around rolling hills and the '
+             'two southern mountain groups. Alluvial reaches and sheltered foothills explain settlement. High '
+             'rocky interiors remain uncultivated. Individual fields and buildings are below globe resolution.'),
+            ('Defence and movement',
+             'The broad mountains retain lower passes and staging valleys. Rivers, escarpments and coastlines '
+             'channel movement without implying that every route is easily navigable.')]},
+ {'title': 'Two river corridors and an eastern dam',
   'kicker': 'HYDROLOGY / THE PRIMARY WATERWAY',
   'figure': 'guide/Waterway_Logic.png',
-  'paras': [('Upstream means upstream',
-             'Mountain tributaries gather above Seattle. The primary channel then descends through the western '
-             'foreland into the reservoir. Its sampled water surface decreases toward 690 m. The lake does not drain '
-             'west to Seattle. The outlet instead leaves through the dam toward the downstream trading city.'),
-            ('The river is deliberately visible',
-             'The main waterway is wider in the texture than the secondary drainage so it remains useful for drawing. '
-             'At a 4K global texture, a few pixels represent many kilometres: this is a reference line-width '
-             'exaggeration, not a literal river width. The main channel has a separately graded surface and a recorded '
-             'downhill check.'),
-            ('Transport requires local decisions',
-             'Logs and cargo can follow this corridor, but an upstream mountain river is not automatically navigable '
-             'end to end. Rapids, bypass canals, locks, portage or transshipment belong at abrupt gradients. Establish '
-             'those local links before staging an uninterrupted boat journey.'),
-            ('Other drainage',
-             'The southern mainland and its islands have a new elevation-routed drainage network. Blue channels favour '
-             'humid slopes; dry interior washes use subdued brown lines. Secondary rivers and desert wadis are '
-             'schematic at this scale. The check on the primary Seattle route does not certify every tributary or '
-             'predict floods.')]},
+  'paras': [('Northern feeder',
+             'Mountain runoff gathers northwest of the lake, northeast of Seattle. The main feeder follows the '
+             'upper plateau and reaches the lake through a major waterfall and a single drowned valley arm. It '
+             'follows the marked western plateau route instead of the crossed-out eastern route.'),
+            ('Western Seattle outlet',
+             'A high natural bedrock sill allows overflow from the reservoir into the western river. The river '
+             'then loses elevation gradually through forest country toward Seattle and its estuary. It lies south '
+             'of the northern feeder.'),
+            ('The eastern outlet remains',
+             'The megadam blocks the deeper eastern route. Controlled releases descend to the eastern downstream '
+             'metropolis and sea. The reservoir therefore has a natural western overflow and a managed eastern '
+             'outlet, not two incoming main rivers.'),
+            ('Readable watercourses',
+             'The main feeder, western outlet and eastern release dominate the globe. A few converging '
+             'tributaries follow the marked western and southern catchments, with three small outlying lakes and '
+             'a restrained estuary fork. Blue lines are widened for drawing clarity, not literal channel '
+             'widths.')]},
  {'title': 'A continental lake needs a continental basin',
   'kicker': 'RESERVOIR LOGIC',
-  'figure': None,
-  'paras': [('What the dam can actually do',
-             'The model reservoir covers about 1.54 million square kilometres. A dam can control a lake this large '
-             'only if a naturally enclosed basin already exists, with one dominant bedrock outlet. The dam raises and '
-             'stabilizes water in that basin; it does not create the depression itself.'),
-            ('How a small lake becomes a super-lake',
-             'A small predecessor lake can occupy the deepest part of a broad valley system. Raising its outlet floods '
-             'extensive shallow land and connected tributary valleys. The model proposes that history, but does not '
-             'yet contain a surveyed pre-dam terrain surface. Shoreline benches and drowned valleys are the visual '
-             'evidence to carry into local maps.'),
-            ('Water budget, explicitly assumed',
-             'For an illustrative 6 million km2 catchment, 0.4 m of annual runoff supplies 2,400 km3/year. Net '
-             'evaporation of 0.8 m/year across the super-lake removes roughly 1,235 km3/year. That leaves about 1,165 '
-             'km3/year before other losses and uses. These are scenario inputs, not measured or climate-simulated '
-             'facts.'),
-            ('The filling history matters',
-             'At an assumed 100 m mean depth, storage would be about 154,000 km3. Even a net filling flow of 25,000 '
-             'm3/s would take roughly two centuries from empty. A credible history should allow existing water, staged '
-             'impoundment and long filling periods, rather than an overnight transformation.'),
-            ('Why it remains fresh',
-             'A sustained controlled outlet exports dissolved salts. Large inflow and continued flushing support fresh '
-             'water; a closed, evaporation-dominated basin would tend toward salinity. Sediment trapping, shoreline '
-             'flooding and changes in downstream fertility are important consequences for settlements and politics.')]},
+  'figure': 'guide/Plateau_Valley_Section.png',
+  'paras': [('A valley inside a plateau',
+             'The water surface is approximately 690 m above sea level. The surrounding plateau is higher, with '
+             'foothills and mountains beyond. Before the dam, a smaller lake and river occupied the low valley '
+             'floor; impoundment flooded connected valley branches.'),
+            ('Why one dam can create this lake',
+             'The eastern channel was the lower escape route. Blocking that gorge raises water until it reaches '
+             'the higher western saddle. The west can then overflow naturally without draining the reservoir back '
+             'to its pre-dam floor. The selected western sill is about 685 m; normal water is above it.'),
+            ('Why the eastern dam is lower',
+             'The downstream eastern valley floor is much lower than the surrounding plateau. The dam foundation '
+             'and tailwater sit closer to sea level, while the dam crest still rises above the 690 m reservoir. A '
+             'low foundation does not mean a low crest.'),
+            ('Water budget and filling time',
+             'The continental reservoir needs continental runoff and a long filling history. The northern river '
+             'is the prominent feeder; smaller catchments are suppressed visually. Evaporation, western overflow '
+             'and eastern releases must balance over time. The previous one-outlet discharge estimate cannot be '
+             'assigned independently to both outlets.'),
+            ('Freshness and navigation',
+             'Throughflow can export dissolved salts, while sediment accumulates in lake arms. A broad lake or '
+             'river is not automatically navigable end to end; falls, rapids, portage and seasonal operating '
+             'levels need local story decisions.')]},
  {'title': 'The Great Panterran Dam',
   'kicker': 'LOCAL MODEL / LANDMARK 05',
   'figure': 'renders/09_dam_valley.png',
   'paras': [('The designed object',
-             'The separate inset has a 4.8 km crest, approximately 470 m structural height, reservoir level at 690 m '
-             'and crest near 715 m. It includes intake towers, bronze gates, spillways, turbine halls, tailraces, '
-             'access roads, checkpoints and a fishing village. One inset unit equals one kilometre.'),
+             'The separate inset has a 4.8 km crest, approximately 470 m structural height, reservoir level at '
+             '690 m and crest near 715 m. It includes intake towers, bronze gates, spillways, turbine halls, '
+             'tailraces, access roads, checkpoints and a fishing village. One inset unit equals one kilometre.'),
             ('Power comes from head and flow',
-             'Using P = density x gravity x flow x head x efficiency, an assumed 10,000 m3/s, 350 m net head and 90% '
-             'efficiency gives about 31 GW. A nominal 60 GW would require roughly 19,400 m3/s at that head. Lake size '
-             'alone cannot guarantee that discharge. [S7]'),
+             'Using P = density x gravity x flow x head x efficiency, an assumed 10,000 m3/s, 350 m net head and '
+             '90% efficiency gives about 31 GW. A nominal 60 GW would require roughly 19,400 m3/s at that head. '
+             'Lake size alone cannot guarantee that discharge. [S7]'),
             ('Scale and limits',
              'The concept is larger in structural height than Hoover (about 221 m) and Three Gorges (181 m). Its '
              "illustrative 31 GW exceeds Three Gorges' 22.5 GW installed capacity. These comparisons establish "
-             'ambition, not engineering feasibility. The inset is a fictional design study, not a construction-ready '
-             'dam. [S8, S9]'),
+             'ambition, not engineering feasibility. The inset is a fictional design study, not a '
+             'construction-ready dam. [S8, S9]'),
             ('Global and local scales',
-             'The dam wall is below the globe texture resolution. The local study shows the abrupt drop; the global '
-             'river grade is smoothed. The village terrace is resolved in the inset, not in its approximate global '
-             'anchor. Do not measure the local gorge from the planetary mesh.')]},
+             'The dam wall is below the globe texture resolution. The local study shows the abrupt drop; the '
+             'global river grade is smoothed. The village terrace is resolved in the inset, not in its '
+             'approximate global anchor. Do not measure the local gorge from the planetary mesh.')]},
+ {'title': 'The northern plateau waterfall',
+  'kicker': 'LANDFORM / UPPER RIVER TO RESERVOIR',
+  'figure': 'renders/16_plateau_falls.png',
+  'paras': [('A 400 m change of level',
+             'The mountain-fed river runs across the high plateau at about 1,090 m near its end. A 250 m main '
+             'waterfall reaches an 840 m plunge pool; lower cascades carry the flow down to the 690 m reservoir.'),
+            ('Why the waterfall is here',
+             'The river crosses a resistant bedrock lip where the upper plateau is cut by the deeper valley. Hard '
+             'layers hold ledges while softer or fractured rock erodes below them. The drowned valley arm reaches '
+             'the foot of the cascade.'),
+            ('How to use the study',
+             'The local Blender model shows a continuous water surface meeting its banks, the main curtain, '
+             'pools, lower cascades, steppe above and limited riparian vegetation. It is a landform reference, '
+             'not a fluid simulation or a precise cutout of the coarse globe mesh.'),
+            ('Story implications',
+             'This is a barrier to through-navigation and a natural crossing, portage and lookout landmark. '
+             'Noise, spray and seasonal discharge affect its surroundings. Its long-term erosion rate remains '
+             'unspecified.')]},
  {'title': 'The northern impact and the red sea',
   'kicker': 'GEOLOGY / RESOURCE PROVINCE',
   'figure': 'renders/08_impact_close.png',
   'paras': [('An old scar incorporated into a continent',
-             'The basin has a central uplift, a broken rim and a broad apron that merges into the northern mainland. '
-             'It is older than the collision belt. Erosion and subsequent tectonics modify its edges, so it reads as '
-             'part of the crust rather than a circular object placed on top.'),
+             'The basin has a central uplift, a broken rim and a broad apron that merges into the northern '
+             'mainland. It is older than the collision belt. Erosion and subsequent tectonics modify its edges, '
+             'so it reads as part of the crust rather than a circular object placed on top.'),
             ('Why the red works',
-             'Rust-coloured soil and sediment suggest oxidized iron minerals such as hematite. Red water represents '
-             'suspended mineral-rich material and staining, not liquid metal. Colour is a strong visual cue, but it '
-             'does not prove that the iron came from a meteorite. [S3]'),
+             'Rust-coloured soil and sediment suggest oxidized iron minerals such as hematite. Red water '
+             'represents suspended mineral-rich material and staining, not liquid metal. Colour is a strong '
+             'visual cue, but it does not prove that the iron came from a meteorite. [S3]'),
             ('Ore and the story',
-             'The iron-rich northern province is a creator premise. Impact melting, fractured rock and later fluid '
-             'circulation offer a proposed way to redistribute and concentrate resources. Real impact structures can '
-             'host ore deposits, but rare earths and enriched uranium are not automatic products of an iron-rich '
-             'impact. Keep those deck claims as separate fiction decisions. [S4; D5, D47]'),
+             'The iron-rich northern province is a creator premise. Impact melting, fractured rock and later '
+             'fluid circulation offer a proposed way to redistribute and concentrate resources. Real impact '
+             'structures can host ore deposits, but rare earths and enriched uranium are not automatic products '
+             'of an iron-rich impact. Keep those deck claims as separate fiction decisions. [S4; D5, D47]'),
             ('Time to recover',
              'A country-scale impact implies an ancient catastrophe. Its age must allow climate and ecosystems to '
              'recover before the current bird kingdoms. The exact age, original diameter and ore inventory remain '
@@ -203,291 +226,291 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
  {'title': 'The dry eastern core',
   'kicker': 'REGIONAL TOUR / 02',
   'figure': 'renders/12_eastern_continent.png',
-  'paras': [('The corrected dry side',
-             "This is the broad dry interior on the left of the creator's far-side view. High northern and eastern "
-             'mountain barriers intercept proposed moisture-bearing air. Downwind descent and distance from the ocean '
-             'reinforce aridity. A narrow wetter coastal margin can coexist with a huge inland desert.'),
-            ('More than one sand colour',
-             'The new pass distinguishes dune fields, gravel country, pale salt basins, mountain-fed channels and '
-             'rocky rift margins. Permanent rivers can cross dry land when fed from snowy highlands, while smaller '
-             'wadis flow episodically. The salt pans are proposed landscape details, not named canonical locations.'),
-            ('Why the coast has edges',
-             'Deep gulfs follow extensional weaknesses and old faults. Long peninsulas and offshore remnants preserve '
-             'the direction of the older crust. The shortened western connection brings this core closer to Panterra '
-             'without reducing the mountain system to a narrow footbridge.'),
-            ('Story use',
-             'The reference material associates eastern deserts with reptile polities. Terrain can guide caravan '
-             'corridors, mountain crossings, water-dependent settlements and trading ports. Their borders and cultures '
-             'are not fixed by biome alone. [D4, D42]')]},
+  'paras': [('A southward swing',
+             'The eastern block is rotated eight degrees clockwise around its junction with Panterra. The far end '
+             'is more vertical in the world view, while the connecting mountain belt remains continuous.'),
+            ('Relief and rain shadow',
+             'The enlarged northern mountain margin gives way to dry lee-side country with gravel basins, dunes, '
+             'salt pans and dissected escarpments. The west/left dry side from the creator redline remains dry. '
+             'Coastal pockets can still receive rain.'),
+            ('Coasts with a history',
+             'The long rift gulf, irregular peninsulas and exposed faulted margins move with the continent. '
+             'Rivers and geographic anchors are transformed with the land, avoiding detached overlays.'),
+            ('Open ocean beyond',
+             'There is no bridge or island arc between this continent and the southern mainland. Their geology '
+             'and migration roles are distinct.')]},
  {'title': 'The independent southern continent',
   'kicker': 'REGIONAL TOUR / 03',
   'figure': 'renders/11_maritime_continent.png',
-  'paras': [('An old mainland with its own character',
-             'The mainland is now entirely south of the equator and substantially smaller than the joined northern '
-             'land system. A split northern coast surrounds shallow embayments. Angular western capes, a southern '
-             'bight and glacial inlets break up the outline. It is neither a tail of the eastern continent nor a link '
-             'in a global mountain ring.'),
-            ('Dry interior, wet coast',
-             'The west and centre contain weathered shield uplands, gravel country, dune fields and closed salt '
-             'basins. Moist onshore flow supports greener eastern slopes and coastal river plains. Farther south, '
-             'westerly storm exposure makes the southwest cooler and wetter. These are latitude- and terrain-based '
-             'proposals, not a simple east-green/west-yellow rule everywhere.'),
-            ('A hierarchy distinct from Panterra',
-             'The eastern escarpment and southern ranges are lower than the giant northern collision belt. Their peaks '
-             'retain alpine snow while southern spring opens lower valleys. The old interior is lower and more eroded. '
-             'Islands preserve fragments of the same structural trend.'),
-            ('Old homeland as a proposal',
-             "This is the proposed setting for the cats' old southern homeland. Its eastern shelf offers a route "
-             'toward the new country during the former lowstand. That identification fits the latest brief but remains '
-             'a naming and historical choice for the creator.')]},
+  'paras': [('An independent southern world',
+             'The redesigned shield remains entirely south of the equator. Its angular northwestern headland, '
+             'asymmetric southeast embayment and offset southern peninsulas give it a new outline rather than a '
+             'rotated Earth analogue.'),
+            ('Dry interior, wet margins',
+             'Old weathered uplands, stony basins and salt pans occupy the interior. The eastern escarpment '
+             'catches moisture; the cooler southern coast has wetter inlets and slopes. These climatic contrasts '
+             'persist during southern spring.'),
+            ('Closer, but still separate',
+             'The southeastward adjustment shortens the passage toward Panterra and puts the mainland more clearly to its southwest. Water still clearly separates the modern mainland and the island chain. There is '
+             'no new land neck.'),
+            ('Old homeland',
+             "Its identity as the cats' old homeland is still a proposal. The sheltered eastern shelf, coastal "
+             'resources and former crossing can support that history without fixing political borders or final '
+             'place names.')]},
  {'title': 'The eastern archipelago and the old crossing',
   'kicker': 'REGIONAL TOUR / THE ARCHIPELAGO',
   'figure': 'renders/14_archipelago.png',
-  'paras': [('Large islands, then a broken shelf route',
-             'The eastern margin breaks into several large continental islands and smaller fault-aligned fragments. '
-             'Sheltered sounds, peninsulas and drowned valleys create a maritime region. Beyond it, the shallow ribbon '
-             "curves northeast toward Panterra's western approach. This is the southern continent's EASTERN route "
-             'toward the main continent. There is no island arc westward to the eastern dry continent; that '
-             'intervening ocean is deliberately open.'),
-            ('A modeled lowstand connection',
-             'The present land mask keeps the southern mainland separate. In the stored physical height field, '
-             'lowering sea level by 65 m connects it to Panterra along the designed shelf. The historical-view diagram '
-             'shows that threshold directly. This is a tested geometric scenario; the former ice volume and timing are '
-             'not independently established.'),
-            ('Why southern winter could expose it',
-             'Growing grounded ice stores water outside the ocean and can lower global sea level. The large southern '
-             'polar continent supplies the proposed reservoir of ice. Later net land-ice loss floods the route. '
-             'Floating sea ice is not the principal sea-level mechanism. Local subsidence and rebound could also '
-             'change individual straits. [S11]'),
-            ('What still needs testing',
-             'Opposing hemispheric seasons do not automatically cause a global lowstand. Southern ice gain must exceed '
-             'simultaneous northern ice loss, and later the reverse balance must permit flooding. The long shelf '
-             'geometry is a deliberate worldbuilding accommodation, not a claim about normal ocean basins. A '
-             'lower-resolution global bathymetry does not certify local crossing safety.')]},
+  'paras': [('A sparse curved archipelago',
+             'Six principal islands and eight minor islands replace the crowded belt. Larger fault-bounded '
+             'fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. '
+             'The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]'),
+            ('What could form a former bridge',
+             'Submerged continental saddles provide the possible old crossing. The volcanic-looking peaks alone '
+             'do not imply shallow water: the model separately includes a continental shelf beneath the route. At '
+             'the illustrative 65 m lower sea level, that designed shelf emerges.'),
+            ('Ice and sea level',
+             'Net growth of grounded ice can lower the ocean. Floating sea ice alone is insufficient. Strong '
+             'southern winter could support the crossing only if added southern land ice outweighed losses '
+             'elsewhere. This remains a hypothesis. [S11]'),
+            ('Limits',
+             'Sparse islands do not prove that the whole gap was once walkable. The lowstand test verifies '
+             'designed connectivity, not real ice volume, dates, currents, or travel safety. The global grid '
+             'cannot specify every historical strait.')]},
  {'title': 'Two poles with different identities',
   'kicker': 'POLAR GEOGRAPHY',
   'figure': 'poles',
-  'paras': [('North: autumn advance',
-             'The north is mainly ocean with islands and continental margins. Growing pack ice, frosting uplands and '
-             'increasingly snowy passes show the approach of winter. Near the Blood Lake at about 65 degrees north, '
-             'local winter weather can precede the astronomical winter boundary. An open red lake centre remains '
-             'visible.'),
-            ('South: spring retreat, not an ice-free pole',
-             'The south retains a grounded polar ice sheet and outlet glaciers left by the former winter. Ocean pack '
-             'has retreated toward the coast, exposing more open water. Large grounded ice sheets do not disappear at '
-             'the start of spring. The southern inhabited continent lies well north of this polar ice mass.'),
-            ('Asymmetric ice storage matters',
-             'The southern hemisphere has extensive polar land on which thick ice can grow; the north has much more '
-             'ocean. This asymmetry is the proposed reason southern winter could dominate the global ice budget. '
-             'Actual ice volumes, accumulation rates and hysteresis require modeling. [S5, S11]')]},
+  'paras': [('A darker northern winter frontier',
+             'With 35-degree tilt, the polar circles lie at 55 degrees latitude. At the chosen late-autumn epoch, '
+             'the Blood Lake district is already in geometric polar night. Reference cameras remain lit for '
+             'drawing; they do not represent the actual sun position.'),
+            ('Northern ice and relief',
+             'Snow covers high ranges and spreads across northern uplands. Ocean pack and broken shore ice extend '
+             'around the polar margins. The iron-red lake remains a readable design landmark; the exact amount of '
+             'unfrozen water needs a thermal and salinity explanation.'),
+            ('Southern spring',
+             'Grounded polar ice and mountain glaciers remain while coastal seas reopen. More extreme tilt also '
+             'brings stronger summers, so a permanent ice map cannot be inferred from winter severity alone.'),
+            ('Ice storage and migration',
+             'The large southern polar landmass can store grounded ice. Whether its long winter actually produced '
+             'the proposed lowstand requires a global mass balance. Opposite seasons by themselves do not '
+             'establish the crossing.')]},
  {'title': 'Climate follows terrain and exposure',
   'kicker': 'RAIN SHADOWS / BIOMES',
   'figure': 'guide/Rainshadow_Section.png',
-  'paras': [('Rain shadows still follow wind',
-             'Moist air can cool and rain as it rises; descending lee air warms and dries. Mountain orientation, '
-             'moisture source and latitude matter. The eastern dry continent keeps its large lee desert, while its '
-             'maritime margins remain wetter. [S2]'),
-            ('Northern cooling is uneven',
-             'At the chosen late-autumn epoch, the far north has short days, spreading snow and coastal ice. '
-             'Midlatitude uplands freeze first; lower sheltered valleys remain accessible longer. Subtropical Panterra '
-             'and the low-latitude reservoir stay comparatively mild, making them plausible migration destinations.'),
-            ('Southern spring has several environments',
-             'The small southern continent is warming. Its subtropical north and interior can be dry despite spring; '
-             'the eastern sea-facing slopes support forests and rivers. The southern coast is cooler and stormier, '
-             'with alpine snow above habitable valleys. The eastern islands grade toward warmer maritime climates as '
-             'the chain reaches lower latitudes.'),
-            ('Circulation and visual limits',
-             'The rain belt is proposed to shift south with seasonal heating. Moist onshore easterly or monsoonal flow '
-             'supplies the northeast, while westerly exposure matters in the southern temperate belt. These are '
-             'physically motivated assumptions, not a solved global circulation. Clouds are omitted and daylight is '
-             'adjusted separately for each reference view.')]},
+  'paras': [('Western moisture and old growth',
+             'The western country is the main forest province. Maritime moisture, wet ravines and sheltered lower '
+             'slopes support dense stands around Seattle. Forest coverage fades gradually inland rather than '
+             'ending at a rectangular boundary.'),
+            ('Northern foothill steppe',
+             'Open grassland and scrub occupy the northern foothills below the high mountains and the drier '
+             'plateau interior. Water follows valleys; narrow riparian vegetation does not turn the whole region '
+             'into forest.'),
+            ('Fertile southern country',
+             'The south and major settled districts have agricultural mosaics, pasture and rolling hills. Lake '
+             'margins and river terraces support crops and transport. Soil fertility is a design premise, not a '
+             'calculated agronomic yield.'),
+            ('Rain shadows and model limits',
+             'Wet windward slopes and dry lee interiors follow mountain exposure and proposed winds. Seasonal '
+             'rain belts and currents are schematic. Regional colours combine terrain and climate reasoning but '
+             'are not a circulation-model result. [S2]')]},
  {'title': 'Living inside thousand-year seasons',
   'kicker': 'TIME / COSMOLOGY',
   'figure': 'guide/Long_Seasons.png',
   'paras': [('An explicit working date',
-             'Use solar longitude 255 degrees: about 833 years after the northern autumn equinox and 167 years before '
-             'northern winter solstice in a circular 4,000-year orbit. The south is the same distance through spring, '
-             'approaching summer. These precise numbers are proposed for continuity; the seasonal pairing follows the '
-             "creator's direction. [S12]"),
+             'Use solar longitude 255 degrees: about 833 years after the northern autumn equinox and 167 years '
+             'before northern winter solstice in a circular 4,000-year orbit. The south is the same distance '
+             'through spring, approaching summer. These precise numbers are proposed for continuity; the seasonal '
+             "pairing follows the creator's direction. [S12]"),
+            ('A stronger tilt',
+             'The adopted tilt is 35 degrees. Higher tilt increases summer sunlight and reduces winter sunlight '
+             'at high latitudes, strengthening seasonal contrasts. The thousand-year duration allows long '
+             'ecological and human responses, but does not mean temperature declines without limit for a thousand '
+             'years. [S13]'),
             ('Weather does not wait for the boundary',
-             'Northern high latitudes can already feel wintry during late autumn. Southern uplands and the polar ice '
-             'sheet can remain cold during late spring. Latitude, elevation, oceans and inherited ice modify local '
-             'conditions. A thousand-year season is a changing climate interval, not one daily weather pattern '
-             'repeated unchanged.'),
+             'Northern high latitudes can already feel wintry during late autumn. Southern uplands and the polar '
+             'ice sheet can remain cold during late spring. Latitude, elevation, oceans and inherited ice modify '
+             'local conditions. A thousand-year season is a changing climate interval, not one daily weather '
+             'pattern repeated unchanged.'),
             ('Earlier crossing and current bird movement',
-             'A proposed crossing 1,100 years ago falls within the previous southern winter / northern summer. A lower '
-             'ocean exposes the shelf while northern destinations are warmer. Today, net southern ice loss has drowned '
-             'that corridor, while advancing northern cold pushes bird communities south. Exact ice history and '
-             'migration dates remain to be agreed.'),
+             'A proposed crossing 1,100 years ago falls within the previous southern winter / northern summer. A '
+             'lower ocean exposes the shelf while northern destinations are warmer. Today, net southern ice loss '
+             'has drowned that corridor, while advancing northern cold pushes bird communities south. Exact ice '
+             'history and migration dates remain to be agreed.'),
             ('The heat source is still unresolved',
-             'A 4,000-year orbit around a one-solar-mass star has semimajor axis about 252 AU. A Sun-like star would '
-             'not provide Earth-like warmth there. The setting needs a different stellar/orbital or additional-heating '
-             'premise. The seasonal visuals assume that a habitable thermal solution exists. [S6]')]},
+             'A 4,000-year orbit around a one-solar-mass star has semimajor axis about 252 AU. A Sun-like star '
+             'would not provide Earth-like warmth there. The setting needs a different stellar/orbital or '
+             'additional-heating premise. The seasonal visuals assume that a habitable thermal solution exists. '
+             '[S6]')]},
  {'title': 'The present seasonal distribution',
   'kicker': 'EPOCH / NORTHERN LATE AUTUMN',
   'figure': 'guide/Seasonal_Epoch.png',
-  'paras': [('Read latitude before colour',
-             'The northern impact district is entering winter conditions; lower Panterra stays milder. South of the '
-             'equator, warmth is increasing. The detached continent spans subtropical to cool-temperate latitudes, so '
-             'it contains desert, forest, grassland and residual alpine ice at the same moment.'),
-            ('Daylight makes the contrast tangible',
-             'At the proposed 255-degree epoch and assumed 24-hour rotation, the Blood Lake at 65 N receives about 3.6 '
-             'hours of daylight; the reservoir at 11.5 N gets 11.4 hours; southern coastal country at 30 S gets 13.9 '
-             'hours. The high Arctic has polar night while the south-polar site has continuous daylight. These are '
-             'geometric estimates, excluding atmospheric refraction and mountain horizons, not temperature '
-             'predictions.'),
-            ('A reference snapshot, not a forecast',
-             'The surface colours show one proposed epoch. Permanent terrain and seasonal snow are conceptually '
-             'distinct. Ice margins and biome boundaries should shift in future seasonal editions. Render lighting is '
-             'deliberately even enough to draw from; it does not depict polar darkness.')]},
+  'paras': [('One stated epoch',
+             'Solar longitude remains 255 degrees in the proposed near-circular orbit: about 833 Earth years '
+             'after the northern autumn equinox and 167 before northern winter solstice. The south is in late '
+             'spring.'),
+            ('Daylight is recalculated',
+             'The model now derives daylight from 35-degree tilt and the stored epoch. The Blood Lake has zero '
+             'geometric daylight at this snapshot. The southern mainland has long spring days. The delivered CSV '
+             'gives region-specific values without atmospheric refraction or terrain horizons.'),
+            ('Surface appearance versus illumination',
+             'Snow, vegetation and sea ice show a proposed seasonal state. Broad daylight lights are used in '
+             'every reference camera so the geography remains visible. The guide separates that artistic lighting '
+             "from the planet's actual day/night geometry.")]},
  {'title': 'The cat crossing: then and now',
   'kicker': 'HISTORICAL SCENARIO / NOT CONFIRMED CHRONOLOGY',
   'figure': 'guide/Migration_Lowstand.png',
   'paras': [('Then: southern winter / northern summer',
              'The lower panel lowers the ocean by 65 m in the stored elevation field. Exposed shelf links the old '
-             'southern mainland to Panterra. The route can support generations of settlement and movement, rather than '
-             'requiring one uninterrupted march. The 1,100-year date places it within the previous southern winter.'),
+             'southern mainland to Panterra. The route can support generations of settlement and movement, rather '
+             'than requiring one uninterrupted march. The 1,100-year date places it within the previous southern '
+             'winter.'),
             ('Now: southern spring / northern autumn',
-             'The same shelf is drowned and the southern mainland is separate. Islands retain traces of the former '
-             'route. Northern birds now face cooling homelands and move toward milder Panterra. The present '
-             'archipelago is a shipping landscape, not a modern dry crossing.'),
+             'The same shelf is drowned and the southern mainland is separate. Islands retain traces of the '
+             'former route. Northern birds now face cooling homelands and move toward milder Panterra. The '
+             'present archipelago is a shipping landscape, not a modern dry crossing.'),
             ('What the check proves',
-             'A periodic-grid connectivity test confirms the designed lowstand geometry. It does not establish the '
-             'required global ice volume, exact water depth in each local channel, bridge longevity or the historical '
-             'migration itself. Those remain stated worldbuilding assumptions.')]},
+             'A periodic-grid connectivity test confirms the designed lowstand geometry. It does not establish '
+             'the required global ice volume, exact water depth in each local channel, bridge longevity or the '
+             'historical migration itself. Those remain stated worldbuilding assumptions.')]},
  {'title': 'Resources create routes and conflicts',
   'kicker': 'STORY GEOGRAPHY',
   'figure': 'guide/Story_Geography.png',
   'paras': [('The material contrast',
-             "The deck's Panterran economy relies on bronze/brass, scarce iron, waterways and electrical metallurgy. "
-             'Northern birds bring access to an iron-rich province. The map supports that contrast through separate '
-             'resource districts and costly passages between them. It does not require every useful metal to have the '
-             'same geological origin. [D47]'),
+             "The deck's Panterran economy relies on bronze/brass, scarce iron, waterways and electrical "
+             'metallurgy. Northern birds bring access to an iron-rich province. The map supports that contrast '
+             'through separate resource districts and costly passages between them. It does not require every '
+             'useful metal to have the same geological origin. [D47]'),
             ('The forest is contested infrastructure',
              'Giant trees supply timber and support sacred avian sites. Rivers make those forests economically '
-             'accessible to logging interests. Deforestation, damaged spawning streams and lost nesting places can '
-             'therefore be local, visible causes of conflict rather than abstract background. [D4, D5]'),
-            ('The dam concentrates dependence',
-             'Power, lake level, downstream releases and transport all meet at one controlled outlet. Upstream fishing '
-             'and farming communities, downstream merchants and industrial users depend on different aspects of its '
-             'operation. The landscape supplies conflicting interests without prescribing who is right.'),
+             'accessible to logging interests. Deforestation, damaged spawning streams and lost nesting places '
+             'can therefore be local, visible causes of conflict rather than abstract background. [D4, D5]'),
+            ('Two different kinds of water control',
+             'The eastern dam controls releases, power and part of the lake-level budget. The natural western '
+             'overflow responds to water level rather than a gate. Seattle depends on that western river, so lake '
+             'management affects communities on both sides of the plateau.'),
             ('Limits of this atlas',
-             'Ore tonnages, forestry yields, crop output, electrical demand and transport capacity are not quantified. '
-             'The map suggests where these systems interact; it is not a balanced economy simulation. Political '
-             'ownership and final settlement names remain creator choices.')]},
+             'Ore tonnages, forestry yields, crop output, electrical demand and transport capacity are not '
+             'quantified. The map suggests where these systems interact; it is not a balanced economy simulation. '
+             'Political ownership and final settlement names remain creator choices.')]},
  {'title': 'Cities and settlements need reasons',
   'kicker': 'SETTLEMENT LOGIC',
   'figure': None,
-  'paras': [('Seattle / upstream timber city',
-             'Place wharves, mills and storage beside accessible valley reaches, with forest roads above the '
-             'floodplain. The city belongs to the primary river corridor. Its named global marker is a location '
-             'anchor; buildings are not modeled on the globe.'),
+  'paras': [('Seattle / forest country and lower-river port',
+             'Seattle names a substantial western region as well as its port. Old-growth woods, working forest, '
+             'tributary settlements and fertile clearings surround the downstream river. Place the core '
+             'settlement on raised ground near the estuary, with wharves on sheltered reaches. This is no longer '
+             'the upstream timber-city layout.'),
             ('London and Rome / lake country',
-             'London occupies southwestern lakeshore country and Rome a high eastern bank. Both can combine fisheries, '
-             'lake shipping and agricultural hinterlands. Shorelines need harbours, terraces and seasonal operating '
-             'levels before detailed city plans are drawn.'),
+             'London occupies southwestern lakeshore country and Rome a high eastern bank. Both can combine '
+             'fisheries, lake shipping and agricultural hinterlands. Shorelines need harbours, terraces and '
+             'seasonal operating levels before detailed city plans are drawn.'),
             ('Amsterdam / downstream outlet',
              'The large downstream city is a trade and processing center with canal links and alluvial land. Its '
-             'wealth can come from controlling exchange and infrastructure rather than possessing rich local ore. This '
-             "follows the deck's trade-outlet concept. [D41]"),
+             'wealth can come from controlling exchange and infrastructure rather than possessing rich local ore. '
+             "This follows the deck's trade-outlet concept. [D41]"),
             ('Milan / merchant island',
-             'The southern island is a useful site for maritime customs, resupply and finance. Its precise role in the '
-             'inland supply chain still needs chosen routes. Do not assume the lake and sea share one uninterrupted '
-             'navigable level.'),
+             'The southern island is a useful site for maritime customs, resupply and finance. Its precise role '
+             'in the inland supply chain still needs chosen routes. Do not assume the lake and sea share one '
+             'uninterrupted navigable level.'),
             ('Small places',
-             'Fishing villages belong in sheltered coves and on stable terraces. Crossing towns belong at ferries, '
-             'bridges and junctions. Checkpoints belong at supply bottlenecks. Ancient ruins should predate the modern '
-             'routes they overlook. The dam inset shows one village proposal; the planetary model does not contain a '
-             'city-building kit.'),
+             'Fishing villages belong in sheltered coves and on stable terraces. Crossing towns belong at '
+             'ferries, bridges and junctions. Checkpoints belong at supply bottlenecks. Ancient ruins should '
+             'predate the modern routes they overlook. The dam inset shows one village proposal; the planetary '
+             'model does not contain a city-building kit.'),
             ('Travel continuity',
-             'At 6,100 km radius, one degree of latitude is about 106 km. Several degrees between markers can mean '
-             'weeks of travel, depending on transport and terrain. Route distances, seasonal pass closures and '
-             'communication speeds must be set before simultaneous episode journeys are scripted.')]},
+             'At 6,100 km radius, one degree of latitude is about 106 km. Several degrees between markers can '
+             'mean weeks of travel, depending on transport and terrain. Route distances, seasonal pass closures '
+             'and communication speeds must be set before simultaneous episode journeys are scripted.')]},
  {'title': 'Migration, sacred trees and choke points',
   'kicker': 'NARRATIVE USE',
   'figure': None,
   'paras': [('A northern departure, not a featureless arrow',
-             'The bird homeland occupies the impact district and surrounding northern country in the draft. Cooling '
-             'affects nesting sites, food supplies and accessible routes. Families, livestock, freight and '
-             'institutions do not move like a single airborne flock. [D2, D5]'),
+             'The bird homeland occupies the impact district and surrounding northern country in the draft. '
+             'Cooling affects nesting sites, food supplies and accessible routes. Families, livestock, freight '
+             'and institutions do not move like a single airborne flock. [D2, D5]'),
             ('Why the passes matter to birds',
-             'Flying individuals can cross barriers that stop carts, but high altitude, weather, loads, feeding stops '
-             'and ground-based supply still create preferred corridors. Western, Central and Eastern Gate are proposed '
-             'lower passages. They are logistical choke points, not an absolute biological wall.'),
+             'Flying individuals can cross barriers that stop carts, but high altitude, weather, loads, feeding '
+             'stops and ground-based supply still create preferred corridors. Western, Central and Eastern Gate '
+             'are proposed lower passages. They are logistical choke points, not an absolute biological wall.'),
             ('Where control becomes visible',
-             'Checkpoint stations can cluster at valley mouths, crossings, staging fields and supply depots. Beyond '
-             'them, routes branch toward timber country, lakeshore towns and the downstream metropolis. The model '
-             'locates candidate gates; it does not specify a border regime or a completed road network.'),
+             'Checkpoint stations can cluster at valley mouths, crossings, staging fields and supply depots. '
+             'Beyond them, routes branch toward timber country, lakeshore towns and the downstream metropolis. '
+             'The model locates candidate gates; it does not specify a border regime or a completed road '
+             'network.'),
             ('The forest preserves memory',
              'Ancient avian carvings and cliff ruins sit above the western forest corridor. The old-growth refuge '
              'provides a setting where material evidence, oral history and present land claims meet. Logging can '
-             'expose ruins while destroying the living landscape around them. Those are narrative proposals grounded '
-             "in the deck's sacred-tree material. [D5, D9]"),
+             'expose ruins while destroying the living landscape around them. Those are narrative proposals '
+             "grounded in the deck's sacred-tree material. [D5, D9]"),
             ('Historical continuity',
-             'The latest brief sets two distinct migrations: an older cat crossing enabled by southern winter, and '
-             'current birds moving south as northern winter approaches. The 1,100-year crossing date is illustrative. '
-             'Earlier deck dates, including roughly 700 years of northern occupation, need reconciliation with the '
-             'chosen epoch; they are not silently treated as confirmed history. [D2, D5, D45]')]},
+             'The latest brief sets two distinct migrations: an older cat crossing enabled by southern winter, '
+             'and current birds moving south as northern winter approaches. The 1,100-year crossing date is '
+             'illustrative. Earlier deck dates, including roughly 700 years of northern occupation, need '
+             'reconciliation with the chosen epoch; they are not silently treated as confirmed history. [D2, D5, '
+             'D45]')]},
  {'title': 'Use the globe as a drawing reference',
   'kicker': 'PRODUCTION GUIDE',
   'figure': None,
   'paras': [('Choose the angle before drawing',
-             'Open the offline atlas and select the hemisphere or regional view. Orthographic cameras show the actual '
-             'sphere without a map-projection stretch. Land near the limb is foreshortened; choose a closer-centered '
-             'view when a region is the drawing subject. The annotated versions locate features on the same renders.'),
-            ('Open the editable model',
-             'CATWORLD_Terra.blend contains the terrain, packed textures, named landmark anchors and twelve atlas '
-             'cameras. Frames 1-12 select their cameras and matching lights. The separate dam file uses kilometre '
-             'units and two local views. Do not merge the files without converting their different scales.'),
+             'Open the offline atlas and select the hemisphere or regional view. Orthographic cameras show the '
+             'actual sphere without a map-projection stretch. Land near the limb is foreshortened; choose a '
+             'closer-centered view when a region is the drawing subject. The annotated versions locate features '
+             'on the same renders.'),
+            ('Open the editable models',
+             'The globe contains thirteen saved cameras with matching lights, packed textures and named anchors. '
+             'The dam has two reference views. The waterfall has its own editable local study, with one kilometre '
+             'per Blender unit and true vertical scale.'),
             ('Resolution and exaggeration',
-             'The global surface uses 4096 x 2048 textures: roughly 9.4 km per texel at the equator. The mesh has '
-             'about 1.18 million vertices. Relief is displayed at 10x; the primary river is deliberately widened. '
-             'Houses, individual trees, narrow channels and the dam wall need local models.'),
+             'Four 4096 x 2048 maps support the globe. Thirteen globe views, two dam views and one waterfall view '
+             'make sixteen clean and sixteen annotated references. The globe uses 10x relief and widened rivers; '
+             'local studies use true relief. Small buildings, individual trees and engineering details remain '
+             'below global resolution.'),
             ('What can be edited',
-             'Feature names and coordinates are in features.json. Primary flow paths are in hydrology_paths.json. The '
-             'reconstruction stages are build_terrain.py, reshape_geography.py and revise_southern.py. Camera '
-             'definitions are in build_blender.py. The source scripts allow reproducible revision; the packed blend is '
-             'usable without rebuilding.'),
+             'Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build '
+             'pipeline reconstructs earlier terrain stages before applying R6, so transforms are not accumulated '
+             'by repeatedly rotating a finished model. The packed Blender files remain independently editable.'),
             ('Light and atmosphere',
-             'Clouds are omitted to expose the terrain. Each camera has broad daylight from a useful drawing angle, '
-             'not one simultaneous astronomical illumination state. The blue limb is a restrained visual atmosphere; '
-             'it is not an atmospheric scattering simulation.')]},
+             'Clouds are omitted to expose the terrain. Each camera has broad daylight from a useful drawing '
+             'angle, not one simultaneous astronomical illumination state. The blue limb is a restrained visual '
+             'atmosphere; it is not an atmospheric scattering simulation.')]},
  {'title': 'Decisions for the creator to make next',
   'kicker': 'DEVELOPMENT REGISTER',
   'figure': None,
-  'paras': [('1 / Heat source and exact epoch',
-             'Keep the confirmed northern late-autumn / southern late-spring direction. Approve or adjust the proposed '
-             '255-degree solar longitude and develop the habitable heat source for the long orbit.'),
+  'paras': [('1 / Heat source and seasonal physics',
+             'Keep the adopted 35-degree tilt and northern-autumn/southern-spring direction. Decide the habitable '
+             'heat source and validate the precise epoch, temperature distribution, ice mass and sea-level '
+             'history.'),
             ('2 / Homeland and coastline approval',
-             'Review the separate southern mainland and eastern archipelago, and decide whether this is officially Old '
-             'Panterra. Panterra and the eastern continent remain mountain-connected. Final names, factions and '
-             'political borders remain open.'),
-            ('3 / Reservoir history',
-             'Choose the pre-dam lake extent, dam construction sequence, filling timescale, operating level and '
-             "downstream obligations. Decide whether the super-lake's extreme scale is literal or should be reduced "
-             'before local maps are commissioned.'),
+             'Review the separate southern mainland and eastern archipelago, and decide whether this is '
+             'officially Old Panterra. Panterra and the eastern continent remain mountain-connected. Final names, '
+             'factions and political borders remain open.'),
+            ('3 / Reservoir and waterfall history',
+             'Develop the pre-dam valley, filling timescale, natural western sill, eastern operating rules and '
+             "the waterfall's resistant bedrock. The local fall is a proposal with a 250 m main drop and 150 m of "
+             'lower cascades.'),
             ('4 / Energy and material limits',
-             'Choose reliable rather than nominal power output, catchment assumptions, industrial demand and the role '
-             'of scarce iron. Treat naturally enriched uranium and any unusual cooling mechanism as separate fictional '
-             'premises requiring decisions.'),
+             'Choose reliable rather than nominal power output, catchment assumptions, industrial demand and the '
+             'role of scarce iron. Treat naturally enriched uranium and any unusual cooling mechanism as separate '
+             'fictional premises requiring decisions.'),
             ('5 / Ice budget, crossing and travel',
              'Approve or revise the proposed 65 m lowstand and 1,100-year crossing date. Test net grounded-ice '
              'storage, relative sea level and local shelf elevations before declaring a safe historic route. Fix '
              'journey distances and seasonal pass accessibility for scripts.'),
-            ('6 / Next level of production detail',
-             'After those choices, commission local maps of the Seattle corridor, lake shores, dam district and '
-             "selected gate valleys. They should inherit this globe's direction and scale, while replacing its "
-             'exaggerated river widths and simplified settlement markers.')]}]
+            ('6 / Local production detail',
+             'Develop Seattle forest districts, agricultural settlements, lake shipping, eastern dam operations '
+             'and the northern passes at regional scale. Use the broad continental atlas for continuity; '
+             'commission local maps for individual journeys and scenes.')]}]
 SOURCES = [('D / Project references',
-  'CATWORLD PITCH DECK.pdf, 50-page development draft, and map sketches 3-5. D2 = overview/migration; D4 = Panterra; '
-  'D5 = Flock; D9 = Cyrus context; D12 = Pieter/dam village; D38-42 = map concepts; D45 = chronology; D47 = materials '
-  'and dam. Page numbers refer to PDF pages. The latest creator corrections take precedence. Private message '
-  'screenshots and the deck itself are not redistributed in this package.'),
+  'CATWORLD PITCH DECK.pdf, 50-page development draft, and map sketches 3-5. D2 = overview/migration; D4 = '
+  'Panterra; D5 = Flock; D9 = Cyrus context; D12 = Pieter/dam village; D38-42 = map concepts; D45 = chronology; '
+  'D47 = materials and dam. Page numbers refer to PDF pages. The latest creator corrections take precedence. '
+  'Private message screenshots and the deck itself are not redistributed in this package.'),
  ('S1 / Collision mountains',
-  'USGS, The Himalayas, https://pubs.usgs.gov/gip/dynamic/himalaya.html ; National Park Service, Collisional Mountain '
-  'Ranges, https://www.nps.gov/subjects/geology/plate-tectonics-collisional-mountain-ranges.htm'),
+  'USGS, The Himalayas, https://pubs.usgs.gov/gip/dynamic/himalaya.html ; National Park Service, Collisional '
+  'Mountain Ranges, https://www.nps.gov/subjects/geology/plate-tectonics-collisional-mountain-ranges.htm'),
  ('S2 / Rain shadows',
-  'NOAA, Teek and Tom educator guide, lesson 2, https://oceantoday.noaa.gov/teekandtom/educators-guide/lesson-2.pdf'),
+  'NOAA, Teek and Tom educator guide, lesson 2, '
+  'https://oceantoday.noaa.gov/teekandtom/educators-guide/lesson-2.pdf'),
  ('S3 / Red iron oxides',
   'USGS, Find-A-Feature: Red Rocks, https://www.usgs.gov/educational-resources/find-feature-red-rocks'),
  ('S4 / Impact-related resources',
@@ -498,28 +521,34 @@ SOURCES = [('D / Project references',
   'National Snow and Ice Data Center: https://nsidc.org/learn/parts-cryosphere/sea-ice and '
   'https://nsidc.org/learn/parts-cryosphere/ice-sheets'),
  ('S6 / Orbital period',
-  "NASA, Orbits and Kepler's Laws, https://science.nasa.gov/solar-system/orbits-and-keplers-laws/ . The 252 AU figure "
-  "is this guide's calculation for a one-solar-mass primary."),
+  "NASA, Orbits and Kepler's Laws, https://science.nasa.gov/solar-system/orbits-and-keplers-laws/ . The 252 AU "
+  "figure is this guide's calculation for a one-solar-mass primary."),
  ('S7 / Hydropower',
-  'US Department of Energy, How Hydropower Works, https://www.energy.gov/cmei/water/how-hydropower-works . All Terra '
-  'discharge, head, efficiency and power values are explicitly assumed examples.'),
+  'US Department of Energy, How Hydropower Works, https://www.energy.gov/cmei/water/how-hydropower-works . All '
+  'Terra discharge, head, efficiency and power values are explicitly assumed examples.'),
  ('S8-S9 / Dam scale comparisons',
-  'US Bureau of Reclamation, Hoover Dam, https://www.usbr.gov/projects/index.php?id=122 ; China Energy Engineering '
-  'Corporation project profile, Three Gorges maximum height and capacity, '
+  'US Bureau of Reclamation, Hoover Dam, https://www.usbr.gov/projects/index.php?id=122 ; China Energy '
+  'Engineering Corporation project profile, Three Gorges maximum height and capacity, '
   'https://en.ceec.net.cn/attach/0/1903261138048558920.pdf'),
  ('S10 / Warming and aerosols',
-  'NASA, Causes of Climate Change, https://science.nasa.gov/climate-change/causes/ ; NASA, Aerosols: Small Particles '
-  'with Big Climate Effects, '
+  'NASA, Causes of Climate Change, https://science.nasa.gov/climate-change/causes/ ; NASA, Aerosols: Small '
+  'Particles with Big Climate Effects, '
   'https://science.nasa.gov/science-research/earth-science/climate-science/aerosols-small-particles-with-big-climate-effects/'),
  ('T / Terrain provenance',
-  'Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled and '
-  'combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution is '
-  'bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model.'),
+  'Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled '
+  'and combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution '
+  'is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model.'),
  ('S11 / Ice and sea level',
   'NASA, Melting sea ice versus land ice: '
-  'https://sealevel.nasa.gov/faq/23/whats-the-difference-between-melting-sea-ice-and-melting-land-ice-on-sea-levels/ ; '
-  'NOAA, Local versus global sea level: https://oceanservice.noaa.gov/facts/sealevel-global-local.html . These support '
-  'the mechanisms, not the fictional 65 m or 1,100-year values.'),
+  'https://sealevel.nasa.gov/faq/23/whats-the-difference-between-melting-sea-ice-and-melting-land-ice-on-sea-levels/ '
+  '; NOAA, Local versus global sea level: https://oceanservice.noaa.gov/facts/sealevel-global-local.html . These '
+  'support the mechanisms, not the fictional 65 m or 1,100-year values.'),
  ('S12 / Opposite seasons',
-  'NOAA / National Weather Service, Why Do We Have The Seasons? https://www.weather.gov/fgz/Seasons . The 255-degree '
-  "epoch and dates are this guide's calculations for a circular 4,000-year orbit.")]
+  'NOAA / National Weather Service, Why Do We Have The Seasons? https://www.weather.gov/fgz/Seasons . The '
+  "255-degree epoch and dates are this guide's calculations for a circular 4,000-year orbit."),
+ ('S13 / Stronger axial tilt',
+  "NASA Science, Milankovitch (Orbital) Cycles and Their Role in Earth's Climate. "
+  'https://science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/ '
+  '. General tilt-season mechanism; the 35-degree alien-world climate is a design extrapolation.')]
+
+SOURCES.append(('S14 / Island-arc analogy','USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m sea-level fall.'))

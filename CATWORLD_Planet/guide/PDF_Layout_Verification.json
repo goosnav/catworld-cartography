@@ -1,6 +1,6 @@
 {
-  "pages": 45,
-  "sections": 23,
+  "pages": 49,
+  "sections": 24,
   "layout": [
     {
       "page": 1,
@@ -8,19 +8,19 @@
     },
     {
       "page": 2,
-      "lowest_content_y": 94.89
+      "lowest_content_y": 73.89
     },
     {
       "page": 3,
-      "lowest_content_y": 349.05
+      "lowest_content_y": 378.03
     },
     {
       "page": 4,
-      "lowest_content_y": 174.86
+      "lowest_content_y": 160.37
     },
     {
       "page": 5,
-      "lowest_content_y": 190.12
+      "lowest_content_y": 204.06
     },
     {
       "page": 6,
@@ -28,19 +28,19 @@
     },
     {
       "page": 7,
-      "lowest_content_y": 167.32
+      "lowest_content_y": 121.83
     },
     {
       "page": 8,
-      "lowest_content_y": 141.99
+      "lowest_content_y": 110.99
     },
     {
       "page": 9,
-      "lowest_content_y": 192.48
+      "lowest_content_y": 134.53
     },
     {
       "page": 10,
-      "lowest_content_y": 321.05
+      "lowest_content_y": 60.0
     },
     {
       "page": 11,
@@ -48,7 +48,7 @@
     },
     {
       "page": 12,
-      "lowest_content_y": 82.01
+      "lowest_content_y": 115.47
     },
     {
       "page": 13,
@@ -56,63 +56,63 @@
     },
     {
       "page": 14,
-      "lowest_content_y": 60.0
+      "lowest_content_y": 125.48
     },
     {
       "page": 15,
-      "lowest_content_y": 60.0
+      "lowest_content_y": 96.5
     },
     {
       "page": 16,
-      "lowest_content_y": 234.84
+      "lowest_content_y": 60.0
     },
     {
       "page": 17,
-      "lowest_content_y": 152.83
+      "lowest_content_y": 174.86
     },
     {
       "page": 18,
-      "lowest_content_y": 177.99
+      "lowest_content_y": 210.79
     },
     {
       "page": 19,
-      "lowest_content_y": 141.99
+      "lowest_content_y": 103.52
     },
     {
       "page": 20,
-      "lowest_content_y": 156.48
+      "lowest_content_y": 170.97
     },
     {
       "page": 21,
-      "lowest_content_y": 183.33
+      "lowest_content_y": 156.48
     },
     {
       "page": 22,
-      "lowest_content_y": 274.58
+      "lowest_content_y": 183.33
     },
     {
       "page": 23,
-      "lowest_content_y": 334.56
+      "lowest_content_y": 274.58
     },
     {
       "page": 24,
-      "lowest_content_y": 349.05
+      "lowest_content_y": 334.56
     },
     {
       "page": 25,
-      "lowest_content_y": 303.56
+      "lowest_content_y": 349.05
     },
     {
       "page": 26,
-      "lowest_content_y": 298.09
+      "lowest_content_y": 318.05
     },
     {
       "page": 27,
-      "lowest_content_y": 315.29
+      "lowest_content_y": 298.09
     },
     {
       "page": 28,
-      "lowest_content_y": 295.89
+      "lowest_content_y": 156.69
     },
     {
       "page": 29,
@@ -124,27 +124,27 @@
     },
     {
       "page": 31,
-      "lowest_content_y": 285.89
+      "lowest_content_y": 295.89
     },
     {
       "page": 32,
-      "lowest_content_y": 122.89
+      "lowest_content_y": 471.89
     },
     {
       "page": 33,
-      "lowest_content_y": 205.89
+      "lowest_content_y": 284.69
     },
     {
       "page": 34,
-      "lowest_content_y": 143.89
+      "lowest_content_y": 153.89
     },
     {
       "page": 35,
-      "lowest_content_y": 174.89
+      "lowest_content_y": 236.89
     },
     {
       "page": 36,
-      "lowest_content_y": 205.89
+      "lowest_content_y": 133.39
     },
     {
       "page": 37,
@@ -152,35 +152,51 @@
     },
     {
       "page": 38,
-      "lowest_content_y": 98.89
+      "lowest_content_y": 205.89
     },
     {
       "page": 39,
-      "lowest_content_y": 236.89
+      "lowest_content_y": 205.89
     },
     {
       "page": 40,
-      "lowest_content_y": 312.89
+      "lowest_content_y": 140.39
     },
     {
       "page": 41,
-      "lowest_content_y": 334.39
-    },
-    {
-      "page": 42,
-      "lowest_content_y": 205.89
-    },
-    {
-      "page": 43,
       "lowest_content_y": 236.89
     },
     {
+      "page": 42,
+      "lowest_content_y": 312.89
+    },
+    {
+      "page": 43,
+      "lowest_content_y": 334.39
+    },
+    {
       "page": 44,
-      "lowest_content_y": 202.39
+      "lowest_content_y": 205.89
     },
     {
       "page": 45,
+      "lowest_content_y": 236.89
+    },
+    {
+      "page": 46,
+      "lowest_content_y": 202.39
+    },
+    {
+      "page": 47,
       "lowest_content_y": 205.89
+    },
+    {
+      "page": 48,
+      "lowest_content_y": 140.39
+    },
+    {
+      "page": 49,
+      "lowest_content_y": 305.89
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "radius_km": 6100,
-  "tilt_deg": 23.4,
+  "tilt_deg": 35,
   "orbital_year_earth_years": 4000,
   "relief_exaggeration": 10,
   "seed": 49,
@@ -9,8 +9,8 @@
     64.98695651135345
   ],
   "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule",
-  "revision": 5,
-  "geographic_revision": "Detached southern continent and eastern shelf archipelago; main/eastern mountain link retained",
+  "revision": 6,
+  "geographic_revision": "Rotated eastern core; redesigned southern shield; sparse eastern archipelago; drowned plateau valley",
   "seasonal_epoch": {
     "solar_longitude_deg": 255,
     "north": "late autumn; early winter conditions at high latitude",
@@ -25,5 +25,16 @@
     "illustrative_crossing_years_before_present": 1100,
     "mechanism": "southern grounded-ice storage; later net loss floods shelf",
     "not_simulated": "ice mass, global sea level history and climate require further validation"
+  },
+  "r6": {
+    "eastern_rotation_deg": 8,
+    "southern_shift_east_deg": 41,
+    "southern_shift_south_deg": 5,
+    "latest_southern_move_east_deg": 16,
+    "principal_islands": 6,
+    "minor_islands": 8,
+    "reservoir_level_m": 690,
+    "western_sill_bed_m": 685,
+    "waterfall_drop_m": 400
   }
 }

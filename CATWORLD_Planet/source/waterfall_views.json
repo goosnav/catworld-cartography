@@ -1,0 +1,55 @@
+[
+  {
+    "name": "16_plateau_falls",
+    "features": [
+      {
+        "id": "A",
+        "name": "Upper plateau river / 1090 m",
+        "x": 0.7125248312950134,
+        "y": 0.2290668487548828,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      },
+      {
+        "id": "B",
+        "name": "Main waterfall / 250 m",
+        "x": 0.5277918577194214,
+        "y": 0.46016812324523926,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      },
+      {
+        "id": "C",
+        "name": "Plunge pool / 840 m",
+        "x": 0.4754781424999237,
+        "y": 0.5665987730026245,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      },
+      {
+        "id": "D",
+        "name": "Lower cascades",
+        "x": 0.36921581625938416,
+        "y": 0.7058309614658356,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      },
+      {
+        "id": "E",
+        "name": "Reservoir valley / 690 m",
+        "x": 0.2220834195613861,
+        "y": 0.8832627832889557,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      },
+      {
+        "id": "F",
+        "name": "Steppe plateau",
+        "x": 0.9304987192153931,
+        "y": 0.32154542207717896,
+        "visible": true,
+        "description": "Local study; true vertical scale"
+      }
+    ]
+  }
+]

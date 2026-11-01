@@ -9,11 +9,11 @@ s.unit_settings.system='METRIC';s.unit_settings.scale_length=1000
 s['purpose']='Conceptual terrain inset of landmark 05, oriented north upstream; 1 Blender unit = 1 km. Fictional engineering, not a construction design.'
 def mat(name,col,rough=.7):
  m=bpy.data.materials.new(name);m.diffuse_color=(*col,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*col,1);p.inputs['Roughness'].default_value=rough;return m
-stone=mat('Warm weathered mass concrete',(.42,.40,.33));dark=mat('Oxidized bronze gates',(.12,.18,.16),.35);water=mat('Fresh reservoir water',(.025,.17,.19),.24);roof=mat('Patinated copper roofs',(.15,.25,.21),.5);white=mat('Aerated spillway water',(.62,.79,.79),.4);earth=mat('Layered bedrock',(.24,.23,.18));leaves=mat('Forest canopy',(.055,.12,.045));road=mat('Pale crushed stone road',(.36,.33,.25))
+stone=mat('Warm weathered mass concrete',(.42,.40,.33));dark=mat('Oxidized bronze gates',(.12,.18,.16),.35);water=mat('Fresh reservoir water',(.025,.17,.19),.24);roof=mat('Patinated copper roofs',(.15,.25,.21),.5);white=mat('Aerated spillway water',(.62,.79,.79),.4);earth=mat('Layered bedrock',(.24,.23,.18));leaves=mat('Forest canopy',(.17,.22,.07));road=mat('Pale crushed stone road',(.36,.33,.25))
 # Material texture distinguishes stone from green slopes.
 terrainmat=mat('Bedrock and forest slope mosaic',(.18,.25,.10));nt=terrainmat.node_tree;n=nt.nodes;l=nt.links;p=n.get('Principled BSDF');tex=n.new('ShaderNodeTexNoise');tex.inputs['Scale'].default_value=3;tex.inputs['Detail'].default_value=7;tex.inputs['Roughness'].default_value=.72
 coords=n.new('ShaderNodeTexCoord');l.new(coords.outputs['Object'],tex.inputs['Vector'])
-ramp=n.new('ShaderNodeValToRGB');ramp.color_ramp.elements[0].position=.25;ramp.color_ramp.elements[0].color=(.035,.065,.018,1);ramp.color_ramp.elements[1].position=.76;ramp.color_ramp.elements[1].color=(.37,.32,.22,1);e=ramp.color_ramp.elements.new(.52);e.color=(.14,.20,.06,1);l.new(tex.outputs['Fac'],ramp.inputs[0]);l.new(ramp.outputs[0],p.inputs['Base Color']);bum=n.new('ShaderNodeBump');bum.inputs['Strength'].default_value=.4;bum.inputs['Distance'].default_value=.05;l.new(tex.outputs['Fac'],bum.inputs['Height']);l.new(bum.outputs[0],p.inputs['Normal'])
+ramp=n.new('ShaderNodeValToRGB');ramp.color_ramp.elements[0].position=.25;ramp.color_ramp.elements[0].color=(.19,.18,.09,1);ramp.color_ramp.elements[1].position=.76;ramp.color_ramp.elements[1].color=(.37,.32,.22,1);e=ramp.color_ramp.elements.new(.52);e.color=(.30,.29,.13,1);l.new(tex.outputs['Fac'],ramp.inputs[0]);l.new(ramp.outputs[0],p.inputs['Base Color']);bum=n.new('ShaderNodeBump');bum.inputs['Strength'].default_value=.4;bum.inputs['Distance'].default_value=.05;l.new(tex.outputs['Fac'],bum.inputs['Height']);l.new(bum.outputs[0],p.inputs['Normal'])
 geom=n.new('ShaderNodeNewGeometry');sep=n.new('ShaderNodeSeparateXYZ');albedo=n.new('ShaderNodeMixRGB');albedo.blend_type='MIX';albedo.inputs[1].default_value=(.27,.25,.20,1);l.new(geom.outputs['Normal'],sep.inputs[0]);l.new(sep.outputs['Z'],albedo.inputs[0]);l.new(ramp.outputs[0],albedo.inputs[2]);l.new(albedo.outputs[0],p.inputs['Base Color'])
 # Concrete fine grain.
 n=stone.node_tree.nodes;l=stone.node_tree.links;t=n.new('ShaderNodeTexNoise');t.inputs['Scale'].default_value=85;t.inputs['Detail'].default_value=3;b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.2;b.inputs['Distance'].default_value=.004;l.new(t.outputs['Fac'],b.inputs['Height']);l.new(b.outputs[0],n.get('Principled BSDF').inputs['Normal'])
@@ -106,9 +106,9 @@ for i in range(55):
  cube('Copper roof',(x,y,z+.03),(.039,.029,.008),roof)
 # Sparse tree stands provide a scale cue; canopy detail is mostly material at this altitude.
 bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1,radius=1);proto=bpy.context.object;proto.name='Canopy prototype';proto.data.materials.append(leaves)
-for i in range(1800):
+for i in range(280):
  x=random.uniform(-7,7);y=random.uniform(-5,9);z=terrain(x,y)
- if z<.74 or z>1.6 or abs(y)<.35:continue
+ if z<.74 or z>1.15 or abs(y)<.35:continue
  o=bpy.data.objects.new('Forest canopy',proto.data);s.collection.objects.link(o);o.location=(x,y,z+.025);r=random.uniform(.018,.04);o.scale=(r,r,r*1.3)
 bpy.data.objects.remove(proto,do_unlink=True)
 bpy.ops.object.light_add(type='SUN',location=(0,0,10));sun=bpy.context.object;sun.rotation_euler=(math.radians(24),math.radians(-20),math.radians(-35));sun.data.energy=3;sun.data.angle=.15

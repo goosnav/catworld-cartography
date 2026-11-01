@@ -1,10 +1,10 @@
 id,region,latitude_deg,daylight_hours,solar_declination_deg
-01,Ferric Sea / impact basin,64.987,3.61,-22.558
-02,Northern Divide,36.819,9.58,-22.558
-03,Panterran Plateau,21.091,10.77,-22.558
-04,Great Reservoir,11.504,11.35,-22.558
-11,Southern coastal river country,-30,13.85,-22.558
-21,Old southern shield,-28,13.7,-22.558
-23,Northern remnant island,55,7.15,-22.558
-28,Arctic crown islands,80.0,0,-22.558
-29,South polar ice continent,-77.0,24,-22.558
+01,Ferric Sea / impact basin,64.987,0,-33.644
+02,Northern Divide,36.819,8.02,-33.644
+03,Panterran Plateau,23,9.81,-33.644
+04,Great Reservoir,11.504,10.96,-33.644
+11,Southern eastern coast,-36,15.86,-33.644
+21,Southern shield,-37,16.01,-33.644
+23,Northern remnant island,55,2.42,-33.644
+28,Arctic crown islands,80.0,0,-33.644
+29,South polar ice continent,-77.0,24,-33.644

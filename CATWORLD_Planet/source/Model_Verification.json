@@ -1,9 +1,9 @@
 {
   "globe_vertices": 1181953,
   "globe_quads": 1179648,
-  "geographic_landmarks": 30,
-  "atlas_cameras": 12,
-  "timeline_markers": 12,
+  "geographic_landmarks": 36,
+  "atlas_cameras": 13,
+  "timeline_markers": 13,
   "packed_images": [
     {
       "name": "albedo_4096.png",

@@ -371,5 +371,8 @@ print('Built terrain',W,H,'land fraction',land.mean(),'max elevation',height.max
 from reshape_geography import reshape
 reshape(OUT)
 
-from revise_southern import revise
+from revise_southern_r6 import revise
 revise(OUT)
+
+from revise_r6 import revise_r6
+revise_r6(OUT)

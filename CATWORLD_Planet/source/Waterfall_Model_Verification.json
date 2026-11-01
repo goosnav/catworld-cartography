@@ -1,0 +1,9 @@
+{
+  "revision": 6,
+  "camera": "Camera",
+  "unit_scale_m": 1000.0,
+  "upper_river_m": 1090,
+  "reservoir_m": 690,
+  "drop_m": 400,
+  "water_surface": "Continuous mesh following the graded bed; procedural water, no fluid simulation"
+}

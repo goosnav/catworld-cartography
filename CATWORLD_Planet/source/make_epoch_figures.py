@@ -1,8 +1,8 @@
-"""R5: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
+"""R6: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
-from revise_southern import SPINE,CHAIN
+from revise_southern_r6 import SPINE,CHAIN,shorten_shelf
 B=Path(__file__).resolve().parents[1];G=B/'guide';BG='#10191f';INK='#efe7d6';MUTED='#abc2ca';TEAL='#7cdccc';GOLD='#e3b479'
 def font(n,b=False):return ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial'+(' Bold' if b else '')+'.ttf',n)
 def text(d,p,s,n=30,col=INK,b=False):d.text(p,s,font=font(n,b),fill=col)
@@ -16,7 +16,7 @@ def lab(d,loc,txt,col=INK):
 im,d=base('CURRENT EPOCH / NORTH AUTUMN, SOUTH SPRING','Proposed Ls 255 degrees: 833 years after equinox; 167 years until northern winter solstice.')
 m=world_map();q=ImageDraw.Draw(m)
 for la in [60,30,0,-30,-60]:q.line([(0,pt(0,la)[1]),(2060,pt(0,la)[1])],fill='#657784',width=1)
-for loc,txt in [((8,66),'BLOOD LAKE / FREEZE BEGINS'),((72,47),'SNOWY NORTHERN RANGES'),((20,4),'MILD LOWLANDS'),((184,-30),'SOUTHERN SPRING'),((233,-10),'WARMING ISLAND SEAS'),((70,-78),'RELIC GROUNDED ICE'),((208,57),'SMALL NORTHERN REMNANT')]:lab(q,loc,txt)
+for loc,txt in [((8,66),'BLOOD LAKE / POLAR NIGHT'),((72,47),'SNOWY NORTHERN RANGES'),((20,4),'MILD LOWLANDS'),((234,-37),'SOUTHERN SPRING'),((278,-15),'WARMING ISLAND SEAS'),((70,-78),'RELIC GROUNDED ICE'),((208,57),'SMALL NORTHERN REMNANT')]:lab(q,loc,txt)
 im.paste(m,(70,185));text(d,(70,1250),'North: shorter days, growing snow and sea ice; birds move toward lower-latitude refuges.',31)
 text(d,(70,1300),'South: warming coasts, residual alpine glaciers; dry interior remains dry despite spring.',31)
 text(d,(70,1370),'Ice extent and biome colours are design hypotheses. Reference lighting is not the actual polar-day/night pattern.',26,MUTED)
@@ -42,25 +42,28 @@ def line(points,col,width=6):
  for a,b in zip(points[:-1],points[1:]):
   aa,bb=pt(*a),pt(*b)
   if abs(aa[0]-bb[0])<1000:q.line([aa,bb],fill=col,width=width)
-line([(-50,31),(-20,36),(10,37),(35,37),(52,37),(72,35),(95,30),(122,27),(145,23)],GOLD,8)
+from revise_r6 import east_transform
+sp=[(-50,31),(-20,36),(10,37),(35,37),(52,37),(72,35),(95,30),(122,27),(145,23)]
+line([tuple(map(float,east_transform(a,b))) if a>54.58 else (a,b) for a,b in sp],GOLD,8)
+line([(-32,-7),(-28,-7),(-24,-4),(-21,-8),(-22,-13)],'#a7a4dd',5);line([(6,-10),(5,-13.5),(8.5,-15.3),(6.6,-18),(9.2,-20)],'#a7a4dd',5)
 line(SPINE,'#a7a4dd',7);line(CHAIN,'#dfb7a3',5)
-line([(230,-16),(242,-23),(254,-23),(268,-17),(285,-7)],'#6e9fd2',6)
-for loc,txt in [((5,24),'PANTERRA'),((97,8),'EASTERN DRY CORE'),((163,2),'DEEP SEPARATING OCEAN'),((183,-30),'OLD SOUTHERN SHIELD'),((235,-4),'RIFTED SHELF'),((286,20),'TOWARD PANTERRA')]:lab(q,loc,txt)
+line(shorten_shelf([(253,-19),(265,-20),(277,-16),(290,-7),(301,3)]),'#6e9fd2',6)
+for loc,txt in [((5,24),'PANTERRA'),((97,8),'EASTERN DRY CORE'),((163,2),'DEEP SEPARATING OCEAN'),((234,-37),'OLD SOUTHERN SHIELD'),((280,-9),'RIFTED SHELF'),((286,20),'TOWARD PANTERRA')]:lab(q,loc,txt)
 im.paste(m,(70,185));text(d,(70,1250),'GOLD: main collision belt    VIOLET: old raised eastern margin    BLUE: extension    PALE: continental shelf ribbon',26,MUTED)
 text(d,(70,1310),'Collision thickens the main mountain bridge. Southern rifting makes islands and angular bays.',31)
 text(d,(70,1360),'Low sea level can expose the shelf; it cannot expose the deep ocean separating the eastern and southern continents.',27)
 im.save(G/'Tectonic_Framework.png')
 # Before/after uses the previous far-side angle and the new 12-degree southern framing.
-im,d=base('FAR SIDE / REBUILT AS A SEPARATE SOUTHERN WORLD','Previous northern extension -> independent southern mainland and eastern archipelago.',1300)
-for j,p in enumerate([B/'source/reference_R4_far_side.jpg',B/'renders/04_far_side.png']):
+im,d=base('FAR SIDE / MORE DISTINCTIVE SOUTHERN GEOGRAPHY','R6: asymmetric southern mainland moves southeast; the island chain becomes shorter and sparser.',1300)
+for j,p in enumerate([B/'source/reference_R5_far_side.png',B/'renders/04_far_side.png']):
  pic=Image.open(p).convert('RGBA');pic.thumbnail((1000,1000),Image.Resampling.LANCZOS);im.paste(pic,(70+j*1070,220),pic)
- text(d,(70+j*1070,170),'PREVIOUS / R4' if j==0 else 'REVISED / R5',32,MUTED if j==0 else TEAL,True)
-text(d,(70,1240),'R4 centre: 180 lon / 0 lat. R5 centre: 180 lon / 12 south. Same globe scale; southern framing adjusted.',26,MUTED)
+ text(d,(70+j*1070,170),'PREVIOUS / R5' if j==0 else 'REVISED / R6',32,MUTED if j==0 else TEAL,True)
+text(d,(70,1240),'Both views: 180 longitude / 12 south. The southern regional plate gives a closer view of the new coast.',26,MUTED)
 im.save(G/'Revision_Comparison.jpg',quality=94)
-print('R5 EPOCH FIGURES COMPLETE')
+print('R6 EPOCH FIGURES COMPLETE')
 # Geometric daylight at the proposed epoch, without refraction or terrain horizons.
 import math,json,csv
-dec=math.asin(math.sin(math.radians(23.4))*math.sin(math.radians(255)));rows=[]
+dec=math.asin(math.sin(math.radians(35))*math.sin(math.radians(255)));rows=[]
 for f in json.load(open(B/'source/features.json')):
  if f['id'] in ['01','02','03','04','11','21','23','28','29']:
   q=-math.tan(math.radians(f['lat']))*math.tan(dec);hours=24 if q<=-1 else 0 if q>=1 else 24/math.pi*math.acos(q)
