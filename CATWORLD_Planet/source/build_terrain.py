@@ -366,3 +366,7 @@ next(f for f in features if f['id']=='16').update(lon=-13.9306640625,lat=8.30566
 json.dump(features,open(OUT/'source/features.json','w'),indent=2)
 json.dump(dict(radius_km=6100,tilt_deg=23.4,orbital_year_earth_years=4000,relief_exaggeration=10,seed=49,crater_center=[clon,clat],projection='Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule'),open(OUT/'source/planet.json','w'),indent=2)
 print('Built terrain',W,H,'land fraction',land.mean(),'max elevation',height.max());print('features',[(f['id'],round(f['lon'],1),round(f['lat'],1)) for f in features])
+
+# Revision 4 reconstructs the far-side core after the original sketch fit.
+from reshape_geography import reshape
+reshape(OUT)

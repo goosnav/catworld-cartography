@@ -1,5 +1,5 @@
 {
-  "revision": 2,
+  "revision": 4,
   "clean_views": 14,
   "annotated_views": 14,
   "images": [
@@ -9,7 +9,7 @@
         2048,
         2048
       ],
-      "sha256": "68568915de6b75bce978f6a7ae476c106215d2ca37e5925f53a97b0f5f35a7d8"
+      "sha256": "4c60f803d3991b198bcc477d74403f77f7e4b4d644e3b8f9d6c98a6f2feedb10"
     },
     {
       "path": "annotated/01_panterra_annotated.png",
@@ -17,7 +17,7 @@
         2600,
         2060
       ],
-      "sha256": "a5dc33680ab0fcd19d171c278650b5f05fd2941e9168012be354b33df5cc278d"
+      "sha256": "ae012b057988cac01b98fc886058fad6e1289b91087b9d70116fe76c91f9448e"
     },
     {
       "path": "renders/02_eastern.png",
@@ -25,7 +25,7 @@
         2048,
         2048
       ],
-      "sha256": "b94c244c4478ba9954b96d7d81a50bceb360c1326442ea831467278881282b24"
+      "sha256": "d5a8f4d56920bc465c63a6f3c2c4c867db1978922a6b30ed4d983c835e872224"
     },
     {
       "path": "annotated/02_eastern_annotated.png",
@@ -33,7 +33,7 @@
         2600,
         2060
       ],
-      "sha256": "0d3b13eb946ad8ee7b9609d02b0d1e750f8f02b257d5707a92433c1f07c3feb8"
+      "sha256": "01fb73f58727b56ddf2f68d31498ca8c1ce8558945f84c03e10bc02a3faef35d"
     },
     {
       "path": "renders/03_western.png",
@@ -41,7 +41,7 @@
         2048,
         2048
       ],
-      "sha256": "4be13b4745de27f21379f5b4f822a173e3807ff65184b49c0d1b9f52430f48f9"
+      "sha256": "e1fcb470c02d995cce1a26f3fa7bedcc40576fde7c6cec1b3ee7c1317a597f18"
     },
     {
       "path": "annotated/03_western_annotated.png",
@@ -49,7 +49,7 @@
         2600,
         2060
       ],
-      "sha256": "489e3b5941e7d23d045711bcc6f915826ef9be9925b99eeef8700a4964589c5c"
+      "sha256": "2d3783a22cc28b2339e0a2d1c1a3b852b83cb744cee083ec6e68a5d0d8ac1d65"
     },
     {
       "path": "renders/04_far_side.png",
@@ -57,7 +57,7 @@
         2048,
         2048
       ],
-      "sha256": "bc4d952c9e7e4c4ad3b698463a0d96308dd9a89d4e11fb0db1a4e4eb5d3f5104"
+      "sha256": "3f82d0dc20306d5d540db66db894391b3909f25e3e7696aa94e38b642c101be9"
     },
     {
       "path": "annotated/04_far_side_annotated.png",
@@ -65,7 +65,7 @@
         2600,
         2060
       ],
-      "sha256": "1de59834dfc69723dc06ad3210100467a0bd0323150dccb1f53e351801922b9d"
+      "sha256": "468ff35a90dbebd6fffaad280fdf6cd9a267b17b35a93fddea8c325886005db8"
     },
     {
       "path": "renders/05_north_pole.png",
@@ -73,7 +73,7 @@
         2048,
         2048
       ],
-      "sha256": "cb0b1046e9b611e9d008bdc560e5813b3e16befbaa441129c9f2659385eda027"
+      "sha256": "cb0956cff0779f195bea6240ab9406940fee37ce4d52ace9bf06bdeec071dc98"
     },
     {
       "path": "annotated/05_north_pole_annotated.png",
@@ -81,7 +81,7 @@
         2600,
         2060
       ],
-      "sha256": "66422f0e16572b15a71086b881ca80ce55e995e489d4711c03a07a827a613e74"
+      "sha256": "e6653f4cb43d7173be595d3aa45054980fd1a2d628b9c998c36727362d6821f5"
     },
     {
       "path": "renders/06_south_pole.png",
@@ -89,7 +89,7 @@
         2048,
         2048
       ],
-      "sha256": "3974948a1d507973a56ee0d4575a510ec53c09f5db7b147671fd658069b581a0"
+      "sha256": "dea538b17f49cf5c8633bf387e15eab3dd5b99a7107ecaa21e466703e97f45d8"
     },
     {
       "path": "annotated/06_south_pole_annotated.png",
@@ -97,7 +97,7 @@
         2600,
         2060
       ],
-      "sha256": "4ffda3969d305796983e69ee9a15db096fc305360e65f5387730b2af8a4a4e06"
+      "sha256": "9a2cd712b43e14f61cde1b239ea14e975358938d9be4732b494376efbd902726"
     },
     {
       "path": "renders/07_panterra_close.png",
@@ -105,7 +105,7 @@
         2048,
         2048
       ],
-      "sha256": "27fd50471d9458f9876dd72ababdeab7b8c25fdae589b4f66a781689895f80a5"
+      "sha256": "e6a916442ff0799f8c56a09bab5b19269ca897ec4101a2b47ce907db4f6f56cc"
     },
     {
       "path": "annotated/07_panterra_close_annotated.png",
@@ -113,7 +113,7 @@
         2600,
         2060
       ],
-      "sha256": "d21e1f8429e0118a6b30dfac44ea096a2de62410b4bba1289e843ea501b5a1e8"
+      "sha256": "014e0d63de33536db1647ee44af04f041581e5523a67865f0130c27cd9783f48"
     },
     {
       "path": "renders/08_impact_close.png",
@@ -121,7 +121,7 @@
         2048,
         2048
       ],
-      "sha256": "37988a4cc3f33d12831d4c43e9ea313f8884957d4d93c3f498adaab29b22a671"
+      "sha256": "a3e619a068dbdef8d886c0a5a3d16c1425ac6dc2b9b24d1899c25152c8c51dc9"
     },
     {
       "path": "annotated/08_impact_close_annotated.png",
@@ -129,23 +129,23 @@
         2600,
         2060
       ],
-      "sha256": "62906d0c4513f3ada3a3ace5a8ae89632d407295e8876349d8a8f64138b958e6"
+      "sha256": "0fad35b2a3d69e3b126a88a03daad69fa94156bd3a8326b2b33268e1b7fcb546"
     },
     {
-      "path": "renders/11_southern_continent.png",
+      "path": "renders/11_maritime_continent.png",
       "size": [
         2048,
         2048
       ],
-      "sha256": "c0309264c54a38552bef07d60098bf503353cb00d0a005be8adb1508350cba4b"
+      "sha256": "0ccae467ca1adacc726d484552fbae2e4b5558f8931ff078ba095dc918be919f"
     },
     {
-      "path": "annotated/11_southern_continent_annotated.png",
+      "path": "annotated/11_maritime_continent_annotated.png",
       "size": [
         2600,
         2060
       ],
-      "sha256": "50e9793c72ef6c0cef37ed7e10f51674e99d1b5a2c4c7cafdcad777ed74d2445"
+      "sha256": "7ae91c6f9f3e0d2beec06c592bdb6192ab504b97a6a0a87693b88272c66bdbab"
     },
     {
       "path": "renders/12_eastern_continent.png",
@@ -153,7 +153,7 @@
         2048,
         2048
       ],
-      "sha256": "a76df4bc25450dab44c6895be3714cdfa38f630dde58e98e464b1cbcd4ffe441"
+      "sha256": "de99114892dd59bb2d95f7d0e46fbd67173241a1801bf7ee7359a56319b4fab4"
     },
     {
       "path": "annotated/12_eastern_continent_annotated.png",
@@ -161,7 +161,7 @@
         2600,
         2060
       ],
-      "sha256": "e75f9f8337ee12950e34ffb7c8b108b888b0fc7f85f536eb0950ad39375deca6"
+      "sha256": "b7e875df0439b525ff251bad27227fb50de2ffbe9690abe7e0b625a8d3cbed07"
     },
     {
       "path": "renders/13_seattle_waterway.png",
@@ -169,7 +169,7 @@
         2048,
         2048
       ],
-      "sha256": "b9eb21d45a8919dbeee853a5ec76d842368b1314598e63ea7355eec96b50eeab"
+      "sha256": "97193d13f16f7262e1d662f1b80602fc0be1f829e263d5cf873a0b516cac35e8"
     },
     {
       "path": "annotated/13_seattle_waterway_annotated.png",
@@ -177,7 +177,7 @@
         2600,
         2060
       ],
-      "sha256": "a13d8f977a90916310b47edf0e6bab4b1ebca081f7c6601c825617b153420dc2"
+      "sha256": "7455b99b2650d0425086d353ddcff5b0b400f0fb78667545a9c229dec2a0a277"
     },
     {
       "path": "renders/14_archipelago.png",
@@ -185,7 +185,7 @@
         2048,
         2048
       ],
-      "sha256": "aaf81fe42ce2380099dc9b5d55553690661cc800e6c3f19e594b8ecd2f38145a"
+      "sha256": "9789c278f2d289ad71b5d40e4101ec08fa9d0f181edc49fffe65a3ab4bf98bd2"
     },
     {
       "path": "annotated/14_archipelago_annotated.png",
@@ -193,7 +193,7 @@
         2600,
         2060
       ],
-      "sha256": "e71a76753e74c991aded9577225a646f75f6d1111c342565244d46aea3f6f3cd"
+      "sha256": "39ae3088ad0cfaf6472c7eb69e34891907c7ce257f06fb34e791b148f6691cf5"
     },
     {
       "path": "renders/09_dam_valley.png",
@@ -228,7 +228,7 @@
       "sha256": "e63ed63fa1c320d678f343c019b0480dfb86b255966d6a9a1d3e43170e9e44d2"
     }
   ],
-  "pdf_pages": 22,
+  "pdf_pages": 43,
   "all_gallery_links_exist": true,
   "models": [
     "model/CATWORLD_Terra.blend",
@@ -246,17 +246,17 @@
     1481.4644775390625,
     1299.40234375,
     1109.1859130859375,
-    906.9235229492188,
+    906.923583984375,
     690.0
   ],
   "main_river_sampled_direction_descending": true,
   "dam_outlet_sampled_surface_m": [
     690.0,
-    484.4256286621094,
+    484.4256896972656,
     365.0105285644531,
     247.57936096191406,
-    131.32078552246094,
-    13.621988296508789
+    131.32080078125,
+    13.621990203857422
   ],
   "dam_outlet_sampled_direction_descending": true,
   "city_sites": [
@@ -264,7 +264,7 @@
       "id": "06",
       "name": "Alluvial trade outlet",
       "on_land": true,
-      "height_m": 13.621988296508789
+      "height_m": 13.621990203857422
     },
     {
       "id": "16",

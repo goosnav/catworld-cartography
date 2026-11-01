@@ -8,5 +8,7 @@
     1.8167724384495947,
     64.98695651135345
   ],
-  "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule"
+  "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule",
+  "revision": 4,
+  "geographic_revision": "Short necks; a full northern maritime interior with terrain-routed drainage"
 }

@@ -23,7 +23,7 @@ for target in re.findall(r'(?:href|src)="([^"]+)"',(B/'OPEN_ATLAS.html').read_te
 model=json.load(open(B/'source/Model_Verification.json'));assert model['atlas_cameras']==12 and model['geographic_landmarks']==30
 assert all(i['packed'] for i in model['packed_images'])
 z=np.load(B/'source/terrain_fields.npz');land=z['land'];h,w=land.shape;shift=w*3//4;lab,n=label(np.roll(land,shift,axis=1))
-anchors=[(0,20),(150,5),(-140,-30)]
+geography=json.load(open(B/'source/Geography_Verification.json'));anchors=[(a['lon'],a['lat']) for a in geography['core_anchors']]
 ids=[int(lab[int((90-la)/180*h),(int((lo+180)/360*w)+shift)%w]) for lo,la in anchors]
 assert len(set(ids))==1 and ids[0]>0
 assert int(lab[-3,w//2])!=ids[0]
@@ -38,8 +38,8 @@ for f in json.load(open(B/'source/features.json')):
   assert land[y,x] and not z['lake'][y,x]
   cities.append({'id':f['id'],'name':f['name'],'on_land':True,'height_m':float(z['height'][y,x])})
 import pymupdf
-pdf=pymupdf.open(B/'guide/CATWORLD_Geography_Atlas.pdf')
+pdf=pymupdf.open(B/'guide/CATWORLD_Creator_Guide.pdf')
 assert len(pdf)>=20
-report={'revision':2,'clean_views':14,'annotated_views':14,'images':images,'pdf_pages':len(pdf),'all_gallery_links_exist':True,'models':[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],'three_cores_connected':True,'south_polar_land_separate':True,'main_river_sampled_surface_m':v.tolist(),'main_river_sampled_direction_descending':True,'dam_outlet_sampled_surface_m':ov.tolist(),'dam_outlet_sampled_direction_descending':True,'city_sites':cities,'all_source_python_parses':True}
+report={'revision':4,'clean_views':14,'annotated_views':14,'images':images,'pdf_pages':len(pdf),'all_gallery_links_exist':True,'models':[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],'three_cores_connected':True,'south_polar_land_separate':True,'main_river_sampled_surface_m':v.tolist(),'main_river_sampled_direction_descending':True,'dam_outlet_sampled_surface_m':ov.tolist(),'dam_outlet_sampled_direction_descending':True,'city_sites':cities,'all_source_python_parses':True}
 json.dump(report,open(B/'source/Delivery_Verification.json','w'),indent=2)
 print(json.dumps({k:v for k,v in report.items() if k!='images'},indent=2))

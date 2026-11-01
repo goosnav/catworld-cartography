@@ -1,0 +1,13 @@
+{
+  "revision": 4,
+  "saved_cameras": [
+    "09_dam_valley",
+    "10_dam_detail"
+  ],
+  "frames": [
+    1,
+    2
+  ],
+  "unit_scale_m": 1000.0,
+  "default_camera": "09_dam_valley"
+}

@@ -1,31 +1,228 @@
 {
-  "core_anchor_lonlat": [
+  "revision": 4,
+  "core_anchors": [
+    {
+      "lon": 0,
+      "lat": 20,
+      "component": 17
+    },
+    {
+      "lon": 120,
+      "lat": 5,
+      "component": 17
+    },
+    {
+      "lon": -155,
+      "lat": 37,
+      "component": 17
+    }
+  ],
+  "three_cores_connected": true,
+  "old_bridge_longitude_span_deg": 60,
+  "new_bridge_longitude_span_deg": 25,
+  "bridge_shortening_percent": 58.333333,
+  "polar_latitude_bands_preserved": true,
+  "new_maritime_core_bounds_lonlat": [
+    166,
+    239,
+    6,
+    60
+  ],
+  "new_river_routing_grid_step": 3,
+  "new_river_routed_cells": 38248,
+  "new_river_threshold_cells": 75,
+  "new_core_polygon": [
     [
-      0,
+      166,
+      16
+    ],
+    [
+      173,
+      24
+    ],
+    [
+      181,
+      28
+    ],
+    [
+      184,
+      34
+    ],
+    [
+      179,
+      38
+    ],
+    [
+      177,
+      43
+    ],
+    [
+      184,
+      46
+    ],
+    [
+      184,
+      51
+    ],
+    [
+      193,
+      54
+    ],
+    [
+      199,
+      60
+    ],
+    [
+      204,
+      54
+    ],
+    [
+      214,
+      53
+    ],
+    [
+      219,
+      48
+    ],
+    [
+      228,
+      48
+    ],
+    [
+      232,
+      43
+    ],
+    [
+      225,
+      40
+    ],
+    [
+      221,
+      34
+    ],
+    [
+      229,
+      35
+    ],
+    [
+      235,
+      30
+    ],
+    [
+      239,
+      23
+    ],
+    [
+      235,
+      18
+    ],
+    [
+      229,
       20
     ],
     [
-      150,
-      5
+      231,
+      14
     ],
     [
-      -140,
-      -30
+      224,
+      9
+    ],
+    [
+      218,
+      11
+    ],
+    [
+      210,
+      6
+    ],
+    [
+      201,
+      8
+    ],
+    [
+      194,
+      12
+    ],
+    [
+      187,
+      10
+    ],
+    [
+      181,
+      11
+    ],
+    [
+      175,
+      9
+    ],
+    [
+      168,
+      11
     ]
   ],
-  "core_connected_component_ids": [
-    17,
-    17,
-    17
+  "new_suture_spine": [
+    [
+      143,
+      20
+    ],
+    [
+      154,
+      17
+    ],
+    [
+      166,
+      16
+    ],
+    [
+      179,
+      20
+    ],
+    [
+      191,
+      24
+    ],
+    [
+      202,
+      22
+    ],
+    [
+      214,
+      19
+    ],
+    [
+      226,
+      14
+    ]
   ],
-  "three_cores_connected": true,
-  "south_polar_component": 218,
-  "physical_peak_m": 10800.0,
-  "river": {
-    "direction": "Seattle -> Great Reservoir -> Dam -> downstream metropolis",
-    "main_river_upstream_water_m": 3140.0,
-    "main_river_lake_inlet_water_m": 690.0,
-    "monotonic_water_profile": true,
-    "river_width_is_exaggerated": true
-  }
+  "new_archipelago": [
+    [
+      -123,
+      16
+    ],
+    [
+      -113,
+      -3
+    ],
+    [
+      -103,
+      -16
+    ],
+    [
+      -87,
+      -24
+    ],
+    [
+      -70,
+      -21
+    ],
+    [
+      -57,
+      -12
+    ],
+    [
+      -44,
+      4
+    ]
+  ]
 }
