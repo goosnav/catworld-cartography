@@ -1,6 +1,6 @@
 {
-  "pages": 49,
-  "sections": 24,
+  "pages": 50,
+  "sections": 25,
   "layout": [
     {
       "page": 1,
@@ -8,7 +8,7 @@
     },
     {
       "page": 2,
-      "lowest_content_y": 73.89
+      "lowest_content_y": 52.89
     },
     {
       "page": 3,
@@ -20,7 +20,7 @@
     },
     {
       "page": 5,
-      "lowest_content_y": 204.06
+      "lowest_content_y": 156.48
     },
     {
       "page": 6,
@@ -100,7 +100,7 @@
     },
     {
       "page": 25,
-      "lowest_content_y": 349.05
+      "lowest_content_y": 334.56
     },
     {
       "page": 26,
@@ -108,15 +108,15 @@
     },
     {
       "page": 27,
-      "lowest_content_y": 298.09
+      "lowest_content_y": 96.5
     },
     {
       "page": 28,
-      "lowest_content_y": 156.69
+      "lowest_content_y": 298.09
     },
     {
       "page": 29,
-      "lowest_content_y": 295.89
+      "lowest_content_y": 156.69
     },
     {
       "page": 30,
@@ -124,31 +124,31 @@
     },
     {
       "page": 31,
-      "lowest_content_y": 295.89
+      "lowest_content_y": 282.89
     },
     {
       "page": 32,
-      "lowest_content_y": 471.89
+      "lowest_content_y": 295.89
     },
     {
       "page": 33,
-      "lowest_content_y": 284.69
+      "lowest_content_y": 471.89
     },
     {
       "page": 34,
-      "lowest_content_y": 153.89
+      "lowest_content_y": 284.69
     },
     {
       "page": 35,
-      "lowest_content_y": 236.89
+      "lowest_content_y": 153.89
     },
     {
       "page": 36,
-      "lowest_content_y": 133.39
+      "lowest_content_y": 236.89
     },
     {
       "page": 37,
-      "lowest_content_y": 205.89
+      "lowest_content_y": 133.39
     },
     {
       "page": 38,
@@ -160,42 +160,46 @@
     },
     {
       "page": 40,
-      "lowest_content_y": 140.39
+      "lowest_content_y": 205.89
     },
     {
       "page": 41,
-      "lowest_content_y": 236.89
-    },
-    {
-      "page": 42,
-      "lowest_content_y": 312.89
-    },
-    {
-      "page": 43,
-      "lowest_content_y": 334.39
-    },
-    {
-      "page": 44,
-      "lowest_content_y": 205.89
-    },
-    {
-      "page": 45,
-      "lowest_content_y": 236.89
-    },
-    {
-      "page": 46,
-      "lowest_content_y": 202.39
-    },
-    {
-      "page": 47,
-      "lowest_content_y": 205.89
-    },
-    {
-      "page": 48,
       "lowest_content_y": 140.39
     },
     {
+      "page": 42,
+      "lowest_content_y": 236.89
+    },
+    {
+      "page": 43,
+      "lowest_content_y": 312.89
+    },
+    {
+      "page": 44,
+      "lowest_content_y": 334.39
+    },
+    {
+      "page": 45,
+      "lowest_content_y": 195.39
+    },
+    {
+      "page": 46,
+      "lowest_content_y": 236.89
+    },
+    {
+      "page": 47,
+      "lowest_content_y": 202.39
+    },
+    {
+      "page": 48,
+      "lowest_content_y": 205.89
+    },
+    {
       "page": 49,
+      "lowest_content_y": 140.39
+    },
+    {
+      "page": 50,
       "lowest_content_y": 305.89
     }
   ]

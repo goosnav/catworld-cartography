@@ -72,15 +72,15 @@
   {
     "id": "11",
     "name": "Southern eastern coast",
-    "lon": -96,
-    "lat": -36,
+    "lon": -86.0,
+    "lat": -37.0,
     "description": "Wet spring coast beneath the old escarpment"
   },
   {
     "id": "12",
     "name": "Southern escarpment",
-    "lon": -101,
-    "lat": -42,
+    "lon": -91.0,
+    "lat": -43.0,
     "description": "Old uplifted margin follows the redesigned eastern coast"
   },
   {
@@ -135,15 +135,15 @@
   {
     "id": "20",
     "name": "Sparse eastern archipelago",
-    "lon": -75.6,
-    "lat": -24.25,
-    "description": "Six principal islands and eight minor islands toward Panterra"
+    "lon": -68.45000000000005,
+    "lat": -24.965,
+    "description": "Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra"
   },
   {
     "id": "21",
     "name": "Southern shield",
-    "lon": -116,
-    "lat": -37,
+    "lon": -106.0,
+    "lat": -38.0,
     "description": "Asymmetric dry continental interior"
   },
   {
@@ -184,8 +184,8 @@
   {
     "id": "27",
     "name": "Drowned migration shelf",
-    "lon": -62.4,
-    "lat": -13.75,
+    "lon": -58.549999999999955,
+    "lat": -14.135,
     "description": "Submerged continental saddles between sparse island peaks"
   },
   {

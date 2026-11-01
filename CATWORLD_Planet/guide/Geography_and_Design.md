@@ -1,12 +1,12 @@
-# Terra / R6 technical companion
+# Terra / R7 technical companion
 
-The illustrated creator guide explains the world and its design reasoning. R6 preserves the shortened Panterra/eastern mountain connection and the independent southern continent, while revising landforms, hydrology, vegetation and seasons.
+The illustrated creator guide explains the world and its design reasoning. R7 preserves the shortened Panterra/eastern mountain connection and the independent southern continent, while revising landforms, hydrology, vegetation and seasons.
 
 ## Geography and tectonics
 
 The eastern block rotates eight degrees clockwise around the connection. Its mountain belt rotates with it and broadens into supporting uplands. Northern Panterra becomes a broad orogenic province: folded ranges, high massifs and intermontane valleys. The old impact basin remains embedded within northern crust. The impact is not proposed as the cause of the entire mountain system.
 
-The southern mainland covers approximately 9.20 million km2, with a new asymmetric outline, dry old interior, wetter eastern margin, southern inlets and an oblique escarpment. It sits southwest of Panterra; the final adjustment moves it 16 degrees east and 5 degrees south, shortening the crossing. Six principal and eight minor island shapes form a sparse chain toward Panterra only. Large, irregular continental fragments sit nearest the southern mainland. The chain tapers into smaller arc remnants with staggered spacing and wider water gaps toward Panterra, using Oceania and the Aleutians as morphological analogues. A continental ribbon supports the proposed lowstand crossing; isolated peaks can represent later arc volcanism. This is a proposed geological history, not a plate reconstruction. Deep ocean separates this southern land from the eastern continent; no linking island arc is added there.
+The southern mainland covers approximately 9 million km2, with a new asymmetric outline, dry old interior, wetter eastern margin, southern inlets and an oblique escarpment. It sits southwest of Panterra; the R7 adjustment moves it another 10 degrees east and 1 degree south, shortening the crossing. Five retained island shapes form a sparse chain toward Panterra only. Large, irregular continental fragments sit nearest the southern mainland. The chain tapers into smaller arc remnants with staggered spacing and wider water gaps toward Panterra, using Oceania and the Aleutians as morphological analogues. A continental ribbon supports the proposed lowstand crossing; isolated peaks can represent later arc volcanism. This is a proposed geological history, not a plate reconstruction. Deep ocean separates this southern land from the eastern continent; no linking island arc is added there.
 
 A submerged continental shelf provides a possible former migration route. At the proposed 65 m lower ocean level, that designed shelf becomes connected. Present sea level leaves the southern mainland separate. The connectivity test accounts for the longitude seam. It verifies geometry, not ice volume, chronology or local travel conditions.
 
@@ -32,8 +32,12 @@ Stronger tilt intensifies summer as well as winter sunlight contrasts. Snow, sea
 
 Globe physical radius is 6,100 km; Blender radius is ten units, with tenfold displayed relief. Four 4096 x 2048 maps are packed into the globe. Physical height and visible surface elevation are separately stored in `terrain_fields.npz`; lake and river water surfaces differ from their beds. Local models use kilometre units and true vertical scale, so convert scales before combining them.
 
-`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and final R6 terrain/hydrology pass. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
+`build_terrain.py` reconstructs the initial traced geography, then its R4 transformation, R6 southern rewrite and R6 terrain/hydrology pass and final R7 natural-landforms pass. Run the full pipeline for terrain edits; repeated application of the last pass would accumulate rotation. Previous-stage scripts remain because they are inputs to this reconstruction.
 
 `build_blender.py` renders thirteen cameras; `finalize_model.py` saves their timeline/light bindings and verifies packed textures. The dam and waterfall have separate build scripts. `make_epoch_figures.py` and `make_explanatory_figures.py` generate the world/process diagrams. `package_atlas.py` creates annotations, gallery, CSV and statistics. `build_creator_guide.py` creates the PDF and editable guide. `verify_delivery.py` checks topology, hydrology, metadata and delivered files.
 
 The globe is a satellite-style drawing reference with deliberately readable relief and waterways. Sub-texel roads, houses, individual giant trees and engineering are not resolved globally. Use the regional and local studies for closer design work. The guide's 36 feature anchors are proposals unless explicitly identified as creator direction.
+
+## R7 basin and surface treatment
+
+Three small lakes now occupy elongated, branching basins with tributary notches and enclosing valley walls. Each has a level water surface. The previous circular lake rims were removed. Broad lowland noise is subdued and mixed with dissected terrain detail; forest-steppe edges vary with regional moisture and relief. Terrain mesh samples are bilinear to reduce stepped shading. These are constructed landforms, not an erosion simulation.

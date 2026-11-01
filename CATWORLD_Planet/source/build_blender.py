@@ -24,7 +24,11 @@ NU,NV=1536,768
 lat=np.linspace(-np.pi/2,np.pi/2,NV+1);lon=np.linspace(-np.pi,np.pi,NU+1)
 la,lo=np.meshgrid(lat,lon,indexing='ij')
 yi=np.clip(np.round((np.pi/2-la)/np.pi*(H-1)).astype(int),0,H-1);xi=np.clip(np.round((lo+np.pi)/(2*np.pi)*(W-1)).astype(int),0,W-1)
-r=10+height[yi,xi]/6100000*10*10
+# Bilinear surface samples avoid quantized rings on the displaced mesh.
+fy=np.clip((np.pi/2-la)/np.pi*(H-1),0,H-1);fx=np.clip((lo+np.pi)/(2*np.pi)*(W-1),0,W-1)
+y0=np.floor(fy).astype(int);x0=np.floor(fx).astype(int);y1=np.minimum(y0+1,H-1);x1=np.minimum(x0+1,W-1);ty=fy-y0;tx=fx-x0
+hh=(height[y0,x0]*(1-tx)+height[y0,x1]*tx)*(1-ty)+(height[y1,x0]*(1-tx)+height[y1,x1]*tx)*ty
+r=10+hh/6100000*10*10
 verts=np.stack([r*np.cos(la)*np.cos(lo),r*np.cos(la)*np.sin(lo),r*np.sin(la)],-1).reshape(-1,3)
 a=np.arange(NV)[:,None]*(NU+1)+np.arange(NU)[None,:];faces=np.stack([a,a+1,a+NU+2,a+NU+1],-1).reshape(-1,4)
 mesh=bpy.data.meshes.new('Geographic terrain | 10x relief');mesh.from_pydata(verts.tolist(),[],faces.tolist());mesh.update()
@@ -38,7 +42,7 @@ def tex(name,space='sRGB'):
  t=n.new('ShaderNodeTexImage');t.image=bpy.data.images.load(str(BASE/'textures'/name));t.image.colorspace_settings.name=space;t.image.pack();t.interpolation='Linear';return t
 col=tex('albedo_4096.png');l.new(col.outputs['Color'],p.inputs['Base Color'])
 rough=tex('roughness.png','Non-Color');l.new(rough.outputs['Color'],p.inputs['Roughness'])
-h=tex('height_16bit.png','Non-Color');b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.6;b.inputs['Distance'].default_value=.16;l.new(h.outputs['Color'],b.inputs['Height']);l.new(b.outputs['Normal'],p.inputs['Normal'])
+h=tex('height_16bit.png','Non-Color');b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.34;b.inputs['Distance'].default_value=.16;l.new(h.outputs['Color'],b.inputs['Height']);l.new(b.outputs['Normal'],p.inputs['Normal'])
 p.inputs['Specular IOR Level'].default_value=.035
 obj.data.materials.append(mat)
 # Fine surface irregularities, restrained enough to read at globe scale.
@@ -62,7 +66,7 @@ for ftr in features:
 bpy.ops.object.camera_add();cam=bpy.context.object;cam.name='ATLAS camera';scene.camera=cam;cam.data.type='ORTHO';cam.data.ortho_scale=22.2;cam.data.lens=50
 bpy.ops.object.light_add(type='AREA');key=bpy.context.object;key.name='Broad daylight';key.data.energy=7500;key.data.shape='DISK';key.data.size=14
 bpy.ops.object.light_add(type='AREA');fill=bpy.context.object;fill.name='Soft atmospheric fill';fill.data.energy=3400;fill.data.size=20
-views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,-12,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-112,-38,15.0),('12_eastern_continent',129,-2,15.0),('13_seattle_waterway',-27,15,7.5),('14_archipelago',-69,-20,15.0),('15_plateau_hydrology',-21,23,8.3)]
+views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,-12,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-102,-39,15.0),('12_eastern_continent',129,-2,15.0),('13_seattle_waterway',-27,15,7.5),('14_archipelago',-65,-20,15.0),('15_plateau_hydrology',-21,23,8.3)]
 metadata=[]
 for name,lon,lat,scale in views:
  direction=xyz(lon,lat,1);target=Vector((0,0,0)) if scale>20 else direction*8.7

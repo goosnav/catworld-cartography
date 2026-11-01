@@ -32,19 +32,19 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'belt, rotated eight degrees downward at its junction. A deep ocean separates it from the '
              'independent southern shield.'),
             ('The southern silhouette',
-             'The smaller mainland sits southwest of Panterra, closer and farther south after a final 16-degree eastward and 5-degree southward adjustment. An asymmetric headland, oblique old '
+             'The smaller mainland sits southwest of Panterra, closer and farther south after a further 10-degree eastward and 1-degree southward adjustment in R7. An asymmetric headland, oblique old '
              'escarpment, deeply cut southeastern coast and offset southern peninsulas replace the '
              'inverted-Australia resemblance.'),
             ('An intentionally sparse route',
-             'Six principal islands and eight minor islands lead east toward Panterra. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments '
+             'Five retained islands lead east toward Panterra: two large fragments, one middle island and two small remnants. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments '
              'recall Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies '
              'of their real climates.'),
             ('Using the globe',
              'Front is 0 degrees, east +90, west -90 and far side 180. The southern regional camera follows the '
              'relocated mainland. Polar and regional views all render the same model.')]},
  {'title': 'What changed in this pass',
-  'kicker': 'REVISION 6',
-  'figure': 'guide/Revision_Comparison.jpg',
+  'kicker': 'GEOGRAPHY DEVELOPMENT',
+  'figure': 'renders/11_maritime_continent.png',
   'paras': [('Land and mountains',
              'The eastern block swings south. The southern mainland is redesigned and closer to Panterra, with '
              'fewer islands. Northern Panterra becomes a broad, dissected highland province with parallel ranges, '
@@ -261,7 +261,7 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
   'kicker': 'REGIONAL TOUR / THE ARCHIPELAGO',
   'figure': 'renders/14_archipelago.png',
   'paras': [('A sparse curved archipelago',
-             'Six principal islands and eight minor islands replace the crowded belt. Larger fault-bounded '
+             'Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. Larger fault-bounded '
              'fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. '
              'The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]'),
             ('What could form a former bridge',
@@ -467,7 +467,7 @@ SECTIONS = [{'title': 'What is established, and what is proposed',
              'below global resolution.'),
             ('What can be edited',
              'Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build '
-             'pipeline reconstructs earlier terrain stages before applying R6, so transforms are not accumulated '
+             'pipeline reconstructs earlier terrain stages before applying R6 and the R7 natural-landforms pass, so transforms are not accumulated '
              'by repeatedly rotating a finished model. The packed Blender files remain independently editable.'),
             ('Light and atmosphere',
              'Clouds are omitted to expose the terrain. Each camera has broad daylight from a useful drawing '
@@ -552,3 +552,5 @@ SOURCES = [('D / Project references',
   '. General tilt-season mechanism; the 35-degree alien-world climate is a design extrapolation.')]
 
 SOURCES.append(('S14 / Island-arc analogy','USGS, Seismicity of the Earth 1900-2010, Aleutian arc and vicinity. https://pubs.usgs.gov/publication/ofr20101083B . The real Aleutians are a subduction arc. The model combines an old arc with a retained continental shelf; a deep volcanic arc alone would not be exposed by a 65 m sea-level fall.'))
+
+SECTIONS.append(dict(title='R7 / Natural landforms and shorter crossing',kicker='LATEST REVISION',figure='renders/15_plateau_hydrology.png',paras=[('Valley lakes','Three small circular lakes are replaced by elongated, branching basins. Narrow inlets follow tributary valleys; bedrock shoulders divide their arms. Each basin has one level water surface and a bed below it.'),('Coherent terrain','Broad lowland lumps are reduced in favour of subdued dissected relief. Forest-steppe boundaries are irregular, alpine snow transitions follow relief more closely, and the globe samples terrain continuously to reduce stepped shading.'),('Less crowded ocean','The southern mainland moves another ten degrees east and one degree south. Five retained islands span the shorter gap: two large continental fragments near the mainland, one middle island, and two small remnants nearer Panterra. Most former island peaks are submerged. The deep ocean toward the eastern continent stays open.'),('Limits','These are art-directed landforms and a geological interpretation, not a numerical erosion or climate simulation. River widths and globe relief remain exaggerated for drawing reference.')]))

@@ -376,3 +376,6 @@ revise(OUT)
 
 from revise_r6 import revise_r6
 revise_r6(OUT)
+
+from revise_r7 import revise as natural_landforms
+natural_landforms(OUT)

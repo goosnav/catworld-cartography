@@ -1,8 +1,8 @@
-# Catworld / Terra - Revision 6
+# Catworld / Terra - Revision 7
 
 Start with **guide/CATWORLD_Creator_Guide.pdf**, the illustrated creator/showrunner guide. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
 
-The eastern continent swings eight degrees south around its mountain junction. The independent southern mainland has a new asymmetric coastline, sits farther southeast and closer to Panterra, and has a sparse eastward chain of six principal and eight minor islands toward Panterra. Open ocean still separates it from the eastern continent. The north is a wide mountain province, with steppe foothills below; Seattle has broad western forest country, and southern settled districts have fertile rolling agricultural land.
+The eastern continent swings eight degrees south around its mountain junction. The independent southern mainland has a new asymmetric coastline, sits farther southeast and closer to Panterra, and has a sparse eastward chain of five islands: two large fragments, one middle island and two small remnants toward Panterra. Open ocean still separates it from the eastern continent. The north is a wide mountain province, with steppe foothills below; Seattle has broad western forest country, and southern settled districts have fertile rolling agricultural land.
 
 The northern mountain river crosses the upper plateau and falls into the reservoir valley. **The lake drains west through Seattle to the sea**, across a natural high bedrock sill. The eastern megadam controls a separate lower outlet toward the downstream city. This supersedes the old Seattle-into-lake arrangement.
 
@@ -11,7 +11,7 @@ The northern mountain river crosses the upper plateau and falls into the reservo
 - `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 36-landmark catalogue, model specifications and sixteen reference plates.
 - `guide/Creator_Guide.md`: editable guide text.
 - `guide/Geography_and_Design.md`: technical companion.
-- `guide/Revision_Comparison.jpg`: R5/R6 far-side comparison.
+- `guide/Revision_Comparison.jpg`: R6/R7 lake, terrain and archipelago comparison.
 - `guide/Tectonic_Framework.png`, `Seasonal_Epoch.png`, `Migration_Lowstand.png`: world-scale explanation plates.
 - `guide/Waterway_Logic.png`, `Plateau_Valley_Section.png`, `Mountain_Section.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: process diagrams.
 - `guide/Seasonal_Reference.csv`: geometric daylight at the stated epoch.
@@ -41,7 +41,7 @@ Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf`. Run from the pack
 
 ```sh
 BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
-# Optional full terrain reconstruction; delivered terrain already contains R6.
+# Optional full terrain reconstruction; delivered terrain already contains R7.
 # python source/build_terrain.py
 "$BLENDER" -b -t 8 --python source/build_blender.py
 "$BLENDER" -b -t 8 --python source/build_dam.py
@@ -55,6 +55,10 @@ python source/build_creator_guide.py
 python source/verify_delivery.py
 ```
 
-Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6; do not apply `revise_r6.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
+Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6 and R7; do not apply `revise_r6.py` or `revise_r7.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
 
 Original private sketches, message screenshots and the pitch deck are excluded from the handoff. Earlier Git commits preserve earlier iterations. The stable repository directory `CATWORLD_Planet/` contains the current release.
+
+## R7 natural landforms pass
+
+The southern mainland moves a further 10 degrees east and 1 degree south, shortening the gap. The archipelago is reduced to five retained islands. Three dot-like lakes become branching valley basins; lowland relief, biome transitions and surface sampling are refined for a less rigid appearance.

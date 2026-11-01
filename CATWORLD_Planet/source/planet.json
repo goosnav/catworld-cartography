@@ -9,7 +9,7 @@
     64.98695651135345
   ],
   "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule",
-  "revision": 6,
+  "revision": 7,
   "geographic_revision": "Rotated eastern core; redesigned southern shield; sparse eastern archipelago; drowned plateau valley",
   "seasonal_epoch": {
     "solar_longitude_deg": 255,
@@ -36,5 +36,12 @@
     "reservoir_level_m": 690,
     "western_sill_bed_m": 685,
     "waterfall_drop_m": 400
+  },
+  "r7": {
+    "southern_move_east_deg": 10,
+    "southern_move_south_deg": 1,
+    "archipelago_retained_islands": 5,
+    "small_lakes": "three elongated branching valley basins",
+    "terrain": "subdued dissected lowlands; irregular biome and alpine transitions"
   }
 }

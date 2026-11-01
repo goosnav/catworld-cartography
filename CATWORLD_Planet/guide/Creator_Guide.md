@@ -1,6 +1,6 @@
 # CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE
 
-Revision 6. Prepared 31 October 2026.
+Revision 7. Prepared 31 October 2026.
 
 ## What is established, and what is proposed
 
@@ -32,11 +32,11 @@ Panterra is the main story landscape. The eastern dry core remains attached thro
 
 ### The southern silhouette
 
-The smaller mainland sits southwest of Panterra, closer and farther south after a final 16-degree eastward and 5-degree southward adjustment. An asymmetric headland, oblique old escarpment, deeply cut southeastern coast and offset southern peninsulas replace the inverted-Australia resemblance.
+The smaller mainland sits southwest of Panterra, closer and farther south after a further 10-degree eastward and 1-degree southward adjustment in R7. An asymmetric headland, oblique old escarpment, deeply cut southeastern coast and offset southern peninsulas replace the inverted-Australia resemblance.
 
 ### An intentionally sparse route
 
-Six principal islands and eight minor islands lead east toward Panterra. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments recall Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies of their real climates.
+Five retained islands lead east toward Panterra: two large fragments, one middle island and two small remnants. The largest, irregular continental fragments cluster near the southern mainland; small, separated arc remnants pepper the approach to Panterra. Large rifted fragments recall Oceania; elongated island forms recall the Aleutians. Those are visual analogues, not copies of their real climates.
 
 ### Using the globe
 
@@ -248,7 +248,7 @@ Its identity as the cats' old homeland is still a proposal. The sheltered easter
 
 ### A sparse curved archipelago
 
-Six principal islands and eight minor islands replace the crowded belt. Larger fault-bounded fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]
+Five islands replace the crowded belt; the southern mainland is closer, shortening the crossing. Larger fault-bounded fragments transition into slender volcanic-looking islands, separated by conspicuous water gaps. The chain runs east toward Panterra only. The Aleutians inform its arc curvature and aligned peaks, not the depth of its crossing shelf. [S14]
 
 ### What could form a former bridge
 
@@ -430,7 +430,7 @@ Four 4096 x 2048 maps support the globe. Thirteen globe views, two dam views and
 
 ### What can be edited
 
-Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
+Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6 and the R7 natural-landforms pass, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
 
 ### Light and atmosphere
 
@@ -461,6 +461,24 @@ Approve or revise the proposed 65 m lowstand and 1,100-year crossing date. Test 
 ### 6 / Local production detail
 
 Develop Seattle forest districts, agricultural settlements, lake shipping, eastern dam operations and the northern passes at regional scale. Use the broad continental atlas for continuity; commission local maps for individual journeys and scenes.
+
+## R7 / Natural landforms and shorter crossing
+
+### Valley lakes
+
+Three small circular lakes are replaced by elongated, branching basins. Narrow inlets follow tributary valleys; bedrock shoulders divide their arms. Each basin has one level water surface and a bed below it.
+
+### Coherent terrain
+
+Broad lowland lumps are reduced in favour of subdued dissected relief. Forest-steppe boundaries are irregular, alpine snow transitions follow relief more closely, and the globe samples terrain continuously to reduce stepped shading.
+
+### Less crowded ocean
+
+The southern mainland moves another ten degrees east and one degree south. Five retained islands span the shorter gap: two large continental fragments near the mainland, one middle island, and two small remnants nearer Panterra. Most former island peaks are submerged. The deep ocean toward the eastern continent stays open.
+
+### Limits
+
+These are art-directed landforms and a geological interpretation, not a numerical erosion or climate simulation. River widths and globe relief remain exaggerated for drawing reference.
 
 ## Sources and reference notes
 

@@ -4,7 +4,9 @@ An editable Blender planet and satellite-style drawing-reference atlas for Catwo
 
 ![Panterra regional reference](CATWORLD_Planet/renders/07_panterra_close.png)
 
-Revision 6 follows the creator's latest river redline. The northern feeder winds down the plateau northwest of the reservoir, while the lake drains west through Seattle country and separately through the eastern megadam. The crossed-out eastern feeder is removed. The north is a broad mountain province with steppe foothills; the west is substantial forest country. Two southern mountain groups rise above fertile agricultural lowlands.
+Revision 7 follows the creator's latest river redline. The northern feeder winds down the plateau northwest of the reservoir, while the lake drains west through Seattle country and separately through the eastern megadam. The crossed-out eastern feeder is removed. The north is a broad mountain province with steppe foothills; the west is substantial forest country. Two southern mountain groups rise above fertile agricultural lowlands.
+
+The latest pass replaces small circular lakes with branching valley basins, subdues repetitive lowland relief, and makes forest-steppe transitions less rigid. The southern mainland moves a further ten degrees east and one degree south; only five islands remain across the shorter crossing.
 
 The eastern continent rotates eight degrees south. The independent southern mainland has a new asymmetric coast, moves closer to Panterra, and has a shorter, sparse eastern archipelago. Only Panterra and the eastern continent share the mountain connection. Deep ocean separates the eastern and southern continents without a linking island arc.
 

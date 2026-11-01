@@ -9,8 +9,8 @@ id,name,lon,lat,description
 08,Western Gate,-46.78797235872307,30.248634146714547,Lower mountain saddle; migration checkpoint
 09,Central Gate,22.508067686309346,35.51702116314776,Second low passage through Northern Divide
 10,Eastern Gate,64.58697539695169,38.11506561092289,Eastern coastal and ridge crossing
-11,Southern eastern coast,-96,-36,Wet spring coast beneath the old escarpment
-12,Southern escarpment,-101,-42,Old uplifted margin follows the redesigned eastern coast
+11,Southern eastern coast,-86.0,-37.0,Wet spring coast beneath the old escarpment
+12,Southern escarpment,-91.0,-43.0,Old uplifted margin follows the redesigned eastern coast
 13,Panterran shelf approach,-57,-1,Flooded final approach of the proposed cat migration route
 14,Pieter’s fishing village,-2.4435,5.1468,Local dam inset site; terrace location is below global texture resolution
 15,Ancient avian cliff ruins,-47.013750025877385,23.62665012258742,Ruins above the western forest corridor
@@ -18,14 +18,14 @@ id,name,lon,lat,description
 17,Merchant island,7.218955481766841,-31.189720228991867,Milan shorthand; trade controls in southern strait
 18,Great leeward desert,115.62186604155515,-5.947732984098095,Dry interior on the left of the marked far-side view
 19,Eastern rift gulf,88.80170660613456,8.015214481891224,Fault-bounded gulf opening into the southern sea
-20,Sparse eastern archipelago,-75.6,-24.25,Six principal islands and eight minor islands toward Panterra
-21,Southern shield,-116,-37,Asymmetric dry continental interior
+20,Sparse eastern archipelago,-68.45000000000005,-24.965,"Two large rifted fragments, one middle island and two small remnants; wide open straits toward Panterra"
+21,Southern shield,-106.0,-38.0,Asymmetric dry continental interior
 22,Eastern collision knot,69.31413184176402,31.30300546154483,Broad transpressional uplands joining eastern terranes
 23,Northern remnant island,-161,55,Small isolated glacial remnant; cooling into winter
 24,Seattle / western forest country,-33.4,13.5,Large forested region and lower-river port downstream of the western overflow
 25,Rome / eastern lake shore,-2.5927734375,10.6787109375,Proposed high-bank city overlooking the lake; distinct from the downstream metropolis
 26,Deep separating ocean,182,-10,No island route between eastern and southern continents
-27,Drowned migration shelf,-62.4,-13.75,Submerged continental saddles between sparse island peaks
+27,Drowned migration shelf,-58.549999999999955,-14.135,Submerged continental saddles between sparse island peaks
 28,Arctic crown islands,-80.0,80.0,Glaciated bedrock islands and straits amid broken pack ice
 29,South polar ice continent,105.0,-77.0,"Asymmetric land ice, coastal mountains and outlet glaciers"
 30,Southern embayment,-25.0,-76.0,Deep marine inlet interrupts the south polar ice sheet
