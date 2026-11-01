@@ -4,6 +4,7 @@
 *.jpg binary
 *.npy binary
 *.npz binary
-*.csv text eol=lf
+# Preserve generated CSV bytes so archive checksums also verify after cloning.
+*.csv -text whitespace=cr-at-eol
 *.py text eol=lf
 *.md text eol=lf
