@@ -1,10 +1,10 @@
-# Catworld / Terra - Revision 9
+# Catworld / Terra - Revision 10
 
 Start with **guide/CATWORLD_Creator_Guide.pdf**, the illustrated creator/showrunner guide. Use **OPEN_ATLAS.html** to browse full-resolution drawing references offline.
 
 **Primary exports:** open `world_maps/01_world_ocean_centered.png` for the view matching the redline, and `world_maps/02_world_panterra_centered.png` for the Panterra-centered view. Both are clean 8192 x 4096 equirectangular maps of the same globe. The two matching tectonic sheets and two numbered world sheets are beside them.
 
-The eastern continent inclines a further thirteen degrees south; its connection sweeps south into the lower western flank, following the latest green correction. Five islands form a curved route out of Panterra's peninsula toward the southern mainland, with larger fragments near the old homeland. A larger isolated volcanic island, two sparse companions, three northern fore-islands and other scattered ocean islands add regional variety. No continuous chain joins the eastern and southern continents.
+The entire eastern continent rotates rigidly by 23 degrees from R8. Its coast and interior move together, and a reconstructed, dissected mountain system continues southeast through the join. This replaces the rejected R9 elastic bend. Five islands form a curved route out of Panterra's peninsula toward the southern mainland, with larger fragments near the old homeland. A larger isolated volcanic island, two sparse companions, three northern fore-islands and other scattered ocean islands add regional variety. No continuous chain joins the eastern and southern continents.
 
 The north is a broad mountain province with steppe foothills. Seattle retains substantial western forest country. Southern settled districts remain fertile rolling agricultural land.
 
@@ -12,12 +12,14 @@ The northern mountain river crosses the upper plateau and falls into the reservo
 
 ## Contents
 
+- `guide/Eastern_Terrain_R10.md`: rotation, terrain reconstruction and verification.
+
 - `guide/CATWORLD_Creator_Guide.pdf`: illustrated world guide, sources, 39-landmark catalogue, model specifications and sixteen globe/local reference plates plus four rectangular world plates.
 - `world_maps/`: primary clean, tectonic and numbered maps in two longitude framings.
-- `guide/Ocean_and_Tectonics_R9.md`: this revision, island origins and tectonic assumptions.
+- `guide/Ocean_and_Tectonics_R9.md`: R9 island origins and tectonic assumptions; superseded eastern bend.
 - `guide/Creator_Guide.md`: editable guide text.
 - `guide/Geography_and_Design.md`: technical companion.
-- `guide/Revision_Comparison.jpg`: R8/R9 rectangular geography comparison.
+- `guide/Revision_Comparison.jpg`: R9/R10 rectangular geography comparison.
 - `guide/Tectonic_Framework.png`, `Seasonal_Epoch.png`, `Migration_Lowstand.png`: world-scale explanation plates.
 - `guide/Waterway_Logic.png`, `Plateau_Valley_Section.png`, `Mountain_Section.png`, `Rainshadow_Section.png`, `Long_Seasons.png`, `Story_Geography.png`: process diagrams.
 - `guide/Seasonal_Reference.csv`: geometric daylight at the stated epoch.
@@ -47,7 +49,7 @@ Install `numpy`, `scipy`, `pillow`, `reportlab` and `pymupdf`. Run from the pack
 
 ```sh
 BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
-# Optional full terrain reconstruction; delivered terrain already contains R9.
+# Optional full terrain reconstruction; delivered terrain already contains R10.
 # python source/build_terrain.py
 "$BLENDER" -b -t 8 --python source/build_blender.py
 "$BLENDER" -b -t 8 --python source/build_dam.py
@@ -57,15 +59,15 @@ BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
 "$BLENDER" -b --python source/verify_waterfall.py
 python source/make_epoch_figures.py
 python source/export_world_maps.py
-python source/make_r9_figures.py
 python source/make_explanatory_figures.py
-python source/make_revision_comparison.py
+python source/make_r10_figures.py
 python source/package_atlas.py
 python source/build_creator_guide.py
 python source/verify_delivery.py
+python source/verify_eastern_plate.py
 ```
 
-Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6, R7, R8 and R9; do not apply `revise_r6.py` `revise_r7.py` `revise_r8.py` or `revise_r9.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
+Add `-- --draft` to the globe build command for fast previews. The full terrain pipeline rebuilds its predecessor stages before R6, R7 and R8, then R10 regenerates the R9 ocean additions without the rejected warp; do not apply `revise_r6.py` `revise_r7.py` `revise_r8.py` or `revise_r9.py` or `revise_r10.py` repeatedly to already revised fields. The bundled terrain analogue avoids a download. Document scripts use macOS Arial. Regenerate checksums after any rebuild.
 
 Original private sketches, message screenshots and the pitch deck are excluded from the handoff. Earlier Git commits preserve earlier iterations. The stable repository directory `CATWORLD_Planet/` contains the current release.
 

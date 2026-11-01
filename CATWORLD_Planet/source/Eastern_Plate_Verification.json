@@ -1,0 +1,13 @@
+{
+  "revision": 10,
+  "rigid_rotation_degrees": 23,
+  "pairwise_geodesic_error_km": 4.547473508864641e-12,
+  "range_reverses_north": false,
+  "suture_land_fraction": 1.0,
+  "minimum_cross_section_peak_m": 5457.2763671875,
+  "minimum_sampled_centerline_m": 1400.0,
+  "continuous_land_component": 6,
+  "protected_panterra_max_elevation_change_m": 0.0,
+  "southern_polar_coast_unchanged": true,
+  "southern_polar_max_elevation_change_m": 0.0
+}

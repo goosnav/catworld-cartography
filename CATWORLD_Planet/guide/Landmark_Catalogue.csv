@@ -8,7 +8,7 @@ id,name,lon,lat,description
 07,Western old-growth country,-36,20,Broad Seattle forest country; old growth covers the western watershed and hills
 08,Western Gate,-46.78797235872307,30.248634146714547,Lower mountain saddle; migration checkpoint
 09,Central Gate,22.508067686309346,35.51702116314776,Second low passage through Northern Divide
-10,Eastern Gate,64.95350948952475,9.230477372960209,Eastern coastal and ridge crossing
+10,Eastern Gate,60.785884915270145,28.12046602272444,Eastern coastal and ridge crossing
 11,Southern eastern coast,-86.0,-37.0,Wet spring coast beneath the old escarpment
 12,Southern escarpment,-91.0,-43.0,Old uplifted margin follows the redesigned eastern coast
 13,Panterran shelf approach,-45,10,Peninsula departure into the curved shelf island route
@@ -16,11 +16,11 @@ id,name,lon,lat,description
 15,Ancient avian cliff ruins,-47.013750025877385,23.62665012258742,Ruins above the western forest corridor
 16,London / lakeshore country,-13.9306640625,8.3056640625,Proposed city on the southwestern lake shore; elevated above the reservoir
 17,Merchant island,7.218955481766841,-31.189720228991867,Milan shorthand; trade controls in southern strait
-18,Great leeward desert,103.23138365082498,-16.489655020513496,Dry interior on the left of the marked far-side view
-19,Eastern rift gulf,80.79389346326893,-10.704978013420574,Fault-bounded gulf opening into the southern sea
+18,Great leeward desert,100.64839118662768,-23.886894373246797,Dry interior on the left of the marked far-side view
+19,Eastern rift gulf,74.99622499016388,-6.450838604874653,Fault-bounded gulf opening into the southern sea
 20,Curved southern shelf archipelago,-60.8,-19,Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland
 21,Southern shield,-106.0,-38.0,Asymmetric dry continental interior
-22,Eastern collision knot,68.4396749187525,1.4140812321592833,Broad transpressional uplands joining eastern terranes
+22,Eastern collision knot,62.61522439335541,20.459832933363664,Broad transpressional uplands joining eastern terranes
 23,Northern remnant island,-161,55,Small isolated glacial remnant; cooling into winter
 24,Seattle / western forest country,-33.4,13.5,Large forested region and lower-river port downstream of the western overflow
 25,Rome / eastern lake shore,-2.5927734375,10.6787109375,Proposed high-bank city overlooking the lake; distinct from the downstream metropolis

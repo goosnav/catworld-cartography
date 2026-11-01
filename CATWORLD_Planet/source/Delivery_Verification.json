@@ -1,5 +1,5 @@
 {
-  "revision": 9,
+  "revision": 10,
   "archipelago_islands": 5,
   "clean_views": 16,
   "annotated_views": 16,
@@ -10,7 +10,7 @@
         2048,
         2048
       ],
-      "sha256": "470e249fb05e3f9a19a6cbc121ac30ccf975bdbc8d1529cf16e81c081bb97824"
+      "sha256": "762e27ac0d2f6ab13e6474ddd87a4b291f0be859f02a304ac2ba8dc6292d9260"
     },
     {
       "path": "annotated/01_panterra_annotated.png",
@@ -18,7 +18,7 @@
         2600,
         2060
       ],
-      "sha256": "93f99a803c9f9b56ee3399c3069f6c96318c99b973cbcf1a3df471ddc52d69fb"
+      "sha256": "af892841002596ea4894a80e90b70812e97bd5f87a6888d4e9b9bc0da076d8e8"
     },
     {
       "path": "renders/02_eastern.png",
@@ -26,7 +26,7 @@
         2048,
         2048
       ],
-      "sha256": "dd61556ed7e5608f286031355c4ca2a42e10cc9e372aaa0cfc58981d3c439eb0"
+      "sha256": "d37161b5f52ba6fc7c4a9f2982244ee4f38bc156dfdc5d5be277258072139add"
     },
     {
       "path": "annotated/02_eastern_annotated.png",
@@ -34,7 +34,7 @@
         2600,
         2060
       ],
-      "sha256": "83722710a6f479f98c46ee10cd6bf0b7f500258287a60b3363131ef58602a315"
+      "sha256": "e369152a784efdd2e5deb4e7f79ad5db50523bf1f25dda6df9f953153635700d"
     },
     {
       "path": "renders/03_western.png",
@@ -42,7 +42,7 @@
         2048,
         2048
       ],
-      "sha256": "5b4a13bf715c6b978ee6db8f37401cf74537bad2f10005905b9eef4a02d47085"
+      "sha256": "603808147dd7cec040ad9a24c43a2f0d540685a32b9a4c4f26b31fb3dad66efe"
     },
     {
       "path": "annotated/03_western_annotated.png",
@@ -50,7 +50,7 @@
         2600,
         2060
       ],
-      "sha256": "0cfccebeec67d630d8895bd7cba5da16bdebe684f7843a17c82964121ea552eb"
+      "sha256": "9b686de4f2518f79e8d5cca492c07dfc51e884fb6cf44baaec2db048ac587409"
     },
     {
       "path": "renders/04_far_side.png",
@@ -58,7 +58,7 @@
         2048,
         2048
       ],
-      "sha256": "76b1b04b0ab64eea24782e7a279afebd1cab1fec5d5067a3e6c7eafa1a68f579"
+      "sha256": "a753432b5df0826bb30cef55f55b6196851fef122ca204d338c00988c0b8d868"
     },
     {
       "path": "annotated/04_far_side_annotated.png",
@@ -66,7 +66,7 @@
         2600,
         2060
       ],
-      "sha256": "fcde8ff5767a78250d7ca09b014f52393e9b75c61a263fe1d3dd084a27efc79d"
+      "sha256": "e94ec28758c30dafea4a3d6d3feb4e6d6d0ce18f6daab26c94e985824396cddb"
     },
     {
       "path": "renders/05_north_pole.png",
@@ -74,7 +74,7 @@
         2048,
         2048
       ],
-      "sha256": "ce48ea2b9406427fc0ba56f9ebaf40d206325ec13433798ad07fb3f515a3f3b8"
+      "sha256": "245425893d6c00397f70fac3153f0e82f7ca983d60b926be5ece4acb18d8fdf0"
     },
     {
       "path": "annotated/05_north_pole_annotated.png",
@@ -82,7 +82,7 @@
         2600,
         2060
       ],
-      "sha256": "c5ef899856ccc0fc1a73447e73f8f69ea5a85c20ea6f462922056aa423e0e764"
+      "sha256": "ae4a5bdf936856e8f7edebb2d84ec23d2b2f231a36b5c4cdc5de277c8b605d0c"
     },
     {
       "path": "renders/06_south_pole.png",
@@ -90,7 +90,7 @@
         2048,
         2048
       ],
-      "sha256": "de981c1e655a7dbc58d7deca6cae256cc5f484702f5050d660b4ff97a3db936e"
+      "sha256": "08081ebacb18f59edc2467edd1c5561c9db993985a62e9fa16ddb749291b5c20"
     },
     {
       "path": "annotated/06_south_pole_annotated.png",
@@ -98,7 +98,7 @@
         2600,
         2060
       ],
-      "sha256": "c6a936964bd0ede37b93fde7864dbf769c3d78bf60d89d23e9c9e59f3e683afa"
+      "sha256": "7e337ff809f2090eb2a74d9f0f432e23505fb91cac3beb47d3b38d6ba229451b"
     },
     {
       "path": "renders/07_panterra_close.png",
@@ -106,7 +106,7 @@
         2048,
         2048
       ],
-      "sha256": "95bcfab3838ce22efe7d4ae0bd09b7d47e1305a6f5408dd26f74c0348063a5ab"
+      "sha256": "1477dcca98d96e0acd0605580a908f46f0ce8a625ebed4a896667843496e22ab"
     },
     {
       "path": "annotated/07_panterra_close_annotated.png",
@@ -114,7 +114,7 @@
         2600,
         2060
       ],
-      "sha256": "c020e8dc2d1514d2a9df733041fc54d1c25faebd1e1aeb02375cb824ce0ee456"
+      "sha256": "6dc8aa768a378bb3284728dce4b63cc0fdaff4b8a80a84da574206191889ec07"
     },
     {
       "path": "renders/08_impact_close.png",
@@ -122,7 +122,7 @@
         2048,
         2048
       ],
-      "sha256": "cc311b961298c4665e0d8c8c5eca2e1f990cb420b4aed92dc913804611842dfb"
+      "sha256": "d28319d9d3fa39384f19830b9686420e0c40d442c3e73e10b9e4161f33c794bc"
     },
     {
       "path": "annotated/08_impact_close_annotated.png",
@@ -130,7 +130,7 @@
         2600,
         2060
       ],
-      "sha256": "4c3e53c34df7514187def14d98f13e07f793038b67f0599413d6ba41ed47cac6"
+      "sha256": "86499641b85186702a52eca701c0b70c3b4ba92b5dc50e3b5c78a82f70bd4a59"
     },
     {
       "path": "renders/11_maritime_continent.png",
@@ -138,7 +138,7 @@
         2048,
         2048
       ],
-      "sha256": "3449310b245d4cc6c087acb418572d59067bea933200050dfd7115c7f1d40ba1"
+      "sha256": "0445a0d1779ef60e873a26df5e4f76f272c76f2e624a19f86ae039050d185697"
     },
     {
       "path": "annotated/11_maritime_continent_annotated.png",
@@ -146,7 +146,7 @@
         2600,
         2060
       ],
-      "sha256": "bba0a9dc806b8c0dc3dde478dd3f5162bf7b54d8e0a7f70d6fe19f464be8dffb"
+      "sha256": "598c95b2494867d8f71b5289bacdba5248aa3c11cd50fb847d5795797b1b5ad3"
     },
     {
       "path": "renders/12_eastern_continent.png",
@@ -154,7 +154,7 @@
         2048,
         2048
       ],
-      "sha256": "09b5321097d1d5706435e7f1eb95bc7b6a12b7f081a148a5cfd0e7f19a78e7d3"
+      "sha256": "65dd083315f7da4c189b72c6bab900d44267734c964b3a5fad46ac5a839eb2fc"
     },
     {
       "path": "annotated/12_eastern_continent_annotated.png",
@@ -162,7 +162,7 @@
         2600,
         2060
       ],
-      "sha256": "46bad9f97b558fd6506b75e1c783838bf149145ee5217c42c244af2ca9dfcf29"
+      "sha256": "1d4b0669dfe74fc853c5b179cc33c7ce8c016e28c53ab3b50d8b5633e6e7b90c"
     },
     {
       "path": "renders/13_seattle_waterway.png",
@@ -170,7 +170,7 @@
         2048,
         2048
       ],
-      "sha256": "d6ac2b22b8a35476fbb43d0f47fc00bee72ede89d257db2654ce0682cfa523d2"
+      "sha256": "3cea56d75903f75f181b72539debb16a36dacba5163d3461b24a45c590771fe8"
     },
     {
       "path": "annotated/13_seattle_waterway_annotated.png",
@@ -178,7 +178,7 @@
         2600,
         2060
       ],
-      "sha256": "22e9cce188ae17d2cd578015c7d5144745fbbabc81298f1f53d5670c3b9b3bb6"
+      "sha256": "1906eea92f80d856ea69aa4ac92b19038d760efbf0fdf5ca566e19c8de6b9972"
     },
     {
       "path": "renders/14_archipelago.png",
@@ -186,7 +186,7 @@
         2048,
         2048
       ],
-      "sha256": "c90562b743dd42567418633553ee84956861b20514aed2a43f1592f58f6f5afa"
+      "sha256": "d36143d5d5753b1a1e9a7458a9364f99f4b83ff3993519394607946a32c7982a"
     },
     {
       "path": "annotated/14_archipelago_annotated.png",
@@ -194,7 +194,7 @@
         2600,
         2060
       ],
-      "sha256": "23736701c9196fa9057d6497d45478b7b4548982769e9229f990aa285283c43a"
+      "sha256": "e34b97a51dd2884944398e27094eaba77af87cfd677c9c63c2a3cb87b5978a3c"
     },
     {
       "path": "renders/15_plateau_hydrology.png",
@@ -202,7 +202,7 @@
         2048,
         2048
       ],
-      "sha256": "606de23da2674f702e582cd28a7c764fdc7e554b946753464cdbd788f5647690"
+      "sha256": "861a2eda6b0ea1bb3dfe714e4bc319179b12adfb8e8ec0f7d265f56f896dbbdc"
     },
     {
       "path": "annotated/15_plateau_hydrology_annotated.png",
@@ -210,7 +210,7 @@
         2600,
         2060
       ],
-      "sha256": "011e8082f1210a3bbb10280aadfc38f308d83fba62516aff812408e7eb1c951f"
+      "sha256": "1de8305246acacdafe15e6f882397acd3610b620f8e8ac92d69ff0efdc1a14c9"
     },
     {
       "path": "renders/09_dam_valley.png",
@@ -1072,11 +1072,11 @@
   "primary_maps_verified": true,
   "new_authored_islands": 22,
   "shelf_island_components": [
-    146,
-    135,
-    119,
-    101,
-    90
+    114,
+    112,
+    98,
+    83,
+    76
   ],
   "geographic_landmarks": 39
 }

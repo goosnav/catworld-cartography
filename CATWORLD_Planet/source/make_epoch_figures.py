@@ -1,4 +1,4 @@
-"""R9: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
+"""R10: seasonal epoch, lowstand geometry, tectonic framework and visual comparison."""
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
@@ -58,13 +58,13 @@ text(d,(70,1310),'Collision thickens the main mountain bridge. Southern rifting 
 text(d,(70,1360),'Low sea level can expose the shelf; it cannot expose the deep ocean separating the eastern and southern continents.',27)
 im.save(G/'Tectonic_Framework.png')
 # Before/after uses the previous far-side angle and the new 12-degree southern framing.
-im,d=base('FAR SIDE / MORE DISTINCTIVE SOUTHERN GEOGRAPHY','R9: southern mainland closer; five islands with broad straits replace the long crowded chain.',1300)
+im,d=base('FAR SIDE / MORE DISTINCTIVE SOUTHERN GEOGRAPHY','R10: southern mainland closer; five islands with broad straits replace the long crowded chain.',1300)
 for j,p in enumerate([B/'source/reference_R5_far_side.png',B/'renders/04_far_side.png']):
  pic=Image.open(p).convert('RGBA');pic.thumbnail((1000,1000),Image.Resampling.LANCZOS);im.paste(pic,(70+j*1070,220),pic)
- text(d,(70+j*1070,170),'PREVIOUS / R5' if j==0 else 'REVISED / R9',32,MUTED if j==0 else TEAL,True)
+ text(d,(70+j*1070,170),'PREVIOUS / R5' if j==0 else 'REVISED / R10',32,MUTED if j==0 else TEAL,True)
 text(d,(70,1240),'Both views: 180 longitude / 12 south. The southern regional plate gives a closer view of the new coast.',26,MUTED)
 im.save(G/'Revision_Comparison.jpg',quality=94)
-print('R9 EPOCH FIGURES COMPLETE')
+print('R10 EPOCH FIGURES COMPLETE')
 # Geometric daylight at the proposed epoch, without refraction or terrain horizons.
 import math,json,csv
 dec=math.asin(math.sin(math.radians(35))*math.sin(math.radians(255)));rows=[]

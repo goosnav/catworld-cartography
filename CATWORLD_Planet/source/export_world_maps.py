@@ -4,7 +4,8 @@ import json,math
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 from scipy.ndimage import gaussian_filter,zoom
-from revise_r9 import CHAIN,east_forward
+from revise_r9 import CHAIN
+from revise_r10 import east_forward,spine
 from revise_r6 import east_transform
 B=Path(__file__).resolve().parents[1];O=B/'world_maps';O.mkdir(exist_ok=True)
 FONT='/System/Library/Fonts/Supplemental/Arial'
@@ -16,13 +17,7 @@ for center,name in [(180,'01_world_ocean_centered'),(0,'02_world_panterra_center
  Image.fromarray(a).resize((2200,1100),Image.Resampling.LANCZOS).save(O/(name+'_preview.jpg'),quality=94)
 # Shared boundaries: endpoint coordinates are deliberately reused at junctions.
 R=(315,37);J=(160,-30);T=(200,78);A=(302,-18);K=(285,-65);S=(200,-65)
-sp=[(-45,37),(-20,37),(0,37),(30,37),(52,37),(72,35),(95,30),(122,27),(145,23)]
-collision=[]
-for x,y in sp:
- if x>54.58:x,y=east_transform(x,y)
- if x>24:x,y=east_forward(x,y)
- collision.append((float(x)%360,float(y)))
-collision[0]=R;collision.append(J)
+collision=[R,(-20%360,37),(0,37)]+[(x%360,y) for x,y in spine()]+[J]
 boundaries=[('collision',collision),('ridge',[J,(184,-7),(188,18),(178,37),(195,58),T]),('transform',[T,(241,72),(278,57),R]),('subduction',[R,(304,24),(306,12),(315,0),(309,-10),A]),('subduction',[A,(295,-31),(285,-42),(281,-54),K]),('transform',[J,(207,-22),(246,-19),(275,-14),A]),('ridge',[J,(182,-48),S]),('ridge',[(0,-65),(60,-65),(120,-65),(160,-65),S,(240,-65),K,(330,-65),(359.9,-65)])]
 colors={'collision':'#ffb86b','subduction':'#f57970','ridge':'#69d5e0','transform':'#dbabf1'}
 for center,name in [(180,'03_tectonics_ocean_centered'),(0,'04_tectonics_panterra_centered')]:
@@ -47,7 +42,7 @@ for center,name in [(180,'03_tectonics_ocean_centered'),(0,'04_tectonics_panterr
   d.rounded_rectangle((x-10,y-6,x+tw+12,y+41+(26 if small else 0)),5,fill='#10191f');d.text((x,y),title,font=ft,fill='#f1eadb')
   if small:d.text((x,y+37),small,font=font(20),fill='#aec2c9')
  d.text((48,32),'CATWORLD / PROPOSED PLATE TECTONICS',font=font(45,True),fill='#f1eadb')
- d.text((48,90),f'Equirectangular | central meridian {center} degrees | R9 | plate boundaries are design hypotheses',font=font(25),fill='#aec2c9')
+ d.text((48,90),f'Equirectangular | central meridian {center} degrees | R10 | plate boundaries are design hypotheses',font=font(25),fill='#aec2c9')
  for la in [-60,-30,0,30,60]:
   y=pt((0,la))[1];d.line((0,y,mw,y),fill='#344750',width=1)
  for kind,points in boundaries:

@@ -1,7 +1,8 @@
 {
   "revision": 9,
-  "eastern_rotation_additional_deg": 13,
-  "neck_depression_deg": 28,
+  "eastern_rotation_additional_deg": 0,
+  "neck_depression_deg": 0,
+  "eastern_warp_applied": false,
   "archipelago_centerline": [
     [
       276,

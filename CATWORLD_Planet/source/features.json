@@ -65,8 +65,8 @@
   {
     "id": "10",
     "name": "Eastern Gate",
-    "lon": 64.95350948952475,
-    "lat": 9.230477372960209,
+    "lon": 60.785884915270145,
+    "lat": 28.12046602272444,
     "description": "Eastern coastal and ridge crossing"
   },
   {
@@ -121,15 +121,15 @@
   {
     "id": "18",
     "name": "Great leeward desert",
-    "lon": 103.23138365082498,
-    "lat": -16.489655020513496,
+    "lon": 100.64839118662768,
+    "lat": -23.886894373246797,
     "description": "Dry interior on the left of the marked far-side view"
   },
   {
     "id": "19",
     "name": "Eastern rift gulf",
-    "lon": 80.79389346326893,
-    "lat": -10.704978013420574,
+    "lon": 74.99622499016388,
+    "lat": -6.450838604874653,
     "description": "Fault-bounded gulf opening into the southern sea"
   },
   {
@@ -149,8 +149,8 @@
   {
     "id": "22",
     "name": "Eastern collision knot",
-    "lon": 68.4396749187525,
-    "lat": 1.4140812321592833,
+    "lon": 62.61522439335541,
+    "lat": 20.459832933363664,
     "description": "Broad transpressional uplands joining eastern terranes"
   },
   {

@@ -1,4 +1,4 @@
-"""Verify the delivered R9 atlas and its actual terrain fields."""
+"""Verify the delivered R10 atlas and its actual terrain fields."""
 import ast,hashlib,json,re,math
 from pathlib import Path
 import numpy as np
@@ -23,7 +23,7 @@ for target in re.findall(r'(?:href|src)="([^"]+)"',(B/'OPEN_ATLAS.html').read_te
 model=json.load(open(B/'source/Model_Verification.json'))
 assert model['atlas_cameras']==13 and model['geographic_landmarks']==39
 assert model['timeline_markers']==13 and all(i['packed'] for i in model['packed_images'])
-planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==9
+planet=json.load(open(B/'source/planet.json'));assert planet['tilt_deg']==35 and planet['revision']==10
 z=np.load(B/'source/terrain_fields.npz');land=z['land'];h,w=land.shape
 
 def components(mask):
@@ -93,10 +93,10 @@ for name,points in paths.items():
  dense[name]=dict(maximum_pixel_uphill_m=delta,interpretation='Minor raster quantization; designed continuous profile is downhill')
 import pymupdf
 pdf=pymupdf.open(B/'guide/CATWORLD_Creator_Guide.pdf');assert len(pdf)>=40
-report=dict(revision=9,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,dense_pixel_checks=dense,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
+report=dict(revision=10,archipelago_islands=5,clean_views=16,annotated_views=16,images=images,pdf_pages=len(pdf),all_gallery_links_exist=True,models=[str(p.relative_to(B)) for p in (B/'model').glob('*.blend')],main_and_east_connected=True,southern_core_separate=True,historical_shelf_connected_at_minus65m=True,no_island_arc_between_east_and_south=True,south_polar_land_separate=True,river_profiles=profiles,dense_pixel_checks=dense,corridor_axis_diagnostic_deg=angle,small_lakes=smallstats,city_sites=cities,largest_island_by_zone_km2=island_sizes,all_source_python_parses=True)
 assert len(report['models'])==3
 json.dump(report,open(B/'source/Delivery_Verification.json','w'),indent=2)
-geog=json.load(open(B/'source/Geography_Verification.json'));geog['revision']=9;geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
+geog=json.load(open(B/'source/Geography_Verification.json'));geog['revision']=10;geog['core_anchors']=[dict(lon=q[0],lat=q[1],component=i) for q,i in zip(anchors,ids)];area_per_row=6100**2*np.pi/h*2*np.pi/w*np.cos(np.radians(la));geog['southern_mainland_area_km2']=float((area_per_row[:,None]*(lab==ids[2])).sum());geog['lowstand_components']=[int(at(low,*q)) for q in anchors];json.dump(geog,open(B/'source/Geography_Verification.json','w'),indent=2)
 print(json.dumps({k:v for k,v in report.items() if k not in ['images','river_profiles']},indent=2))
 
 # Primary maps must be exact longitude rolls of one texture, not separate drawings.
@@ -112,4 +112,4 @@ assert len(set(chain_ids))==5 and not set(chain_ids)&set(ids),chain_ids
 assert len([f for f in new['islands'] if f['name'].startswith('Crown ')])==2
 assert len([f for f in new['islands'] if f['name'].startswith('Northern ') and f['kind']=='glacial'])==3
 r=json.load(open(B/'source/Delivery_Verification.json'));r.update(primary_maps_verified=True,new_authored_islands=len(new['islands']),shelf_island_components=chain_ids,geographic_landmarks=39);json.dump(r,open(B/'source/Delivery_Verification.json','w'),indent=2)
-print('R9 PRIMARY MAPS AND ISLANDS VERIFIED')
+print('R10 PRIMARY MAPS AND ISLANDS VERIFIED')

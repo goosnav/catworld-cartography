@@ -1,6 +1,6 @@
 # CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE
 
-Revision 9. Prepared 1 November 2026.
+Revision 10. Prepared 1 November 2026.
 
 ## What is established, and what is proposed
 
@@ -28,7 +28,7 @@ Radius 6,100 km, 35-degree tilt, 24-hour rotation, Ls 255 degrees, a 65 m former
 
 ### Three continental identities
 
-Panterra is the main story landscape. The eastern dry core remains attached through the mountain belt, inclined farther south with a south-swept connecting neck. A deep ocean separates it from the independent southern shield.
+Panterra is the main story landscape. The eastern dry core remains attached through the mountain belt, rotated as one body, with a continuous mountain connection. A deep ocean separates it from the independent southern shield.
 
 ### The southern silhouette
 
@@ -44,17 +44,17 @@ Front is 0 degrees, east +90, west -90 and far side 180. The southern regional c
 
 ## What changed in this pass
 
-### Primary rectangular exports
+### Whole-continent placement
 
-Two clean 8192 x 4096 equirectangular world maps now lead the package: one centered on the far ocean at 180 degrees, matching the creator redline; one centered on Panterra at zero degrees. Matching tectonic and numbered sheets use the same framing. These are the globe surface unwrapped, not independent painted geographies.
+The entire eastern plate is rotated rigidly by 23 degrees on the sphere from the intact R8 baseline. One rotation moves its coastline, rift gulf, peninsulas and terrain together; it preserves spherical distances and proportions. It replaces the rejected R9 elastic bend, rather than adding another deformation to it.
 
-### Eastern connection and island route
+### One continuous mountain system
 
-The eastern block inclines a further 13 degrees south. The entire connecting neck and its mountains sweep south to meet the lower western flank of the eastern continent, following the latest green correction. The southern island crossing bends sharply out from the Panterran peninsula before flattening toward the old homeland. Five exposed islands remain, with the largest fragments nearest the southern mainland.
+The junction is reconstructed as coastal foothills, dissected ranges and high valleys. The suture follows a continuous southeast course into the eastern interior without the former V-shaped reversal. Bounded mountain elevation samples provide branching relief through the join. Existing relief away from the junction is retained; broad blur filters no longer turn high terrain into blank snowfields. Snow, rock, vegetation and slope shading are recalculated at the new latitude.
 
-### New ocean geography
+### The rest of the atlas
 
-Pelagic Crown is a working name for the requested bigger Hawaii. It has two distant, much smaller companions. Three northern fore-islands sit south of the Greenland-like polar land and the older northern remnant. Other scattered islands occur in sparse volcanic pairs, isolated seamount groups, and low warm-water atolls. None creates a continuous eastern-to-southern bridge.
+The two 8K rectangular maps, curved five-island crossing, Pelagic Crown and scattered ocean islands are retained. Panterra's reservoir, Seattle outlet, northern feeder and agricultural districts keep their established layout. Tectonic sheets, regional cameras and landmark coordinates follow the revised continent.
 
 ## A collision system and a separate old continent
 
@@ -210,9 +210,9 @@ A country-scale impact implies an ancient catastrophe. Its age must allow climat
 
 ## The dry eastern core
 
-### A southward swing
+### A coherent southward orientation
 
-The eastern block retains its initial eight-degree inclination and adds a further thirteen-degree southward rotation in R9, with a south-swept connecting neck attached lower on the eastern flank. The far end is more vertical in the world view, while the connecting mountain belt remains continuous.
+The eastern continent uses one rigid 23-degree rotation from the intact R8 position, about 30 degrees east / 37 degrees north. The whole coast and interior turn together. The joining mountains are reconstructed separately across the suture to produce a continuous southeast range. This is a cartographic placement operation, not a claim that a plate physically rotated overnight.
 
 ### Relief and rain shadow
 
@@ -430,7 +430,7 @@ An 8192 x 4096 colour map and three 4096 x 2048 physical maps support the globe.
 
 ### What can be edited
 
-Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, R7, R8 terrain and R9 ocean geography, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
+Geographic anchors, directed river paths and planet parameters are stored in source JSON. The build pipeline reconstructs earlier terrain stages before applying R6, R7, R8 terrain and R9 ocean geography without its rejected elastic warp, then R10 rigid plate placement, so transforms are not accumulated by repeatedly rotating a finished model. The packed Blender files remain independently editable.
 
 ### Light and atmosphere
 

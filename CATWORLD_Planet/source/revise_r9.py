@@ -19,18 +19,19 @@ def east_forward(lo,la):
  dip=28*smooth((lo-26)/40)*(1-smooth((lo-72)/32))*fade
  return 55+xx/.85,35+yy-dip
 
-def revise():
+def revise(apply_east=True):
  z=dict(np.load(B/'source/terrain_fields.npz'));h,w=z['land'].shape
  Y,X=np.mgrid[:h,:w];lat=(90-(Y+.5)*180/h).astype('f');lon=((X+.5)*360/w-180).astype('f');ux=lon%360
  c=np.array(Image.open(B/'textures/albedo_4096.png'),dtype='f')/255
  # Invert the smooth two-dimensional warp, preserving terrain/biomes/coasts together.
  roi=(lon>24)&(lon<177)&(lat>-62)&(lat<75);tx=lon[roi];ty=lat[roi];sx=tx.copy();sy=ty.copy()
- for _ in range(65):
-  fx,fy=east_forward(sx,sy);sx+=.45*(tx-fx);sy+=.45*(ty-fy)
- coords=[(90-sy)/180*h-.5,(sx+180)/360*w-.5]
- for k,a in z.items():
-  old=a.copy();a[roi]=map_coordinates(old,coords,order=0 if a.dtype==bool else 1,mode='nearest')
- for k in range(3):c[...,k][roi]=map_coordinates(c[...,k].copy(),coords,order=1,mode='nearest')
+ if apply_east:
+  for _ in range(65):
+   fx,fy=east_forward(sx,sy);sx+=.45*(tx-fx);sy+=.45*(ty-fy)
+  coords=[(90-sy)/180*h-.5,(sx+180)/360*w-.5]
+  for k,a in z.items():
+   old=a.copy();a[roi]=map_coordinates(old,coords,order=0 if a.dtype==bool else 1,mode='nearest')
+  for k in range(3):c[...,k][roi]=map_coordinates(c[...,k].copy(),coords,order=1,mode='nearest')
  # Retire the old straight island approach and its submerged shelf.
  labs,_=label(z['land']);aust=labs[int((90+39)/180*h),int((-104+180)/360*w)];main=labs[int((90-20)/180*h),int(180/360*w)]
  zone=(ux>276)&(ux<316)&(lat>-38)&(lat<14)
@@ -93,7 +94,7 @@ def revise():
  for name,im in [('albedo_4096.png',np.uint8(np.clip(c,0,1)*255)),('height_16bit.png',np.uint16(np.clip((z['surface']+100)/11100,0,1)*65535)),('land_mask.png',np.uint8(z['land'])*255),('roughness.png',np.uint8(np.where(aquatic,.25,np.where(z['land'],.86,.30))*255))]:Image.fromarray(im).save(B/'textures'/name)
  fs=json.load(open(B/'source/features.json'))
  for f in fs:
-  if 24<f['lon']<177 and -62<f['lat']<57:f['lon'],f['lat']=map(float,east_forward(f['lon'],f['lat']))
+  if apply_east and 24<f['lon']<177 and -62<f['lat']<57:f['lon'],f['lat']=map(float,east_forward(f['lon'],f['lat']))
   if f['id']=='20':f.update(lon=-60.8,lat=-19,name='Curved southern shelf archipelago',description='Five islands bend out from the Panterran peninsula; largest fragments near the southern mainland')
   if f['id']=='27':f.update(lon=-56,lat=-10,description='Curved drowned shelf; proposed migration corridor at lower sea level')
   if f['id']=='13':f.update(lon=-45,lat=10,description='Peninsula departure into the curved shelf island route')
@@ -101,6 +102,6 @@ def revise():
  fs += [dict(id='37',name='Pelagic Crown / bigger Hawaii',lon=-150,lat=-3.8,description='Large isolated volcanic island; sparse older companions to the northeast'),dict(id='38',name='Northern fore-islands',lon=-155,lat=46.6,description='Three rugged islands south of the northern remnant and Greenland-like polar land'),dict(id='39',name='Southern ocean volcanic outpost',lon=165,lat=-42,description='Isolated shield island and distant eroded remnant')]
  json.dump(fs,open(B/'source/features.json','w'),indent=2)
  p=json.load(open(B/'source/planet.json'));p.update(revision=9,geographic_revision='South-swept eastern neck and additional southward inclination; curved five-island shelf; isolated hotspot and northern fore-islands');json.dump(p,open(B/'source/planet.json','w'),indent=2)
- json.dump(dict(revision=9,eastern_rotation_additional_deg=13,neck_depression_deg=28,archipelago_centerline=CHAIN,islands=records,main_hydrology_unchanged=True),open(B/'source/Ocean_Revision_R9.json','w'),indent=2)
+ json.dump(dict(revision=9,eastern_rotation_additional_deg=13 if apply_east else 0,neck_depression_deg=28 if apply_east else 0,eastern_warp_applied=apply_east,archipelago_centerline=CHAIN,islands=records,main_hydrology_unchanged=True),open(B/'source/Ocean_Revision_R9.json','w'),indent=2)
  print('R9 terrain complete:',len(records),'authored islands')
 if __name__=='__main__':revise()
