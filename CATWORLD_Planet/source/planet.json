@@ -9,6 +9,21 @@
     64.98695651135345
   ],
   "projection": "Interpretive inverse Mollweide fit to map 5; hand sketch has no defined graticule",
-  "revision": 4,
-  "geographic_revision": "Short necks; a full northern maritime interior with terrain-routed drainage"
+  "revision": 5,
+  "geographic_revision": "Detached southern continent and eastern shelf archipelago; main/eastern mountain link retained",
+  "seasonal_epoch": {
+    "solar_longitude_deg": 255,
+    "north": "late autumn; early winter conditions at high latitude",
+    "south": "late spring; approaching summer",
+    "years_since_northern_autumn_equinox": 833,
+    "years_until_northern_winter_solstice": 167,
+    "assumptions": "near-circular orbit, 24-hour rotation, habitable heat source unresolved"
+  },
+  "migration_scenario": {
+    "old_homeland": "southern continent, proposed identification",
+    "lowstand_m": -65,
+    "illustrative_crossing_years_before_present": 1100,
+    "mechanism": "southern grounded-ice storage; later net loss floods shelf",
+    "not_simulated": "ice mass, global sea level history and climate require further validation"
+  }
 }

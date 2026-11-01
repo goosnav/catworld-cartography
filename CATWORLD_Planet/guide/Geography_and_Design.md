@@ -1,25 +1,33 @@
-# Catworld / Terra - technical companion, revision 4
+# Terra / R5 technical companion
 
-The complete current explanation is in `Creator_Guide.md` and `CATWORLD_Creator_Guide.pdf`. This replaces the earlier revision narrative. The PDF is the creator-facing handoff; the PNGs remain the full-resolution drawing references.
+The illustrated creator guide is the main explanation. R5 supersedes the former three-connected-core layout and the former northern maritime mainland.
 
-## Geographic construction
+## Current geography
 
-The original map-5 silhouette is fitted interpretively to a sphere; the sketch has no defined graticule. `build_terrain.py` constructs that base. `reshape_geography.py` compresses the marked eastern connection, rebuilds the maritime continent north of its collision belt, creates its new drainage, updates the island chain and preserves the polar latitude bands. Main Panterran geography and the Seattle-to-reservoir route retain their prior positions.
+Panterra and the eastern dry continent retain their shortened, broad mountain connection. The separate southern mainland covers approximately 10.38 million km2 and spans roughly 15-51 degrees south. It has an old dry shield, salt basins, an eastern escarpment, a cooler southern coast and a substantial eastern archipelago. A small northern remnant survives; the former northern maritime core is open ocean. Deep water separates the southern and eastern continents. The residual island arc off the eastern continent is removed. The southern continent's only candidate former crossing runs east through its archipelago toward Panterra.
 
-Three cores remain land-connected. The east-facing bridge endpoint span changes from 60 to 25 degrees of longitude. The maritime continent now has a broad northern interior, an older shield, a southern high range and a short irregular southern foreland. Its new river network uses a reduced elevation grid and smoothed paths; it is not a complete hydrologic simulation. The eastern desert includes proposed erg fields and pale salt pans. The modern island geometry does not establish a complete former dry crossing without a bathymetric reconstruction.
+The eastern island region contains large angular continental fragments, drowned sounds and a shallow ribbon toward Panterra. At present sea level it is not a continuous land connection. In the stored height field it becomes connected at the proposed -65 m lowstand. The lowstand geometry is checked with periodic longitude connectivity. Ice mass, relative sea level, chronology and local crossing safety have not been simulated.
 
-## Physical and display data
+## One specified epoch
 
-Radius: 6,100 km. Tilt: 23.4 degrees. Orbital period: 4,000 Earth years. A 24-hour rotation and northern late-autumn epoch are assumptions. The physical `height` and `surface` arrays are in metres. The globe radius is 10 Blender units, with 10x radial relief. The separate dam study uses kilometre units and a local vertical datum consistent with the proposed reservoir level; its detailed gorge is not extracted from the coarse planetary grid.
+The creator's seasonal direction is northern late autumn / southern late spring, with northern winter approaching. The proposed exact epoch is solar longitude 255 degrees. For a circular 4,000-year orbit this is 833 years after the northern autumn equinox and 167 years before the northern winter solstice. High northern latitudes can already have winter conditions; lower Panterra remains milder. Southern spring does not remove the desert or instantly melt grounded polar ice.
 
-`terrain_fields.npz` contains height, water/display surface, land mask, reservoir mask and moisture heuristic. The land mask includes inland reservoir footprint, so its raw area is a continental footprint rather than exposed dry land. The reservoir mask refers to the super-lake. The peak and measured reservoir area are recorded in `statistics.json`.
+Northern snow and pack ice are advancing. The Blood Lake has broken shore ice and an open red centre. Southern ocean pack has retreated while grounded polar ice and high mountain glaciers persist. Southern coastal woodland, wet eastern slopes, dry subtropical interior and cooler southern valleys coexist in this snapshot. No global circulation, vegetation or ice-sheet simulation has been run.
 
-## Hydrology
+The proposed crossing 1,100 years before the present falls in the previous southern winter / northern summer. Southern grounded-ice storage must have outweighed northern ice loss to lower global sea level; later net land-ice loss must have flooded the route. Floating sea ice alone cannot provide this mechanism. These are explicit conditions of the scenario, not automatic consequences of opposite seasons. The habitable heat source for a 4,000-year orbit remains unresolved.
 
-The confirmed order is Seattle -> super-lake -> dam -> downstream city. The primary channel has an explicitly graded surface ending at 690 m. The local dam has a 4.8 km crest and about 470 m structural height. Its local tailwater drop is resolved in the inset; the global downstream river profile is smoothed. River width, local village placement and dam structures are below the literal resolution of the global texture. The village's approximate global anchor should be interpreted through the local inset, not as a surveyed site on a global lake pixel.
+## Water and model scales
 
-## Reproducibility and checks
+Seattle -> Great Reservoir -> Great Dam -> downstream metropolis. London/Rome sit near the lake. The graded primary river and outlet remain downhill. Lake surface: 690 m. Globe relief is exaggerated 10x and rivers are widened for drawing clarity. Physical elevations are stored in metres. The globe radius is 10 Blender units for a physical radius of 6,100 km. Textures are 4096 x 2048, about 9.4 km per texel at the equator.
 
-`Geography_Verification.json` records the connected cores, shortened span and new geographic construction. `Hydrology_Verification.json` records the primary channel design. `Model_Verification.json` checks mesh, landmarks, cameras and packed images. `Dam_Model_Verification.json` records the two local camera frames. `Delivery_Verification.json` records image sizes/hashes, gallery links, sampled downhill profiles, city positions and PDF page count. `PDF_Layout_Verification.json` records page content bounds. These checks verify the artifact and key design constraints; they do not validate a physical climate or tectonic simulation.
+The local dam study remains unchanged: 1 unit = 1 km, 4.8 km crest, approximately 470 m structural height. Local structures, village terraces and abrupt hydraulic drops are below planetary texture resolution. The globe and dam models must be converted to a common scale before combination.
 
-The full source and model are editable. If terrain changes, rebuild camera metadata and all dependent renders, annotations, guide figures, PDF and manifests together. Keep the numbered feature catalogue synchronized with the model anchors.
+## Build and inspection
+
+`build_terrain.py` reconstructs the sketch and original terrain, then calls the intermediate R4 `reshape_geography.py` and final R5 `revise_southern.py`. The R5 stage must run once on R4 fields, not repeatedly on itself. Delivered fields already contain R5 and can directly rebuild the globe. Full base reconstruction uses the traced sketch coordinates and Himalayan analogue already bundled in the source directory; the original private sketches are not needed to execute the scripts.
+
+`build_blender.py` constructs the textured globe and renders twelve cameras. `finalize_model.py` binds camera lighting to frames 1-12 and verifies packed textures. Frames 1-2 in the separate dam file select context/detail. Rendering uses 16 Cycles samples and denoising. Cameras use useful daylight for drawing; they do not show the actual darkness of the seasonal epoch.
+
+`make_epoch_figures.py` builds the current seasonal map, tectonic schematic, historical lowstand comparison and R4/R5 comparison. `make_explanatory_figures.py` builds the physical-process diagrams. `package_atlas.py` makes annotations, the gallery, catalogue and statistics. `build_creator_guide.py` makes the comprehensive PDF and editable Markdown. `verify_delivery.py` checks image dimensions, packed maps, primary grades, city sites and gallery links.
+
+The guide distinguishes confirmed creator direction, development-deck context, cartographic proposals and open science/engineering decisions. No political borders or final city names are implied by a biome. Terrain attribution remains in `source/TERRAIN_ATTRIBUTION.md`.

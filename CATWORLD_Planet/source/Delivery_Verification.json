@@ -1,5 +1,5 @@
 {
-  "revision": 4,
+  "revision": 5,
   "clean_views": 14,
   "annotated_views": 14,
   "images": [
@@ -9,7 +9,7 @@
         2048,
         2048
       ],
-      "sha256": "4c60f803d3991b198bcc477d74403f77f7e4b4d644e3b8f9d6c98a6f2feedb10"
+      "sha256": "b9b03b59c04b6c91f6df276ca80fc5e3004f94e12f5fa99d6646bdd660db5518"
     },
     {
       "path": "annotated/01_panterra_annotated.png",
@@ -17,7 +17,7 @@
         2600,
         2060
       ],
-      "sha256": "ae012b057988cac01b98fc886058fad6e1289b91087b9d70116fe76c91f9448e"
+      "sha256": "e387a5533cb6c6cb9eb9b2c1620c96413a29112f604f89a83f261045abf71514"
     },
     {
       "path": "renders/02_eastern.png",
@@ -25,7 +25,7 @@
         2048,
         2048
       ],
-      "sha256": "d5a8f4d56920bc465c63a6f3c2c4c867db1978922a6b30ed4d983c835e872224"
+      "sha256": "1cba15ed4ac430951c817c3961eff58bf2b3f0274f0ad1bf2ca403de6a7dc331"
     },
     {
       "path": "annotated/02_eastern_annotated.png",
@@ -33,7 +33,7 @@
         2600,
         2060
       ],
-      "sha256": "01fb73f58727b56ddf2f68d31498ca8c1ce8558945f84c03e10bc02a3faef35d"
+      "sha256": "03b0db9f9ee825550797a19a2a0a3ad57dda446a3721cd7d0472c38ac68cf119"
     },
     {
       "path": "renders/03_western.png",
@@ -41,7 +41,7 @@
         2048,
         2048
       ],
-      "sha256": "e1fcb470c02d995cce1a26f3fa7bedcc40576fde7c6cec1b3ee7c1317a597f18"
+      "sha256": "4558b20e47bbe216b1c28e8a2353ec27ef2a1b58b84e4bfecadcc3ee583edfa4"
     },
     {
       "path": "annotated/03_western_annotated.png",
@@ -49,7 +49,7 @@
         2600,
         2060
       ],
-      "sha256": "2d3783a22cc28b2339e0a2d1c1a3b852b83cb744cee083ec6e68a5d0d8ac1d65"
+      "sha256": "4987a25215eece560a43e256e07302110f27f9608d36a8cae5ed6e69b5980f63"
     },
     {
       "path": "renders/04_far_side.png",
@@ -57,7 +57,7 @@
         2048,
         2048
       ],
-      "sha256": "3f82d0dc20306d5d540db66db894391b3909f25e3e7696aa94e38b642c101be9"
+      "sha256": "0d84c489501e291f9bdb79f03d3fa560e3e7dfbedc002bbc0b4abd4608366d89"
     },
     {
       "path": "annotated/04_far_side_annotated.png",
@@ -65,7 +65,7 @@
         2600,
         2060
       ],
-      "sha256": "468ff35a90dbebd6fffaad280fdf6cd9a267b17b35a93fddea8c325886005db8"
+      "sha256": "bf5886e2775319232685ea9a321b4d6d69b6f0e99c8ba19576c8b6d37777bd9f"
     },
     {
       "path": "renders/05_north_pole.png",
@@ -73,7 +73,7 @@
         2048,
         2048
       ],
-      "sha256": "cb0956cff0779f195bea6240ab9406940fee37ce4d52ace9bf06bdeec071dc98"
+      "sha256": "6d8c6c1fe5d6c2d526eb93f968e190fecf29ef50be88d73771c6f6ae15a9a7bb"
     },
     {
       "path": "annotated/05_north_pole_annotated.png",
@@ -81,7 +81,7 @@
         2600,
         2060
       ],
-      "sha256": "e6653f4cb43d7173be595d3aa45054980fd1a2d628b9c998c36727362d6821f5"
+      "sha256": "20881bb9d05a934965937ebc17c1bfc937be6e3fe7151db57df6388b5a06e771"
     },
     {
       "path": "renders/06_south_pole.png",
@@ -89,7 +89,7 @@
         2048,
         2048
       ],
-      "sha256": "dea538b17f49cf5c8633bf387e15eab3dd5b99a7107ecaa21e466703e97f45d8"
+      "sha256": "7493160e93b5bb4f7267e58dd2bafd232f52f51360b85506f71db4aeedad5b8b"
     },
     {
       "path": "annotated/06_south_pole_annotated.png",
@@ -97,7 +97,7 @@
         2600,
         2060
       ],
-      "sha256": "9a2cd712b43e14f61cde1b239ea14e975358938d9be4732b494376efbd902726"
+      "sha256": "e9c247a1786c661527078fe61d68e5633e8c21f4a0dc43e56bf20b28577c5013"
     },
     {
       "path": "renders/07_panterra_close.png",
@@ -105,7 +105,7 @@
         2048,
         2048
       ],
-      "sha256": "e6a916442ff0799f8c56a09bab5b19269ca897ec4101a2b47ce907db4f6f56cc"
+      "sha256": "cdcd210c24e77dc63710d57f4e2928cd34e7ad7ede51f09a144e0dbfc447c857"
     },
     {
       "path": "annotated/07_panterra_close_annotated.png",
@@ -113,7 +113,7 @@
         2600,
         2060
       ],
-      "sha256": "014e0d63de33536db1647ee44af04f041581e5523a67865f0130c27cd9783f48"
+      "sha256": "b42d8ac84037f834f6cc7d2936da79f446b08f2767b2cb41fa1680b9b1c84f11"
     },
     {
       "path": "renders/08_impact_close.png",
@@ -121,7 +121,7 @@
         2048,
         2048
       ],
-      "sha256": "a3e619a068dbdef8d886c0a5a3d16c1425ac6dc2b9b24d1899c25152c8c51dc9"
+      "sha256": "57c9339db9baa7f8719992bfcf42d3993cfde3a4dbea003b8373a03a20957e8a"
     },
     {
       "path": "annotated/08_impact_close_annotated.png",
@@ -129,7 +129,7 @@
         2600,
         2060
       ],
-      "sha256": "0fad35b2a3d69e3b126a88a03daad69fa94156bd3a8326b2b33268e1b7fcb546"
+      "sha256": "a1033bd1e3f898fadfef87b194ed1271064383f2e2f2e93eba142f0763693307"
     },
     {
       "path": "renders/11_maritime_continent.png",
@@ -137,7 +137,7 @@
         2048,
         2048
       ],
-      "sha256": "0ccae467ca1adacc726d484552fbae2e4b5558f8931ff078ba095dc918be919f"
+      "sha256": "42335adcdfeeed33fac7b10188e679b78e21c8ed494c5ce3721454c868ad3067"
     },
     {
       "path": "annotated/11_maritime_continent_annotated.png",
@@ -145,7 +145,7 @@
         2600,
         2060
       ],
-      "sha256": "7ae91c6f9f3e0d2beec06c592bdb6192ab504b97a6a0a87693b88272c66bdbab"
+      "sha256": "622b5d82c8cf3a9c61708781cc6e8318c0a52dc05b539644ae737646d3ae203a"
     },
     {
       "path": "renders/12_eastern_continent.png",
@@ -153,7 +153,7 @@
         2048,
         2048
       ],
-      "sha256": "de99114892dd59bb2d95f7d0e46fbd67173241a1801bf7ee7359a56319b4fab4"
+      "sha256": "5b166d66829475cd6fa05a82133dee5b517d7760888289bb243e07b6872c9a4c"
     },
     {
       "path": "annotated/12_eastern_continent_annotated.png",
@@ -161,7 +161,7 @@
         2600,
         2060
       ],
-      "sha256": "b7e875df0439b525ff251bad27227fb50de2ffbe9690abe7e0b625a8d3cbed07"
+      "sha256": "8c9e98d7c0689948e168d5dfbc4ffc7e9897bf710433006bbe41421e49a9cac2"
     },
     {
       "path": "renders/13_seattle_waterway.png",
@@ -169,7 +169,7 @@
         2048,
         2048
       ],
-      "sha256": "97193d13f16f7262e1d662f1b80602fc0be1f829e263d5cf873a0b516cac35e8"
+      "sha256": "85eb3a5a0a304bb380d35dd74b6b33bc88ce777bc76b9dbae7b5c45467aa725e"
     },
     {
       "path": "annotated/13_seattle_waterway_annotated.png",
@@ -177,7 +177,7 @@
         2600,
         2060
       ],
-      "sha256": "7455b99b2650d0425086d353ddcff5b0b400f0fb78667545a9c229dec2a0a277"
+      "sha256": "416274e68b339e2d00e434d52aee3505787e78ea1be014f8d2497e2cd0ba409d"
     },
     {
       "path": "renders/14_archipelago.png",
@@ -185,7 +185,7 @@
         2048,
         2048
       ],
-      "sha256": "9789c278f2d289ad71b5d40e4101ec08fa9d0f181edc49fffe65a3ab4bf98bd2"
+      "sha256": "d94548fe4b13858de12a5cdb820e3a3ec61a30f1a5edc0bd0cdca61797a93f68"
     },
     {
       "path": "annotated/14_archipelago_annotated.png",
@@ -193,7 +193,7 @@
         2600,
         2060
       ],
-      "sha256": "39ae3088ad0cfaf6472c7eb69e34891907c7ce257f06fb34e791b148f6691cf5"
+      "sha256": "8d11d6391006fe816007524e46f6b6fe769896b287e84ccbafd1ecfe4b3c58d3"
     },
     {
       "path": "renders/09_dam_valley.png",
@@ -228,13 +228,16 @@
       "sha256": "e63ed63fa1c320d678f343c019b0480dfb86b255966d6a9a1d3e43170e9e44d2"
     }
   ],
-  "pdf_pages": 43,
+  "pdf_pages": 45,
   "all_gallery_links_exist": true,
   "models": [
     "model/CATWORLD_Terra.blend",
     "model/CATWORLD_Dam_Study.blend"
   ],
-  "three_cores_connected": true,
+  "main_and_east_connected": true,
+  "southern_core_separate": true,
+  "historical_shelf_connected_at_minus65m": true,
+  "no_island_arc_between_east_and_south": true,
   "south_polar_land_separate": true,
   "main_river_sampled_surface_m": [
     3114.105224609375,

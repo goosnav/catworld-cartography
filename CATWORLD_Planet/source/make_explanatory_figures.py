@@ -41,16 +41,16 @@ for a,b in [((180,520),(520,520)),((540,510),(790,270)),((1100,265),(1470,490)),
 for x,y in [(600,580),(660,520),(730,450)]:
  for j in range(4):d.line([(x+j*28,y),(x-22+j*28,y+70)],fill=TEAL,width=5)
 label(d,(110,250),'OCEAN MOISTURE',True);label(d,(480,200),'RISING AIR\nCOOLS + RAINS',True);label(d,(1490,250),'DESCENDING AIR\nWARMS + DRIES',True);label(d,(440,845),'WET WINDWARD SLOPES',True);label(d,(1370,845),'LEE DESERT + SALT BASINS',True)
-label(d,(80,975),'Maritime core: additional western / ocean-facing moisture supports its green northern interior.',False)
+label(d,(80,975),'Southern continent: wet eastern slopes, dry interior; southern westerlies moisten the southwest.',False)
 im.save(G/'Rainshadow_Section.png')
 im,d=canvas('A YEAR LASTS FOUR THOUSAND EARTH YEARS','Illustrative near-circular orbit: four approximately 1,000-year seasonal quarters.',(2200,940))
-colors=['#95ae85','#c3aa5a','#bd805f','#a6bdcb'];titles=['NORTHERN SPRING','NORTHERN SUMMER','NORTHERN AUTUMN','NORTHERN WINTER'];bodies=['Forests advance\nIce retreats\nNew farmland','Long warmth\nHigh northern habitability\nMigration destinations shift','Cooling frontier\nSnow closes routes\nIllustrated working epoch','Ice expansion\nSouthern refuge pressure\nOld routes become stories']
+colors=['#95ae85','#c3aa5a','#bd805f','#a6bdcb'];titles=['NORTHERN SPRING','NORTHERN SUMMER','NORTHERN AUTUMN','NORTHERN WINTER'];bodies=['Forests advance\nIce retreats\nNew farmland','Long warmth\nHigh northern habitability\nMigration destinations shift','Cooling frontier\nSnow closes routes\nPresent: late autumn','Ice expansion\nSouthern refuge pressure\nOld routes become stories']
 for j in range(4):
  x=70+j*530;d.rounded_rectangle((x,250,x+505,660),15,fill=colors[j]);d.text((x+25,280),titles[j],font=font(34,True),fill=INK);d.text((x+25,350),'~ 1,000 Earth years',font=font(33),fill=INK);label(d,(x+25,430),bodies[j])
 label(d,(80,750),'The southern hemisphere has opposite seasons. Exact duration depends on orbital eccentricity.\nThe star / heat source remains unresolved; the map represents one epoch, not the full climate cycle.')
 im.save(G/'Long_Seasons.png')
 im,d=canvas('GEOGRAPHY CREATES THE STORY PRESSURES','The links below are narrative consequences of the model, not fixed political borders.',(2200,980))
-rows=[('NORTHERN IRON','Ore + craft production','Mountain passes','Migration + bargaining power'),('WESTERN FOREST','Giant timber + sacred sites','Seattle river','Logging + contested land'),('LAKE + DAM','Food, water + electricity','Controlled outlet','Infrastructure + political power'),('MARITIME SHELF','Fish + sheltered harbours','Island straits','Merchants + migration memory')]
+rows=[('NORTHERN IRON','Ore + craft production','Mountain passes','Migration + bargaining power'),('WESTERN FOREST','Giant timber + sacred sites','Seattle river','Logging + contested land'),('LAKE + DAM','Food, water + electricity','Controlled outlet','Infrastructure + political power'),('SOUTHERN SHELF','Fish + sheltered harbours','Island straits','Merchants + migration memory')]
 for j,row in enumerate(rows):
  y=235+j*165
  for k,t in enumerate(row):

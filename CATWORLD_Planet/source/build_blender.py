@@ -54,7 +54,7 @@ for ftr in features:
 bpy.ops.object.camera_add();cam=bpy.context.object;cam.name='ATLAS camera';scene.camera=cam;cam.data.type='ORTHO';cam.data.ortho_scale=22.2;cam.data.lens=50
 bpy.ops.object.light_add(type='AREA');key=bpy.context.object;key.name='Broad daylight';key.data.energy=7500;key.data.shape='DISK';key.data.size=14
 bpy.ops.object.light_add(type='AREA');fill=bpy.context.object;fill.name='Soft atmospheric fill';fill.data.energy=3400;fill.data.size=20
-views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,0,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-153,35,15.0),('12_eastern_continent',135,5,15.0),('13_seattle_waterway',-25,16,6.7),('14_archipelago',-87,-12,16.0)]
+views=[('01_panterra',0,22,22.2),('02_eastern',90,0,22.2),('03_western',-90,0,22.2),('04_far_side',180,-12,22.2),('05_north_pole',0,90,22.2),('06_south_pole',0,-90,22.2),('07_panterra_close',-8,15,12.5),('08_impact_close',features[0]['lon'],features[0]['lat'],10.3),('11_maritime_continent',-153,-32,15.0),('12_eastern_continent',135,5,15.0),('13_seattle_waterway',-25,16,6.7),('14_archipelago',-108,-18,16.0)]
 metadata=[]
 for name,lon,lat,scale in views:
  direction=xyz(lon,lat,1);target=Vector((0,0,0)) if scale>20 else direction*8.7

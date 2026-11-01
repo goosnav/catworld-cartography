@@ -1,228 +1,212 @@
 {
-  "revision": 4,
+  "revision": 5,
   "core_anchors": [
     {
       "lon": 0,
       "lat": 20,
-      "component": 17
+      "component": 15
     },
     {
       "lon": 120,
       "lat": 5,
-      "component": 17
+      "component": 15
     },
     {
-      "lon": -155,
-      "lat": 37,
-      "component": 17
+      "lon": -160,
+      "lat": -30,
+      "component": 151
     }
   ],
-  "three_cores_connected": true,
-  "old_bridge_longitude_span_deg": 60,
-  "new_bridge_longitude_span_deg": 25,
-  "bridge_shortening_percent": 58.333333,
-  "polar_latitude_bands_preserved": true,
-  "new_maritime_core_bounds_lonlat": [
-    166,
-    239,
-    6,
-    60
+  "main_and_east_connected": true,
+  "southern_core_separate": true,
+  "south_polar_land_separate": true,
+  "historical_shelf_connected_at_minus65m": true,
+  "lowstand_components": [
+    15,
+    15,
+    15
   ],
-  "new_river_routing_grid_step": 3,
-  "new_river_routed_cells": 38248,
-  "new_river_threshold_cells": 75,
-  "new_core_polygon": [
-    [
-      166,
-      16
-    ],
-    [
-      173,
-      24
-    ],
-    [
-      181,
-      28
-    ],
-    [
-      184,
-      34
-    ],
-    [
-      179,
-      38
-    ],
+  "southern_mainland_area_km2": 10378020.542118574,
+  "core_polygon": [
     [
       177,
-      43
-    ],
-    [
-      184,
-      46
-    ],
-    [
-      184,
-      51
-    ],
-    [
-      193,
-      54
-    ],
-    [
-      199,
-      60
-    ],
-    [
-      204,
-      54
-    ],
-    [
-      214,
-      53
-    ],
-    [
-      219,
-      48
-    ],
-    [
-      228,
-      48
-    ],
-    [
-      232,
-      43
-    ],
-    [
-      225,
-      40
-    ],
-    [
-      221,
-      34
-    ],
-    [
-      229,
-      35
-    ],
-    [
-      235,
-      30
-    ],
-    [
-      239,
-      23
-    ],
-    [
-      235,
-      18
-    ],
-    [
-      229,
-      20
-    ],
-    [
-      231,
-      14
-    ],
-    [
-      224,
-      9
-    ],
-    [
-      218,
-      11
-    ],
-    [
-      210,
-      6
-    ],
-    [
-      201,
-      8
-    ],
-    [
-      194,
-      12
-    ],
-    [
-      187,
-      10
+      -30
     ],
     [
       181,
-      11
-    ],
-    [
-      175,
-      9
-    ],
-    [
-      168,
-      11
-    ]
-  ],
-  "new_suture_spine": [
-    [
-      143,
-      20
-    ],
-    [
-      154,
-      17
-    ],
-    [
-      166,
-      16
-    ],
-    [
-      179,
-      20
-    ],
-    [
-      191,
-      24
-    ],
-    [
-      202,
-      22
-    ],
-    [
-      214,
-      19
-    ],
-    [
-      226,
-      14
-    ]
-  ],
-  "new_archipelago": [
-    [
-      -123,
-      16
-    ],
-    [
-      -113,
-      -3
-    ],
-    [
-      -103,
-      -16
-    ],
-    [
-      -87,
       -24
     ],
     [
-      -70,
+      188,
       -21
     ],
     [
-      -57,
-      -12
+      192,
+      -16
     ],
     [
-      -44,
-      4
+      198,
+      -18
+    ],
+    [
+      201,
+      -23
+    ],
+    [
+      205,
+      -25
+    ],
+    [
+      209,
+      -21
+    ],
+    [
+      212,
+      -15
+    ],
+    [
+      217,
+      -19
+    ],
+    [
+      223,
+      -18
+    ],
+    [
+      227,
+      -23
+    ],
+    [
+      224,
+      -28
+    ],
+    [
+      230,
+      -32
+    ],
+    [
+      228,
+      -38
+    ],
+    [
+      222,
+      -40
+    ],
+    [
+      220,
+      -45
+    ],
+    [
+      214,
+      -47
+    ],
+    [
+      212,
+      -51
+    ],
+    [
+      207,
+      -47
+    ],
+    [
+      202,
+      -46
+    ],
+    [
+      199,
+      -41
+    ],
+    [
+      194,
+      -42
+    ],
+    [
+      191,
+      -38
+    ],
+    [
+      188,
+      -36
+    ],
+    [
+      184,
+      -40
+    ],
+    [
+      180,
+      -36
     ]
-  ]
+  ],
+  "eastern_range_spine": [
+    [
+      218,
+      -19
+    ],
+    [
+      220,
+      -25
+    ],
+    [
+      222,
+      -31
+    ],
+    [
+      219,
+      -37
+    ],
+    [
+      216,
+      -43
+    ],
+    [
+      211,
+      -47
+    ]
+  ],
+  "historical_shelf_centerline": [
+    [
+      220,
+      -23
+    ],
+    [
+      233,
+      -22
+    ],
+    [
+      246,
+      -22
+    ],
+    [
+      258,
+      -19
+    ],
+    [
+      272,
+      -15
+    ],
+    [
+      286,
+      -8
+    ],
+    [
+      299,
+      1
+    ],
+    [
+      313,
+      12
+    ]
+  ],
+  "seasonal_epoch": {
+    "solar_longitude_deg": 255,
+    "north": "late autumn; early winter conditions at high latitude",
+    "south": "late spring; approaching summer",
+    "years_since_northern_autumn_equinox": 833,
+    "years_until_northern_winter_solstice": 167,
+    "assumptions": "near-circular orbit, 24-hour rotation, habitable heat source unresolved"
+  },
+  "new_drainage_routed_cells": 23124,
+  "eastern_southern_ocean_has_no_island_arc": true,
+  "removed_eastern_arc_pixels": 22285,
+  "panterra_western_coast_preserved": true
 }

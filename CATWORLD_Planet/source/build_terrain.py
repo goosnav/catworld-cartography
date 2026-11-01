@@ -370,3 +370,6 @@ print('Built terrain',W,H,'land fraction',land.mean(),'max elevation',height.max
 # Revision 4 reconstructs the far-side core after the original sketch fit.
 from reshape_geography import reshape
 reshape(OUT)
+
+from revise_southern import revise
+revise(OUT)

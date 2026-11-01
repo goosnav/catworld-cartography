@@ -111,10 +111,10 @@
   },
   {
     "id": "11",
-    "name": "Maritime river country",
-    "lon": -158,
-    "lat": 38,
-    "description": "Forested northern foreland with branching rivers and coastal plains",
+    "name": "Southern coastal river country",
+    "lon": -140,
+    "lat": -30,
+    "description": "Warm eastern coastal catchments; southern late spring",
     "sketch_xy": [
       600,
       1550
@@ -122,10 +122,10 @@
   },
   {
     "id": "12",
-    "name": "Maritime great range",
-    "lon": -164,
-    "lat": 23,
-    "description": "Third continental core joins the global collision belt",
+    "name": "Eastern escarpment",
+    "lon": -139,
+    "lat": -34,
+    "description": "Rejuvenated old margin; distinct from the northern collision belt",
     "sketch_xy": [
       825,
       1610
@@ -133,10 +133,10 @@
   },
   {
     "id": "13",
-    "name": "Drowned land bridge",
+    "name": "Panterran shelf approach",
     "lon": -57,
-    "lat": -12,
-    "description": "Island chain and former low-sea-level migration route",
+    "lat": -1,
+    "description": "Flooded final approach of the proposed cat migration route",
     "sketch_xy": [
       1060,
       1530
@@ -210,10 +210,10 @@
   },
   {
     "id": "20",
-    "name": "Eastern marginal gulf",
-    "lon": -131,
-    "lat": 39,
-    "description": "Drowned failed-rift basin and broken capes",
+    "name": "Eastern shelf archipelago",
+    "lon": -125,
+    "lat": -24,
+    "description": "Large continental fragments, drowned valleys and narrow sounds",
     "sketch_xy": [
       775,
       1550
@@ -221,10 +221,10 @@
   },
   {
     "id": "21",
-    "name": "Old maritime shield",
-    "lon": -148,
-    "lat": 41,
-    "description": "Old shield with deeply weathered forests and river plains",
+    "name": "Old southern shield",
+    "lon": -163,
+    "lat": -28,
+    "description": "Dry sandstone basins, weathered uplands and salt pans",
     "sketch_xy": [
       530,
       1515
@@ -243,10 +243,10 @@
   },
   {
     "id": "23",
-    "name": "Northern fjord remnant",
-    "lon": -172.79193266554645,
-    "lat": 70.86021372751848,
-    "description": "Glacial valleys cut into the high-latitude remnant",
+    "name": "Northern remnant island",
+    "lon": -161,
+    "lat": 55,
+    "description": "Small isolated glacial remnant; cooling into winter",
     "sketch_xy": [
       730,
       530
@@ -268,17 +268,17 @@
   },
   {
     "id": "26",
-    "name": "Compact collision junction",
-    "lon": 167,
-    "lat": 16,
-    "description": "Oblique junction where three continental blocks meet through broad ranges"
+    "name": "Deep separating ocean",
+    "lon": 169,
+    "lat": -5,
+    "description": "Open water separates the eastern core from the southern continent"
   },
   {
     "id": "27",
-    "name": "Drowned shelf archipelago",
-    "lon": -87,
-    "lat": -24,
-    "description": "Former land bridge toward Panterra; submerged saddle chain"
+    "name": "Drowned migration shelf",
+    "lon": -100,
+    "lat": -18,
+    "description": "Former dry crossing at illustrative sea level 65 m lower"
   },
   {
     "id": "28",

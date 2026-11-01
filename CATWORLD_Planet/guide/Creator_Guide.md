@@ -1,74 +1,78 @@
 # CATWORLD / TERRA - CREATOR & SHOWRUNNER GUIDE
 
-Revision 4. Prepared 31 October 2026.
+Revision 5. Prepared 31 October 2026.
 
 ## What is established, and what is proposed
 
-### Confirmed by the creator brief
+### Confirmed world facts
 
-Terra is approximately Earth-sized, with Earth-like axial tilt and a 4,000-Earth-year orbital period. Three major continental cores connect through gargantuan mountain belts. A huge northern impact brought metals to an iron-poor world. The red basin, continental reservoir and exceptional hydroelectric dam are central features.
+Terra is approximately Earth-sized, with Earth-like tilt and a 4,000-Earth-year orbit. Panterra and the eastern continent remain joined by the enormous mountain belt. The smaller far-side continent is independent and lies in the SOUTH, with a substantial archipelago to its east. This supersedes the former three-connected-core and northern-far-side layouts.
 
-### Confirmed layout corrections
+### Confirmed seasonal direction
 
-The main Panterran outline remains recognizable. The mountain bridge is shorter. The green far-side core moves northward and loses its long southern tail. In the marked far-side view, the large left interior is dry and the right maritime country is wet. A long island chain can represent the old connection toward Catworld country.
+Northern winter is approaching. The Blood Lake country is in late autumn or locally early winter; the southern hemisphere is in late spring, approaching summer. Earlier southern winter allowed the cats to cross from their old homeland toward Panterra. The model now reflects those opposing seasons.
 
 ### Confirmed water order
 
-Seattle is upstream: its major river flows INTO the super-lake near London and Rome. The dam controls the lake outlet. The large city lies downstream. This guide uses Amsterdam for that city, following the pitch deck; city names are working shorthand.
+Seattle is upstream: its major river flows INTO the super-lake near London and Rome. The dam controls the outlet, and the large trading city is downstream. City names remain development shorthand.
 
-### Cartographic proposals
+### Proposed quantities and mechanisms
 
-The exact 6,100 km radius, 23.4-degree tilt, 24-hour day, present northern-autumn epoch, coordinates, tectonic history, wind routes, ice margins and most descriptive place names are design proposals. The model is a coherent interpretation of the sketches, not a uniquely recoverable projection.
+The model uses radius 6,100 km, tilt 23.4 degrees and a 24-hour day. Solar longitude 255 degrees, a former sea level 65 m lower, a crossing 1,100 years before the present, and identification of the new southern landmass as Old Panterra are explicit proposals. The creator has fixed the direction of the seasonal story, not those exact numbers.
 
-### Open worldbuilding decisions
+### Unresolved physics
 
-The stellar/heating explanation for the long orbit, exact chronology, final political borders, city names, reservoir history and reliable power output remain open. The deck is a development draft. Its notes supply context; they do not override the creator's latest corrections.
+A habitable heat source for the long orbit, grounded-ice mass balance, sea-level chronology and regional climate require further development. The map is an art-directed geographic hypothesis, not an ice-sheet or climate simulation.
 
 ## The planet at a glance
 
-### One connected inhabited system
+### Two connected continents and one separate southern land
 
-Panterra anchors the principal drawing hemisphere. A shorter mountain neck reaches the eastern dry core. A second oblique junction connects that core to the maritime continent on the far side. These are three old continental interiors within one connected land system, not three unrelated islands.
+Panterra connects eastward through a short, broad mountainous neck to the eastern dry continent. That collision system ends before the separating ocean. There is no present-day land bridge from the eastern continent to the southern continent.
 
-### A different far-side silhouette
+### A smaller southern silhouette
 
-The maritime continent now occupies the northern ocean area marked in the redline. Its broad interior lies north of the main collision range. A short, irregular southern foreland replaces the long green tail. Western bays, an eastern marginal gulf and a cool northern peninsula give it distinct edges.
+The southern mainland lies roughly between 15 and 51 degrees south. It has a weathered dry interior, a divided northern coast, a wetter eastern escarpment, cool southern inlets and a long eastern archipelago. A small northern remnant island survives in an otherwise open far-side northern ocean.
 
-### Water and the poles
+### Different kinds of connection
 
-Large oceans separate the inhabited continental system from a separate south-polar landmass. The north is chiefly ocean with islands and broken pack ice. The island bridge curves through the western ocean toward Panterra. Its gaps matter: they create maritime routes and possible former shelf crossings.
+The mountain connection is permanent land. The eastern archipelago is separated by water today. A modeled shallow continental ribbon provides a proposed former lowstand crossing toward Panterra; it is not a third modern mountain bridge.
 
-### Orientation rule
+### Orientation
 
-Longitude is an arbitrary model coordinate. Front = 0 degrees, east = +90, west = -90, far side = 180. The two images above are opposite sides of the same globe; their shorelines and terrain agree.
+Longitude is arbitrary. Front is 0 degrees, east +90, west -90, and far side 180. The far-side camera is tipped 12 degrees south to show the new mainland. Polar views complete the same globe.
 
 ## What changed in this pass
 
-### Shorter connection, fuller continent
+### The northern extension is removed
 
-The marked eastern bridge segment shrinks from 60 to 25 degrees of longitude, about 58%. This is a measurement of the chosen bridge endpoints, not the entire mountain system. Panterra stays in place while the adjacent core moves closer.
+The former far-side northern mainland and its collision junction are replaced by ocean. The new independent mainland is smaller and south of the equator. Its geology and silhouette are rebuilt rather than simply rotating the old green strip.
 
-### The far side is rebuilt
+### Distinct mainland and island regions
 
-The maritime core now has a substantial northern interior, an old upland shield, a folded southern range and branching drainage. It is no longer a rotated strip with a long tail. The desert has differentiated dune fields and pale salt basins. The island chain, both polar views and the Seattle waterway remain part of the review.
+The interior gains dry basins, stony uplands and salt pans. A less extreme eastern range supports wet coastal catchments. Large fault-aligned islands, outer fragments and drowned sounds make the eastern side an archipelago. Panterra retains its shortened mountain connection to the eastern continent. The residual island arc below the eastern continent is removed so it no longer suggests a second link.
 
-## Why these continents fit together
+### One explicit seasonal snapshot
 
-### Stage 1: older crust and a northern impact
+Northern highlands gain autumn snow and frost; the Blood Lake retains an open red centre and broken shore ice. Arctic pack expands while southern pack retreats. Southern grounded ice and mountain glaciers survive into spring. The primary Seattle waterway and dam remain intact.
 
-Three older continental blocks exist before the present mountain system. The northern impact damages one of them, leaving a basin, fractured rock and a broad ejecta/mineral province. The crater and the later long mountain wall have different origins.
+## A collision system and a separate old continent
 
-### Stage 2: successive collisions
+### Older continental crust
 
-Oceanic crust is consumed between Panterra and eastern terranes. Continental collision thickens and folds the crust. A later oblique collision docks the maritime block against the eastern core. The two sutures join, producing a connected, branching mountain system rather than independent decorative ridges. [S1]
+Panterra, the eastern dry interior and the southern mainland preserve older crustal blocks. The northern impact and its iron province predate the main collision. The southern shield has its own weathering, rifting and erosion history.
 
-### Stage 3: erosion and partial reopening
+### The main collision stops at the eastern margin
 
-Rivers cut the high ground. Old faults and later extension guide the large gulfs, capes and island shelf. Short mountain necks remain where uplifted crust bridges the older continental interiors. Coastline angles follow these broad structural directions.
+Panterra and the eastern block collide, thickening crust and supporting the gargantuan range. Broad folds, plateaus and valleys explain the mountain bridge. This belt does not need to continue across every continent. [S1]
 
-### What the diagram means
+### Southern rifting and an old raised margin
 
-The lines are proposed sutures and rifts, not a solved global plate network. No plate velocities, absolute ages or mantle dynamics have been calculated. A future reconstruction can add ocean ridges and transform faults without changing the central story geography.
+The independent southern continent is interpreted as an older rifted block. Its eastern escarpment is a rejuvenated inherited mountain margin, lower than the main collision belt. Extension breaks the continental shelf into large islands, gulfs and straits. This supports an Australia-like role without copying Australia.
+
+### Two different seaways
+
+Deep ocean separates the southern continent from the eastern dry core. The long eastern shelf ribbon toward Panterra is a distinct, shallow remnant of stretched continental crust. Its former emergence is a sea-level hypothesis, not a new mountain collision. Boundary lines are schematic and plate velocities are unspecified.
 
 ## Gargantuan ranges, not a row of peaks
 
@@ -82,7 +86,7 @@ Thickened crust raises a wide region. Erosion then cuts the lower flank into val
 
 ### Why the terrain looks structured
 
-A real Himalayan elevation analogue supplies ridge-and-valley texture, warped into the invented belt. The far-side range is rebuilt along its own suture and blended into the compact junction. The source elevations are modified reference data, not a claim that Terra copies Earth.
+A real Himalayan elevation analogue supplies ridge-and-valley texture, warped into the invented belt. The independent southern escarpment uses a lower, separately shaped relief field; it has no collision junction with the northern belt. The source elevations are modified reference data, not a claim that Terra copies Earth.
 
 ### Reading the height correctly
 
@@ -118,7 +122,7 @@ Logs and cargo can follow this corridor, but an upstream mountain river is not a
 
 ### Other drainage
 
-The maritime core has a new elevation-routed tributary network, with grid corners smoothed for readability. Secondary rivers and desert wadis are schematic at this scale. The check on the primary Seattle route does not certify every tributary or predict floods.
+The southern mainland and its islands have a new elevation-routed drainage network. Blue channels favour humid slopes; dry interior washes use subdued brown lines. Secondary rivers and desert wadis are schematic at this scale. The check on the primary Seattle route does not certify every tributary or predict floods.
 
 ## A continental lake needs a continental basin
 
@@ -196,91 +200,119 @@ Deep gulfs follow extensional weaknesses and old faults. Long peninsulas and off
 
 The reference material associates eastern deserts with reptile polities. Terrain can guide caravan corridors, mountain crossings, water-dependent settlements and trading ports. Their borders and cultures are not fixed by biome alone. [D4, D42]
 
-## The maritime continent, rebuilt
+## The independent southern continent
 
-### A real interior above the range
+### An old mainland with its own character
 
-The former long green strip is replaced by a compact northern-reaching continent. Its main collision belt lies along the southern margin. North of it are forested river country and an older upland shield; farther north, a peninsula grades toward cool woodland and tundra.
+The mainland is now entirely south of the equator and substantially smaller than the joined northern land system. A split northern coast surrounds shallow embayments. Angular western capes, a southern bight and glacial inlets break up the outline. It is neither a tail of the eastern continent nor a link in a global mountain ring.
 
-### Coasts with different histories
+### Dry interior, wet coast
 
-The western embayments face an open marginal sea. An eastern gulf cuts back into the mainland between angular headlands. Offshore fragments and the beginning of the island chain continue those structural directions. These features give the coast readable regional identities.
+The west and centre contain weathered shield uplands, gravel country, dune fields and closed salt basins. Moist onshore flow supports greener eastern slopes and coastal river plains. Farther south, westerly storm exposure makes the southwest cooler and wetter. These are latitude- and terrain-based proposals, not a simple east-green/west-yellow rule everywhere.
 
-### A coherent relief hierarchy
+### A hierarchy distinct from Panterra
 
-The young southern range is the highest terrain. The old shield is lower and more weathered. Smaller northern uplands catch snow at lower elevations in the colder latitude band. Rivers gather in the intervening lowlands and reach the nearby seas.
+The eastern escarpment and southern ranges are lower than the giant northern collision belt. Their peaks retain alpine snow while southern spring opens lower valleys. The old interior is lower and more eroded. Islands preserve fragments of the same structural trend.
 
-### A role without invented canon
+### Old homeland as a proposal
 
-This core can supply forests, fisheries and ports beyond Panterra, with its own routes and histories. The model does not automatically assign it to a faction or claim it is Old Panterra. That historical identity should be chosen by the creator after reviewing the new layout.
+This is the proposed setting for the cats' old southern homeland. Its eastern shelf offers a route toward the new country during the former lowstand. That identification fits the latest brief but remains a naming and historical choice for the creator.
 
-## The island bridge and its missing land
+## The eastern archipelago and the old crossing
 
-### A long broken connection
+### Large islands, then a broken shelf route
 
-The chain curves from the maritime margin toward Panterra's western and southwestern approaches. Elongated islands, straits and shelf fragments follow a consistent trend. They replace a random scattering of identical round islands.
+The eastern margin breaks into several large continental islands and smaller fault-aligned fragments. Sheltered sounds, peninsulas and drowned valleys create a maritime region. Beyond it, the shallow ribbon curves northeast toward Panterra's western approach. This is the southern continent's EASTERN route toward the main continent. There is no island arc westward to the eastern dry continent; that intervening ocean is deliberately open.
 
-### What a former land bridge requires
+### A modeled lowstand connection
 
-A past crossing needs shallow saddles between islands and a sufficiently lower sea level or different tectonic elevation. The surface chain is modeled; a complete revised bathymetric survey is not. Do not yet claim that every channel was dry at once or attach an exact migration date.
+The present land mask keeps the southern mainland separate. In the stored physical height field, lowering sea level by 65 m connects it to Panterra along the designed shelf. The historical-view diagram shows that threshold directly. This is a tested geometric scenario; the former ice volume and timing are not independently established.
 
-### Ports and ruins belong at useful places
+### Why southern winter could expose it
 
-Sheltered sounds support fishing towns. Navigable straits create customs and resupply stations. Abandoned headlands can preserve road approaches or ruins above drowned valleys. Settlement density should follow usable harbours and freshwater access, not even spacing along the chain.
+Growing grounded ice stores water outside the ocean and can lower global sea level. The large southern polar continent supplies the proposed reservoir of ice. Later net land-ice loss floods the route. Floating sea ice is not the principal sea-level mechanism. Local subsidence and rebound could also change individual straits. [S11]
 
-### Connection to the deck
+### What still needs testing
 
-Earlier concepts propose an ancient route from Old Panterra to the newer cat country. This chain provides a candidate setting for that history while leaving the exact homeland, sea-level event and chronology open. [D39, D42]
+Opposing hemispheric seasons do not automatically cause a global lowstand. Southern ice gain must exceed simultaneous northern ice loss, and later the reverse balance must permit flooding. The long shelf geometry is a deliberate worldbuilding accommodation, not a claim about normal ocean basins. A lower-resolution global bathymetry does not certify local crossing safety.
 
 ## Two poles with different identities
 
-### North: an ocean of routes and barriers
+### North: autumn advance
 
-The Arctic region contains bedrock islands, glaciated uplands, channels and broken floating pack ice. The impact district lies on its continental margin. Leads and straits matter for navigation; ice does not form one featureless white latitude band.
+The north is mainly ocean with islands and continental margins. Growing pack ice, frosting uplands and increasingly snowy passes show the approach of winter. Near the Blood Lake at about 65 degrees north, local winter weather can precede the astronomical winter boundary. An open red lake centre remains visible.
 
-### South: a separate ice continent
+### South: spring retreat, not an ice-free pole
 
-The southern pole lies within an asymmetric landmass with a peninsula, deep coastal embayments, mountain exposures and an interior ice dome. Grounded ice drains toward outlet glaciers and the surrounding shelves. It remains separate from the three inhabited continental cores.
+The south retains a grounded polar ice sheet and outlet glaciers left by the former winter. Ocean pack has retreated toward the coast, exposing more open water. Large grounded ice sheets do not disappear at the start of spring. The southern inhabited continent lies well north of this polar ice mass.
 
-### What is fixed in the picture
+### Asymmetric ice storage matters
 
-The north-ocean / south-land contrast follows a useful Earth analogue, but the actual margins are proposals for this epoch. No ice-sheet or sea-ice simulation has been run. The 4,000-year orbit makes long-term advance and retreat important; this atlas is one moment in that cycle. [S5]
+The southern hemisphere has extensive polar land on which thick ice can grow; the north has much more ocean. This asymmetry is the proposed reason southern winter could dominate the global ice budget. Actual ice volumes, accumulation rates and hysteresis require modeling. [S5, S11]
 
 ## Climate follows terrain and exposure
 
-### The mechanism
+### Rain shadows still follow wind
 
-Air rising over a mountain barrier cools and can lose moisture as precipitation. Descending air on the lee side warms and dries. The relevant distinction is windward versus leeward, not left versus right on a flat drawing. [S2]
+Moist air can cool and rain as it rises; descending lee air warms and dries. Mountain orientation, moisture source and latitude matter. The eastern dry continent keeps its large lee desert, while its maritime margins remain wetter. [S2]
 
-### The circulation proposed here
+### Northern cooling is uneven
 
-Oblique storm tracks and monsoonal flow supply moisture from the northern/eastern marginal seas to the eastern wall. Its sheltered interior stays dry. Western and other ocean-facing exposure supplies the maritime core, keeping its northern interior greener. Panterra's western uplands intercept moisture and feed the Seattle catchment.
+At the chosen late-autumn epoch, the far north has short days, spreading snow and coastal ice. Midlatitude uplands freeze first; lower sheltered valleys remain accessible longer. Subtropical Panterra and the low-latitude reservoir stay comparatively mild, making them plausible migration destinations.
 
-### Transitions instead of painted zones
+### Southern spring has several environments
 
-Forests give way to open woodland, grassland, rocky highlands and snow as moisture and elevation change. The maritime southern lee has drier pockets. Desert margins contain fans and seasonal channels. The biome field is an art-directed approximation, not the output of a global circulation model.
+The small southern continent is warming. Its subtropical north and interior can be dry despite spring; the eastern sea-facing slopes support forests and rivers. The southern coast is cooler and stormier, with alpine snow above habitable valleys. The eastern islands grade toward warmer maritime climates as the chain reaches lower latitudes.
 
-### Do not freeze the whole cycle into one map
+### Circulation and visual limits
 
-Long seasons can shift snowlines, storm paths, vegetation and coast access over generations. The displayed northern late-autumn epoch is a working assumption. Once the stellar premise is chosen, a climate specialist could test these proposed wind routes and revise them without discarding the geography.
+The rain belt is proposed to shift south with seasonal heating. Moist onshore easterly or monsoonal flow supplies the northeast, while westerly exposure matters in the southern temperate belt. These are physically motivated assumptions, not a solved global circulation. Clouds are omitted and daylight is adjusted separately for each reference view.
 
 ## Living inside thousand-year seasons
 
-### What 4,000 years means
+### An explicit working date
 
-With Earth-like tilt and a near-circular orbit, four seasonal quarters each last roughly 1,000 Earth years. Northern and southern seasons oppose each other. Eccentricity would make the quarters unequal. A 24-hour rotation is assumed for the model; the creator has not fixed it.
+Use solar longitude 255 degrees: about 833 years after the northern autumn equinox and 167 years before northern winter solstice in a circular 4,000-year orbit. The south is the same distance through spring, approaching summer. These precise numbers are proposed for continuity; the seasonal pairing follows the creator's direction. [S12]
 
-### Consequences for history
+### Weather does not wait for the boundary
 
-A forest frontier can move while dynasties rise and fall. Farmland, ice margins and river regimes can change within inherited memory. Migration knowledge can become sacred history, and old routes may cease to be useful. Civilizations are not simply experiencing ordinary Earth weather in slow motion.
+Northern high latitudes can already feel wintry during late autumn. Southern uplands and the polar ice sheet can remain cold during late spring. Latitude, elevation, oceans and inherited ice modify local conditions. A thousand-year season is a changing climate interval, not one daily weather pattern repeated unchanged.
 
-### The heat-source problem remains open
+### Earlier crossing and current bird movement
 
-Kepler's relation gives about 252 AU for a 4,000-year orbit around a one-solar-mass star. A Sun-like star would not supply Earth-like warmth there. The setting needs a different stellar/orbital or additional-heating premise. The atlas preserves the specified period rather than silently substituting an Earth year. [S6]
+A proposed crossing 1,100 years ago falls within the previous southern winter / northern summer. A lower ocean exposes the shelf while northern destinations are warmer. Today, net southern ice loss has drowned that corridor, while advancing northern cold pushes bird communities south. Exact ice history and migration dates remain to be agreed.
 
-### Industrial cooling in the draft
+### The heat source is still unresolved
 
-The deck discusses industrial activity accelerating northern cooling. Ordinary CO2 warming does not become an inverse greenhouse effect. Aerosols can produce cooling, but their composition, persistence and net balance must be specified. Treat causation as an unresolved story decision or an in-world disputed claim, not established climate physics. [S10; D4, D45]
+A 4,000-year orbit around a one-solar-mass star has semimajor axis about 252 AU. A Sun-like star would not provide Earth-like warmth there. The setting needs a different stellar/orbital or additional-heating premise. The seasonal visuals assume that a habitable thermal solution exists. [S6]
+
+## The present seasonal distribution
+
+### Read latitude before colour
+
+The northern impact district is entering winter conditions; lower Panterra stays milder. South of the equator, warmth is increasing. The detached continent spans subtropical to cool-temperate latitudes, so it contains desert, forest, grassland and residual alpine ice at the same moment.
+
+### Daylight makes the contrast tangible
+
+At the proposed 255-degree epoch and assumed 24-hour rotation, the Blood Lake at 65 N receives about 3.6 hours of daylight; the reservoir at 11.5 N gets 11.4 hours; southern coastal country at 30 S gets 13.9 hours. The high Arctic has polar night while the south-polar site has continuous daylight. These are geometric estimates, excluding atmospheric refraction and mountain horizons, not temperature predictions.
+
+### A reference snapshot, not a forecast
+
+The surface colours show one proposed epoch. Permanent terrain and seasonal snow are conceptually distinct. Ice margins and biome boundaries should shift in future seasonal editions. Render lighting is deliberately even enough to draw from; it does not depict polar darkness.
+
+## The cat crossing: then and now
+
+### Then: southern winter / northern summer
+
+The lower panel lowers the ocean by 65 m in the stored elevation field. Exposed shelf links the old southern mainland to Panterra. The route can support generations of settlement and movement, rather than requiring one uninterrupted march. The 1,100-year date places it within the previous southern winter.
+
+### Now: southern spring / northern autumn
+
+The same shelf is drowned and the southern mainland is separate. Islands retain traces of the former route. Northern birds now face cooling homelands and move toward milder Panterra. The present archipelago is a shipping landscape, not a modern dry crossing.
+
+### What the check proves
+
+A periodic-grid connectivity test confirms the designed lowstand geometry. It does not establish the required global ice volume, exact water depth in each local channel, bridge longevity or the historical migration itself. Those remain stated worldbuilding assumptions.
 
 ## Resources create routes and conflicts
 
@@ -344,9 +376,9 @@ Checkpoint stations can cluster at valley mouths, crossings, staging fields and 
 
 Ancient avian carvings and cliff ruins sit above the western forest corridor. The old-growth refuge provides a setting where material evidence, oral history and present land claims meet. Logging can expose ruins while destroying the living landscape around them. Those are narrative proposals grounded in the deck's sacred-tree material. [D5, D9]
 
-### Chronology is deliberately unfinished
+### Historical continuity
 
-The deck mentions roughly 700 years of northern occupation, millennial migrations and possible early departure. A 4,000-year orbit does not automatically imply a migration every 1,000 years. Decide which seasonal threshold drives movement, whether migrations alternate hemispheres, and which dates are history versus tradition. [D2, D5, D45]
+The latest brief sets two distinct migrations: an older cat crossing enabled by southern winter, and current birds moving south as northern winter approaches. The 1,100-year crossing date is illustrative. Earlier deck dates, including roughly 700 years of northern occupation, need reconciliation with the chosen epoch; they are not silently treated as confirmed history. [D2, D5, D45]
 
 ## Use the globe as a drawing reference
 
@@ -364,7 +396,7 @@ The global surface uses 4096 x 2048 textures: roughly 9.4 km per texel at the eq
 
 ### What can be edited
 
-Feature names and coordinates are in features.json. Primary flow paths are in hydrology_paths.json. The base sketch reconstruction and R4 changes are in build_terrain.py and reshape_geography.py. Camera definitions are in build_blender.py. The source scripts allow reproducible revision; the packed blend is usable without rebuilding.
+Feature names and coordinates are in features.json. Primary flow paths are in hydrology_paths.json. The reconstruction stages are build_terrain.py, reshape_geography.py and revise_southern.py. Camera definitions are in build_blender.py. The source scripts allow reproducible revision; the packed blend is usable without rebuilding.
 
 ### Light and atmosphere
 
@@ -372,13 +404,13 @@ Clouds are omitted to expose the terrain. Each camera has broad daylight from a 
 
 ## Decisions for the creator to make next
 
-### 1 / Stellar premise and seasonal epoch
+### 1 / Heat source and exact epoch
 
-Keep the 4,000-year orbit, then decide how the planet receives habitable heat. Confirm whether the story starts in northern late autumn. This controls the long-term climate and migration logic.
+Keep the confirmed northern late-autumn / southern late-spring direction. Approve or adjust the proposed 255-degree solar longitude and develop the habitable heat source for the long orbit.
 
-### 2 / Canon geography and names
+### 2 / Homeland and coastline approval
 
-Approve or revise the three-core arrangement, the new maritime interior, the exact location of Old Panterra and the former land bridge. Replace Seattle, London, Rome, Amsterdam and Milan shorthand with final names when ready.
+Review the separate southern mainland and eastern archipelago, and decide whether this is officially Old Panterra. Panterra and the eastern continent remain mountain-connected. Final names, factions and political borders remain open.
 
 ### 3 / Reservoir history
 
@@ -388,9 +420,9 @@ Choose the pre-dam lake extent, dam construction sequence, filling timescale, op
 
 Choose reliable rather than nominal power output, catchment assumptions, industrial demand and the role of scarce iron. Treat naturally enriched uranium and any unusual cooling mechanism as separate fictional premises requiring decisions.
 
-### 5 / Routes and chronology
+### 5 / Ice budget, crossing and travel
 
-Fix pass accessibility, boat/canal connections, shipping speeds and journey distances. Reconcile the deck's migration intervals with the seasonal cycle. Distinguish old records, oral tradition and political claims.
+Approve or revise the proposed 65 m lowstand and 1,100-year crossing date. Test net grounded-ice storage, relative sea level and local shelf elevations before declaring a safe historic route. Fix journey distances and seasonal pass accessibility for scripts.
 
 ### 6 / Next level of production detail
 
@@ -441,3 +473,11 @@ NASA, Causes of Climate Change, https://science.nasa.gov/climate-change/causes/ 
 ### T / Terrain provenance
 
 Mapzen Terrain Tiles on AWS, with USGS SRTM/GMTED elevation sources. A Himalayan mosaic was warped, rescaled and combined with fictional terrain. https://registry.opendata.aws/terrain-tiles/ . Full provider attribution is bundled in source/TERRAIN_ATTRIBUTION.md. No provider endorses this fictional model.
+
+### S11 / Ice and sea level
+
+NASA, Melting sea ice versus land ice: https://sealevel.nasa.gov/faq/23/whats-the-difference-between-melting-sea-ice-and-melting-land-ice-on-sea-levels/ ; NOAA, Local versus global sea level: https://oceanservice.noaa.gov/facts/sealevel-global-local.html . These support the mechanisms, not the fictional 65 m or 1,100-year values.
+
+### S12 / Opposite seasons
+
+NOAA / National Weather Service, Why Do We Have The Seasons? https://www.weather.gov/fgz/Seasons . The 255-degree epoch and dates are this guide's calculations for a circular 4,000-year orbit.
