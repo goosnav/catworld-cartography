@@ -39,10 +39,10 @@ fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='known
 scope={'np':np};exec(compile(ast.Module(body=[fn],type_ignores=[]),'known','exec'),scope);known=scope['known']
 for lo,la in [(-106,-38),(-86,-37),(-91,-43),(-104,-39)]:assert not known(lo,la,'cats')
 for lo,la in [(-50,-3.5),(-54.9,-10),(-60.5,-20)]:assert known(lo,la,'cats')
-assert known(15,24,'reptiles') and known(165,-42,'reptiles') and known(-10,11,'reptiles')
-assert known(-155,46.6,'birds') and known(-161,55,'birds') and known(-20,20,'birds')
+assert known(18,24,'reptiles') and known(10,-15,'reptiles') and not known(130,-12,'reptiles')
+assert known(-100,70,'birds') and known(100,70,'birds') and known(-20,27,'birds')
 manifest=json.loads((B/'source/Cartography_Manifest.json').read_text());maps={m['key']:m for m in manifest['maps']}
-assert maps['reptiles']['angle']==90 and maps['reptiles']['western_continuation_inset']['angle']==90
+assert maps['reptiles']['angle']==18 and 'western_continuation_inset' not in maps['reptiles']
 assert maps['world']['extent']==[-2,2,-1,1] and maps['world']['center']==[0,0]
 assert len(set(m['source_sha256'] for m in maps.values()))==1
 for lat in [-20,-12,0,10]:
@@ -82,10 +82,10 @@ y=para(y,'SVG linework and 300-dpi PNG sheets are included. The A4 file is optio
 assert y>42,y;text(50,28,'CATWORLD / PRINT GUIDE / 1',8);c.showPage()
 text(50,744,'FOUR POINTS OF VIEW',18,'Bold');y=714
 for heading,body in [
- ('Birds / The Northern Reaches','A polar-centered chart includes the Blood Lake province, northern massifs, crown and fore-islands, and a wider part of Panterra down toward the plateau. Its rotation suits the paper; the cross identifies the North Pole. Geography continues beyond the sparsely charted southern frontier.'),
- ('Cats / The Lands of Panterra','Southern Panterra, the Seattle woodland and river, the reservoir valley, northern feeder and falls, eastern dam, cultivated hills and nearby islands are included. The facing mountain spines and a short eastern approach mark the limits of knowledge. Australia and the distant southern route are absent.'),
- ('Reptiles / The Eastern Realms','The eastern homeland occupies the large panel, with geographic west toward the bottom. The Panterran Marches inset shares that orientation and reaches into the main continent around the reservoir, Rome, dam and downstream port. It shows approaches under exploration, not a claim of political control. The two panels use different scales.'),
- ('Reptiles / Unexplored interior','The eastern homeland coastline is recognized, but a broad irregular area inland in its geographic east remains uncharted. Its quiet interior is deliberate. Nearby islands remain on the map. The inset overlaps the main panel at the western mountain approach.'),
+ ('Birds / The Northern Reaches','The northern homeland occupies a broad continuous chart, from the Blood Lake to the mountain belt and southern plateau fringe. The cross marks the North Pole. Distant islands on both sides appear as thin, broken, partial outlines: these are islands of legend, not fully surveyed coasts.'),
+ ('Cats / The Lands of Panterra','Southern Panterra, the Seattle woodland and river, the reservoir valley, northern feeder and falls, eastern dam, cultivated hills and nearby islands are included. The facing mountain spines lead into a substantial western portion of the eastern continent, including its inner gulf. Australia and the distant southern route are absent.'),
+ ('Reptiles / The Eastern Realms','One continuous view crosses from eastern Panterra into the eastern homeland. A gentle 18-degree rotation keeps the connected mountain belt broad on the landscape sheet. The Panterran coast, downstream port and nearby merchant isle sit within the same projection and scale. These are explored approaches, not claims of political control.'),
+ ('Reptiles / Unexplored interior','Most of the eastern shoreline is uncharted and omitted. Its visible coast ends remain open; no enclosing border is drawn around the unknown land. Interior marks end with the survey. The same convention applies at the Panterran exploration frontier. Nearby known islands remain visible.'),
  ('Whole world / Terra','The fourth sheet has no cultural limits. It includes Panterra, the eastern continent, the southern homeland, the sparse island route, Pelagic Crown, northern remnants and south polar land. It preserves the satellite map\'s equirectangular layout and central meridian of 0 degrees.')]:
  text(50,y,heading,12,'Bold');y-=21;y=para(y,body,10)
 text(50,y-4,'What the linework means',13,'Bold');y-=27
@@ -107,16 +107,16 @@ for i,key in enumerate(KEYS):
  x=20+(i%2)*1040+(1010-im.width)//2;y=20+(i//2)*820+(800-im.height)//2
  board.paste(im,(x,y))
 board.save(B/'FOUR_MAPS_PREVIEW.jpg',quality=94)
-(B/'README.txt').write_text('''CATWORLD / FOUR TRACING MAPS / LETTER EDITION 2
+(B/'README.txt').write_text('''CATWORLD / FOUR TRACING MAPS / LETTER EDITION 3
 
 Print 01_CLEAN_TRACING_LETTER.pdf for your own lettering, or 02_LABELLED_MAPS_LETTER.pdf for named maps.
 Four sheets: birds, cats, reptiles, whole world. ALL LANDSCAPE, US Letter 11 x 8.5 inches. Print at 100% / Actual size.
 Only need the world? Print individual/world_trace_Letter.pdf.
 Read 00_READ_FIRST.pdf for the printing and interpretation guide.
 
-BIRDS: expanded northern world and Panterra; polar orientation.
-CATS: southern Panterra, nearby islands and eastern approach; no Australia.
-REPTILES: west down; eastern homeland plus Panterran Marches inset; part of eastern interior unexplored.
+BIRDS: broad northern homeland and southern plateau fringe; partial islands of legend.
+CATS: Panterra and roughly one third of the eastern continent; no Australia.
+REPTILES: one gently rotated view with eastern Panterra; most eastern coastline is unexplored and omitted.
 WORLD: complete equirectangular world centered on Panterra, preserving the 2:1 satellite map proportions.
 
 Black vector lines on white. No grey fills. SVG and 300-dpi PNG exports included.
@@ -130,5 +130,5 @@ Dependencies: Python, numpy, scipy, contourpy, shapely, reportlab, pymupdf, Pill
 Source data: ../CATWORLD_Planet/source/terrain_fields.npz, hydrology_paths.json, features.json.
 The build script currently uses the canonical Mac project path and Times New Roman from macOS; change MODEL/font paths on other systems.
 ''')
-(B/'source/Print_Verification.json').write_text(json.dumps(dict(letter_page_count=4,labelled_page_count=4,tiled_page_count=16,all_letter_maps_landscape=True,vector_maps_verified=True,pdf_text_in_page_bounds=True,cats_southern_mainland_excluded=True,near_cat_islands_included=True,expanded_bird_islands_and_panterra_included=True,reptile_panterra_marches_and_outpost_included=True,reptile_panels_both_west_down=True,reptile_eastern_interior_unexplored=True,world_full_extent_and_zero_central_meridian=True,tile_calibration_bar_mm=50,terrain_source_sha256=maps['world']['source_sha256'],map_coverage=reports),indent=2))
+(B/'source/Print_Verification.json').write_text(json.dumps(dict(letter_page_count=4,labelled_page_count=4,tiled_page_count=16,all_letter_maps_landscape=True,vector_maps_verified=True,pdf_text_in_page_bounds=True,cats_southern_mainland_excluded=True,near_cat_islands_included=True,expanded_bird_islands_and_panterra_included=True,reptile_panterra_marches_included=True,reptile_single_view_rotation_degrees=18,reptile_eastern_coast_omitted=True,bird_legendary_islands_partial=True,world_full_extent_and_zero_central_meridian=True,tile_calibration_bar_mm=50,terrain_source_sha256=maps['world']['source_sha256'],map_coverage=reports),indent=2))
 print(json.dumps(reports,indent=2));print('Guide and print checks complete')

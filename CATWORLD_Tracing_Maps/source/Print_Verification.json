@@ -8,16 +8,17 @@
   "cats_southern_mainland_excluded": true,
   "near_cat_islands_included": true,
   "expanded_bird_islands_and_panterra_included": true,
-  "reptile_panterra_marches_and_outpost_included": true,
-  "reptile_panels_both_west_down": true,
-  "reptile_eastern_interior_unexplored": true,
+  "reptile_panterra_marches_included": true,
+  "reptile_single_view_rotation_degrees": 18,
+  "reptile_eastern_coast_omitted": true,
+  "bird_legendary_islands_partial": true,
   "world_full_extent_and_zero_central_meridian": true,
   "tile_calibration_bar_mm": 50,
   "terrain_source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
   "map_coverage": [
     {
       "map": "birds",
-      "black_equivalent_page_coverage_percent": 1.785,
+      "black_equivalent_page_coverage_percent": 1.768,
       "png_dimensions": [
         3300,
         2550
@@ -26,7 +27,7 @@
     },
     {
       "map": "cats",
-      "black_equivalent_page_coverage_percent": 1.758,
+      "black_equivalent_page_coverage_percent": 1.738,
       "png_dimensions": [
         3300,
         2550
@@ -35,7 +36,7 @@
     },
     {
       "map": "reptiles",
-      "black_equivalent_page_coverage_percent": 1.818,
+      "black_equivalent_page_coverage_percent": 1.567,
       "png_dimensions": [
         3300,
         2550
@@ -44,7 +45,7 @@
     },
     {
       "map": "world",
-      "black_equivalent_page_coverage_percent": 1.76,
+      "black_equivalent_page_coverage_percent": 1.759,
       "png_dimensions": [
         3300,
         2550

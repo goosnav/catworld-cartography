@@ -19,7 +19,7 @@ for d in ['svg','png','individual','source']: (B/d).mkdir(exist_ok=True)
 for name,fn in [('Book','Times New Roman.ttf'),('Italic','Times New Roman Italic.ttf'),('Bold','Times New Roman Bold.ttf')]:pdfmetrics.registerFont(TTFont(name,'/System/Library/Fonts/Supplemental/'+fn))
 W,H=792.,612. # All four sheets use US Letter landscape
 RECT=(25,55,W-25,H-68)
-CFG=[dict(key='birds',title='THE NORTHERN REACHES',culture='Birds',center=(-5,63),angle=65,extent=None,seed=302),dict(key='cats',title='THE LANDS OF PANTERRA',culture='Cats',center=(-7,10),angle=0,extent=None,seed=405),dict(key='reptiles',title='THE EASTERN REALMS',culture='Reptiles',center=(98,-5),part='main',angle=90,extent=None,seed=806),dict(key='world',title='TERRA / THE WHOLE WORLD',culture='World',center=(0,0),angle=0,extent=(-2,2,-1,1),seed=912)]
+CFG=[dict(key='birds',title='THE NORTHERN REACHES',culture='Birds',center=(0,48),angle=15,extent=None,seed=302),dict(key='cats',title='THE LANDS OF PANTERRA',culture='Cats',center=(12,12),angle=0,extent=None,seed=405),dict(key='reptiles',title='THE EASTERN REALMS',culture='Reptiles',center=(63,8),angle=18,extent=None,seed=806),dict(key='world',title='TERRA / THE WHOLE WORLD',culture='World',center=(0,0),angle=0,extent=(-2,2,-1,1),seed=912)]
 def smooth(t):t=np.clip(t,0,1);return t*t*(3-2*t)
 def inverse(x,y,lon0,lat0):
  rho=np.hypot(x,y);cc=2*np.arcsin(np.minimum(rho/2,.99999));p=np.radians(lat0);r=np.maximum(rho,1e-9)
@@ -31,9 +31,17 @@ def forward(lo,la,lo0,la0):
  return k*np.cos(p)*np.sin(d),k*(np.cos(p0)*np.sin(p)-np.sin(p0)*np.cos(p)*np.cos(d))
 def known(lo,la,k):
  if k=='world':return np.ones(np.broadcast(lo,la).shape,dtype=bool)
- if k=='birds':return (la>37)|((lo>-65)&(lo<55)&(la>17+2*np.sin(np.radians(lo*3))))
- if k=='cats':return (lo>-65)&(lo<66)&(la>-40)&(la<42-3*np.sin(np.radians(lo*3)))&((lo<33)|(la>24))
- return (lo>-24)&(lo<173)&(la>-53)&(la<44)&((lo>47)|(la>-33))
+ if k=='birds':
+  main=(lo>-67)&(lo<70)&(la>25+3*np.sin(np.radians(lo*3)))
+  legend=(abs(lo)>70)&(abs(lo)<145)&(la>62)&(la<76+4*np.sin(np.radians(lo*4)))
+  return main|legend
+ if k=='cats':
+  eastedge=86+5*np.sin(np.radians(la*5))
+  return (lo>-65)&(lo<eastedge)&(la>-40)&(la<42-3*np.sin(np.radians(lo*3)))&((lo<35)|(la>-14))
+ westedge=8+8*np.sin(np.radians(la*4))
+ eastedge=115+5*np.sin(np.radians(la*4))
+ return (lo>westedge)&(lo<eastedge)&(la>-46)&(la<43)
+
 class Art:
  def __init__(self):self.items=[]
  def line(self,p,w=.48,dash=None,fill=False):
@@ -83,11 +91,9 @@ def chart(cfg):
  scale=min((RECT[2]-RECT[0])/(xmax-xmin),(RECT[3]-RECT[1])/(ymax-ymin));xoff=(RECT[0]+RECT[2]-(xmax+xmin)*scale)/2;yoff=(RECT[1]+RECT[3]-(ymax+ymin)*scale)/2
  nx,ny=1500,1150;xs=np.linspace(xmin,xmax,nx);ys=np.linspace(ymin,ymax,ny);xx,yy=np.meshgrid(xs,ys);lo,la=(xx*90,yy*90) if k=='world' else inverse(ct*xx+st*yy,-st*xx+ct*yy,*cfg['center']);coords=[np.clip((90-la)/180*2048-.5,0,2047),(lo+180)/360*4096-.5]
  land=map_coordinates(Z['land'],coords,order=0,mode='grid-wrap');elev=map_coordinates(Z['surface'],coords,order=1,mode='grid-wrap');wet=map_coordinates(Z['wet'],coords,order=1,mode='grid-wrap');lake=map_coordinates(Z['lake']|Z['small_lake'],coords,order=0,mode='grid-wrap');know=coverage(lo,la)
- # Coasts may be recognized while inland routes remain unexplored.
+ # Unknown territory removes coastline as well as interior detail.
  detail=know.copy()
- if k=='reptiles':
-  edge=np.interp(la,[-32,-25,-15,-6,2,9,18],[126,120,118,116,119,120,125])
-  detail&=~((lo>edge)&(la>-32)&(la<18))
+ if k=='birds':detail&=(abs(lo)<70)
  shore=distance_transform_edt(land&~lake);water=~land|lake
  def pos(lon,lat):x,y=project(lon,lat);return float(xoff+x*scale),float(yoff+y*scale)
  def ix(x,y):return int(np.clip(round(((y-yoff)/scale-ymin)/(ymax-ymin)*(ny-1)),0,ny-1)),int(np.clip(round(((x-xoff)/scale-xmin)/(xmax-xmin)*(nx-1)),0,nx-1))
@@ -100,7 +106,7 @@ def chart(cfg):
    path=np.array(LineString(path).simplify(.32,preserve_topology=False).coords)
    keep=np.array([mask[ix(*p)] for p in path])
    # Include complete nearby islands when most of their shoreline is already known.
-   if np.linalg.norm(path[0]-path[-1])<1 and np.ptp(path[:,0])<65 and np.ptp(path[:,1])<65 and keep.mean()>.55:keep[:]=True
+   if k not in ['birds','reptiles'] and np.linalg.norm(path[0]-path[-1])<1 and np.ptp(path[:,0])<65 and np.ptp(path[:,1])<65 and keep.mean()>.55:keep[:]=True
    start=None
    for ii,v in enumerate(np.r_[keep,False]):
     if v and start is None:start=ii
@@ -117,7 +123,11 @@ def chart(cfg):
     pts=[]
   if len(pts)>1:a.line(pts,width,dash)
  # Real coastlines; clip individual line segments at knowledge edges, never close an unknown coast.
- lines(land,.70);lines(lake,.64)
+ if k=='birds':
+  lines(land,.70,mask=know&(abs(lo)<70))
+  lines(land,.38,mask=know&(abs(lo)>=70),dash=[3,3])
+ else:lines(land,.70)
+ lines(lake,.64)
  # Sparse short coastal accents, only offshore and only on known shores.
  co=contourpy.contour_generator(x=xs*scale+xoff,y=ys*scale+yoff,z=gaussian_filter(land.astype(float),1.3))
  for path in co.lines(.20):
@@ -125,7 +135,7 @@ def chart(cfg):
   path=np.array(LineString(path).simplify(.55).coords)
   for start in range(8,len(path)-7,29):
    seg=path[start:start+6]
-   if all(know[ix(*q)] for q in seg):a.line(seg,.27)
+   if all(detail[ix(*q)] for q in seg):a.line(seg,.27)
  # Directed, established Panterran waterways. No fantasy cross-continent rivers.
  if k in ['cats','reptiles','birds','world']:
   for name,p in HY.items():clipped_geo(p,.72 if name.startswith('lake_to_') else .55)
@@ -230,32 +240,35 @@ def chart(cfg):
   # Fine corner frame and small compass leave the drawing area unfilled.
   for x,y,dx,dy in [(28,29,1,1),(W-28,29,-1,1),(28,H-29,1,-1),(W-28,H-29,-1,-1)]:a.line([(x,y+dy*16),(x,y),(x+dx*28,y)],.38)
   a.text(W/2,H-48,cfg['title'],16,'Book');a.text(W/2,49,'',8)
-  if k not in ['birds']:
-   cx,cy=W-58,H-112;a.line([(cx,cy-18),(cx,cy+20)],.45);a.line([(cx-10,cy),(cx+10,cy)],.32);a.line([(cx-4,cy+12),(cx,cy+20),(cx+4,cy+12)],.45);a.text(cx,cy+27,'E' if k=='reptiles' else 'N',9)
-   if k=='reptiles':a.text(cx,cy-30,'W',9)
+  if k!='birds':
+   cx,cy=W-55,H-108
+   dx,dy=-math.sin(theta)*20,math.cos(theta)*20
+   a.line([(cx-dx*.65,cy-dy*.65),(cx+dx,cy+dy)],.45)
+   a.line([(cx+dx*.6-4*math.cos(theta),cy+dy*.6-4*math.sin(theta)),(cx+dx,cy+dy),(cx+dx*.6+4*math.cos(theta),cy+dy*.6+4*math.sin(theta))],.45)
+   a.text(cx+dx*1.5,cy+dy*1.5,'N',9)
   else:
    px,py=pos(0,90);a.line([(px-4,py),(px+4,py)],.35);a.line([(px,py-4),(px,py+4)],.35)
   a.text(36,17,f'{cfg["culture"].upper()} / TRACING MASTER',7,'Book','left');a.text(W-180,17,'R10 geography / Letter tracing edition',7,'Book','left')
  # Reference labels are separate from the clean drawing.
  labels={
- 'birds':[(1.8,61,'BLOOD LAKE'),(-8,49,'THE NORTHERN MASSIFS'),(-40,58,'WESTERN HIGH COUNTRY'),(49,62,'EASTERN RIM'),(-145,78,'POLAR CROWN'),(-155,48,'NORTHERN FORE-ISLES'),(-30,19,'SOUTHERN LANDS UNKNOWN')],
+ 'birds':[(1.8,61,'BLOOD LAKE'),(-8,49,'THE NORTHERN MASSIFS'),(-40,58,'WESTERN HIGH COUNTRY'),(49,62,'EASTERN RIM'),(-100,70,'ISLES OF LEGEND'),(100,70,'ISLES OF LEGEND'),(-30,22,'SOUTHERN LANDS UNKNOWN')],
  'cats':[(-11,12,'GREAT RESERVOIR'),(-36,23,'SEATTLE FOREST'),(-6,25,'PLATEAU STEPPE'),(-4,-1,'CULTIVATED HILLS'),(-25,-10,'WESTERN UPLANDS'),(8,-19,'SOUTHERN SPINE'),(-10,39,'NORTHERN DIVIDE'),(48,33,'EASTERN APPROACHES')],
- 'reptiles':[(7,24,'PANTERRAN MARCHES'),(124,-12,'UNEXPLORED EASTERN INTERIOR'),(96,-20,'THE LEEWARD DESERT'),(76,-7,'RIFT GULF'),(91,16,'THE GREAT DIVIDE'),(118,-34,'SOUTHERN CAPES'),(40,32,'WESTERN APPROACH')],
+ 'reptiles':[(7,24,'PANTERRAN MARCHES'),(113,0,'UNEXPLORED EAST'),(96,-20,'THE LEEWARD DESERT'),(76,-7,'RIFT GULF'),(91,16,'THE GREAT DIVIDE'),(118,-34,'SOUTHERN CAPES'),(40,32,'WESTERN APPROACH')],
  'world':[(-12,4,'PANTERRA'),(98,-19,'EASTERN CONTINENT'),(-109,-39,'SOUTHERN HOMELAND'),(2,65,'BLOOD LAKE'),(-150,-3,'PELAGIC CROWN'),(65,-80,'SOUTH POLAR LANDS')]}[k]
  ref=Art();ref.items=list(a.items)
  for lon,lat,text in labels:
   x,y=pos(lon,lat)
   if k=='birds' and text=='POLAR CROWN':x-=20;y+=10
   if RECT[0]<x<RECT[2] and RECT[1]<y<RECT[3]:
-   if text=='UNEXPLORED EASTERN INTERIOR':
-    ref.text(x,y+5,'UNEXPLORED',8.5,'Italic',halo=True);ref.text(x,y-5,'EASTERN INTERIOR',8.5,'Italic',halo=True)
+   if text=='UNEXPLORED EAST':
+    ref.text(x,y+5,'UNEXPLORED',8.5,'Italic',halo=True);ref.text(x,y-5,'EASTWARD',8.5,'Italic',halo=True)
    else:ref.text(x,y,text,8 if cfg.get('inset') else 10,'Italic',halo=True)
  for f,x,y in sites:
   name={'05':'Dam','06':'Downstream port','08':'Western Gate','09':'Central Gate','10':'Eastern Gate','14':'Fishing village','15':'Cliff ruins','16':'London','17':'Milan','24':'Seattle','25':'Rome','31':'Plateau falls'}[f['id']]
   if f['id']=='14':continue # Local site falls within dam symbol at world scale.
   dx,dy={'05':(25,-7),'25':(19,12),'16':(-10,-14),'31':(-25,10),'24':(-10,-14),'06':(25,-10),'15':(-25,-8)}.get(f['id'],(0,-14))
   ref.text(x+dx,y+dy,name,9,'Italic',halo=True)
- notes={'birds':'Polar routes and northern homeland, extending into Panterra. The pole is marked by a cross.', 'cats':'Panterra, the facing mountain spines and eastern approaches. The southern homeland is unknown.', 'reptiles':'West is toward the bottom. Eastern interior partly unexplored; Panterran marches are charted approaches.', 'world':'Full 360-degree equirectangular world; Panterra centered. No cultural limits are applied.'}
+ notes={'birds':'Polar routes and northern homeland, extending into Panterra. The pole is marked by a cross.', 'cats':'Panterra and the western reaches of the eastern continent. Open coast ends mark the limits of exploration.', 'reptiles':'One continuous chart: Panterran marches and eastern homeland. Open coast ends lead into unexplored lands.', 'world':'Full 360-degree equirectangular world; Panterra centered. No cultural limits are applied.'}
  if not cfg.get('inset'):ref.text(W/2,37,notes[k],8,'Italic',halo=True)
  if k=='birds':
   px,py=pos(0,90)
@@ -267,16 +280,7 @@ allstats=[];clean=pymupdf.open();key=pymupdf.open()
 for cfg in CFG:
  W,H=792.,612.
  RECT=(25,55,W-25,H-68)
- if cfg['key']=='reptiles':RECT=(308,70,W-28,H-70)
  a,r,stats=chart(cfg)
- if cfg['key']=='reptiles':
-  RECT=(32,98,281,423)
-  inset=dict(key='reptiles',title='Panterran marches',culture='Reptiles',center=(9,8),part='marches',angle=90,extent=None,seed=1206,inset=True,symbol_scale=.68)
-  ai,ri,si=chart(inset);a.items+=ai.items;r.items+=ri.items
-  for art in [a,r]:
-   art.text(156,453,'PANTERRAN MARCHES',11,'Book');art.text(156,437,'Western continuation',8,'Italic')
-   for x,y,dx,dy in [(29,89,1,1),(285,89,-1,1),(29,425,1,-1),(285,425,-1,-1)]:art.line([(x,y+dy*9),(x,y),(x+dx*12,y)],.32)
-  stats['western_continuation_inset']=si
  allstats.append(stats)
  for suffix,art,doc in [('trace',a,clean),('reference',r,key)]:
   p=B/'individual'/f'{cfg["key"]}_{suffix}_Letter.pdf';c=canvas.Canvas(str(p),pagesize=(W,H),pageCompression=1);c.setTitle(cfg['title']+' / '+suffix);c.setAuthor('Catworld cartography');art.render(c);c.showPage();c.save();doc.insert_pdf(pymupdf.open(p))
@@ -306,4 +310,4 @@ for i,cfg in enumerate(CFG):
     p.draw_line((xx+sx*2,yy),(xx+sx*7,yy),width=.35);p.draw_line((xx,yy+sy*2),(xx,yy+sy*7),width=.35)
    p.draw_line((35,H-17),(176.7323,H-17),width=.5);p.insert_text((185,H-14),'50 mm calibration',fontsize=7)
 d.save(B/'04_ENLARGED_TRACING_TILED_LETTER.pdf',garbage=4,deflate=True)
-(B/'source/Cartography_Manifest.json').write_text(json.dumps(dict(revision='Tracing edition 2',world_revision=10,maps=allstats,print_scale='Four US Letter landscape originals; culturally rotated regional maps and one Panterra-centered equirectangular world; optional 180% tiled enlargement',knowledge_limits='Interpretive cultural coverage, not political borders',geometry='Coast and lake outlines sampled from R10; established hydrology paths projected from R10; relief symbols follow physical elevation',new_rivers=False),indent=2))
+(B/'source/Cartography_Manifest.json').write_text(json.dumps(dict(revision='Tracing edition 3',world_revision=10,maps=allstats,print_scale='Four US Letter landscape originals; culturally rotated regional maps and one Panterra-centered equirectangular world; optional 180% tiled enlargement',knowledge_limits='Interpretive cultural coverage, not political borders',geometry='Coast and lake outlines sampled from R10; established hydrology paths projected from R10; relief symbols follow physical elevation',new_rivers=False),indent=2))

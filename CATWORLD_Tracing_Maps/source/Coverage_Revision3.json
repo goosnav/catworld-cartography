@@ -1,0 +1,18 @@
+{
+  "cats_eastern_continent": 38.2,
+  "birds_south_of_range": 23.0,
+  "reptiles_panterra": 24.0,
+  "method": "Area-weighted land pixels within approximate reference regions; exploratory coverage, not political claims.",
+  "east_reference_bounds": [
+    50,
+    150,
+    -50,
+    38
+  ],
+  "panterra_south_reference_bounds": [
+    -65,
+    45,
+    -40,
+    32
+  ]
+}

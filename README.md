@@ -35,6 +35,6 @@ Terrain attribution: [TERRAIN_ATTRIBUTION.md](CATWORLD_Planet/source/TERRAIN_ATT
 - [Four clean tracing sheets](CATWORLD_Tracing_Maps/01_CLEAN_TRACING_LETTER.pdf) or [labelled reference sheets](CATWORLD_Tracing_Maps/02_LABELLED_MAPS_LETTER.pdf).
 - [Printing and map guide](CATWORLD_Tracing_Maps/00_READ_FIRST.pdf), editable SVGs, 300-dpi PNGs and an optional 180% tiled version.
 
-Print at 100% / Actual size, landscape, on 8.5 x 11-inch paper. The reptiles' sheet places west at the bottom, with a separate Panterran Marches continuation and an unexplored eastern interior. The birds' coverage reaches farther into Panterra; the cats do not know the southern homeland.
+Print at 100% / Actual size, landscape, on 8.5 x 11-inch paper. Tracing edition 3 gives the reptiles one continuous view with a gentle 18-degree rotation, about 24% of Panterra, and most of the eastern shore omitted as unexplored. Cats chart about 38% of the eastern continent; birds chart about 23% of Panterra south of the range, with partial legendary-island outlines. These are approximate land-area coverage checks, not political boundaries. Cats do not know the southern homeland.
 
 ![Four tracing maps](CATWORLD_Tracing_Maps/FOUR_MAPS_PREVIEW.jpg)

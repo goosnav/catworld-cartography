@@ -1122,10 +1122,9 @@
 <polyline points="764.00,45.00 764.00,29.00 736.00,29.00" fill="none" stroke="black" stroke-width="0.38" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="396.00" y="48.00" font-family="Times New Roman,serif" font-size="16" text-anchor="middle">TERRA / THE WHOLE WORLD</text>
 <text x="396.00" y="563.00" font-family="Times New Roman,serif" font-size="8" text-anchor="middle"></text>
-<polyline points="734.00,130.00 734.00,92.00" fill="none" stroke="black" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="724.00,112.00 744.00,112.00" fill="none" stroke="black" stroke-width="0.32" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="730.00,100.00 734.00,92.00 738.00,100.00" fill="none" stroke="black" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="734.00" y="85.00" font-family="Times New Roman,serif" font-size="9" text-anchor="middle">N</text>
+<polyline points="737.00,121.00 737.00,88.00" fill="none" stroke="black" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="733.00,96.00 737.00,88.00 741.00,96.00" fill="none" stroke="black" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="737.00" y="78.00" font-family="Times New Roman,serif" font-size="9" text-anchor="middle">N</text>
 <text x="36.00" y="595.00" font-family="Times New Roman,serif" font-size="7" text-anchor="start">WORLD / TRACING MASTER</text>
 <text x="612.00" y="595.00" font-family="Times New Roman,serif" font-size="7" text-anchor="start">R10 geography / Letter tracing edition</text>
 </svg>
