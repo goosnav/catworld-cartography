@@ -26,3 +26,15 @@ After cloning, open `CATWORLD_Planet/OPEN_ATLAS.html` for the offline gallery. R
 Global relief is exaggerated ten times and river widths are enlarged for drawing clarity. Physical elevation remains 4K; the 8K colour map improves presentation. Local studies use true relief in kilometre units. The model retains a working 35-degree tilt and 4,000-Earth-year orbit. Plate geometry, migration lowstand, crossing date and precise seasonal epoch are proposals; the visual model does not solve climate, orbital heating, erosion or hydraulic engineering.
 
 Terrain attribution: [TERRAIN_ATTRIBUTION.md](CATWORLD_Planet/source/TERRAIN_ATTRIBUTION.md). Original pitch deck, private screenshots, backups and temporary work are excluded.
+
+## Print-and-trace maps
+
+[Catworld tracing pack](CATWORLD_Tracing_Maps/README.txt) adds four black-and-white vector maps on landscape US Letter sheets: birds, cats, reptiles and the complete Panterra-centered world. The R10 planet remains unchanged.
+
+- [Full world on one Letter sheet](CATWORLD_Tracing_Maps/individual/world_trace_Letter.pdf): the complete 2:1 satellite-map projection as economical line art.
+- [Four clean tracing sheets](CATWORLD_Tracing_Maps/01_CLEAN_TRACING_LETTER.pdf) or [labelled reference sheets](CATWORLD_Tracing_Maps/02_LABELLED_MAPS_LETTER.pdf).
+- [Printing and map guide](CATWORLD_Tracing_Maps/00_READ_FIRST.pdf), editable SVGs, 300-dpi PNGs and an optional 180% tiled version.
+
+Print at 100% / Actual size, landscape, on 8.5 x 11-inch paper. The reptiles' sheet places west at the bottom, with a separate Panterran Marches continuation and an unexplored eastern interior. The birds' coverage reaches farther into Panterra; the cats do not know the southern homeland.
+
+![Four tracing maps](CATWORLD_Tracing_Maps/FOUR_MAPS_PREVIEW.jpg)

@@ -1,0 +1,159 @@
+{
+  "revision": "Tracing edition 2",
+  "world_revision": 10,
+  "maps": [
+    {
+      "key": "birds",
+      "title": "THE NORTHERN REACHES",
+      "culture": "Birds",
+      "center": [
+        -5,
+        63
+      ],
+      "angle": 65,
+      "extent": [
+        -1.1849506975859074,
+        0.8551878518036006,
+        -1.0344188104779088,
+        0.7733237661560837
+      ],
+      "seed": 302,
+      "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
+      "symbols": {
+        "mountains": 243,
+        "trees": 94,
+        "hills": 46,
+        "dune_groups": 0,
+        "steppe_marks": 0,
+        "ice_marks": 13,
+        "fields": 0
+      },
+      "paths": 1172,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+    },
+    {
+      "key": "cats",
+      "title": "THE LANDS OF PANTERRA",
+      "culture": "Cats",
+      "center": [
+        -7,
+        10
+      ],
+      "angle": 0,
+      "extent": [
+        -0.9668514958859098,
+        1.12680477234135,
+        -0.8498915909761019,
+        0.7257326993652478
+      ],
+      "seed": 405,
+      "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
+      "symbols": {
+        "mountains": 178,
+        "trees": 118,
+        "hills": 61,
+        "dune_groups": 0,
+        "steppe_marks": 24,
+        "ice_marks": 0,
+        "fields": 51
+      },
+      "paths": 1208,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+    },
+    {
+      "key": "reptiles",
+      "title": "THE EASTERN REALMS",
+      "culture": "Reptiles",
+      "center": [
+        98,
+        -5
+      ],
+      "part": "main",
+      "angle": 90,
+      "extent": [
+        -0.8538084511335267,
+        0.8465431828716473,
+        -0.9397793994163024,
+        0.8947942930248688
+      ],
+      "seed": 806,
+      "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
+      "symbols": {
+        "mountains": 117,
+        "trees": 17,
+        "hills": 5,
+        "dune_groups": 146,
+        "steppe_marks": 1,
+        "ice_marks": 0,
+        "fields": 0
+      },
+      "paths": 718,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
+      "western_continuation_inset": {
+        "key": "reptiles",
+        "title": "Panterran marches",
+        "culture": "Reptiles",
+        "center": [
+          9,
+          8
+        ],
+        "part": "marches",
+        "angle": 90,
+        "extent": [
+          -0.695232979911502,
+          0.737350973498376,
+          -0.6143784661840722,
+          0.7141579468143727
+        ],
+        "seed": 1206,
+        "inset": true,
+        "symbol_scale": 0.68,
+        "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
+        "symbols": {
+          "mountains": 88,
+          "trees": 8,
+          "hills": 122,
+          "dune_groups": 0,
+          "steppe_marks": 27,
+          "ice_marks": 0,
+          "fields": 0
+        },
+        "paths": 528,
+        "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+      }
+    },
+    {
+      "key": "world",
+      "title": "TERRA / THE WHOLE WORLD",
+      "culture": "World",
+      "center": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "extent": [
+        -2,
+        2,
+        -1,
+        1
+      ],
+      "seed": 912,
+      "projection": "Equirectangular, central meridian 0",
+      "symbols": {
+        "mountains": 128,
+        "trees": 99,
+        "hills": 12,
+        "dune_groups": 30,
+        "steppe_marks": 0,
+        "ice_marks": 53,
+        "fields": 2
+      },
+      "paths": 902,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+    }
+  ],
+  "print_scale": "Four US Letter landscape originals; culturally rotated regional maps and one Panterra-centered equirectangular world; optional 180% tiled enlargement",
+  "knowledge_limits": "Interpretive cultural coverage, not political borders",
+  "geometry": "Coast and lake outlines sampled from R10; established hydrology paths projected from R10; relief symbols follow physical elevation",
+  "new_rivers": false
+}
