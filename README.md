@@ -29,12 +29,23 @@ Terrain attribution: [TERRAIN_ATTRIBUTION.md](CATWORLD_Planet/source/TERRAIN_ATT
 
 ## Print-and-trace maps
 
-[Catworld tracing pack](CATWORLD_Tracing_Maps/README.txt) adds four black-and-white vector maps on landscape US Letter sheets: birds, cats, reptiles and the complete Panterra-centered world. The R10 planet remains unchanged.
+[Catworld tracing pack](CATWORLD_Tracing_Maps/README.txt) contains four black-and-white vector maps: birds, cats, reptiles and the complete Panterra-centered world. **Sketch edition 4** follows the supplied Panterra drawing with stronger pen coastlines, dotted offshore edges, shaded mountain faces, rounded woodland clusters and open rolling hills. Woodland patches share geographic positions across the four views. The small volcanic gulf islet from the sketch is included in these charts; the R10 planet files remain unchanged.
+
+**For digital tracing, open the large artwork canvases:**
+
+- [Panterra / cats](CATWORLD_Tracing_Maps/png/cats_trace_artwork.png)
+- [Birds](CATWORLD_Tracing_Maps/png/birds_trace_artwork.png)
+- [Reptiles](CATWORLD_Tracing_Maps/png/reptiles_trace_artwork.png)
+- [Whole world](CATWORLD_Tracing_Maps/png/world_trace_artwork.png)
+
+Each canvas is **13,200 pixels wide**, cropped to the artwork with a small margin and no titles, compass, frame or footer. Full-sheet `*_trace_master.png` files are **13,200 × 10,200 pixels**, four times the width and height of the older 300-dpi exports. Both versions render directly from vector paths, preserving sharp linework. The `*_preview.png` files are small browsing copies; use the artwork or master files for tracing. PNG compression keeps file sizes modest despite the large pixel dimensions. Editable SVGs and PDFs can scale further.
 
 - [Full world on one Letter sheet](CATWORLD_Tracing_Maps/individual/world_trace_Letter.pdf): the complete 2:1 satellite-map projection as economical line art.
 - [Four clean tracing sheets](CATWORLD_Tracing_Maps/01_CLEAN_TRACING_LETTER.pdf) or [labelled reference sheets](CATWORLD_Tracing_Maps/02_LABELLED_MAPS_LETTER.pdf).
-- [Printing and map guide](CATWORLD_Tracing_Maps/00_READ_FIRST.pdf), editable SVGs, 300-dpi PNGs and an optional 180% tiled version.
+- [Printing and map guide](CATWORLD_Tracing_Maps/00_READ_FIRST.pdf), editable SVGs, large PNG canvases, 300-dpi Letter compatibility copies and an optional 180% tiled version.
 
-Print at 100% / Actual size, landscape, on 8.5 x 11-inch paper. Tracing edition 3 gives the reptiles one continuous view with a gentle 18-degree rotation, about 24% of Panterra, and most of the eastern shore omitted as unexplored. Cats chart about 38% of the eastern continent; birds chart about 23% of Panterra south of the range, with partial legendary-island outlines. These are approximate land-area coverage checks, not political boundaries. Cats do not know the southern homeland.
+Print the Letter PDFs at 100% / Actual size, landscape, on 8.5 x 11-inch paper. The reptiles retain one continuous view with a gentle 18-degree rotation, about 24% of Panterra, and most of the eastern shore omitted as unexplored. Cats chart about 38% of the eastern continent; birds chart about 23% of Panterra south of the range, with partial legendary-island outlines. These are approximate land-area coverage checks, not political boundaries. Cats do not know the southern homeland.
+
+To rebuild the tracing pack on Linux, macOS or Windows, install [the Python dependencies](CATWORLD_Tracing_Maps/source/requirements.txt), then run `build_tracing_maps.py` and `finish_print_pack.py` from `CATWORLD_Tracing_Maps/source/`. Paths are repository-relative and fonts are portable. Run `python3 -m unittest discover -s CATWORLD_Tracing_Maps/source` from the repository root to check the large exports.
 
 ![Four tracing maps](CATWORLD_Tracing_Maps/FOUR_MAPS_PREVIEW.jpg)

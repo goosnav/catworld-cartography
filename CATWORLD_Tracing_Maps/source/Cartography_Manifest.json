@@ -1,5 +1,15 @@
 {
-  "revision": "Tracing edition 3",
+  "revision": "Tracing edition 4",
+  "style_reference": "CATWORLD_drawn_Maps/panterra_v1.PNG",
+  "style": "Inked mountain faces, rounded woodland clusters, dotted offshore contours, open rolling hills",
+  "raster_exports": {
+    "master": [
+      13200,
+      10200
+    ],
+    "artwork_long_edge": 13200,
+    "rendered_from": "vector paths; no raster upscaling"
+  },
   "world_revision": 10,
   "maps": [
     {
@@ -20,16 +30,20 @@
       "seed": 302,
       "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
       "symbols": {
-        "mountains": 295,
-        "trees": 66,
-        "hills": 30,
+        "mountains": 342,
+        "trees": 22,
+        "hills": 31,
         "dune_groups": 0,
         "steppe_marks": 0,
-        "ice_marks": 8,
+        "ice_marks": 10,
         "fields": 0
       },
-      "paths": 1261,
-      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+      "paths": 1987,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
+      "artwork_dimensions": [
+        13200,
+        10353
+      ]
     },
     {
       "key": "cats",
@@ -49,16 +63,20 @@
       "seed": 405,
       "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
       "symbols": {
-        "mountains": 164,
-        "trees": 84,
-        "hills": 54,
+        "mountains": 216,
+        "trees": 306,
+        "hills": 61,
         "dune_groups": 0,
-        "steppe_marks": 24,
+        "steppe_marks": 0,
         "ice_marks": 0,
-        "fields": 38
+        "fields": 0
       },
-      "paths": 1054,
-      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+      "paths": 2990,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
+      "artwork_dimensions": [
+        13200,
+        8705
+      ]
     },
     {
       "key": "reptiles",
@@ -78,16 +96,20 @@
       "seed": 806,
       "projection": "Lambert azimuthal equal-area; spherical radius cancels in page placement",
       "symbols": {
-        "mountains": 165,
-        "trees": 25,
-        "hills": 14,
+        "mountains": 204,
+        "trees": 139,
+        "hills": 19,
         "dune_groups": 141,
-        "steppe_marks": 3,
+        "steppe_marks": 0,
         "ice_marks": 0,
         "fields": 0
       },
-      "paths": 918,
-      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+      "paths": 2550,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
+      "artwork_dimensions": [
+        13200,
+        10795
+      ]
     },
     {
       "key": "world",
@@ -107,20 +129,31 @@
       "seed": 912,
       "projection": "Equirectangular, central meridian 0",
       "symbols": {
-        "mountains": 128,
-        "trees": 99,
+        "mountains": 151,
+        "trees": 72,
         "hills": 12,
-        "dune_groups": 30,
+        "dune_groups": 26,
         "steppe_marks": 0,
-        "ice_marks": 53,
-        "fields": 2
+        "ice_marks": 62,
+        "fields": 0
       },
-      "paths": 901,
-      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89"
+      "paths": 3073,
+      "source_sha256": "4deaea62bedf1cbe6516104317a1b3c1c5765c4637becb23fdc1a6b7dbef3e89",
+      "artwork_dimensions": [
+        13200,
+        6580
+      ]
     }
   ],
   "print_scale": "Four US Letter landscape originals; culturally rotated regional maps and one Panterra-centered equirectangular world; optional 180% tiled enlargement",
   "knowledge_limits": "Interpretive cultural coverage, not political borders",
-  "geometry": "Coast and lake outlines sampled from R10; established hydrology paths projected from R10; relief symbols follow physical elevation",
+  "geometry": "R10 coast/lake outlines and hydrology, with the supplied sketch gulf islet at 28.4E 17.7N added to the tracing edition; relief symbols follow physical elevation",
+  "sketch_additions": {
+    "gulf_islet_center": [
+      28.4,
+      17.7
+    ],
+    "planet_fields_modified": false
+  },
   "new_rivers": false
 }

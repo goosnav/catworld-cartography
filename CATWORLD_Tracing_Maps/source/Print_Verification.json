@@ -4,6 +4,8 @@
   "tiled_page_count": 16,
   "all_letter_maps_landscape": true,
   "vector_maps_verified": true,
+  "large_png_exports_verified": true,
+  "large_png_source": "Direct vector render",
   "pdf_text_in_page_bounds": true,
   "cats_southern_mainland_excluded": true,
   "near_cat_islands_included": true,
@@ -18,39 +20,55 @@
   "map_coverage": [
     {
       "map": "birds",
-      "black_equivalent_page_coverage_percent": 1.768,
+      "black_equivalent_page_coverage_percent": 3.451,
       "png_dimensions": [
         3300,
         2550
       ],
-      "paper": "US Letter landscape: 11 x 8.5 inches"
+      "paper": "US Letter landscape: 11 x 8.5 inches",
+      "master_dimensions": [
+        13200,
+        10200
+      ]
     },
     {
       "map": "cats",
-      "black_equivalent_page_coverage_percent": 1.738,
+      "black_equivalent_page_coverage_percent": 3.769,
       "png_dimensions": [
         3300,
         2550
       ],
-      "paper": "US Letter landscape: 11 x 8.5 inches"
+      "paper": "US Letter landscape: 11 x 8.5 inches",
+      "master_dimensions": [
+        13200,
+        10200
+      ]
     },
     {
       "map": "reptiles",
-      "black_equivalent_page_coverage_percent": 1.567,
+      "black_equivalent_page_coverage_percent": 3.306,
       "png_dimensions": [
         3300,
         2550
       ],
-      "paper": "US Letter landscape: 11 x 8.5 inches"
+      "paper": "US Letter landscape: 11 x 8.5 inches",
+      "master_dimensions": [
+        13200,
+        10200
+      ]
     },
     {
       "map": "world",
-      "black_equivalent_page_coverage_percent": 1.759,
+      "black_equivalent_page_coverage_percent": 3.182,
       "png_dimensions": [
         3300,
         2550
       ],
-      "paper": "US Letter landscape: 11 x 8.5 inches"
+      "paper": "US Letter landscape: 11 x 8.5 inches",
+      "master_dimensions": [
+        13200,
+        10200
+      ]
     }
   ]
 }

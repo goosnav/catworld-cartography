@@ -1,0 +1,7 @@
+numpy
+scipy
+contourpy
+shapely
+reportlab
+pymupdf
+Pillow

@@ -8,18 +8,28 @@ from PIL import Image, ImageDraw, ImageFont
 import pymupdf
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from map_fonts import register_fonts
 B=Path(__file__).resolve().parents[1]
 KEYS=['birds','cats','reptiles','world']
-for name,fn in [('Book','Times New Roman.ttf'),('Bold','Times New Roman Bold.ttf'),('Italic','Times New Roman Italic.ttf')]:
- pdfmetrics.registerFont(TTFont(name,'/System/Library/Fonts/Supplemental/'+fn))
+register_fonts()
+from test_large_exports import LargeExportTests
+LargeExportTests('test_all_maps_have_large_sheet_and_artwork_canvases').test_all_maps_have_large_sheet_and_artwork_canvases()
 reports=[]
 for key in KEYS:
  im=np.array(Image.open(B/'png'/f'{key}_trace_300dpi.png').convert('L'))
  ink=float((1-im.astype(float)/255).mean()*100)
- assert ink<3, (key,ink)
+ assert 0.2<ink<8, (key,ink) # Strong pen linework, still predominantly white.
  assert im.shape==(2550,3300), (key,im.shape)
- reports.append(dict(map=key,black_equivalent_page_coverage_percent=round(ink,3),png_dimensions=[3300,2550],paper='US Letter landscape: 11 x 8.5 inches'))
+ reports.append(dict(map=key,black_equivalent_page_coverage_percent=round(ink,3),png_dimensions=[3300,2550],paper='US Letter landscape: 11 x 8.5 inches',master_dimensions=[13200,10200]))
+ # Artwork PDFs must remain scalable, contain no page furniture, and preserve
+ # the complete vector drawing inside the canvas with a breathing margin.
+ with pymupdf.open(B/'individual'/f'{key}_trace_artwork.pdf') as artwork:
+  assert len(artwork)==1
+  page=artwork[0]
+  assert not page.get_images() and not page.get_text().strip(),key
+  paths=page.get_drawings();assert len(paths)>100,key
+  for path in paths:
+   assert page.rect.contains(path['rect']), (key,path['rect'])
 files={ '01_CLEAN_TRACING_LETTER.pdf':4,'02_LABELLED_MAPS_LETTER.pdf':4,'04_ENLARGED_TRACING_TILED_LETTER.pdf':16 }
 for key in KEYS:
  for kind in ['trace','reference']: files[f'individual/{key}_{kind}_Letter.pdf']=1
@@ -64,10 +74,10 @@ def para(y,s,size=10.5,width=512,font='Book'):
  if line:lines.append(line)
  for line in lines:text(50,y,line,size,font);y-=size*1.38
  return y-8
-text(50,744,'CATWORLD / FOUR TRACING MAPS',18,'Bold');y=para(718,'US Letter landscape / R10 geography / 1 November 2026',10,font='Italic')
+text(50,744,'CATWORLD / FOUR TRACING MAPS',18,'Bold');y=para(718,'Sketch edition 4 / R10 geography / 6 November 2026',10,font='Italic')
 text(50,y-4,'Choose one print file',13,'Bold');y-=27
 for s in [
- '01_CLEAN_TRACING_LETTER.pdf: four pages with coastlines, rivers, lakes and terrain symbols, leaving the internal lettering to you. This is the main tracing master.',
+ '01_CLEAN_TRACING_LETTER.pdf: four pages with coastlines, rivers, lakes and terrain symbols, leaving the internal lettering to you. Use the large PNG canvases for digital drawing.',
  '02_LABELLED_MAPS_LETTER.pdf: the same four sheets with working place names. Use it as your reference, or trace its lettering. Page order in both files: 1 birds, 2 cats, 3 reptiles, 4 whole world.',
  'For only the full world, print individual/world_trace_Letter.pdf. It uses the same 360-degree rectangular projection as the satellite world map, centered on Panterra, with no cultural exclusions or plate-boundary overlays.',
  'Every map sheet is 11 x 8.5 inches, landscape. Print at Actual size / 100%, black-and-white, single-sided. Disable borderless printing. Use normal quality to keep the fine strokes; draft mode can drop small marks.',
@@ -76,9 +86,9 @@ for s in [
 text(50,y-4,'Optional larger drawing',13,'Bold');y-=27
 y=para(y,'04_ENLARGED_TRACING_TILED_LETTER.pdf enlarges each clean sheet to 180% across four Letter pages. Birds: pages 1-4. Cats: 5-8. Reptiles: 9-12. World: 13-16. Each assembled sheet is 19.8 x 15.3 inches.')
 y=para(y,'Print the tiles at Actual size. Arrange 1A / 1B above 2A / 2B, match the repeated 10 mm artwork strips, trim one overlapping edge and tape from behind. Measure the 50 mm calibration bar before assembly. You do not need the tiles for ordinary Letter-size tracing.')
-text(50,y-4,'Economical ink; editable artwork',13,'Bold');y-=27
+text(50,y-4,'Large digital canvases; editable artwork',13,'Bold');y-=27
 y=para(y,'All map artwork is black vector linework on white, without grey terrain or paper textures. Measured black-equivalent coverage: '+', '.join(f'{r["map"]} {r["black_equivalent_page_coverage_percent"]:.2f}%' for r in reports)+'. This is rendered page coverage, not a cartridge-yield promise.')
-y=para(y,'SVG linework and 300-dpi PNG sheets are included. The A4 file is optional. Begin tracing with shores and watercourses, then the mountain belts and woodland. Add lowland marks and your own names last. Titles, corner marks and notes are optional to trace.')
+y=para(y,'For digital tracing use png/*_trace_artwork.png: 13,200 pixels wide, without page furniture, at 300 dpi. Full sheets are *_trace_master.png: 13,200 x 10,200 pixels. Both render directly from vectors. *_preview.png files are small browsing copies only. SVG and PDF remain scalable; 300-dpi Letter PNGs remain available.')
 assert y>42,y;text(50,28,'CATWORLD / PRINT GUIDE / 1',8);c.showPage()
 text(50,744,'FOUR POINTS OF VIEW',18,'Bold');y=714
 for heading,body in [
@@ -90,9 +100,9 @@ for heading,body in [
  text(50,y,heading,12,'Bold');y-=21;y=para(y,body,10)
 text(50,y-4,'What the linework means',13,'Bold');y-=27
 for s in [
- 'Coasts and lake outlines come from the R10 terrain fields; waterways come from the established hydrology paths. Regional sheets use Lambert azimuthal equal-area views. No coastline, continental arrangement or world model was redesigned for this pack.',
- 'Mountain signs summarize elevated terrain, not individual literal peaks. Trees indicate woodland; low arcs indicate hills; ripples indicate dry country; field outlines indicate cultivation. Small broken lines show ice. Rings mark settlements; open tower shapes mark gates and ruins. Paired strokes mark the dam or falls.',
- 'The exact knowledge frontiers are proposed story interpretations. Open coast ends mean uncharted continuation, not a new strait. Names such as Seattle, London, Rome and Milan remain working labels. No new regional rivers or capitals were invented. Fine coastal detail is generalized for a home printer.'
+ 'Coasts and lake outlines come from the R10 terrain fields; waterways come from the established hydrology paths. Regional sheets use Lambert azimuthal equal-area views. The sketch adds a small volcanic gulf islet at 28.4 E, 17.7 N to these charts. Continental arrangement and the R10 globe files are retained.',
+ 'The supplied Panterra pen sketch directs this edition: inked mountain faces, rounded woodland clusters, dotted offshore edges and open hill crests. Woodland patches in Panterra follow that drawing across all four views. Mountains summarize elevated terrain; dunes and broken ice marks retain their regional meanings. Paired strokes mark the dam or falls.',
+ 'The exact knowledge frontiers are proposed story interpretations. Open coast ends mean uncharted continuation, not a new strait. Names such as Seattle, London, Rome and Milan remain working labels. No new regional rivers or capitals were invented. Coasts are simplified at vector scale; larger PNGs preserve crisp strokes rather than inventing finer geography.'
 ]:y=para(y,s,10)
 assert y>42,y;text(50,28,'CATWORLD / MAP NOTES / 2',8);c.showPage();c.save()
 # Verify and render the guide after creation.
@@ -107,7 +117,7 @@ for i,key in enumerate(KEYS):
  x=20+(i%2)*1040+(1010-im.width)//2;y=20+(i//2)*820+(800-im.height)//2
  board.paste(im,(x,y))
 board.save(B/'FOUR_MAPS_PREVIEW.jpg',quality=94)
-(B/'README.txt').write_text('''CATWORLD / FOUR TRACING MAPS / LETTER EDITION 3
+(B/'README.txt').write_text('''CATWORLD / FOUR TRACING MAPS / SKETCH EDITION 4
 
 Print 01_CLEAN_TRACING_LETTER.pdf for your own lettering, or 02_LABELLED_MAPS_LETTER.pdf for named maps.
 Four sheets: birds, cats, reptiles, whole world. ALL LANDSCAPE, US Letter 11 x 8.5 inches. Print at 100% / Actual size.
@@ -119,16 +129,42 @@ CATS: Panterra and roughly one third of the eastern continent; no Australia.
 REPTILES: one gently rotated view with eastern Panterra; most eastern coastline is unexplored and omitted.
 WORLD: complete equirectangular world centered on Panterra, preserving the 2:1 satellite map proportions.
 
-Black vector lines on white. No grey fills. SVG and 300-dpi PNG exports included.
+START HERE FOR LARGE DIGITAL TRACING:
+  png/cats_trace_artwork.png (Panterra, artwork only)
+  png/birds_trace_artwork.png
+  png/reptiles_trace_artwork.png
+  png/world_trace_artwork.png
+Each artwork canvas is 13,200 pixels wide, with its natural aspect ratio and a small margin.
+No title, compass, corner frame or footer takes up the drawing canvas.
+
+FULL SHEETS: png/*_trace_master.png are 13,200 x 10,200 pixels (134.6 megapixels).
+These are rendered from the vector artwork at 1200 dpi, not enlarged from small PNGs.
+The artwork-only PNGs have 300-dpi metadata for large-format use (44 inches wide).
+PNG compression keeps these mostly white canvases relatively small in bytes.
+The *_preview.png files are for browsing only; do not use them as drawing masters.
+The *_300dpi.png files remain 3300 x 2550 Letter-size compatibility copies.
+Editable SVGs and vector PDFs can be enlarged further without pixelation.
+Artwork-only PDFs are in individual/*_trace_artwork.pdf.
+
+The supplied CATWORLD_drawn_Maps/panterra_v1.PNG directs the visual style:
+strong pen coasts, dotted offshore halos, dark mountain faces, rounded woodland clusters,
+and open rolling hills. The same geographic woodland patches carry across the maps.
+Black vector lines and black mountain facets on white. No grey terrain fills.
 The 16-page tiled PDF is optional: four Letter sheets per map at 180%, with 10 mm overlaps. Do not print it unless you want an enlarged drawing.
 03_CLEAN_TRACING_A4.pdf is an optional A4 alternative.
 
-Geography is derived from the accepted R10 planet, which is unchanged. Cultural knowledge boundaries are proposed interpretations, not territorial claims. Names are working labels.
+Geography is based on R10, plus the supplied sketch's small volcanic gulf islet at 28.4 E, 17.7 N.
+The islet is a tracing-map addition; the R10 planet files are unchanged. Cultural knowledge boundaries are proposed interpretations, not territorial claims. Names are working labels.
 
 Source: source/build_tracing_maps.py and source/finish_print_pack.py.
 Dependencies: Python, numpy, scipy, contourpy, shapely, reportlab, pymupdf, Pillow.
 Source data: ../CATWORLD_Planet/source/terrain_fields.npz, hydrology_paths.json, features.json.
-The build script currently uses the canonical Mac project path and Times New Roman from macOS; change MODEL/font paths on other systems.
+Rebuild from the repository root (Python 3):
+  python3 CATWORLD_Tracing_Maps/source/build_tracing_maps.py
+  python3 CATWORLD_Tracing_Maps/source/finish_print_pack.py
+  python3 -m unittest discover -s CATWORLD_Tracing_Maps/source
+Paths are relative to the repository; built-in PDF Times fonts work on every platform.
+Allow roughly 1 GB of free memory for a large canvas; exports are rendered one at a time.
 ''')
-(B/'source/Print_Verification.json').write_text(json.dumps(dict(letter_page_count=4,labelled_page_count=4,tiled_page_count=16,all_letter_maps_landscape=True,vector_maps_verified=True,pdf_text_in_page_bounds=True,cats_southern_mainland_excluded=True,near_cat_islands_included=True,expanded_bird_islands_and_panterra_included=True,reptile_panterra_marches_included=True,reptile_single_view_rotation_degrees=18,reptile_eastern_coast_omitted=True,bird_legendary_islands_partial=True,world_full_extent_and_zero_central_meridian=True,tile_calibration_bar_mm=50,terrain_source_sha256=maps['world']['source_sha256'],map_coverage=reports),indent=2))
+(B/'source/Print_Verification.json').write_text(json.dumps(dict(letter_page_count=4,labelled_page_count=4,tiled_page_count=16,all_letter_maps_landscape=True,vector_maps_verified=True,large_png_exports_verified=True,large_png_source='Direct vector render',pdf_text_in_page_bounds=True,cats_southern_mainland_excluded=True,near_cat_islands_included=True,expanded_bird_islands_and_panterra_included=True,reptile_panterra_marches_included=True,reptile_single_view_rotation_degrees=18,reptile_eastern_coast_omitted=True,bird_legendary_islands_partial=True,world_full_extent_and_zero_central_meridian=True,tile_calibration_bar_mm=50,terrain_source_sha256=maps['world']['source_sha256'],map_coverage=reports),indent=2))
 print(json.dumps(reports,indent=2));print('Guide and print checks complete')
