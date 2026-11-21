@@ -1,5 +1,11 @@
 # Catworld Cartography
 
+## Procreate map lettering
+
+The [Procreate lettering pack](working/procreate/README.md) contains two aligned **6600 × 5100 PNGs (11 × 8.5 inches, landscape, 600 DPI)**: [transparent crimson names](working/procreate/Catworld-Crimson-Labels-600dpi.png) and the [full tracing reference](working/procreate/Catworld-Full-Reference-600dpi.png). It uses the repository's Catword font, 64 source-checked names, and curved cartographic lettering registered to `catworld_working_base`. Editable layout data and vector outlines are included.
+
+## Planet atlas
+
 An editable Blender planet and satellite-style drawing-reference atlas for Catworld / Terra.
 
 ![Eastern plate correction](CATWORLD_Planet/guide/Bridge_Correction_R10.jpg)

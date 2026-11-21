@@ -1,0 +1,138 @@
+{
+  "source": "CATWORLD_drawn_Maps/panterra_v1.PNG",
+  "source_sha256": "bb6da6ce88888d75bcc00430148062b3c596272b4623d1562ba1ac9af68897b2",
+  "source_size": [
+    1030,
+    796
+  ],
+  "canvas_size": [
+    6600,
+    5100
+  ],
+  "dpi": 600,
+  "transform": {
+    "scale_x": 8.375741555283149,
+    "scale_y": 8.375284105077908,
+    "translate_x": -232.2607308375533,
+    "translate_y": -866.4592099919479,
+    "equations": [
+      "canvas_x = source_x * scale_x + translate_x",
+      "canvas_y = source_y * scale_y + translate_y"
+    ]
+  },
+  "source_crop_box": [
+    27.730169239886667,
+    103.45430663857915,
+    815.7200990195289,
+    712.388873635284
+  ],
+  "resampling": "Pillow LANCZOS from original raster with fractional crop box",
+  "registration_method": "Independent least-squares fit of ten printed marker centres in working/catworld_working_base.png to corresponding original-source coordinates in working/Catworld-Full-Map-Drawing-Guide.pdf. Markers sampled using connected components of red circle pixels.",
+  "registration_fit": {
+    "max_abs_x_px": 0.5032628432477395,
+    "max_abs_y_px": 0.3796605701336375,
+    "source_points": [
+      [
+        260.0,
+        164.0
+      ],
+      [
+        359.0,
+        280.0
+      ],
+      [
+        327.0,
+        480.0
+      ],
+      [
+        411.0,
+        443.0
+      ],
+      [
+        397.0,
+        505.0
+      ],
+      [
+        250.0,
+        455.0
+      ],
+      [
+        527.0,
+        449.0
+      ],
+      [
+        279.0,
+        416.0
+      ],
+      [
+        356.0,
+        392.0
+      ],
+      [
+        350.0,
+        260.0
+      ]
+    ],
+    "observed_canvas_points": [
+      [
+        1945.0,
+        507.0
+      ],
+      [
+        2774.5,
+        1479.0
+      ],
+      [
+        2507.0,
+        3154.0
+      ],
+      [
+        3210.0,
+        2844.0
+      ],
+      [
+        3093.0,
+        3363.0
+      ],
+      [
+        1862.0,
+        2944.0
+      ],
+      [
+        4182.0,
+        2894.0
+      ],
+      [
+        2105.0,
+        2617.5
+      ],
+      [
+        2749.0,
+        2416.5
+      ],
+      [
+        2699.0,
+        1311.0
+      ]
+    ]
+  },
+  "notes": [
+    "Original source confirmed pixel-identical to 1030x796 image embedded in Full Map Drawing Guide PDF.",
+    "Working XCF combines a scaled annotated reference over a differently scaled clean art layer. Current output uses one consistent transform matching annotated Panterra geography; the small northeast misregistration seam is removed.",
+    "No new map artwork, river, thinning, recoloring, terrain or labels introduced. This is an enlarged raster drawing reference, not new 600-DPI geographic detail."
+  ],
+  "existing_xcf_clean_layer_transform": {
+    "scale_x": 8.424271844660193,
+    "scale_y": 8.424623115577889,
+    "translate_x": -281,
+    "translate_y": -873
+  },
+  "derived_pdf_top_transform": {
+    "scale_x": 8.377825028139997,
+    "scale_y": 8.376623640157248,
+    "translate_x": -232.76890849166784,
+    "translate_y": -867.171168736049,
+    "basis": "Embedded image rectangle in 300-dpi full reference PNG, crop offset (318,658) to reference copy, copy resized to 5565x5049 and placed at (58,4); close to fitted transform, differences reflect raster marker rounding."
+  },
+  "output_sha256": "e2bf116d6ec6ac40561e3cf8a9627cdd9cdaf69b68032df092911aca834febe8"
+}
