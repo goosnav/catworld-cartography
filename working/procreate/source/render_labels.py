@@ -6,6 +6,10 @@ Each glyph retains its original outline and rotates rigidly along the baseline.
 Positive ``rise`` arches a label upward: (x, y) is the baseline's centre and
 the two baseline endpoints sit ``rise`` pixels below it. ``angle`` is clockwise.
 ``points`` optionally supplies 2, 3, or 4 global Bezier control points instead.
+``align`` (start, center, end; default center) and ``offset`` (canvas pixels)
+position text along that path. Positive offset advances toward the path end.
+``require_individual_paths`` requires a distinct cubic and a ``path_rationale``
+for every label; geometry is compared independently of position, scale, and angle.
 ``reference_opacity`` (default 1) and ``reference_halo_px`` (default 0) affect
 only the flattened reference; the transparent label export remains unchanged.
 
@@ -49,6 +53,37 @@ def resolve_repo_path(value: str | Path) -> Path:
 
 def num(value: float) -> str:
     return f"{value:.6f}".rstrip("0").rstrip(".") or "0"
+
+
+def finite_number(value, name: str, *, positive: bool = False) -> float:
+    try:
+        result = float(value)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError(f"{name} must be a finite number") from exc
+    if isinstance(value, bool) or not math.isfinite(result):
+        raise ValueError(f"{name} must be a finite number")
+    if positive and result <= 0:
+        raise ValueError(f"{name} must be positive")
+    return result
+
+
+def canvas_dimensions(layout: dict) -> tuple[int, int]:
+    dimensions = [finite_number(layout[key], key, positive=True) for key in ("width", "height")]
+    if any(value != int(value) for value in dimensions):
+        raise ValueError("Canvas width and height must be positive whole pixels")
+    return tuple(int(value) for value in dimensions)
+
+
+def angle_span(angles) -> float:
+    """Range of continuously unwrapped tangent angles, in degrees."""
+    unwrapped = []
+    previous = None
+    for angle in angles:
+        if previous is not None:
+            angle = previous + math.atan2(math.sin(angle - previous), math.cos(angle - previous))
+        unwrapped.append(angle)
+        previous = angle
+    return math.degrees(max(unwrapped) - min(unwrapped)) if unwrapped else 0.0
 
 
 @dataclass
@@ -147,9 +182,17 @@ def bezier(points, t: float):
 
 class Baseline:
     def __init__(self, points):
-        if len(points) not in (2, 3, 4):
+        if not isinstance(points, (list, tuple)) or len(points) not in (2, 3, 4):
             raise ValueError("A baseline requires 2, 3, or 4 Bezier control points")
-        self.points = points
+        self.points = []
+        for i, point in enumerate(points):
+            if not isinstance(point, (list, tuple)) or len(point) != 2:
+                raise ValueError(f"Baseline point {i} must contain exactly two coordinates")
+            self.points.append(tuple(finite_number(value, f"Baseline point {i} coordinate") for value in point))
+        points = self.points
+        n = len(points) - 1
+        self.derivative_points = [(n * (b[0] - a[0]), n * (b[1] - a[1]))
+                                  for a, b in zip(points, points[1:])]
         self.samples = 4096
         self.lengths = [0.0]
         last = bezier(points, 0)
@@ -158,6 +201,33 @@ class Baseline:
             self.lengths.append(self.lengths[-1] + math.hypot(current[0] - last[0], current[1] - last[1]))
             last = current
         self.length = self.lengths[-1]
+        if not math.isfinite(self.length) or self.length <= 0:
+            raise ValueError("A baseline must have finite, positive length")
+        # Endpoint tangents must be defined; duplicate endpoint handles would
+        # otherwise silently become zero-degree rotations through atan2(0, 0).
+        self.tangent(0)
+        self.tangent(1)
+
+    def tangent(self, t: float) -> float:
+        derivative = bezier(self.derivative_points, t)
+        if math.hypot(*derivative) <= 1e-10:
+            raise ValueError(f"Baseline has an undefined tangent at t={t:.6f}")
+        return math.atan2(derivative[1], derivative[0])
+
+    def normalized_points(self) -> list[list[float]]:
+        """Translate, rotate, and scale by the endpoint chord; round to 0.001."""
+        start, end = self.points[0], self.points[-1]
+        dx, dy = end[0] - start[0], end[1] - start[1]
+        chord = math.hypot(dx, dy)
+        if chord <= 1e-10:
+            raise ValueError("Baseline endpoints must be distinct for curve normalization")
+        cs, sn = dx / chord, dy / chord
+        result = []
+        for x, y in self.points:
+            x, y = x - start[0], y - start[1]
+            result.append([round((x * cs + y * sn) / chord, 3) or 0.0,
+                           round((-x * sn + y * cs) / chord, 3) or 0.0])
+        return result
 
     def at(self, distance: float):
         import bisect
@@ -167,27 +237,33 @@ class Baseline:
         frac = (distance - self.lengths[i - 1]) / interval if interval else 0
         t = (i - 1 + frac) / self.samples
         position = bezier(self.points, t)
-        n = len(self.points) - 1
-        derivative_points = [(n * (b[0] - a[0]), n * (b[1] - a[1]))
-                             for a, b in zip(self.points, self.points[1:])]
-        derivative = bezier(derivative_points, t)
-        return position, math.atan2(derivative[1], derivative[0])
+        return position, self.tangent(t)
+
+    def tangent_variation(self, start: float = 0, end: float | None = None) -> float:
+        end = self.length if end is None else end
+        return angle_span(self.at(start + (end - start) * i / 256)[1] for i in range(257))
 
 
 def make_baseline(label: dict, text_width: float) -> Baseline:
     if "points" in label:
         return Baseline(label["points"])
-    x, y = float(label["x"]), float(label["y"])
-    rise = float(label.get("rise", 0))
-    angle = math.radians(float(label.get("angle", 0)))
-    span = max(text_width, float(label.get("span", text_width)))
+    x, y = finite_number(label["x"], "x"), finite_number(label["y"], "y")
+    rise = finite_number(label.get("rise", 0), "rise")
+    angle = math.radians(finite_number(label.get("angle", 0), "angle"))
+    span = max(text_width, finite_number(label.get("span", text_width), "span", positive=True))
     cs, sn = math.cos(angle), math.sin(angle)
     local = [(-span / 2, rise), (0, -rise), (span / 2, rise)]
     return Baseline([(x + px * cs - py * sn, y + px * sn + py * cs) for px, py in local])
 
 
 def render_svg(layout: dict, path: Path):
-    width, height = int(layout["width"]), int(layout["height"])
+    width, height = canvas_dimensions(layout)
+    finite_number(layout.get("dpi", 600), "dpi", positive=True)
+    if not isinstance(layout.get("labels"), list) or not layout["labels"]:
+        raise ValueError("The layout must contain a nonempty labels list")
+    require_individual_paths = layout.get("require_individual_paths", False)
+    if not isinstance(require_individual_paths, bool):
+        raise ValueError("require_individual_paths must be true or false")
     font_path = resolve_repo_path(layout["font"])
     face = OutlinedFont(font_path)
     colour = layout.get("color", "#B31532")
@@ -207,26 +283,60 @@ def render_svg(layout: dict, path: Path):
                                 "layout_sha256": hashlib.sha256(json.dumps(layout, sort_keys=True).encode()).hexdigest()}, sort_keys=True)
     reports = []
     ids = set()
+    curve_owners = {}
     for label in layout["labels"]:
         label_id = str(label["id"])
         if label_id in ids:
             raise ValueError(f"Duplicate label ID: {label_id}")
         ids.add(label_id)
+        if not isinstance(label.get("text"), str) or not label["text"].strip():
+            raise ValueError(f"Label {label_id} requires nonempty text")
+        if require_individual_paths:
+            if not isinstance(label.get("points"), list) or len(label["points"]) != 4:
+                raise ValueError(f"Label {label_id} ({label['text']}) requires four explicit cubic control points")
+            if not isinstance(label.get("path_rationale"), str) or not label["path_rationale"].strip():
+                raise ValueError(f"Label {label_id} ({label['text']}) requires a nonempty path_rationale")
         shaped = face.shape(label["text"])
-        scale = float(label["size"]) / face.units
-        tracking = float(label.get("tracking", 0))
+        scale = finite_number(label["size"], f"Label {label_id} size", positive=True) / face.units
+        tracking = finite_number(label.get("tracking", 0), f"Label {label_id} tracking")
         advances = [glyph.advance * scale for glyph in shaped]
         text_width = sum(advances) + tracking * max(0, len(shaped) - 1)
-        if text_width <= 0:
+        if not math.isfinite(text_width) or text_width <= 0:
             raise ValueError(f"Empty or zero-width label: {label_id}")
-        curve = make_baseline(label, text_width)
+        if any(not math.isfinite(advance) or advance <= 0 for advance in advances):
+            raise ValueError(f"Label {label_id} has an invalid glyph advance")
+        if any(advance + tracking <= 0 for advance in advances[:-1]):
+            raise ValueError(f"Label {label_id} tracking must leave positive glyph progression")
+        try:
+            curve = make_baseline(label, text_width)
+            normalized_points = curve.normalized_points()
+        except (TypeError, ValueError) as exc:
+            raise ValueError(f"Label {label_id} ({label['text']}): {exc}") from exc
+        curve_signature = hashlib.sha256(json.dumps(normalized_points, separators=(",", ":")).encode()).hexdigest()
+        if require_individual_paths and curve_signature in curve_owners:
+            raise ValueError(f"Label {label_id} ({label['text']}) repeats the normalized curve geometry of "
+                             f"label {curve_owners[curve_signature]}; each path must be individually designed")
+        curve_owners[curve_signature] = label_id
         if curve.length + 0.01 < text_width:
-            raise ValueError(f"Path for {label_id} ({curve.length:.1f}px) is shorter than the text ({text_width:.1f}px)")
+            raise ValueError(f"Path for label {label_id} ({label['text']}) is {curve.length:.1f}px long; "
+                             f"text needs {text_width:.1f}px")
+        align = label.get("align", "center")
+        if align not in ("start", "center", "end"):
+            raise ValueError(f"Label {label_id} align must be start, center, or end")
+        offset = finite_number(label.get("offset", 0), f"Label {label_id} offset")
+        start = {"start": 0, "center": (curve.length - text_width) / 2,
+                 "end": curve.length - text_width}[align] + offset
+        end = start + text_width
+        if start < -0.01 or end > curve.length + 0.01:
+            raise ValueError(f"Label {label_id} ({label['text']}) needs {text_width:.1f}px at "
+                             f"[{start:.1f}, {end:.1f}]px, outside its {curve.length:.1f}px path; "
+                             "adjust align, offset, or control points")
         group = ET.SubElement(root, tag("g"), {"id": f"label-{label_id}", "aria-label": label["text"]})
         ET.SubElement(group, tag("title")).text = label["text"]
-        cursor = (curve.length - text_width) / 2
+        cursor = start
         bounds = []
         glyphs = []
+        glyph_angles = []
         for glyph, advance in zip(shaped, advances):
             point, theta = curve.at(cursor + advance / 2)
             cs, sn = math.cos(theta), math.sin(theta)
@@ -241,7 +351,9 @@ def render_svg(layout: dict, path: Path):
                 glyph_bound = face.bounds(glyph.name, transform)
                 if glyph_bound:
                     bounds.append(glyph_bound)
-                    glyphs.append({"glyph": glyph.name, "bounds": [round(v, 3) for v in glyph_bound]})
+                    glyph_angles.append(theta)
+                    glyphs.append({"glyph": glyph.name, "bounds": [round(v, 3) for v in glyph_bound],
+                                   "baseline_angle": round(math.degrees(theta), 3)})
             cursor += advance + tracking
         if not bounds:
             raise ValueError(f"Label has no visible glyphs: {label_id}")
@@ -252,11 +364,26 @@ def render_svg(layout: dict, path: Path):
         reports.append({"id": label_id, "text": label["text"], "kind": label.get("kind", ""),
                         "bounds": [round(v, 3) for v in box], "margin": round(margin, 3),
                         "baseline_length": round(curve.length, 3), "text_width": round(text_width, 3),
+                        "baseline_points": [list(point) for point in curve.points],
+                        "baseline_angle_at_start": round(math.degrees(curve.at(0)[1]), 3),
+                        "baseline_angle_at_end": round(math.degrees(curve.at(curve.length)[1]), 3),
+                        "baseline_tangent_variation_degrees": round(curve.tangent_variation(), 3),
+                        "text_tangent_variation_degrees": round(curve.tangent_variation(start, end), 3),
+                        "glyph_tangent_variation_degrees": round(angle_span(glyph_angles), 3),
+                        "normalized_control_points": normalized_points,
+                        "curve_signature": curve_signature,
+                        "path_rationale": label.get("path_rationale", ""),
+                        "align": align, "offset": offset,
+                        "text_start_distance": round(start, 3), "text_end_distance": round(end, 3),
                         "glyphs": glyphs})
     ET.indent(root, space="  ")
     ET.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
     return {"width": width, "height": height, "dpi": layout.get("dpi", 600),
             "color": colour, "font": layout["font"], "label_count": len(reports),
+            "require_individual_paths": require_individual_paths,
+            "unique_curve_count": len(curve_owners),
+            "geometry_units": "canvas pixels; angles in clockwise degrees; tangent variation is unwrapped angular range",
+            "curve_normalization": "subtract start, rotate endpoint chord horizontal, divide by chord length, round to 0.001",
             "minimum_margin": min(r["margin"] for r in reports), "labels": reports}
 
 
@@ -272,12 +399,16 @@ def render_png(svg: Path, layout: dict, output: Path, base_path: Path | None, pr
     inkscape = shutil.which("inkscape")
     if not inkscape:
         raise RuntimeError("Install Inkscape and ensure its 'inkscape' executable is on PATH")
-    full_width, full_height = int(layout["width"]), int(layout["height"])
+    full_width, full_height = canvas_dimensions(layout)
+    if preview_width is not None:
+        finite_number(preview_width, "preview width", positive=True)
     ratio = min(1, preview_width / full_width) if preview_width else 1
     width, height = round(full_width * ratio), round(full_height * ratio)
-    dpi = float(layout.get("dpi", 600)) * ratio
-    reference_opacity = float(layout.get("reference_opacity", 1))
-    reference_halo_px = float(layout.get("reference_halo_px", 0))
+    if min(width, height) < 1:
+        raise ValueError("Preview dimensions must each be at least one pixel")
+    dpi = finite_number(layout.get("dpi", 600), "dpi", positive=True) * ratio
+    reference_opacity = finite_number(layout.get("reference_opacity", 1), "reference_opacity")
+    reference_halo_px = finite_number(layout.get("reference_halo_px", 0), "reference_halo_px")
     if not 0 <= reference_opacity <= 1:
         raise ValueError("reference_opacity must be between 0 and 1")
     if reference_halo_px < 0:

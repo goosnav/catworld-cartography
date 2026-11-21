@@ -1,0 +1,841 @@
+{
+  "source": "Original regional gazetteer and Full Map Drawing Guide, preserving the 64-name inventory of revision 1.",
+  "original_count": 64,
+  "displayed_count": 41,
+  "omitted_count": 23,
+  "label_reduction_percent": 35.938,
+  "names": [
+    {
+      "id": "01",
+      "canonical_name": "Oerkrone",
+      "kind": "highest mountain",
+      "source_anchor": [
+        260,
+        164
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "02",
+      "canonical_name": "Tower at Windnek",
+      "kind": "watchtower",
+      "source_anchor": [
+        359,
+        280
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Distinct structure from Montedal fortress; south mouth of Windnek pass. Can share compact label with pass if crowded.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "03",
+      "canonical_name": "Roodrock",
+      "kind": "canyon",
+      "source_anchor": [
+        327,
+        480
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "04",
+      "canonical_name": "Obervaldam",
+      "kind": "dam fortress",
+      "source_anchor": [
+        411,
+        443
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "At southeast outlet of enclosed Oudmeer; river leaves dam downstream toward Heilig.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "05",
+      "canonical_name": "Heilig",
+      "kind": "capital",
+      "source_anchor": [
+        397,
+        505
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Capital on lower Vaur. Visually strongest city. Do not give the old real-world shorthand London/Rome/Amsterdam/Seattle to any additional cities.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "06",
+      "canonical_name": "Ertsburg",
+      "kind": "industrial coastal city",
+      "source_anchor": [
+        250,
+        455
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "07",
+      "canonical_name": "Librehaven",
+      "kind": "merchant port city",
+      "source_anchor": [
+        527,
+        449
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "On Panterra east-facing shoreline, not the separate eastern continent across Marevian Sea.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "08",
+      "canonical_name": "Urwald",
+      "kind": "primeval forest",
+      "source_anchor": [
+        279,
+        416
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "09",
+      "canonical_name": "Oudmeer",
+      "kind": "lake",
+      "source_anchor": [
+        356,
+        392
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Large enclosed central lake; NOT coastal bay.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "10",
+      "canonical_name": "Vaur",
+      "kind": "river",
+      "source_anchor": [
+        445,
+        469
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Downstream chain is Oudmeer → Obervaldam → upper Vaur valley → middle Vaur valley → Heilig/Ribeirendam → southern bay. Guide marker center is an offset callout, not entire river geometry.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "11",
+      "canonical_name": "Windnek",
+      "kind": "mountain pass",
+      "source_anchor": [
+        350,
+        260
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "12",
+      "canonical_name": "Urkronen Alps",
+      "kind": "mountain range",
+      "source_anchor": [
+        459,
+        249
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "13",
+      "canonical_name": "Monteheim",
+      "kind": "province",
+      "source_anchor": [
+        280,
+        490
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Broad western forest/mineral province. Guide map label is offset into west ocean but actual province is western land around Ertsburg and Urwald.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "14",
+      "canonical_name": "Aurelmark",
+      "kind": "province",
+      "source_anchor": [
+        369,
+        466
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Central inland Oudmeer–Vaur–Heilig corridor. User attempted label in open southern bay is a display offset; canon does not establish a southern bay named Aurelmark. Province name should align with central lowlands; no exact boundary exists.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "15",
+      "canonical_name": "Marenveld",
+      "kind": "province; provisional latest name",
+      "source_anchor": [
+        517,
+        417
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Use Marenveld, per latest Sam note. Eastervael in deck and Highveld in screenshot are alternate names of same province, not additional regions.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "16",
+      "canonical_name": "Panterra",
+      "kind": "empire; sheet title",
+      "source_anchor": [
+        null,
+        null
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Empire/nation name for mainland south of Urkronen Alps. Can serve as unobtrusive sheet title in free ocean space; it is not a fourth province. Terra is planet, not this continent.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "17",
+      "canonical_name": "Damwerks",
+      "kind": "power grid",
+      "source_anchor": [
+        427,
+        438
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Powerhouse and grid immediately below dam; not separate distant city.",
+      "displayed": false,
+      "omission_reason": "Damwerks is part of the tightly grouped Obervaldam outlet complex; omit this secondary name at regional-map scale."
+    },
+    {
+      "id": "18",
+      "canonical_name": "Zuidbrug",
+      "kind": "bridge town",
+      "source_anchor": [
+        434,
+        456
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Settlement and monumental river bridge downstream of Obervaldam; distinct from ancient Blackbrug.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "19",
+      "canonical_name": "Aurelia Vetus",
+      "kind": "old lakeshore city",
+      "source_anchor": [
+        380,
+        445
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Old city near dam and greatest settlement on Oudmeer shore, upstream of dam.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "20",
+      "canonical_name": "Ribeirendam",
+      "kind": "lower river port town",
+      "source_anchor": [
+        409,
+        516
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Lower Vaur river-port town downstream of Heilig waterfront; avoid upper-valley placement.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "21",
+      "canonical_name": "Vaurgaard",
+      "kind": "farmland region",
+      "source_anchor": [
+        367,
+        477
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Agricultural REGION around both banks of Vaur, not a point settlement.",
+      "displayed": false,
+      "omission_reason": "Secondary agricultural district duplicates the central provincial and river geography."
+    },
+    {
+      "id": "22",
+      "canonical_name": "Vinhas Altas",
+      "kind": "vineyard district",
+      "source_anchor": [
+        373,
+        498
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Vineyards outside Heilig. Distinct from upriver Quinta Aurea.",
+      "displayed": false,
+      "omission_reason": "Secondary vineyard district beside the capital; keep the principal Quinta Aurea estate."
+    },
+    {
+      "id": "23",
+      "canonical_name": "Montedal",
+      "kind": "military fortress",
+      "source_anchor": [
+        294,
+        303
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "24",
+      "canonical_name": "Kupferdal",
+      "kind": "active copper mine",
+      "source_anchor": [
+        271,
+        520
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "ACTIVE copper mine. Distinct from abandoned Oudmijn.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "25",
+      "canonical_name": "Tinbeek",
+      "kind": "tin mine",
+      "source_anchor": [
+        267,
+        320
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Tin mine beside tributary in western foothills.",
+      "displayed": false,
+      "omission_reason": "Minor resource site in the crowded northern monuments group; retain the distinctive western copper-mining pair."
+    },
+    {
+      "id": "26",
+      "canonical_name": "Houtwerks",
+      "kind": "timber works",
+      "source_anchor": [
+        310,
+        456
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Timber yard outside edge of Urwald; distinct from village Bosveld.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "27",
+      "canonical_name": "Bosveld",
+      "kind": "logging village",
+      "source_anchor": [
+        280,
+        455
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": false,
+      "omission_reason": "Minor logging village duplicates nearby forest and timber-works geography."
+    },
+    {
+      "id": "28",
+      "canonical_name": "Farol Velho",
+      "kind": "abandoned lighthouse",
+      "source_anchor": [
+        125,
+        383
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "ABANDONED lighthouse. Distinct from active Beacon at Stormhoek.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "29",
+      "canonical_name": "Oudmijn",
+      "kind": "abandoned copper mine",
+      "source_anchor": [
+        212,
+        517
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Oudmijn is full deck name; screenshot Mijn is shorthand, not second mine.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "30",
+      "canonical_name": "Westerdok",
+      "kind": "naval port",
+      "source_anchor": [
+        204,
+        495
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Western naval port. Distinct from Librehaven merchant harbor and Werf de Zandt shipyard.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "31",
+      "canonical_name": "Maréhaven",
+      "kind": "harbor city",
+      "source_anchor": [
+        491,
+        584
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Harbor south of Librehaven on same east-facing Panterran coast. Keep accent in Maréhaven.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "32",
+      "canonical_name": "Porto Ilha",
+      "kind": "island city",
+      "source_anchor": [
+        478,
+        667
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Southern offshore island city. Distinct from small western island Ilha Verde.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "33",
+      "canonical_name": "Veldemaar",
+      "kind": "high valley city",
+      "source_anchor": [
+        441,
+        316
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Northernmost Panterran CITY; inland high valley below Alps near northeastern lake. Do not place on marine island. Montedal is fortress, not an additional city designation.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "34",
+      "canonical_name": "Ponta Velha",
+      "kind": "coastal river town",
+      "source_anchor": [
+        456,
+        347
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Coastal town at river connection from Veldemaar lake.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "35",
+      "canonical_name": "Wilderveld",
+      "kind": "wilderness region",
+      "source_anchor": [
+        489,
+        407
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Broad wilderness primarily east but also between all provinces. No political boundary.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "36",
+      "canonical_name": "Achterveld",
+      "kind": "upland grasslands",
+      "source_anchor": [
+        425,
+        326
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Elevated grasslands and foothills below northern Alps, a subregion of Wilderveld.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "37",
+      "canonical_name": "Oudeland",
+      "kind": "ancient forest region",
+      "source_anchor": [
+        290,
+        350
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Far northwest forests and valleys including Urwald, ancient avian ruins.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "38",
+      "canonical_name": "Steenveld",
+      "kind": "mineral region",
+      "source_anchor": [
+        322,
+        520
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Mineral fields in midwest and southwest; regional label, not town.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "39",
+      "canonical_name": "Oerkrone's Claw",
+      "kind": "mountain pass",
+      "source_anchor": [
+        285,
+        225
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Second pass nearer Oerkrone, west of Windnek; retain proper possessive.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "40",
+      "canonical_name": "Westermar",
+      "kind": "sea; Sea of Storms",
+      "source_anchor": [
+        130,
+        460
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Western sea; optional epithet Sea of Storms need not be a duplicate label.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "41",
+      "canonical_name": "Marevian Sea",
+      "kind": "sea",
+      "source_anchor": [
+        665,
+        470
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Sea east of Panterra, not the freshwater Oudmeer.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "42",
+      "canonical_name": "Vaur Valley",
+      "kind": "river valley",
+      "source_anchor": [
+        405,
+        480
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Valley spans Obervaldam to Heilig; label as geography, not village.",
+      "displayed": false,
+      "omission_reason": "Redundant valley descriptor repeats the Vaur name and crowds the provincial label."
+    },
+    {
+      "id": "43",
+      "canonical_name": "Quinta Aurea",
+      "kind": "major vineyard",
+      "source_anchor": [
+        392,
+        458
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "UPPER valley vineyard below dam, distinct from Vinhas Altas at capital.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "44",
+      "canonical_name": "Douren",
+      "kind": "upper valley town",
+      "source_anchor": [
+        435,
+        476
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "UPPER valley town, downstream of Zuidbrug and upstream of Graanveld. The overview guide uses leaders to offset dense numbered markers.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "45",
+      "canonical_name": "Vinhadal",
+      "kind": "upper valley wealthy village",
+      "source_anchor": [
+        414,
+        466
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "UPPER valley village near Quinta Aurea, distinct from Douren; marker center heavily offset east on reference overview.",
+      "displayed": false,
+      "omission_reason": "Minor upper-valley village; preserve Douren and Quinta Aurea for orientation."
+    },
+    {
+      "id": "46",
+      "canonical_name": "Graanveld",
+      "kind": "middle valley market town",
+      "source_anchor": [
+        390,
+        486
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "MIDDLE valley market town, below Douren and above Ribeirendam.",
+      "displayed": false,
+      "omission_reason": "Secondary market-town label in the space required by the central Aurelmark province name; retain its source site in the inventory."
+    },
+    {
+      "id": "47",
+      "canonical_name": "Oudakker",
+      "kind": "middle valley crossroads village",
+      "source_anchor": [
+        417,
+        488
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "MIDDLE valley crossroads settlement near Graanveld. Do not imply surveyed triple-province border.",
+      "displayed": false,
+      "omission_reason": "Secondary middle-valley village next to Graanveld."
+    },
+    {
+      "id": "48",
+      "canonical_name": "Driehuizen",
+      "kind": "village",
+      "source_anchor": [
+        213,
+        366
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Source allows Aurelmark or Monteheim; guide selects west cape.",
+      "displayed": false,
+      "omission_reason": "Optional small coastal village."
+    },
+    {
+      "id": "49",
+      "canonical_name": "Wagenrust",
+      "kind": "village",
+      "source_anchor": [
+        307,
+        493
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": false,
+      "omission_reason": "Optional roadside village in the western-to-central corridor."
+    },
+    {
+      "id": "50",
+      "canonical_name": "Eikenrust",
+      "kind": "village",
+      "source_anchor": [
+        557,
+        412
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Source allows Marenveld/Eastervael or Monteheim; guide selects eastern woods.",
+      "displayed": false,
+      "omission_reason": "Optional woodland village; leave the eastern forest legible."
+    },
+    {
+      "id": "51",
+      "canonical_name": "Verrehoek",
+      "kind": "remote farming community",
+      "source_anchor": [
+        510,
+        395
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Source allows Marenveld/Eastervael or Aurelmark; guide selects east interior.",
+      "displayed": false,
+      "omission_reason": "Optional remote farming community; retain open countryside."
+    },
+    {
+      "id": "52",
+      "canonical_name": "Droogveld",
+      "kind": "grazing settlement",
+      "source_anchor": [
+        480,
+        531
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Regional gazetteer name; location is guide proposal, not surveyed canon.",
+      "displayed": false,
+      "omission_reason": "Optional grazing settlement in the southeastern interior."
+    },
+    {
+      "id": "53",
+      "canonical_name": "Kleinrust",
+      "kind": "pastoral community",
+      "source_anchor": [
+        352,
+        502
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Source allows Aurelmark or Marenveld/Eastervael; guide selects central southwest lowlands.",
+      "displayed": false,
+      "omission_reason": "Optional pastoral community in space needed by Aurelmark."
+    },
+    {
+      "id": "54",
+      "canonical_name": "Ilha Verde",
+      "kind": "island town",
+      "source_anchor": [
+        204,
+        399
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Small western offshore island with forests and orchards. Distinct from southern Porto Ilha.",
+      "displayed": false,
+      "omission_reason": "Minor island settlement; retain the major southern island port without merging the two islands."
+    },
+    {
+      "id": "55",
+      "canonical_name": "Twee",
+      "kind": "village",
+      "source_anchor": [
+        419,
+        352
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Village in Achterveld.",
+      "displayed": false,
+      "omission_reason": "Small upland village beneath the regional label."
+    },
+    {
+      "id": "56",
+      "canonical_name": "Blackbrug",
+      "kind": "ancient bridge",
+      "source_anchor": [
+        338,
+        330
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Ancient masonry bridge; independent of Zuidbrug.",
+      "displayed": false,
+      "omission_reason": "Optional ancient bridge; retain the principal bridge town Zuidbrug without merging their identities."
+    },
+    {
+      "id": "57",
+      "canonical_name": "Beacon at Stormhoek",
+      "kind": "lighthouse",
+      "source_anchor": [
+        177,
+        360
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Active lighthouse at Stormhoek on jagged Monteheim shore; shortened map name Stormhoek is acceptable if needed.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "58",
+      "canonical_name": "Temple at Diepe Kuil",
+      "kind": "ancient temple",
+      "source_anchor": [
+        240,
+        302
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Temple in Oudeland with deep waterhole inside. Short map label Diepe Kuil can save space.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "59",
+      "canonical_name": "Arch of Urwald",
+      "kind": "ancient avian monument",
+      "source_anchor": [
+        283,
+        319
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Ancient monumental arch at northern border of Urwald, not random western city.",
+      "displayed": true,
+      "omission_reason": null
+    },
+    {
+      "id": "60",
+      "canonical_name": "Stilwater",
+      "kind": "lake",
+      "source_anchor": [
+        310,
+        309
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Foggy lake in Oudeland. Source name is Stilwater (one l), not Stillwater.",
+      "displayed": false,
+      "omission_reason": "Optional small lake in the crowded northern monuments group."
+    },
+    {
+      "id": "61",
+      "canonical_name": "Driekoppen",
+      "kind": "rock spires",
+      "source_anchor": [
+        288,
+        540
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "Three rock spires in Monteheim, not mountain range.",
+      "displayed": false,
+      "omission_reason": "Optional rock-spire name subordinate to the western uplands."
+    },
+    {
+      "id": "62",
+      "canonical_name": "Witkrans",
+      "kind": "cliff",
+      "source_anchor": [
+        232,
+        545
+      ],
+      "source_status": "canonical regional gazetteer",
+      "placement_notes": "White cliff; source permits Monteheim or east. Guide selects southwestern Monteheim.",
+      "displayed": false,
+      "omission_reason": "Optional cliff name with unresolved source alternatives."
+    },
+    {
+      "id": "63",
+      "canonical_name": "Werf de Zandt",
+      "kind": "shipyard; Sam screenshot",
+      "source_anchor": [
+        542,
+        448
+      ],
+      "source_status": "source-supported addition",
+      "placement_notes": "Sam screenshot addition; immediately adjacent to Librehaven harbor. Could omit independent label at tiny scale, preserve in manifest.",
+      "displayed": false,
+      "omission_reason": "Shipyard within the Librehaven harbor complex rather than a separate settlement."
+    },
+    {
+      "id": "64",
+      "canonical_name": "Marevian Bay",
+      "kind": "bay; deck p28",
+      "source_anchor": [
+        620,
+        380
+      ],
+      "source_status": "source-supported addition",
+      "placement_notes": "Deck p28 bay name. Part of Marevian Sea near harbor coast, not second separate ocean.",
+      "displayed": false,
+      "omission_reason": "Nested bay name repeats the principal Marevian Sea orientation."
+    }
+  ]
+}

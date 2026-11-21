@@ -1,4 +1,5 @@
 {
+  "revision": 2,
   "canvas": [
     6600,
     5100
@@ -8,7 +9,12 @@
     8.5
   ],
   "nominal_dpi": 600,
-  "label_count": 64,
+  "previous_label_count": 64,
+  "label_count": 41,
+  "labels_removed": 23,
+  "label_reduction_percent": 35.9375,
+  "unique_normalized_cubic_paths": 41,
+  "all_paths_have_geographic_rationale": true,
   "color": "#DC143C",
   "font_sha256": "c77fc20010c37dabb18e1d04fb7d726e9ee012b80bfbe515ab582b55b1b44cab",
   "label_mode": "RGBA",
@@ -16,17 +22,19 @@
   "transparent_background": true,
   "visible_label_pixels_exact_crimson": true,
   "fully_opaque_label_pixels_match_reference": true,
-  "alpha_unchanged_after_hidden_rgb_normalization": true,
   "no_glyph_clipping": true,
   "no_cross_label_glyph_bounds_intersections": true,
-  "minimum_canvas_margin_pixels": 174.817,
-  "registered_anchor_residual_max_pixels": 0.504,
+  "minimum_canvas_margin_pixels": 106.963,
+  "registered_anchor_residual_max_pixels": 0.503,
+  "registered_artwork_unchanged": true,
+  "reference_opacity": 0.5,
+  "reference_halo_pixels": 5,
   "source_map_geometry": "Original source drawing registered consistently to visible working-base guide anchors; no new geography or line thinning",
   "files": [
     {
       "path": "working/procreate/Catworld-Crimson-Labels-600dpi.png",
-      "bytes": 1099968,
-      "sha256": "56168dbc309aeb39f13787a02dfdfde1f273452f080bb0ad684303a9d6e9e090",
+      "bytes": 840519,
+      "sha256": "694e702c2d80c6357735852eadf4e912245925f4ef32fc25dcb644fd368bb25e",
       "dpi": [
         599.9988,
         599.9988
@@ -35,8 +43,8 @@
     },
     {
       "path": "working/procreate/Catworld-Full-Reference-600dpi.png",
-      "bytes": 5312329,
-      "sha256": "a4b9708547e55cc743b8de4f1fc5e58d8e5d9eab8070cea4a20ae81a483369a1",
+      "bytes": 4822486,
+      "sha256": "a316114c0d9ee52d8137614b9f5534f9f631ce0132a7906af31f0ae661e1610d",
       "dpi": [
         599.9988,
         599.9988

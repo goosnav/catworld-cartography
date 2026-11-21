@@ -2,7 +2,7 @@
 
 ## Procreate map lettering
 
-The [Procreate lettering pack](working/procreate/README.md) contains two aligned **6600 × 5100 PNGs (11 × 8.5 inches, landscape, 600 DPI)**: [transparent crimson names](working/procreate/Catworld-Crimson-Labels-600dpi.png) and the [full tracing reference](working/procreate/Catworld-Full-Reference-600dpi.png). It uses the repository's Catword font, 64 source-checked names, and curved cartographic lettering registered to `catworld_working_base`. Editable layout data and vector outlines are included.
+The [Procreate lettering pack](working/procreate/README.md) contains two aligned **6600 × 5100 PNGs (11 × 8.5 inches, landscape, 600 DPI)**: [transparent crimson names](working/procreate/Catworld-Crimson-Labels-600dpi.png) and the [full tracing reference](working/procreate/Catworld-Full-Reference-600dpi.png). This revision displays **41 of the original 64 labels (35.9375% fewer)** in the repository's Catword font, each on an individually composed curve that follows its geography. Province names sit over their mainland regions; the reference uses 50% ink opacity and 5-pixel white clearance around the text. Canvas dimensions, font and registration to `catworld_working_base` are unchanged. Editable curves, vector outlines and the complete 64-name inventory—including the 23 omitted labels, canonical names and feature anchors—are included.
 
 ## Planet atlas
 
